@@ -1,0 +1,252 @@
+[
+  {
+    "Exame":"122",
+    "Descr":"Alemão",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"126",
+    "Descr":"Geometria Descritiva A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"127",
+    "Descr":"Literatura Portuguesa",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"138",
+    "Descr":"Português Língua Segunda",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"147",
+    "Descr":"Espanhol (continuação)",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"149",
+    "Descr":"Mandarim (iniciação)",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"225",
+    "Descr":"Filosofia",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"226",
+    "Descr":"História A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"227",
+    "Descr":"Matemática A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"229",
+    "Descr":"História B",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"317",
+    "Descr":"Francês (iniciação -bienal)",
+    "TipoExame":"Q"
+  },
+  {
+    "Exame":"325",
+    "Descr":"Física e Química A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"326",
+    "Descr":"História da Cultura e das Artes",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"327",
+    "Descr":"Matemática Aplic. Ciências Soc.",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"421",
+    "Descr":"Biologia e Geologia",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"425",
+    "Descr":"Francês",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"426",
+    "Descr":"Inglês",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"427",
+    "Descr":"Matemática B",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"450",
+    "Descr":"Inglês (iniciação -bienal)",
+    "TipoExame":"Q"
+  },
+  {
+    "Exame":"501",
+    "Descr":"Alemão",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"517",
+    "Descr":"Francês",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"521",
+    "Descr":"Desenho A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"527",
+    "Descr":"Português",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"529",
+    "Descr":"Português Língua Não Materna",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"547",
+    "Descr":"Espanhol (iniciação)",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"550",
+    "Descr":"Inglês",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"621",
+    "Descr":"Economia A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"623",
+    "Descr":"História A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"635",
+    "Descr":"Matemática A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"639",
+    "Descr":"Português",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"702",
+    "Descr":"Biologia e Geologia",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"706",
+    "Descr":"Desenho A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"708",
+    "Descr":"Geometria Descritiva A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"712",
+    "Descr":"Economia A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"714",
+    "Descr":"Filosofia",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"715",
+    "Descr":"Física e Química A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"719",
+    "Descr":"Geografia A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"721",
+    "Descr":"Espanhol (iniciação)",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"723",
+    "Descr":"História B",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"724",
+    "Descr":"História da Cultura e das Artes",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"732",
+    "Descr":"Latim A",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"734",
+    "Descr":"Literatura Portuguesa",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"735",
+    "Descr":"Matemática B",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"801",
+    "Descr":"Alemão (continuação -bienal)",
+    "TipoExame":"Q"
+  },
+  {
+    "Exame":"825",
+    "Descr":"Geografia A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"826",
+    "Descr":"Latim A",
+    "TipoExame":"E"
+  },
+  {
+    "Exame":"835",
+    "Descr":"Matemática Aplic. às Ciências Soc.",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"839",
+    "Descr":"Português Língua Não Materna",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"847",
+    "Descr":"Espanhol (continuação)",
+    "TipoExame":"N"
+  },
+  {
+    "Exame":"848",
+    "Descr":"Mandarim (iniciação)",
+    "TipoExame":"N"
+  }
+]
