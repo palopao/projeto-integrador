@@ -1,180 +1,117 @@
 import { useState, useMemo } from 'react'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,
-  Tooltip, ResponsiveContainer, Area, AreaChart,
-  Legend, BarChart, Bar
+  Tooltip, ResponsiveContainer, Legend, BarChart, Bar
 } from 'recharts'
 import ChartLineIcon from '../../assets/icons/chart-line.svg?react'
-import TrendUpIcon from '../../assets/icons/trend-up.svg?react'
-import DatabaseIcon from '../../assets/icons/database.svg?react'
-import ArrowUpIcon from '../../assets/icons/arrow-up.svg?react'
 import ChecklistIcon from '../../assets/icons/checklist.svg?react'
 import CalculatorIcon from '../../assets/icons/calculator.svg?react'
+import CoursePhaseEvolutionChart from '../CoursePhaseEvolutionChart/CoursePhaseEvolutionChart'
+import AdmissionCalculator from '../AdmissionCalculator/AdmissionCalculator'
+import ApplicationSimulator from '../ApplicationSimulator/ApplicationSimulator'
+import ExamEvolutionChart from '../ExamEvolutionChart/ExamEvolutionChart'
+import { useCoursePhaseEvolution } from '../../hooks/useCoursePhaseEvolution'
+import { useCourseDetailsById } from '../../hooks/useCourseDetailsById'
+import { useExamEvolution } from '../../hooks/useExamEvolution'
 import styles from './CourseDetail.module.css'
 
-/* Mock data for the grade evolution chart */
-const gradeEvolution = [
-  { year: '2020', real: 18.2, predicted: null, ciLow: null, ciHigh: null },
-  { year: '2021', real: 18.5, predicted: null, ciLow: null, ciHigh: null },
-  { year: '2022', real: 18.4, predicted: null, ciLow: null, ciHigh: null },
-  { year: '2023', real: 18.7, predicted: null, ciLow: null, ciHigh: null },
-  { year: '2024', real: 18.8, predicted: 18.9, ciLow: 18.5, ciHigh: 19.3 },
-  { year: '2025', real: null, predicted: 19.0, ciLow: 18.6, ciHigh: 19.4 },
-  { year: '2026', real: null, predicted: 19.0, ciLow: 18.8, ciHigh: 19.2 },
-]
+export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = '9219', nomeDefault = 'Psicologia - Universidade dos Açores - Faculdade de Ciências Sociais e Humanas', codes }) {
+  // Gerir múltiplos códigos (histórico vs atual)
+  const effectiveCodes = codes && codes.length > 0 
+    ? codes 
+    : [{ inst: codigoInstituicao, curso: codigoCurso }]
+  
+  const code1 = effectiveCodes[0]
+  const code2 = effectiveCodes[1] // Pode ser undefined
 
-/* Mock data for exam score evolution */
-const examEvolution = [
-  { year: '2020', biologia: 12.5, fisica: 11.8 },
-  { year: '2021', biologia: 13.0, fisica: 12.2 },
-  { year: '2022', biologia: 12.8, fisica: 12.0 },
-  { year: '2023', biologia: 13.2, fisica: 12.4 },
-  { year: '2024', biologia: 13.8, fisica: 12.4 },
-]
+  // Carregar dados para o código principal e secundário (se existir)
+  const { data: data1, predictions: pred1, loading: load1, error: err1, yearRange: range1 } = useCoursePhaseEvolution(code1?.inst, code1?.curso)
+  const { data: data2, predictions: pred2, loading: load2 } = useCoursePhaseEvolution(code2?.inst || '', code2?.curso || '')
 
-const exams = [
-  {
-    name: 'Nota Interna',
-    weight: '30%',
-    minScore: 'Nota mínima: 95 pontos',
-    optional: null,
-  },
-  {
-    name: 'Biologia e Geologia',
-    weight: '35%',
-    minScore: 'Nota mínima: 95 pontos',
-    optional: null,
-  },
-  {
-    name: 'Física e Química A',
-    weight: '35%',
-    minScore: 'Nota mínima: 95 pontos',
-    optional: {
-      name: 'Matemática A',
-      label: 'Opcional',
-      desc: 'Pode substituir FQ',
-    },
-  },
-]
+  // Fundir dados dos dois códigos
+  const data = useMemo(() => {
+    const d1 = data1 || []
+    const d2 = (code2 && data2) ? data2 : []
+    
+    // Combinar e remover duplicados por ano
+    const combined = [...d1, ...d2]
+    const uniqueMap = new Map()
+    // Usar String(year) como chave para garantir que 2020 (number) e "2020" (string) sejam o mesmo ano
+    combined.forEach(item => uniqueMap.set(String(item.year), item))
+    
+    return Array.from(uniqueMap.values()).sort((a, b) => a.year - b.year)
+  }, [data1, data2, code2])
 
-function CustomTooltip({ active, payload, label }) {
-  if (!active || !payload?.length) return null
-  return (
-    <div className={styles.tooltip}>
-      <p className={styles.tooltipLabel}>{label}</p>
-      {payload.map((p, i) => (
-        <p key={i} style={{ color: p.color }} className={styles.tooltipValue}>
-          {p.name}: {p.value?.toFixed(1) ?? '—'}
-        </p>
-      ))}
-    </div>
-  )
-}
+  // Usar previsões do código que tem dados mais recentes
+  const predictions = useMemo(() => {
+    if (!pred1 && !pred2) return null
+    if (!pred2) return pred1
+    if (!pred1) return pred2
+    
+    const maxYear1 = data1 && data1.length ? Math.max(...data1.map(d => Number(d.year))) : 0
+    const maxYear2 = data2 && data2.length ? Math.max(...data2.map(d => Number(d.year))) : 0
+    return maxYear2 > maxYear1 ? pred2 : pred1
+  }, [pred1, pred2, data1, data2])
 
-function Simulator() {
-  const [notaInterna, setNotaInterna] = useState('')
-  const [biologia, setBiologia] = useState('')
-  const [fisica, setFisica] = useState('')
-  const [result, setResult] = useState(null)
+  const loading = load1 || (code2 && load2)
+  const error = err1 // Ignorar erro do segundo código se não existir
+  
+  // Recalcular range de anos
+  const yearRange = useMemo(() => {
+    if (!data.length) return { min: null, max: null }
+    const years = data.map(d => Number(d.year))
+    return { min: Math.min(...years), max: Math.max(...years) }
+  }, [data])
 
-  const calcular = () => {
-    const ni = parseFloat(notaInterna) || 0
-    const bio = parseFloat(biologia) || 0
-    const fis = parseFloat(fisica) || 0
-    const media = (ni * 0.30 + bio * 0.35 + fis * 0.35) / 10
-    setResult(media.toFixed(1))
+  const { course, loading: courseLoading, error: courseError } = useCourseDetailsById(codigoInstituicao, codigoCurso)
+  const { data: examData, loading: examLoading, error: examError } = useExamEvolution(['Biologia', 'Fisica'])
+
+  // Extract course name and institution from nomeDefault  
+  // Format: "Course Name - Institution Name"
+  const parseCourseInfo = (courseFullName) => {
+    if (!courseFullName) return { institution: '', courseName: '' }
+    // Format esperado: "Psicologia - Universidade dos Açores - Faculdade de ..."
+    // Pega o primeiro ou segundo - como nome do curso e o resto como instituição
+    const parts = courseFullName.split(' - ')
+    if (parts.length === 1) {
+      return { institution: '', courseName: parts[0] || '' }
+    }
+    // Primeira parte é o nome do curso, resto é instituição
+    return {
+      courseName: parts[0] || '',
+      institution: parts.slice(1).join(' - ') || ''
+    }
   }
 
-  const getProbabilidade = (media) => {
-    if (media >= 19.0) return { text: 'Probabilidade Alta', color: '#10b981' }
-    if (media >= 18.5) return { text: 'Probabilidade Média', color: '#10b981' }
-    if (media >= 18.0) return { text: 'Probabilidade Baixa', color: '#f59e0b' }
-    return { text: 'Probabilidade Muito Baixa', color: '#ef4444' }
-  }
+  // Usar nomeDefault se disponível, senão usar dados de course
+  const displayInfo = nomeDefault ? parseCourseInfo(nomeDefault) : null
+  const displayCourseName = displayInfo?.courseName || 'Curso'
+  const displayInstitution = displayInfo?.institution || 'Universidade'
 
-  return (
-    <div className={styles.simulator}>
-      <div className={styles.simulatorHeader}>
-        <CalculatorIcon className={styles.simulatorHeaderIcon} />
-        <h3 className={styles.simulatorTitle}>Simulador de Candidatura</h3>
-      </div>
+  // Calculate average prediction for banner
+  const avgPrediction = predictions && predictions.length > 0 
+    ? predictions[predictions.length - 1]
+    : null
+  const minPred = avgPrediction ? (avgPrediction.prediction - (avgPrediction.ciHigh - avgPrediction.prediction)).toFixed(1) : '—'
+  const maxPred = avgPrediction ? (avgPrediction.prediction + (avgPrediction.ciHigh - avgPrediction.prediction)).toFixed(1) : '—'
 
-      <div className={styles.simulatorForm}>
-        <label className={styles.simulatorLabel}>Nota Interna (0-200)</label>
-        <input
-          type="number"
-          min="0"
-          max="200"
-          placeholder="Ex: 180"
-          value={notaInterna}
-          onChange={(e) => setNotaInterna(e.target.value)}
-          className={styles.simulatorInput}
-        />
-
-        <label className={styles.simulatorLabel}>Biologia e Geologia (0-200)</label>
-        <input
-          type="number"
-          min="0"
-          max="200"
-          placeholder="Ex: 175"
-          value={biologia}
-          onChange={(e) => setBiologia(e.target.value)}
-          className={styles.simulatorInput}
-        />
-
-        <label className={styles.simulatorLabel}>Física e Química A (0-200)</label>
-        <input
-          type="number"
-          min="0"
-          max="200"
-          placeholder="Ex: 170"
-          value={fisica}
-          onChange={(e) => setFisica(e.target.value)}
-          className={styles.simulatorInput}
-        />
-
-        <button type="button" className={styles.calcBtn} onClick={calcular}>
-          Calcular Média
-        </button>
-
-        {result && (
-          <div className={styles.resultBox}>
-            <p className={styles.resultLabel}>Média Estimada</p>
-            <p className={styles.resultValue}>{result}</p>
-            <div className={styles.resultProb}>
-              <span
-                className={styles.resultDot}
-                style={{ background: getProbabilidade(parseFloat(result)).color }}
-              />
-              <span className={styles.resultProbText}>
-                {getProbabilidade(parseFloat(result)).text}
-              </span>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
-
-export default function CourseDetail() {
   return (
     <section className={styles.section}>
       <div className="container">
         {/* University Info Banner */}
         <div className={styles.banner}>
           <div className={styles.bannerLeft}>
-            <p className={styles.university}>Universidade de Lisboa</p>
-            <h2 className={styles.courseName}>Medicina</h2>
+            <p className={styles.university}>{displayInstitution}</p>
+            <h2 className={styles.courseName}>{displayCourseName}</h2>
             <div className={styles.tags}>
-              <span>Lisboa</span>
-              <span>Pública</span>
-              <span>240 Vagas</span>
+              <span>{codigoInstituicao}</span>
+              <span>{codigoCurso}</span>
+              {course?.formula_nota && <span>Com Fórmula</span>}
             </div>
           </div>
           <div className={styles.bannerRight}>
             <p className={styles.avgLabel}>Média Prevista 2026</p>
-            <p className={styles.avgValue}>18.8 - 19.2</p>
+            <p className={styles.avgValue}>{minPred} - {maxPred}</p>
             <p className={styles.avgConf}>Intervalo de confiança 95%</p>
           </div>
         </div>
@@ -183,162 +120,67 @@ export default function CourseDetail() {
         <div className={styles.grid}>
           {/* Left column */}
           <div className={styles.leftCol}>
-            {/* Grade Evolution Chart */}
+            {/* Phase Evolution Chart - New */}
             <div className={styles.card}>
-              <div className={styles.cardHeader}>
-                <div className={`icon-box icon-box--primary`}>
-                  <ChartLineIcon />
-                </div>
-                <h3 className={styles.cardTitle}>Evolução das Médias de Acesso</h3>
-              </div>
-              <div className={styles.chartWrap}>
-                <ResponsiveContainer width="100%" height={320}>
-                  <AreaChart data={gradeEvolution} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                    <XAxis dataKey="year" tick={{ fontSize: 13, fill: '#4b5563' }} />
-                    <YAxis domain={[17, 20]} tick={{ fontSize: 13, fill: '#4b5563' }} allowDataOverflow />
-                    <Tooltip content={<CustomTooltip />} />
-                    <Area
-                      type="monotone"
-                      dataKey="ciHigh"
-                      stackId="ci"
-                      stroke="none"
-                      fill="rgba(16, 185, 129, 0.15)"
-                      connectNulls={false}
-                    />
-                    <Area
-                      type="monotone"
-                      dataKey="ciLow"
-                      stackId="ci"
-                      stroke="none"
-                      fill="#f8fafc"
-                      connectNulls={false}
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="real"
-                      stroke="#2563eb"
-                      strokeWidth={3}
-                      dot={{ r: 5, fill: '#2563eb' }}
-                      connectNulls={false}
-                      name="Média Real"
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="predicted"
-                      stroke="#10b981"
-                      strokeWidth={3}
-                      strokeDasharray="6 4"
-                      dot={{ r: 5, fill: '#10b981' }}
-                      connectNulls={false}
-                      name="Previsão"
-                    />
-                  </AreaChart>
-                </ResponsiveContainer>
-              </div>
-              <div className={styles.legend}>
-                <span className={styles.legendItem}>
-                  <span className={styles.legendDot} style={{ background: '#2563eb' }} />
-                  Média Real
-                </span>
-                <span className={styles.legendItem}>
-                  <span className={styles.legendDot} style={{ background: '#10b981' }} />
-                  Previsão 2024
-                </span>
-                <span className={styles.legendItem}>
-                  <span className={styles.legendDot} style={{ background: 'rgba(16, 185, 129, 0.30)' }} />
-                  Intervalo de Confiança
-                </span>
-              </div>
-              <div className={styles.trendBox}>
-                <TrendUpIcon className={styles.trendIcon} />
-                <div>
-                  <p className={styles.trendTitle}>Tendência: Estável</p>
-                  <p className={styles.trendDesc}>
-                    A média de acesso mantém-se estável nos últimos 3 anos, com ligeira subida prevista.
-                  </p>
-                </div>
-              </div>
+              <CoursePhaseEvolutionChart
+                data={data}
+                predictions={predictions}
+                courseName={displayCourseName}
+                minYear={yearRange.min}
+                maxYear={yearRange.max}
+                isLoading={loading}
+                error={error}
+              />
             </div>
 
-            {/* Exam Scores Chart */}
-            <div className={styles.card}>
-              <div className={styles.cardHeader}>
-                <div className={`icon-box icon-box--primary`}>
-                  <DatabaseIcon />
+            {/* Exam Evolution Chart */}
+            {examData && examData.length > 0 && (
+              <div className={styles.card}>
+                <div className={styles.cardHeader}>
+                  <div className={`icon-box icon-box--primary`}>
+                    <ChartLineIcon />
+                  </div>
+                  <h3 className={styles.cardTitle}>Evolução das Notas dos Exames</h3>
                 </div>
-                <h3 className={styles.cardTitle}>Evolução das Notas dos Exames</h3>
+                <ExamEvolutionChart
+                  data={examData}
+                  isLoading={examLoading}
+                  error={examError}
+                  examNames={['Biologia', 'Fisica']}
+                />
               </div>
-              <div className={styles.examSubjects}>
-                <div className={styles.examSubject}>
-                  <span className={styles.examName}>Biologia e Geologia</span>
-                  <span className={styles.examWeight}>Peso: 35%</span>
-                </div>
-                <div className={styles.examSubject}>
-                  <span className={styles.examName}>Física e Química A</span>
-                  <span className={styles.examWeight}>Peso: 35%</span>
-                </div>
-              </div>
-              <div className={styles.chartWrap}>
-                <ResponsiveContainer width="100%" height={240}>
-                  <BarChart data={examEvolution} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                    <XAxis dataKey="year" tick={{ fontSize: 13, fill: '#4b5563' }} />
-                    <YAxis domain={[8, 16]} tick={{ fontSize: 13, fill: '#4b5563' }} />
-                    <Tooltip content={<CustomTooltip />} />
-                    <Bar dataKey="biologia" name="Biologia e Geologia" fill="#2563eb" radius={[4, 4, 0, 0]} />
-                    <Bar dataKey="fisica" name="Física e Química A" fill="#10b981" radius={[4, 4, 0, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-              <div className={styles.examTrends}>
-                <div className={styles.examTrendGreen}>
-                  <ArrowUpIcon className={styles.examTrendIcon} />
-                  <span className={styles.examTrendBold}>Subida de 0.8 valores</span>
-                  <span className={styles.examTrendLight}>em relação ao ano anterior</span>
-                </div>
-                <div className={styles.examTrendYellow}>
-                  <span className={styles.examTrendLine}>—</span>
-                  <span className={styles.examTrendBold}>Estável</span>
-                  <span className={styles.examTrendLight}>sem variação significativa</span>
-                </div>
-              </div>
-            </div>
+            )}
+
           </div>
 
           {/* Right column */}
           <div className={styles.rightCol}>
-            {/* Required Exams */}
+            {/* Required Exams - Now using real data */}
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <div className={`icon-box icon-box--primary`}>
                   <ChecklistIcon />
                 </div>
-                <h3 className={styles.cardTitle}>Exames Obrigatórios</h3>
+                <h3 className={styles.cardTitle}>Provas de Ingresso</h3>
               </div>
-              <div className={styles.examsList}>
-                {exams.map((exam, i) => (
-                  <div key={i} className={styles.examCard}>
-                    <div className={styles.examCardTop}>
-                      <span className={styles.examCardName}>{exam.name}</span>
-                      <span className={styles.examCardWeight}>{exam.weight}</span>
-                    </div>
-                    <p className={styles.examCardMin}>{exam.minScore}</p>
-                    {exam.optional && (
-                      <div className={styles.optionalCard}>
-                        <div className={styles.examCardTop}>
-                          <span className={styles.examCardName}>{exam.optional.name}</span>
-                          <span className={styles.optionalLabel}>{exam.optional.label}</span>
-                        </div>
-                        <p className={styles.examCardMin}>{exam.optional.desc}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <AdmissionCalculator 
+                course={course}
+                isLoading={courseLoading}
+                error={courseError}
+              />
 
-              {/* Simulator */}
-              <Simulator />
+              {/* Application Simulator */}
+              <div className={styles.simulatorSection}>
+                <div className={styles.simulatorCardHeader}>
+                  <CalculatorIcon className={styles.simulatorHeaderIcon} />
+                  <h3 className={styles.simulatorTitle}>Simulador de Candidatura</h3>
+                </div>
+                <ApplicationSimulator 
+                  data={data}
+                  predictions={predictions}
+                  courseName={displayCourseName}
+                />
+              </div>
             </div>
           </div>
         </div>

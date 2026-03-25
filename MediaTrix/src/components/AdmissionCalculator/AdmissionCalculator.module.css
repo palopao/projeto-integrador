@@ -1,0 +1,247 @@
+.container {
+  width: 100%;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.formulaBox {
+  padding: 12px;
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.formulaLabel {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e40af;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.formulaText {
+  margin: 0;
+  font-size: 13px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.examsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.examBlock {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.examBlock:hover {
+  border-color: #d1d5db;
+  background: #ffffff;
+}
+
+.alternativeLabel {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.examOption {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.examOption:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.examOption.selected {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.radioInput {
+  margin: 0;
+  margin-right: 12px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: #3b82f6;
+}
+
+.optionContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.examCode {
+  display: inline-block;
+  min-width: 40px;
+  padding: 4px 8px;
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.examName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.requiredMark {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  background: #dbeafe;
+  color: #0c4a6e;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.summarySection {
+  padding: 16px;
+  background: #f0fdf4;
+  border-left: 4px solid #10b981;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.summaryTitle {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #065f46;
+}
+
+.summaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #d1e7db;
+}
+
+.summaryCode {
+  display: inline-block;
+  min-width: 40px;
+  padding: 4px 8px;
+  background: #ccfbf1;
+  color: #0d3f2d;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.summaryName {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: #065f46;
+}
+
+.summaryBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #fcd34d;
+  color: #78350f;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.infoBox {
+  padding: 12px;
+  background: #f3f4f6;
+  border-left: 4px solid #6b7280;
+  border-radius: 4px;
+}
+
+.infoTitle {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+}
+
+.infoText {
+  margin: 0;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.loading,
+.error,
+.noData,
+.noExams {
+  text-align: center;
+  padding: 24px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.error {
+  color: #dc2626;
+}

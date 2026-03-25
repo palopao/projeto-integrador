@@ -1,0 +1,160 @@
+.container {
+  width: 100%;
+}
+
+.loading,
+.error,
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  font-size: 16px;
+  color: #6b7280;
+  text-align: center;
+  min-height: 300px;
+}
+
+.error {
+  color: #ef4444;
+  background: #fef2f2;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+}
+
+/* Chart wrapper */
+.chartWrap {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.statCard:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.statColorBox {
+  width: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  border-left: 4px solid;
+}
+
+.statContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.statTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 6px;
+  line-height: 1;
+}
+
+.statMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.statMeta span {
+  display: inline;
+}
+
+.statTrend {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 6px 0 0;
+}
+
+/* Tooltip */
+.tooltip {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tooltipLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 6px;
+}
+
+.tooltipValue {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 4px 0;
+}
+
+/* Info box */
+.infoBox {
+  padding: 16px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-left: 4px solid #0284c7;
+  border-radius: 6px;
+  border: 1px solid #93c5fd;
+}
+
+.infoTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0369a1;
+  margin: 0 0 6px;
+}
+
+.infoText {
+  font-size: 13px;
+  color: #0369a1;
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard {
+    padding: 12px;
+  }
+
+  .statValue {
+    font-size: 18px;
+  }
+}

@@ -394,6 +394,24 @@
   transform: translateY(-1px);
 }
 
+/* Simulator Section Wrapper */
+.simulatorSection {
+  padding: 24px;
+  background: #f9fafb;
+  border-radius: var(--radius-lg);
+  border: 1px solid #e5e7eb;
+  margin-top: 24px;
+}
+
+.simulatorCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Reuse simulatorHeaderIcon from above */
+
 .resultBox {
   background: rgba(255, 255, 255, 0.20);
   border-radius: var(--radius-sm);

@@ -1,0 +1,183 @@
+.container {
+  width: 100%;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.chartWrapper {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 24px;
+}
+
+.tooltip {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltipLabel {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.tooltipValue {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.statBox {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  margin: 8px 0 0 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.predictionsSection {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.predictionsTitle {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.predictionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.predictionCard {
+  padding: 16px;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.predictionCard:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.predictionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.predictionLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.predictionYear {
+  font-size: 11px;
+  font-weight: 500;
+  color: #9ca3af;
+  background: #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.predictionValue {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 12px 0;
+  line-height: 1;
+}
+
+.confidenceInterval {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid #d1d5db;
+}
+
+.ciLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.ciValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.loading,
+.error,
+.noData {
+  padding: 32px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.noData {
+  color: #9ca3af;
+}
