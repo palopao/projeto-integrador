@@ -42,7 +42,7 @@ export default function SearchSection({ onCourseSelect, selectedCourse = null })
         .toString()
         .toLowerCase()
         .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Remove acentos
-        .replace(/[-(),./]/g, ' ') // Substitui pontuação por espaços
+        .replace(/[-(),./–—]/g, ' ') // Substitui pontuação e hífens por espaços
         .split(/\s+/)
         .filter(word => word && !stopWords.has(word)) // Filtra palavras vazias e stop words
         .sort() // Ordena para tornar a chave canónica
@@ -51,12 +51,17 @@ export default function SearchSection({ onCourseSelect, selectedCourse = null })
     
     rawResults.forEach(course => {
       const key = `${normalize(course.curso)}|${normalize(course.instituicao)}`
+      const codeInfo = { 
+        inst: course.codigo_instituicao, 
+        curso: course.codigo_curso,
+        grau: course.grau
+      }
       if (!groups.has(key)) {
-        groups.set(key, { ...course, codes: [{ inst: course.codigo_instituicao, curso: course.codigo_curso }] })
+        groups.set(key, { ...course, codes: [codeInfo] })
       } else {
         const entry = groups.get(key)
         if (!entry.codes.some(c => c.inst === course.codigo_instituicao && c.curso === course.codigo_curso)) {
-          entry.codes.push({ inst: course.codigo_instituicao, curso: course.codigo_curso })
+          entry.codes.push(codeInfo)
         }
       }
     })

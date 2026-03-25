@@ -16,6 +16,19 @@ import { useExamEvolution } from '../../hooks/useExamEvolution'
 import styles from './CourseDetail.module.css'
 
 export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = '9219', nomeDefault = 'Psicologia - Universidade dos Açores - Faculdade de Ciências Sociais e Humanas', codes }) {
+  const degreeChangeInfo = useMemo(() => {
+    if (!codes || codes.length < 2) return null
+
+    const graus = new Set(codes.map(c => c.grau))
+    // Deteta a transição específica de Mestrado Integrado para Licenciatura
+    if (graus.has('MI') && graus.has('L1')) {
+      return {
+        year: 2021, // O ano da transição do Processo de Bolonha
+      }
+    }
+    return null
+  }, [codes])
+
   // Gerir múltiplos códigos (histórico vs atual)
   const effectiveCodes = codes && codes.length > 0 
     ? codes 
@@ -97,6 +110,13 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
 
   return (
     <section className={styles.section}>
+      {degreeChangeInfo && (
+        <div className={styles.degreeNotice}>
+          <div className="container">
+            <p>ℹ️ <b>Aviso:</b> O grau deste curso mudou de Mestrado Integrado para Licenciatura em {degreeChangeInfo.year}. Os dados apresentados foram agregados para refletir a continuidade histórica do curso.</p>
+          </div>
+        </div>
+      )}
       <div className="container">
         {/* University Info Banner */}
         <div className={styles.banner}>
