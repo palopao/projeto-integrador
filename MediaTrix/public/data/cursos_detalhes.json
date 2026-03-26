@@ -1,23 +1,23 @@
 [
   {
-    "codigo_instituicao": "9059",
-    "codigo_curso": "2270",
+    "codigo_instituicao": "2270",
+    "codigo_curso": "9059",
     "curso": "Universidade Católica Portuguesa - Faculdade de Ciências Económicas e Empresariais",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9059&code=2270",
     "provas_ingresso": [],
     "formula_nota": null
   },
   {
-    "codigo_instituicao": "L149",
-    "codigo_curso": "2270",
+    "codigo_instituicao": "2270",
+    "codigo_curso": "L149",
     "curso": "Universidade Católica Portuguesa - Faculdade de Ciências Económicas e Empresariais",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L149&code=2270",
     "provas_ingresso": [],
     "formula_nota": null
   },
   {
-    "codigo_instituicao": "9002",
-    "codigo_curso": "0300",
+    "codigo_instituicao": "0300",
+    "codigo_curso": "9002",
     "curso": "Universidade de Aveiro",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9002&code=0300",
     "provas_ingresso": [
@@ -37,8 +37,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9002",
-    "codigo_curso": "0502",
+    "codigo_instituicao": "0502",
+    "codigo_curso": "9002",
     "curso": "Universidade de Coimbra - Faculdade de Direito",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9002&code=0502",
     "provas_ingresso": [
@@ -58,8 +58,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9002",
-    "codigo_curso": "1516",
+    "codigo_instituicao": "1516",
+    "codigo_curso": "9002",
     "curso": "Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9002&code=1516",
     "provas_ingresso": [
@@ -82,8 +82,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9002",
-    "codigo_curso": "1000",
+    "codigo_instituicao": "1000",
+    "codigo_curso": "9002",
     "curso": "Universidade do Minho",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9002&code=1000",
     "provas_ingresso": [
@@ -103,8 +103,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9002",
-    "codigo_curso": "3054",
+    "codigo_instituicao": "3054",
+    "codigo_curso": "9002",
     "curso": "Instituto Politécnico de Castelo Branco - Escola Superior de Gestão de Idanha-a-Nova",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9002&code=3054",
     "provas_ingresso": [
@@ -133,8 +133,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "9002",
-    "codigo_curso": "3102",
+    "codigo_instituicao": "3102",
+    "codigo_curso": "9002",
     "curso": "Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9002&code=3102",
     "provas_ingresso": [
@@ -154,8 +154,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 30% | Percentagem de vagas: 5%"
   },
   {
-    "codigo_instituicao": "8102",
-    "codigo_curso": "1516",
+    "codigo_instituicao": "1516",
+    "codigo_curso": "8102",
     "curso": "Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8102&code=1516",
     "provas_ingresso": [
@@ -178,8 +178,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8363",
-    "codigo_curso": "1516",
+    "codigo_instituicao": "1516",
+    "codigo_curso": "8363",
     "curso": "Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8363&code=1516",
     "provas_ingresso": [
@@ -202,8 +202,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9670",
-    "codigo_curso": "3124",
+    "codigo_instituicao": "3124",
+    "codigo_curso": "9670",
     "curso": "Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9670&code=3124",
     "provas_ingresso": [
@@ -223,8 +223,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50% | Percentagem de vagas: 10%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "0203",
+    "codigo_instituicao": "0203",
+    "codigo_curso": "9003",
     "curso": "Universidade do Algarve - Faculdade de Ciências e Tecnologia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=0203",
     "provas_ingresso": [
@@ -251,8 +251,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "0602",
+    "codigo_instituicao": "0602",
+    "codigo_curso": "9003",
     "curso": "Universidade de Évora - Escola de Ciências e Tecnologia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=0602",
     "provas_ingresso": [
@@ -273,8 +273,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "1201",
+    "codigo_instituicao": "1201",
+    "codigo_curso": "9003",
     "curso": "Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Agrárias e Veterinárias",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=1201",
     "provas_ingresso": [
@@ -301,8 +301,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "3021",
+    "codigo_instituicao": "3021",
+    "codigo_curso": "9003",
     "curso": "Instituto Politécnico de Beja - Escola Superior Agrária",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=3021",
     "provas_ingresso": [
@@ -329,8 +329,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "3051",
+    "codigo_instituicao": "3051",
+    "codigo_curso": "9003",
     "curso": "Instituto Politécnico de Castelo Branco - Escola Superior Agrária de Castelo Branco",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=3051",
     "provas_ingresso": [
@@ -351,8 +351,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "3061",
+    "codigo_instituicao": "3061",
+    "codigo_curso": "9003",
     "curso": "Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=3061",
     "provas_ingresso": [
@@ -370,8 +370,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 20%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "3125",
+    "codigo_instituicao": "3125",
+    "codigo_curso": "9003",
     "curso": "Instituto Politécnico de Portalegre - Escola Superior de Biociências de Elvas",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=3125",
     "provas_ingresso": [
@@ -389,8 +389,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 30% | Percentagem de vagas: 20%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "3141",
+    "codigo_instituicao": "3141",
+    "codigo_curso": "9003",
     "curso": "Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=3141",
     "provas_ingresso": [
@@ -414,8 +414,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 20% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "9003",
-    "codigo_curso": "3161",
+    "codigo_instituicao": "3161",
+    "codigo_curso": "9003",
     "curso": "Instituto Politécnico de Viana do Castelo - Escola Superior Agrária",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9003&code=3161",
     "provas_ingresso": [
@@ -430,8 +430,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "8419",
-    "codigo_curso": "3141",
+    "codigo_instituicao": "3141",
+    "codigo_curso": "8419",
     "curso": "Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8419&code=3141",
     "provas_ingresso": [
@@ -455,8 +455,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 20% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "L347",
-    "codigo_curso": "0903",
+    "codigo_instituicao": "0903",
+    "codigo_curso": "L347",
     "curso": "Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L347&code=0903",
     "provas_ingresso": [
@@ -474,8 +474,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "L220",
-    "codigo_curso": "4350",
+    "codigo_instituicao": "4350",
+    "codigo_curso": "L220",
     "curso": "Universidade Europeia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L220&code=4350",
     "provas_ingresso": [
@@ -504,8 +504,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8158",
-    "codigo_curso": "2910",
+    "codigo_instituicao": "2910",
+    "codigo_curso": "8158",
     "curso": "Centro Universitário Lusófona - Lisboa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8158&code=2910",
     "provas_ingresso": [
@@ -534,8 +534,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "L351",
-    "codigo_curso": "4350",
+    "codigo_instituicao": "4350",
+    "codigo_curso": "L351",
     "curso": "Universidade Europeia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L351&code=4350",
     "provas_ingresso": [
@@ -564,8 +564,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9933",
-    "codigo_curso": "3042",
+    "codigo_instituicao": "3042",
+    "codigo_curso": "9933",
     "curso": "Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9933&code=3042",
     "provas_ingresso": [
@@ -594,8 +594,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50% | Percentagem de vagas: 20%"
   },
   {
-    "codigo_instituicao": "9005",
-    "codigo_curso": "1202",
+    "codigo_instituicao": "1202",
+    "codigo_curso": "9005",
     "curso": "Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9005&code=1202",
     "provas_ingresso": [
@@ -624,8 +624,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9005",
-    "codigo_curso": "3091",
+    "codigo_instituicao": "3091",
+    "codigo_curso": "9005",
     "curso": "Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9005&code=3091",
     "provas_ingresso": [
@@ -645,8 +645,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "9005",
-    "codigo_curso": "3112",
+    "codigo_instituicao": "3112",
+    "codigo_curso": "9005",
     "curso": "Instituto Politécnico de Lisboa - Escola Superior de Educação",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9005&code=3112",
     "provas_ingresso": [
@@ -666,8 +666,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9005",
-    "codigo_curso": "3151",
+    "codigo_instituicao": "3151",
+    "codigo_curso": "9005",
     "curso": "Instituto Politécnico de Setúbal - Escola Superior de Educação",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9005&code=3151",
     "provas_ingresso": [
@@ -687,8 +687,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "9005",
-    "codigo_curso": "4270",
+    "codigo_instituicao": "4270",
+    "codigo_curso": "9005",
     "curso": "ISCE - Instituto Superior de Lisboa e Vale do Tejo",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9005&code=4270",
     "provas_ingresso": [
@@ -704,8 +704,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9675",
-    "codigo_curso": "3062",
+    "codigo_instituicao": "3062",
+    "codigo_curso": "9675",
     "curso": "Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9675&code=3062",
     "provas_ingresso": [
@@ -734,8 +734,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 40% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "8093",
-    "codigo_curso": "3062",
+    "codigo_instituicao": "3062",
+    "codigo_curso": "8093",
     "curso": "Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8093&code=3062",
     "provas_ingresso": [
@@ -764,8 +764,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 40% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "9848",
-    "codigo_curso": "3105",
+    "codigo_instituicao": "3105",
+    "codigo_curso": "9848",
     "curso": "Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9848&code=3105",
     "provas_ingresso": [
@@ -785,8 +785,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 40% | Percentagem de vagas: 20%"
   },
   {
-    "codigo_instituicao": "9448",
-    "codigo_curso": "6800",
+    "codigo_instituicao": "6800",
+    "codigo_curso": "9448",
     "curso": "ISCTE - Instituto Universitário de Lisboa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9448&code=6800",
     "provas_ingresso": [
@@ -815,8 +815,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9448",
-    "codigo_curso": "0501",
+    "codigo_instituicao": "0501",
+    "codigo_curso": "9448",
     "curso": "Universidade de Coimbra - Faculdade de Ciências e Tecnologia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9448&code=0501",
     "provas_ingresso": [
@@ -845,8 +845,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9448",
-    "codigo_curso": "1516",
+    "codigo_instituicao": "1516",
+    "codigo_curso": "9448",
     "curso": "Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9448&code=1516",
     "provas_ingresso": [
@@ -869,8 +869,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9448",
-    "codigo_curso": "0902",
+    "codigo_instituicao": "0902",
+    "codigo_curso": "9448",
     "curso": "Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9448&code=0902",
     "provas_ingresso": [
@@ -885,8 +885,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9006",
-    "codigo_curso": "0505",
+    "codigo_instituicao": "0505",
+    "codigo_curso": "9006",
     "curso": "Universidade de Coimbra - Faculdade de Letras",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9006&code=0505",
     "provas_ingresso": [
@@ -915,8 +915,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9006",
-    "codigo_curso": "1506",
+    "codigo_instituicao": "1506",
+    "codigo_curso": "9006",
     "curso": "Universidade de Lisboa - Faculdade de Letras",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9006&code=1506",
     "provas_ingresso": [
@@ -936,8 +936,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9006",
-    "codigo_curso": "1000",
+    "codigo_instituicao": "1000",
+    "codigo_curso": "9006",
     "curso": "Universidade do Minho",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9006&code=1000",
     "provas_ingresso": [
@@ -964,8 +964,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9006",
-    "codigo_curso": "0902",
+    "codigo_instituicao": "0902",
+    "codigo_curso": "9006",
     "curso": "Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9006&code=0902",
     "provas_ingresso": [
@@ -982,8 +982,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9006",
-    "codigo_curso": "1107",
+    "codigo_instituicao": "1107",
+    "codigo_curso": "9006",
     "curso": "Universidade do Porto - Faculdade de Letras",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9006&code=1107",
     "provas_ingresso": [
@@ -994,8 +994,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "6800",
+    "codigo_instituicao": "6800",
+    "codigo_curso": "9257",
     "curso": "ISCTE - Instituto Universitário de Lisboa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=6800",
     "provas_ingresso": [
@@ -1024,8 +1024,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "0400",
+    "codigo_instituicao": "0400",
+    "codigo_curso": "9257",
     "curso": "Universidade da Beira Interior",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=0400",
     "provas_ingresso": [
@@ -1045,8 +1045,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "0501",
+    "codigo_instituicao": "0501",
+    "codigo_curso": "9257",
     "curso": "Universidade de Coimbra - Faculdade de Ciências e Tecnologia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=0501",
     "provas_ingresso": [
@@ -1066,8 +1066,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "0603",
+    "codigo_instituicao": "0603",
+    "codigo_curso": "9257",
     "curso": "Universidade de Évora - Escola de Artes",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=0603",
     "provas_ingresso": [
@@ -1096,8 +1096,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "1501",
+    "codigo_instituicao": "1501",
+    "codigo_curso": "9257",
     "curso": "Universidade de Lisboa - Faculdade de Arquitetura",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=1501",
     "provas_ingresso": [
@@ -1120,8 +1120,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "1518",
+    "codigo_instituicao": "1518",
+    "codigo_curso": "9257",
     "curso": "Universidade de Lisboa - Instituto Superior Técnico",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=1518",
     "provas_ingresso": [
@@ -1134,8 +1134,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "1000",
+    "codigo_instituicao": "1000",
+    "codigo_curso": "9257",
     "curso": "Universidade do Minho",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=1000",
     "provas_ingresso": [
@@ -1155,8 +1155,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "1102",
+    "codigo_instituicao": "1102",
+    "codigo_curso": "9257",
     "curso": "Universidade do Porto - Faculdade de Arquitetura",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=1102",
     "provas_ingresso": [
@@ -1178,8 +1178,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "2910",
+    "codigo_instituicao": "2910",
+    "codigo_curso": "9257",
     "curso": "Centro Universitário Lusófona - Lisboa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=2910",
     "provas_ingresso": [
@@ -1208,8 +1208,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "2920",
+    "codigo_instituicao": "2920",
+    "codigo_curso": "9257",
     "curso": "Centro Universitário Lusófona - Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=2920",
     "provas_ingresso": [
@@ -1238,8 +1238,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "4010",
+    "codigo_instituicao": "4010",
+    "codigo_curso": "9257",
     "curso": "Escola Superior Artística do Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=4010",
     "provas_ingresso": [
@@ -1268,8 +1268,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "4375",
+    "codigo_instituicao": "4375",
+    "codigo_curso": "9257",
     "curso": "Instituto Superior Manuel Teixeira Gomes",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=4375",
     "provas_ingresso": [
@@ -1298,8 +1298,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "2100",
+    "codigo_instituicao": "2100",
+    "codigo_curso": "9257",
     "curso": "Universidade Autónoma de Lisboa Luís de Camões",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=2100",
     "provas_ingresso": [
@@ -1328,8 +1328,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "2750",
+    "codigo_instituicao": "2750",
+    "codigo_curso": "9257",
     "curso": "Universidade Fernando Pessoa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=2750",
     "provas_ingresso": [
@@ -1358,8 +1358,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "2410",
+    "codigo_instituicao": "2410",
+    "codigo_curso": "9257",
     "curso": "Universidade Lusíada - Centro Universitário Lusíada - Lisboa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=2410",
     "provas_ingresso": [
@@ -1388,8 +1388,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "2440",
+    "codigo_instituicao": "2440",
+    "codigo_curso": "9257",
     "curso": "Universidade Lusíada - Centro Universitário Lusíada - Norte - Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=2440",
     "provas_ingresso": [
@@ -1418,8 +1418,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9257",
-    "codigo_curso": "2450",
+    "codigo_instituicao": "2450",
+    "codigo_curso": "9257",
     "curso": "Universidade Lusíada - Centro Universitário Lusíada - Norte - Vila Nova de Famalicão",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9257&code=2450",
     "provas_ingresso": [
@@ -1448,8 +1448,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8258",
-    "codigo_curso": "0203",
+    "codigo_instituicao": "0203",
+    "codigo_curso": "8258",
     "curso": "Universidade do Algarve - Faculdade de Ciências e Tecnologia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8258&code=0203",
     "provas_ingresso": [
@@ -1475,8 +1475,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8258",
-    "codigo_curso": "1515",
+    "codigo_instituicao": "1515",
+    "codigo_curso": "8258",
     "curso": "Universidade de Lisboa - Instituto Superior de Agronomia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8258&code=1515",
     "provas_ingresso": [
@@ -1503,8 +1503,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8258",
-    "codigo_curso": "1103",
+    "codigo_instituicao": "1103",
+    "codigo_curso": "8258",
     "curso": "Universidade do Porto - Faculdade de Ciências",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8258&code=1103",
     "provas_ingresso": [
@@ -1529,8 +1529,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9507",
-    "codigo_curso": "2500",
+    "codigo_instituicao": "2500",
+    "codigo_curso": "9507",
     "curso": "Universidade Portucalense Infante D. Henrique",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9507&code=2500",
     "provas_ingresso": [
@@ -1559,16 +1559,16 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9551",
-    "codigo_curso": "2265",
+    "codigo_instituicao": "2265",
+    "codigo_curso": "9551",
     "curso": "Universidade Católica Portuguesa - Escola das Artes",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9551&code=2265",
     "provas_ingresso": [],
     "formula_nota": null
   },
   {
-    "codigo_instituicao": "9898",
-    "codigo_curso": "3042",
+    "codigo_instituicao": "3042",
+    "codigo_curso": "9898",
     "curso": "Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9898&code=3042",
     "provas_ingresso": [
@@ -1597,8 +1597,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50% | Percentagem de vagas: 20%"
   },
   {
-    "codigo_instituicao": "9898",
-    "codigo_curso": "3062",
+    "codigo_instituicao": "3062",
+    "codigo_curso": "9898",
     "curso": "Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9898&code=3062",
     "provas_ingresso": [
@@ -1618,8 +1618,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9904",
-    "codigo_curso": "1502",
+    "codigo_instituicao": "1502",
+    "codigo_curso": "9904",
     "curso": "Universidade de Lisboa - Faculdade de Belas-Artes",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9904&code=1502",
     "provas_ingresso": [
@@ -1629,8 +1629,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9904",
-    "codigo_curso": "4630",
+    "codigo_instituicao": "4630",
+    "codigo_curso": "9904",
     "curso": "Universidade da Maia",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9904&code=4630",
     "provas_ingresso": [
@@ -1659,8 +1659,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9904",
-    "codigo_curso": "4611",
+    "codigo_instituicao": "4611",
+    "codigo_curso": "9904",
     "curso": "Instituto Politécnico da Lusofonia - Escola Superior de Comunicação, Inovação e Artes",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9904&code=4611",
     "provas_ingresso": [
@@ -1689,8 +1689,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "L284",
-    "codigo_curso": "3162",
+    "codigo_instituicao": "3162",
+    "codigo_curso": "L284",
     "curso": "Instituto Politécnico de Viana do Castelo - Escola Superior de Educação",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L284&code=3162",
     "provas_ingresso": [
@@ -1719,8 +1719,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "L374",
-    "codigo_curso": "2410",
+    "codigo_instituicao": "2410",
+    "codigo_curso": "L374",
     "curso": "Universidade Lusíada - Centro Universitário Lusíada - Lisboa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L374&code=2410",
     "provas_ingresso": [
@@ -1749,8 +1749,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "L170",
-    "codigo_curso": "4069",
+    "codigo_instituicao": "4069",
+    "codigo_curso": "L170",
     "curso": "Escola Superior de Artes e Design",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L170&code=4069",
     "provas_ingresso": [
@@ -1779,8 +1779,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "L077",
-    "codigo_curso": "2920",
+    "codigo_instituicao": "2920",
+    "codigo_curso": "L077",
     "curso": "Centro Universitário Lusófona - Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L077&code=2920",
     "provas_ingresso": [
@@ -1809,8 +1809,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8413",
-    "codigo_curso": "1506",
+    "codigo_instituicao": "1506",
+    "codigo_curso": "8413",
     "curso": "Universidade de Lisboa - Faculdade de Letras",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8413&code=1506",
     "provas_ingresso": [
@@ -1830,8 +1830,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9681",
-    "codigo_curso": "3181",
+    "codigo_instituicao": "3181",
+    "codigo_curso": "9681",
     "curso": "Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9681&code=3181",
     "provas_ingresso": [
@@ -1860,8 +1860,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "9007",
-    "codigo_curso": "5402",
+    "codigo_instituicao": "5402",
+    "codigo_curso": "9007",
     "curso": "Universidade do Porto - Faculdade de Belas-Artes",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9007&code=5402",
     "provas_ingresso": [
@@ -1874,8 +1874,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9007",
-    "codigo_curso": "3103",
+    "codigo_instituicao": "3103",
+    "codigo_curso": "9007",
     "curso": "Instituto Politécnico de Leiria - Escola Superior de Artes e Design",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9007&code=3103",
     "provas_ingresso": [
@@ -1898,8 +1898,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 35% | Percentagem de vagas: 30%"
   },
   {
-    "codigo_instituicao": "9682",
-    "codigo_curso": "4010",
+    "codigo_instituicao": "4010",
+    "codigo_curso": "9682",
     "curso": "Escola Superior Artística do Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9682&code=4010",
     "provas_ingresso": [
@@ -1928,8 +1928,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9347",
-    "codigo_curso": "0603",
+    "codigo_instituicao": "0603",
+    "codigo_curso": "9347",
     "curso": "Universidade de Évora - Escola de Artes",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9347&code=0603",
     "provas_ingresso": [
@@ -1955,8 +1955,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9347",
-    "codigo_curso": "3181",
+    "codigo_instituicao": "3181",
+    "codigo_curso": "9347",
     "curso": "Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9347&code=3181",
     "provas_ingresso": [
@@ -1985,8 +1985,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "L122",
-    "codigo_curso": "3162",
+    "codigo_instituicao": "3162",
+    "codigo_curso": "L122",
     "curso": "Instituto Politécnico de Viana do Castelo - Escola Superior de Educação",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L122&code=3162",
     "provas_ingresso": [
@@ -2015,8 +2015,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "9817",
-    "codigo_curso": "0201",
+    "codigo_instituicao": "0201",
+    "codigo_curso": "9817",
     "curso": "Universidade do Algarve - Faculdade de Ciências Humanas e Sociais",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9817&code=0201",
     "provas_ingresso": [
@@ -2045,8 +2045,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9817",
-    "codigo_curso": "1306",
+    "codigo_instituicao": "1306",
+    "codigo_curso": "9817",
     "curso": "Universidade da Madeira - Faculdade de Artes e Humanidades",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9817&code=1306",
     "provas_ingresso": [
@@ -2066,8 +2066,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "9817",
-    "codigo_curso": "1000",
+    "codigo_instituicao": "1000",
+    "codigo_curso": "9817",
     "curso": "Universidade do Minho",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9817&code=1000",
     "provas_ingresso": [
@@ -2090,8 +2090,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9817",
-    "codigo_curso": "2910",
+    "codigo_instituicao": "2910",
+    "codigo_curso": "9817",
     "curso": "Centro Universitário Lusófona - Lisboa",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9817&code=2910",
     "provas_ingresso": [
@@ -2120,8 +2120,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9683",
-    "codigo_curso": "4010",
+    "codigo_instituicao": "4010",
+    "codigo_curso": "9683",
     "curso": "Escola Superior Artística do Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9683&code=4010",
     "provas_ingresso": [
@@ -2150,8 +2150,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8307",
-    "codigo_curso": "3112",
+    "codigo_instituicao": "3112",
+    "codigo_curso": "8307",
     "curso": "Instituto Politécnico de Lisboa - Escola Superior de Educação",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8307&code=3112",
     "provas_ingresso": [
@@ -2171,8 +2171,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8264",
-    "codigo_curso": "3131",
+    "codigo_instituicao": "3131",
+    "codigo_curso": "8264",
     "curso": "Instituto Politécnico do Porto - Escola Superior de Educação",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8264&code=3131",
     "provas_ingresso": [
@@ -2199,8 +2199,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "8276",
-    "codigo_curso": "3063",
+    "codigo_instituicao": "3063",
+    "codigo_curso": "8276",
     "curso": "Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8276&code=3063",
     "provas_ingresso": [
@@ -2229,8 +2229,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9009",
-    "codigo_curso": "3134",
+    "codigo_instituicao": "3134",
+    "codigo_curso": "9009",
     "curso": "Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9009&code=3134",
     "provas_ingresso": [
@@ -2259,8 +2259,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "9829",
-    "codigo_curso": "3134",
+    "codigo_instituicao": "3134",
+    "codigo_curso": "9829",
     "curso": "Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9829&code=3134",
     "provas_ingresso": [
@@ -2289,8 +2289,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "L008",
-    "codigo_curso": "3145",
+    "codigo_instituicao": "3145",
+    "codigo_curso": "L008",
     "curso": "Instituto Politécnico de Santarém - Escola Superior de Desporto de Rio Maior",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L008&code=3145",
     "provas_ingresso": [
@@ -2319,8 +2319,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 30% | Percentagem de vagas: 30% | 846 Complementar/Secundário de Dança (Decreto-Lei n.º 286/89) | F75 Secundário de Dança"
   },
   {
-    "codigo_instituicao": "L008",
-    "codigo_curso": "4271",
+    "codigo_instituicao": "4271",
+    "codigo_curso": "L008",
     "curso": "Instituto Superior de Ciências Educativas do Douro",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L008&code=4271",
     "provas_ingresso": [
@@ -2349,8 +2349,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "8141",
-    "codigo_curso": "7210",
+    "codigo_instituicao": "7210",
+    "codigo_curso": "8141",
     "curso": "Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8141&code=7210",
     "provas_ingresso": [
@@ -2371,8 +2371,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 20%"
   },
   {
-    "codigo_instituicao": "8141",
-    "codigo_curso": "7230",
+    "codigo_instituicao": "7230",
+    "codigo_curso": "8141",
     "curso": "Instituto Politécnico do Porto - Escola Superior de Saúde",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=8141&code=7230",
     "provas_ingresso": [
@@ -2390,8 +2390,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "9010",
-    "codigo_curso": "3022",
+    "codigo_instituicao": "3022",
+    "codigo_curso": "9010",
     "curso": "Instituto Politécnico de Beja - Escola Superior de Educação",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9010&code=3022",
     "provas_ingresso": [
@@ -2420,8 +2420,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50% | Percentagem de vagas: 50%"
   },
   {
-    "codigo_instituicao": "9010",
-    "codigo_curso": "3113",
+    "codigo_instituicao": "3113",
+    "codigo_curso": "9010",
     "curso": "Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=9010&code=3113",
     "provas_ingresso": [
@@ -2450,8 +2450,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "L332",
-    "codigo_curso": "4613",
+    "codigo_instituicao": "4613",
+    "codigo_curso": "L332",
     "curso": "Instituto Politécnico da Lusofonia - Escola Superior de Engenharia e Tecnologias",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L332&code=4613",
     "provas_ingresso": [
@@ -2477,8 +2477,8 @@
     "formula_nota": "Média do secundário: 50% | Provas de ingresso: 50%"
   },
   {
-    "codigo_instituicao": "L299",
-    "codigo_curso": "3014",
+    "codigo_instituicao": "3014",
+    "codigo_curso": "L299",
     "curso": "Universidade de Aveiro - Escola Superior de Design, Gestão e Tecnologia da Produção de Aveiro-Norte",
     "url": "https://www.dges.gov.pt/guias/detcursopi.asp?codc=L299&code=3014",
     "provas_ingresso": [

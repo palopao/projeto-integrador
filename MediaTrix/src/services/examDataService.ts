@@ -40,51 +40,30 @@ function parseExamOption(examStr: string): ExamOption {
  *     { code: "18", name: "Português" }
  *   ]
  */
-export function parseProvasIngresso(provas: string[]): ExamPosition[] {
-  if (!provas || provas.length === 0) {
-    return [];
-  }
-
-  const result: ExamPosition[] = [];
-  let currentGroup: ExamOption[] = [];
+export function parseProvasIngresso(provas: string[]): any[] {
+  if (!provas || provas.length === 0) return [];
+  
+  const result = [];
+  let currentSet = [];
 
   for (const prova of provas) {
-    if (prova === 'ou') {
-      // Marcador de alternativa, continua acumulando no grupo
+    if (prova.toLowerCase() === 'ou') {
+      if (currentSet.length > 0) {
+        result.push(currentSet);
+        currentSet = [];
+      }
       continue;
     }
+    
+    if (prova.toLowerCase() === 'e') continue; // Ignora o "e", apenas junta no mesmo grupo
 
     if (isExamOption(prova)) {
-      const option = parseExamOption(prova);
-      currentGroup.push(option);
-
-      // Verifica se o próximo item é 'ou'
-      const idx = provas.indexOf(prova);
-      const nextItem = provas[idx + 1];
-
-      if (nextItem !== 'ou') {
-        // Fim do grupo de alternativas
-        if (currentGroup.length > 1) {
-          result.push({
-            options: currentGroup,
-          } as ExamAlternatives);
-        } else if (currentGroup.length === 1) {
-          result.push(currentGroup[0]);
-        }
-        currentGroup = [];
-      }
+      currentSet.push(parseExamOption(prova));
     }
   }
-
-  // Adiciona qualquer grupo restante
-  if (currentGroup.length > 0) {
-    if (currentGroup.length > 1) {
-      result.push({
-        options: currentGroup,
-      } as ExamAlternatives);
-    } else {
-      result.push(currentGroup[0]);
-    }
+  
+  if (currentSet.length > 0) {
+    result.push(currentSet);
   }
 
   return result;
