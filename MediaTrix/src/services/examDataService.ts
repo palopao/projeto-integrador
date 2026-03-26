@@ -5,6 +5,7 @@ import type {
   ExamOption,
   ExamAlternatives,
 } from '../types/exams';
+import { normalize } from '../utils/normalize';
 
 /**
  * Serviço para processar e carregar dados de exames
@@ -207,27 +208,35 @@ export interface PhaseEvolutionData {
  */
 export function aggregateCoursePhaseEvolution(
   codigoInstituicao: string,
-  codigoCurso: string,
-  dataByYear: Map<number, CourseYearData[]>
+  codigoCurso: string, // Changed parameter name and type for precise matching
+  dataByYear: Map<number, CourseYearData[]>,
+  displayCourseName?: string // Optional, for fallback or logging
 ): PhaseEvolutionData[] {
-  const years = Array.from(dataByYear.keys()).sort((a, b) => a - b);
-  
+  const years = Array.from(dataByYear.keys()).sort((a, b) => a - b)
+
   return years.map((year) => {
-    const courseData = dataByYear
-      .get(year)
-      ?.find(
-        (c) =>
-          c.codigo_instituicao === codigoInstituicao &&
-          c.codigo_curso === codigoCurso
-      );
+    const courses = dataByYear.get(year) || []
+
+    // Prioritize matching by codigoInstituicao and codigoCurso
+    let courseData = courses.find((c) =>
+      c.codigo_instituicao === codigoInstituicao && c.codigo_curso === codigoCurso
+    )
+
+    // Fallback to matching by displayCourseName if provided and primary match fails
+    if (!courseData && displayCourseName) {
+      const normalizedDisplayCourseName = normalize(displayCourseName)
+      courseData = courses.find((c) =>
+        c.codigo_instituicao === codigoInstituicao && normalize(c.curso).includes(normalizedDisplayCourseName)
+      )
+    }
 
     return {
       year,
-      fase_1: courseData?.fases.fase_1?.nota ?? null,
-      fase_2: courseData?.fases.fase_2?.nota ?? null,
-      fase_3: courseData?.fases.fase_3?.nota ?? null,
-    };
-  });
+      fase_1: courseData?.fases?.fase_1?.nota ?? null,
+      fase_2: courseData?.fases?.fase_2?.nota ?? null,
+      fase_3: courseData?.fases?.fase_3?.nota ?? null,
+    }
+  })
 }
 
 /**

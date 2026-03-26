@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { loadMultipleYearsData, aggregateCoursePhaseEvolution, predictPhaseEvolution } from '../services/examDataService'
+
+const DEFAULT_YEARS = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
 
 /**
  * Hook para carregar e agregar dados de evolução de fases de um curso
- * Inclui previsões para os próximos anos
  */
 export function useCoursePhaseEvolution(
   codigoInstituicao,
   codigoCurso,
-  years = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  courseName,
+  years = DEFAULT_YEARS,
   dataPath = '/data'
 ) {
   const [data, setData] = useState(null)
@@ -17,38 +19,41 @@ export function useCoursePhaseEvolution(
   const [error, setError] = useState(null)
   const [yearRange, setYearRange] = useState({ min: null, max: null })
 
+  // Ref para armazenar os dados carregados apenas uma vez
+  const dataByYearRef = useRef(null)
+
   useEffect(() => {
-    if (!codigoInstituicao || !codigoCurso) {
+    if (!codigoInstituicao || !codigoCurso || !courseName) {
       setLoading(false)
       return
     }
 
+    let mounted = true
     setLoading(true)
     setError(null)
 
-    let mounted = true
-
     const loadDataAsync = async () => {
       try {
-        const validYears = years.filter((y) => y >= 2017 && y <= 2024)
-
-        if (validYears.length === 0) {
-          throw new Error('Nenhum ano válido fornecido')
+        // Carrega os dados apenas uma vez
+        if (!dataByYearRef.current) {
+          const validYears = years.filter(y => y >= 2017 && y <= 2024)
+          const loadedData = await loadMultipleYearsData(validYears, dataPath)
+          dataByYearRef.current = loadedData
         }
 
-        const dataByYear = await loadMultipleYearsData(validYears, dataPath)
-
-        if (dataByYear.size === 0) {
-          throw new Error('Nenhum dado disponível para os anos solicitados')
-        }
-
-        const evolutionData = aggregateCoursePhaseEvolution(
+        const newEvolutionData = aggregateCoursePhaseEvolution(
           codigoInstituicao,
           codigoCurso,
-          dataByYear
-        )
+          dataByYearRef.current,
+          courseName // Pass the displayCourseName as the fourth argument
+        );
 
-        const yearArrays = Array.from(dataByYear.keys()).sort((a, b) => a - b)
+        // Only update state if the data has actually changed (deep comparison)
+        if (JSON.stringify(newEvolutionData) !== JSON.stringify(data)) {
+            setData(newEvolutionData);
+        }
+
+        const yearArrays = Array.from(dataByYearRef.current.keys()).sort((a, b) => a - b);
 
         if (mounted) {
           setYearRange({
@@ -56,12 +61,12 @@ export function useCoursePhaseEvolution(
             max: yearArrays.length > 0 ? yearArrays[yearArrays.length - 1] : null,
           })
 
-          setData(evolutionData)
-
-          // Calcula previsões para os próximos 3 anos
           try {
-            const predictionData = predictPhaseEvolution(evolutionData, 3)
-            setPredictions(predictionData)
+            const newPredictionData = predictPhaseEvolution(newEvolutionData, 3);
+            // Only update state if the predictions have actually changed (deep comparison)
+            if (JSON.stringify(newPredictionData) !== JSON.stringify(predictions)) {
+                setPredictions(newPredictionData);
+            }
           } catch (predErr) {
             console.warn('Erro ao calcular previsões:', predErr)
             setPredictions(null)
@@ -75,9 +80,7 @@ export function useCoursePhaseEvolution(
           setPredictions(null)
         }
       } finally {
-        if (mounted) {
-          setLoading(false)
-        }
+        if (mounted) setLoading(false)
       }
     }
 
@@ -86,54 +89,44 @@ export function useCoursePhaseEvolution(
     return () => {
       mounted = false
     }
-  }, [codigoInstituicao, codigoCurso, years, dataPath])
+  }, [codigoInstituicao, codigoCurso, courseName, years, dataPath])
 
   const refetch = () => {
-    if (codigoInstituicao && codigoCurso) {
-      setLoading(true)
-      setError(null)
-
-      const validYears = years.filter((y) => y >= 2017 && y <= 2024)
-
-      loadMultipleYearsData(validYears, dataPath)
-        .then((dataByYear) => {
-          if (dataByYear.size === 0) {
-            throw new Error('Nenhum dado disponível para os anos solicitados')
-          }
-
-          const evolutionData = aggregateCoursePhaseEvolution(
-            codigoInstituicao,
-            codigoCurso,
-            dataByYear
-          )
-
-          const yearArrays = Array.from(dataByYear.keys()).sort((a, b) => a - b)
-          setYearRange({
-            min: yearArrays.length > 0 ? yearArrays[0] : null,
-            max: yearArrays.length > 0 ? yearArrays[yearArrays.length - 1] : null,
-          })
-
-          setData(evolutionData)
-
-          try {
-            const predictionData = predictPhaseEvolution(evolutionData, 3)
-            setPredictions(predictionData)
-          } catch (predErr) {
-            console.warn('Erro ao calcular previsões:', predErr)
-            setPredictions(null)
-          }
-
-          setError(null)
+    if (codigoInstituicao && codigoCurso && courseName && dataByYearRef.current) {
+      try {
+        const evolutionData = aggregateCoursePhaseEvolution(
+          codigoInstituicao,
+          codigoCurso,
+          dataByYearRef.current,
+          courseName
+        );
+        if (JSON.stringify(evolutionData) !== JSON.stringify(data)) {
+            setData(evolutionData);
+        }
+        
+        const yearArrays = Array.from(dataByYearRef.current.keys()).sort((a, b) => a - b)
+        setYearRange({
+          min: yearArrays.length > 0 ? yearArrays[0] : null,
+          max: yearArrays.length > 0 ? yearArrays[yearArrays.length - 1] : null,
         })
-        .catch((err) => {
-          console.error('Erro ao recarregar dados de evolução:', err)
-          setError(err instanceof Error ? err : new Error('Erro desconhecido'))
-          setData(null)
+
+        try {
+          const predictionData = predictPhaseEvolution(evolutionData, 3)
+          if (JSON.stringify(predictionData) !== JSON.stringify(predictions)) {
+            setPredictions(predictionData);
+          }
+        } catch (predErr) {
+          console.warn('Erro ao calcular previsões:', predErr)
           setPredictions(null)
-        })
-        .finally(() => {
-          setLoading(false)
-        })
+        }
+
+        setError(null)
+      } catch (err) {
+        console.error('Erro ao recarregar dados de evolução:', err)
+        setError(err instanceof Error ? err : new Error('Erro desconhecido'))
+        setData(null)
+        setPredictions(null)
+      }
     }
   }
 

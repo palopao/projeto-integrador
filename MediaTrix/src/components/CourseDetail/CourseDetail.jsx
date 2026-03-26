@@ -15,7 +15,28 @@ import { useCourseDetailsById } from '../../hooks/useCourseDetailsById'
 import { useExamEvolution } from '../../hooks/useExamEvolution'
 import styles from './CourseDetail.module.css'
 
+// Função auxiliar movida para fora para evitar re-declarações e permitir uso imediato
+const parseCourseInfo = (courseFullName) => {
+  if (!courseFullName) return { institution: '', courseName: '' }
+  const parts = courseFullName.split(' - ')
+  if (parts.length === 1) {
+    return { institution: '', courseName: parts[0] || '' }
+  }
+  return {
+    courseName: parts[0] || '',
+    institution: parts.slice(1).join(' - ') || ''
+  }
+}
+
+// Constantes fora do componente para manter referências estáveis e evitar loops
+const EVOLUTION_EXAMS = ['Biologia', 'Fisica'];
+
 export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = '9219', nomeDefault = 'Psicologia - Universidade dos Açores - Faculdade de Ciências Sociais e Humanas', codes }) {
+  // 1. Calcular a informação do curso IMEDIATAMENTE no início para poder ser usada nos hooks abaixo
+  const displayInfo = useMemo(() => parseCourseInfo(nomeDefault), [nomeDefault])
+  const displayCourseName = displayInfo?.courseName || 'Curso'
+  const displayInstitution = displayInfo?.institution || 'Universidade'
+
   const degreeChangeInfo = useMemo(() => {
     if (!codes || codes.length < 2) return null
 
@@ -37,9 +58,9 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   const code1 = effectiveCodes[0]
   const code2 = effectiveCodes[1] // Pode ser undefined
 
-  // Carregar dados para o código principal e secundário (se existir)
-  const { data: data1, predictions: pred1, loading: load1, error: err1, yearRange: range1 } = useCoursePhaseEvolution(code1?.inst, code1?.curso)
-  const { data: data2, predictions: pred2, loading: load2 } = useCoursePhaseEvolution(code2?.inst || '', code2?.curso || '')
+  // Carregar dados para o código principal e secundário (se existir), passando o nome do curso
+  const { data: data1, predictions: pred1, loading: load1, error: err1, yearRange: range1 } = useCoursePhaseEvolution(code1?.inst, code1?.curso, displayCourseName) // displayCourseName is the 3rd arg
+  const { data: data2, predictions: pred2, loading: load2 } = useCoursePhaseEvolution(code2?.inst || '', code2?.curso || '', displayCourseName) // displayCourseName is the 3rd arg
 
   // Fundir dados dos dois códigos
   const data = useMemo(() => {
@@ -77,36 +98,13 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   }, [data])
 
   const { course, loading: courseLoading, error: courseError } = useCourseDetailsById(codigoInstituicao, codigoCurso)
-  const { data: examData, loading: examLoading, error: examError } = useExamEvolution(['Biologia', 'Fisica'])
+  const { data: examData, loading: examLoading, error: examError } = useExamEvolution(EVOLUTION_EXAMS)
 
-  // Extract course name and institution from nomeDefault  
-  // Format: "Course Name - Institution Name"
-  const parseCourseInfo = (courseFullName) => {
-    if (!courseFullName) return { institution: '', courseName: '' }
-    // Format esperado: "Psicologia - Universidade dos Açores - Faculdade de ..."
-    // Pega o primeiro ou segundo - como nome do curso e o resto como instituição
-    const parts = courseFullName.split(' - ')
-    if (parts.length === 1) {
-      return { institution: '', courseName: parts[0] || '' }
-    }
-    // Primeira parte é o nome do curso, resto é instituição
-    return {
-      courseName: parts[0] || '',
-      institution: parts.slice(1).join(' - ') || ''
-    }
-  }
-
-  // Usar nomeDefault se disponível, senão usar dados de course
-  const displayInfo = nomeDefault ? parseCourseInfo(nomeDefault) : null
-  const displayCourseName = displayInfo?.courseName || 'Curso'
-  const displayInstitution = displayInfo?.institution || 'Universidade'
-
-  // Calculate average prediction for banner
-  const avgPrediction = predictions && predictions.length > 0 
-    ? predictions[predictions.length - 1]
-    : null
-  const minPred = avgPrediction ? (avgPrediction.prediction - (avgPrediction.ciHigh - avgPrediction.prediction)).toFixed(1) : '—'
-  const maxPred = avgPrediction ? (avgPrediction.prediction + (avgPrediction.ciHigh - avgPrediction.prediction)).toFixed(1) : '—'
+  // Correção da lógica do banner: predictions é um objeto, não um array.
+  // Procuramos a previsão específica para 2026 na Fase 1.
+  const pred2026 = predictions?.fase_1?.find(p => p.year === 2026);
+  const minPred = pred2026 ? pred2026.ciLow.toFixed(1) : '—';
+  const maxPred = pred2026 ? pred2026.ciHigh.toFixed(1) : '—';
 
   return (
     <section className={styles.section}>
@@ -166,7 +164,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
                   data={examData}
                   isLoading={examLoading}
                   error={examError}
-                  examNames={['Biologia', 'Fisica']}
+                  examNames={EVOLUTION_EXAMS}
                 />
               </div>
             )}

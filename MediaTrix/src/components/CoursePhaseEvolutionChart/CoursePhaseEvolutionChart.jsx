@@ -12,6 +12,66 @@ import {
 } from 'recharts'
 import styles from './CoursePhaseEvolutionChart.module.css'
 
+function predictPhase(values, years, steps = 3) {
+  const clean = values
+    .map((v, i) => (v != null ? { x: years[i], y: v } : null))
+    .filter(Boolean)
+
+  if (clean.length < 2) return null
+
+  const ys = clean.map(p => p.y)
+
+  // -------------------------
+  // Média global
+  // -------------------------
+  const mean =
+    ys.reduce((a, b) => a + b, 0) / ys.length
+
+  // -------------------------
+  // Exponential smoothing
+  // -------------------------
+  const alpha = 0.5
+  let smoothed = ys[0]
+
+  for (let i = 1; i < ys.length; i++) {
+    smoothed = alpha * ys[i] + (1 - alpha) * smoothed
+  }
+
+  // -------------------------
+  // Variância (para IC)
+  // -------------------------
+  const variance =
+    ys.reduce((a, y) => a + Math.pow(y - mean, 2), 0) / ys.length
+
+  const std = Math.sqrt(variance)
+
+  // -------------------------
+  // Previsões (mean reversion)
+  // -------------------------
+  const predictions = []
+  const lastYear = clean[clean.length - 1].x
+
+  for (let i = 1; i <= steps; i++) {
+    const year = lastYear + i
+
+    // regressão à média progressiva
+    const weightToMean = Math.min(0.15 * i, 0.6)
+
+    const predictedRaw =
+      (1 - weightToMean) * smoothed +
+      weightToMean * mean
+
+    const predicted = Math.max(0, Math.min(200, predictedRaw))
+
+    const ciLow = Math.max(0, predicted - 1.96 * std)
+    const ciHigh = Math.min(200, predicted + 1.96 * std)
+
+    predictions.push({ year, predicted, ciLow, ciHigh })
+  }
+
+  return predictions
+}
+
 /**
  * CustomTooltip para o gráfico de evolução de fases
  * Mostra os valores com 1 decimal, exibe "—" para valores nulos
@@ -62,7 +122,6 @@ function PredictionCard({ phase, prediction, phaseLabel, color }) {
  */
 export default function CoursePhaseEvolutionChart({
   data = [],
-  predictions = null,
   courseName = 'Curso',
   minYear = null,
   maxYear = null,
@@ -73,18 +132,28 @@ export default function CoursePhaseEvolutionChart({
   const stats = useMemo(() => {
     if (!data || data.length === 0) return null
 
-    const validFase1 = data.filter((d) => d.fase_1 !== null).map((d) => d.fase_1)
-    const validFase2 = data.filter((d) => d.fase_2 !== null).map((d) => d.fase_2)
-    const validFase3 = data.filter((d) => d.fase_3 !== null).map((d) => d.fase_3)
+    const avg = (key) => {
+      const vals = data.filter(d => d[key] != null).map(d => d[key])
+      return vals.length ? vals.reduce((a, b) => a + b) / vals.length : null
+    }
 
-    const avgFase1 =
-      validFase1.length > 0 ? validFase1.reduce((a, b) => a + b) / validFase1.length : null
-    const avgFase2 =
-      validFase2.length > 0 ? validFase2.reduce((a, b) => a + b) / validFase2.length : null
-    const avgFase3 =
-      validFase3.length > 0 ? validFase3.reduce((a, b) => a + b) / validFase3.length : null
+    return {
+      avgFase1: avg('fase_1'),
+      avgFase2: avg('fase_2'),
+      avgFase3: avg('fase_3'),
+    }
+  }, [data])
 
-    return { avgFase1, avgFase2, avgFase3 }
+  const predictions = useMemo(() => {
+    if (!data || data.length < 2) return null
+
+    const years = data.map(d => Number(d.year))
+
+    return {
+      fase_1: predictPhase(data.map(d => d.fase_1), years),
+      fase_2: predictPhase(data.map(d => d.fase_2), years),
+      fase_3: predictPhase(data.map(d => d.fase_3), years),
+    }
   }, [data])
 
   // Combina dados históricos com previsões
@@ -92,64 +161,37 @@ export default function CoursePhaseEvolutionChart({
     if (!predictions) return data
 
     const combined = [...data]
-    const maxYear = Math.max(...data.map((d) => Number(d.year)))
+    const maxYear = Math.max(...data.map(d => Number(d.year)))
 
     for (let i = 1; i <= 3; i++) {
       const year = maxYear + i
-      let entry = combined.find((d) => Number(d.year) === year)
+      let entry = combined.find(d => Number(d.year) === year)
 
       if (!entry) {
         entry = { year }
         combined.push(entry)
       }
 
-      if (predictions.fase_1 && predictions.fase_1[i - 1]) {
+      if (predictions.fase_1?.[i - 1]) {
         entry.fase_1_pred = predictions.fase_1[i - 1].predicted
-        entry.fase_1_ciLow = predictions.fase_1[i - 1].ciLow
-        entry.fase_1_ciHigh = predictions.fase_1[i - 1].ciHigh
       }
-
-      if (predictions.fase_2 && predictions.fase_2[i - 1]) {
+      if (predictions.fase_2?.[i - 1]) {
         entry.fase_2_pred = predictions.fase_2[i - 1].predicted
-        entry.fase_2_ciLow = predictions.fase_2[i - 1].ciLow
-        entry.fase_2_ciHigh = predictions.fase_2[i - 1].ciHigh
       }
-
-      if (predictions.fase_3 && predictions.fase_3[i - 1]) {
+      if (predictions.fase_3?.[i - 1]) {
         entry.fase_3_pred = predictions.fase_3[i - 1].predicted
-        entry.fase_3_ciLow = predictions.fase_3[i - 1].ciLow
-        entry.fase_3_ciHigh = predictions.fase_3[i - 1].ciHigh
       }
     }
 
     return combined.sort((a, b) => Number(a.year) - Number(b.year))
   }, [data, predictions])
 
-  const yAxisDomain = () => {
-    const allValues = combinedData
-      .flatMap((d) => [
-        d.fase_1,
-        d.fase_2,
-        d.fase_3,
-        d.fase_1_pred,
-        d.fase_2_pred,
-        d.fase_3_pred,
-      ])
-      .filter((v) => v !== null && v !== undefined)
-
-    if (allValues.length === 0) return [0, 200]
-
-    const min = Math.min(...allValues)
-    const max = Math.max(...allValues)
-    const padding = (max - min) * 0.1
-
-    return [Math.floor(min - padding), Math.ceil(max + padding)]
-  }
+  const yAxisDomain = () => [0, 200]
 
   if (isLoading && (!data || data.length === 0)) {
     return (
       <div className={styles.container}>
-        <p className={styles.loading}>Carregando dados...</p>
+        <p className={styles.loading}>A carregar dados...</p>
       </div>
     )
   }
