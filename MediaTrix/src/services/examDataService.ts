@@ -170,8 +170,8 @@ export function findCourse(
 ): CourseDetails | undefined {
   return courses.find(
     (c) =>
-      c.codigo_instituicao === codigoInstituicao &&
-      c.codigo_curso === codigoCurso
+      String(c.codigo_instituicao).padStart(4, '0') === String(codigoInstituicao).padStart(4, '0') &&
+      String(c.codigo_curso).padStart(4, '0') === String(codigoCurso).padStart(4, '0')
   );
 }
 
@@ -208,25 +208,31 @@ export interface PhaseEvolutionData {
  */
 export function aggregateCoursePhaseEvolution(
   codigoInstituicao: string,
-  codigoCurso: string, // Changed parameter name and type for precise matching
+  codigoCurso: string,
   dataByYear: Map<number, CourseYearData[]>,
-  displayCourseName?: string // Optional, for fallback or logging
+  displayCourseName?: string
 ): PhaseEvolutionData[] {
   const years = Array.from(dataByYear.keys()).sort((a, b) => a - b)
+
+  // Normaliza os códigos que chegam para pesquisa
+  const safeInst = String(codigoInstituicao).padStart(4, '0');
+  const safeCurso = String(codigoCurso).padStart(4, '0');
 
   return years.map((year) => {
     const courses = dataByYear.get(year) || []
 
-    // Prioritize matching by codigoInstituicao and codigoCurso
+    // 1ª Tentativa: Match seguro por instituição e curso
     let courseData = courses.find((c) =>
-      c.codigo_instituicao === codigoInstituicao && c.codigo_curso === codigoCurso
+      String(c.codigo_instituicao).padStart(4, '0') === safeInst && 
+      String(c.codigo_curso).padStart(4, '0') === safeCurso
     )
 
-    // Fallback to matching by displayCourseName if provided and primary match fails
+    // 2ª Tentativa (Fallback): Se o código mudou, tentamos encontrar pelo nome na mesma instituição
     if (!courseData && displayCourseName) {
       const normalizedDisplayCourseName = normalize(displayCourseName)
       courseData = courses.find((c) =>
-        c.codigo_instituicao === codigoInstituicao && normalize(c.curso).includes(normalizedDisplayCourseName)
+        String(c.codigo_instituicao).padStart(4, '0') === safeInst && 
+        normalize(c.curso).includes(normalizedDisplayCourseName)
       )
     }
 

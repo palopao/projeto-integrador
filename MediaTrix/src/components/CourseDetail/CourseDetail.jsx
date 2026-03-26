@@ -197,6 +197,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
                   data={data}
                   predictions={predictions}
                   courseName={displayCourseName}
+                  course={course}
                 />
               </div>
             </div>
