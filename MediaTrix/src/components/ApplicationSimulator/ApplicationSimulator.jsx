@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import styles from './ApplicationSimulator.module.css'
 
 // Função mágica para extrair as percentagens da fórmula da DGES
@@ -18,10 +18,21 @@ const getPesos = (formula) => {
   return { sec: pesoSec, pi: pesoPi }
 }
 
-export default function ApplicationSimulator({ data, predictions, courseName, course }) {
+export default function ApplicationSimulator({ data, predictions, courseName, course, selectedExamSetIdx = 0 }) {
   const [notaInterna, setNotaInterna] = useState('')
-  const [notaProvas, setNotaProvas] = useState('')
+  const [notasExames, setNotasExames] = useState([])
   const [calcResult, setCalcResult] = useState(null)
+
+  // Obter o conjunto de exames selecionado no AdmissionCalculator para personalizar o rótulo
+  const selectedSet = useMemo(() => {
+    const conjuntos = course?.provas_ingresso || []
+    return conjuntos[selectedExamSetIdx] || []
+  }, [course, selectedExamSetIdx])
+
+  // Sincronizar os inputs com o conjunto de exames selecionado
+  useEffect(() => {
+    setNotasExames(new Array(selectedSet.length).fill(''))
+  }, [selectedSet])
 
   // Extrair os pesos reais do curso atual
   const pesos = useMemo(() => getPesos(course?.formula_nota), [course?.formula_nota])
@@ -50,13 +61,22 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
     }
   }, [predictions])
 
+  const handleExamChange = (index, value) => {
+    const newNotas = [...notasExames]
+    newNotas[index] = value
+    setNotasExames(newNotas)
+  }
+
   // O nosso novo cálculo matemático dinâmico!
   const calcular = () => {
     const ni = parseFloat(notaInterna) || 0
-    const pi = parseFloat(notaProvas) || 0
+    
+    // Calcula a média das notas individuais das provas de ingresso
+    const piValues = notasExames.map(v => parseFloat(v) || 0)
+    const piMedia = piValues.length > 0 ? piValues.reduce((a, b) => a + b, 0) / piValues.length : 0
     
     // Calcula com base nos pesos da DGES (ex: ni * 0.50 + pi * 0.50)
-    const media = (ni * (pesos.sec / 100) + pi * (pesos.pi / 100)) / 10
+    const media = (ni * (pesos.sec / 100) + piMedia * (pesos.pi / 100)) / 10
     setCalcResult(media.toFixed(1))
   }
 
@@ -127,21 +147,37 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
               />
             </div>
 
-            <div className={styles.inputGroup}>
-              <label className={styles.label}>
-                <span className={styles.labelText}>Média da(s) Prova(s) de Ingresso</span>
-                <span className={styles.weight}>({pesos.pi}% do cálculo)</span>
-              </label>
-              <input
-                type="number"
-                min="0"
-                max="200"
-                placeholder="Ex: 175"
-                value={notaProvas}
-                onChange={(e) => setNotaProvas(e.target.value)}
-                className={styles.input}
-              />
-            </div>
+            {selectedSet.length > 0 ? (
+              selectedSet.map((prova, idx) => (
+                <div className={styles.inputGroup} key={`${prova.code}-${idx}`}>
+                  <label className={styles.label}>
+                    <span className={styles.labelText}>{prova.name}</span>
+                    {idx === 0 && <span className={styles.weight}>({pesos.pi}% total)</span>}
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="200"
+                    placeholder="0-200"
+                    value={notasExames[idx] || ''}
+                    onChange={(e) => handleExamChange(idx, e.target.value)}
+                    className={styles.input}
+                  />
+                </div>
+              ))
+            ) : (
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>
+                  <span className={styles.labelText}>Média das Provas de Ingresso</span>
+                </label>
+                <input
+                  type="number"
+                  disabled
+                  placeholder="Selecione um curso acima"
+                  className={styles.input}
+                />
+              </div>
+            )}
           </div>
 
           <button type="button" className={styles.calcBtn} onClick={calcular}>
@@ -156,56 +192,8 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
               <div className={styles.userGradeBox}>
                 <p className={styles.boxLabel}>Sua Média de Candidatura</p>
                 <p className={styles.boxValue}>{calcResult}</p>
-                <p className={styles.boxFormula}>
-                  ({notaInterna} × {pesos.sec / 100} + {notaProvas} × {pesos.pi / 100}) / 10
-                </p>
               </div>
             </div>
-
-            {lastYearGrades && (
-              <div className={styles.comparisonSection}>
-                <h4 className={styles.sectionTitle}>Comparação com Registos Recentes</h4>
-                
-                <div className={styles.comparisonGrid}>
-                  {/* Último Ano */}
-                  <div className={styles.comparisonCard}>
-                    <p className={styles.comparisonLabel}>{lastYearGrades.year} - Fase Final</p>
-                    <p className={styles.comparisonValue}>
-                      {((lastYearGrades.fase3 || lastYearGrades.fase2 || lastYearGrades.fase1) / 10).toFixed(1)}
-                    </p>
-                    <p className={styles.comparisonNote}>Nota do último colocado</p>
-                  </div>
-
-                  {/* Diferença */}
-                  <div className={`${styles.comparisonCard} ${styles.diffCard}`}>
-                    <p className={styles.comparisonLabel}>Diferença</p>
-                    <p
-                      className={styles.comparisonValue}
-                      style={{ color: probabilidadeInfo?.color || '#000' }}
-                    >
-                      {probabilidadeInfo?.diffLastYear >= 0 ? '+' : ''}
-                      {probabilidadeInfo?.diffLastYear?.toFixed(1)}
-                    </p>
-                    <p className={styles.comparisonNote}>
-                      {probabilidadeInfo?.diffLastYear >= 0 ? 'Acima' : 'Abaixo'} do corte
-                    </p>
-                  </div>
-
-                  {/* Próxima Previsão */}
-                  {nextYearPrediction && (
-                    <div className={styles.comparisonCard}>
-                      <p className={styles.comparisonLabel}>{nextYearPrediction.year} - Previsão</p>
-                      <p className={styles.comparisonValue}>
-                        {((nextYearPrediction.fase3?.predicted || nextYearPrediction.fase2?.predicted || nextYearPrediction.fase1?.predicted) / 10).toFixed(1)}
-                      </p>
-                      <p className={styles.comparisonNote}>
-                        IC 95%: {((nextYearPrediction.fase3?.ciLow || nextYearPrediction.fase2?.ciLow || nextYearPrediction.fase1?.ciLow) / 10).toFixed(1)} - {((nextYearPrediction.fase3?.ciHigh || nextYearPrediction.fase2?.ciHigh || nextYearPrediction.fase1?.ciHigh) / 10).toFixed(1)}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
 
             {/* Probabilidade de Entrada */}
             {probabilidadeInfo && (

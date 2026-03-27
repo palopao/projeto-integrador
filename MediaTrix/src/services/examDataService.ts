@@ -85,7 +85,8 @@ export async function loadCourseDetails(
     // Processa as provas de ingresso
     return data.map((course: any) => ({
       ...course,
-      provas_ingresso: parseProvasIngresso(course.provas_ingresso || []),
+      curso: course.nome_curso || course.curso || '', // Normaliza o nome do curso para consistência
+      provas_ingresso: parseProvasIngresso(course.provas_ingresso || [])
     }));
   } catch (error) {
     console.error('Erro ao carregar dados de cursos:', error);
@@ -186,34 +187,23 @@ export interface PhaseEvolutionData {
  * Retorna um array ordenado de anos com as notas de cada fase
  */
 export function aggregateCoursePhaseEvolution(
-  codigoInstituicao: string,
-  codigoCurso: string,
+  courseName: string,
+  institutionName: string,
   dataByYear: Map<number, CourseYearData[]>,
-  displayCourseName?: string
 ): PhaseEvolutionData[] {
   const years = Array.from(dataByYear.keys()).sort((a, b) => a - b)
-
-  // Normaliza os códigos que chegam para pesquisa
-  const safeInst = String(codigoInstituicao).padStart(4, '0');
-  const safeCurso = String(codigoCurso).padStart(4, '0');
+  const normalizedTargetCourse = normalize(courseName);
+  const normalizedTargetInst = normalize(institutionName);
 
   return years.map((year) => {
     const courses = dataByYear.get(year) || []
 
-    // 1ª Tentativa: Match seguro por instituição e curso
-    let courseData = courses.find((c) =>
-      String(c.codigo_instituicao).padStart(4, '0') === safeInst && 
-      String(c.codigo_curso).padStart(4, '0') === safeCurso
-    )
-
-    // 2ª Tentativa (Fallback): Se o código mudou, tentamos encontrar pelo nome na mesma instituição
-    if (!courseData && displayCourseName) {
-      const normalizedDisplayCourseName = normalize(displayCourseName)
-      courseData = courses.find((c) =>
-        String(c.codigo_instituicao).padStart(4, '0') === safeInst && 
-        normalize(c.curso).includes(normalizedDisplayCourseName)
-      )
-    }
+    // Encontrar por nome do curso e instituição (identificação primária)
+    const courseData = courses.find((c) => {
+      const normalizedCourse = normalize(c.curso);
+      const normalizedInst = normalize(c.instituicao);
+      return normalizedCourse === normalizedTargetCourse && normalizedInst === normalizedTargetInst;
+    });
 
     return {
       year,
@@ -249,150 +239,68 @@ export interface PredictionResult {
 }
 
 /**
- * Resultado de regressão linear simples
+ * Função interna auxiliar para cálculo de previsões baseada em suavização exponencial e reversão à média.
+ * Esta lógica centraliza a forma como as tendências são calculadas em toda a aplicação.
  */
-interface LinearRegressionResult {
-  slope: number;
-  intercept: number;
-  r2: number;
-  stdError: number;
-}
+function predictPhase(
+  values: (number | null)[],
+  years: number[],
+  steps: number = 3
+): PredictionResult[] | null {
+  const clean = values
+    .map((v, i) => (v != null ? { x: years[i], y: v } : null))
+    .filter((v): v is { x: number; y: number } => v !== null);
 
-/**
- * Calcula regressão linear simples
- * @param x Array de valores de X (anos)
- * @param y Array de valores de Y (notas)
- * @returns slope, intercept, r2 (coeficiente de determinação), e erro padrão
- */
-function linearRegression(x: number[], y: number[]): LinearRegressionResult {
-  if (x.length < 2 || y.length < 2 || x.length !== y.length) {
-    throw new Error('Arrays X e Y devem ter pelo menos 2 elementos e tamanho igual');
+  if (clean.length < 2) return null;
+
+  const ys = clean.map((p) => p.y);
+  const mean = ys.reduce((a, b) => a + b, 0) / ys.length;
+
+  // Suavização exponencial (Alpha 0.5 dá peso equilibrado ao histórico recente)
+  const alpha = 0.5;
+  let smoothed = ys[0];
+  for (let i = 1; i < ys.length; i++) {
+    smoothed = alpha * ys[i] + (1 - alpha) * smoothed;
   }
 
-  const n = x.length;
-  const meanX = x.reduce((a, b) => a + b, 0) / n;
-  const meanY = y.reduce((a, b) => a + b, 0) / n;
+  // Cálculo de erro residual para Intervalo de Confiança
+  let residualSum = 0;
+  for (let i = 1; i < ys.length; i++) {
+    const prev = ys[i - 1];
+    const predicted = alpha * ys[i] + (1 - alpha) * prev;
+    residualSum += Math.pow(ys[i] - predicted, 2);
+  }
+  const residualVariance = residualSum / (ys.length - 1);
+  const std = Math.sqrt(residualVariance);
 
-  // Calcula slope (m)
-  const numerator = x.reduce((sum, xi, i) => sum + (xi - meanX) * (y[i] - meanY), 0);
-  const denominator = x.reduce((sum, xi) => sum + (xi - meanX) ** 2, 0);
-  const slope = numerator / denominator;
+  const predictions: PredictionResult[] = [];
+  const lastYear = clean[clean.length - 1].x;
 
-  // Calcula intercept (b)
-  const intercept = meanY - slope * meanX;
+  for (let i = 1; i <= steps; i++) {
+    const year = lastYear + i;
 
-  // Calcula R² (coeficiente de determinação)
-  const ssTotal = y.reduce((sum, yi) => sum + (yi - meanY) ** 2, 0);
-  const ssResidual = y.reduce((sum, yi, i) => {
-    const predicted = slope * x[i] + intercept;
-    return sum + (yi - predicted) ** 2;
-  }, 0);
-  const r2 = 1 - (ssResidual / ssTotal);
+    // Regressão à média progressiva (impede que previsões fujam da realidade histórica)
+    const weightToMean = Math.min(0.15 * i, 0.6);
+    const predictedRaw = (1 - weightToMean) * smoothed + weightToMean * mean;
+    const predicted = Math.max(0, Math.min(200, predictedRaw));
 
-  // Calcula erro padrão
-  const mse = ssResidual / (n - 2);
-  const stdError = Math.sqrt(mse);
+    // Margem de erro cresce com o tempo de previsão
+    const growthFactor = 1 + i * 0.15;
+    const margin = 1.28 * std * growthFactor;
 
-  return { slope, intercept, r2, stdError };
-}
-
-/**
- * Obtém o valor crítico t para intervalo de confiança de 95% aproximado
- * Usa uma tabela simplificada (para tamanhos de amostra típicos)
- */
-function getTCriticalValue(n: number): number {
-  // Graus de liberdade = n - 2
-  const df = Math.max(1, n - 2);
-
-  // Tabela de valores t críticos para IC de 95% (bicaudal)
-  const tValues: { [key: number]: number } = {
-    1: 12.706,
-    2: 4.303,
-    3: 3.182,
-    4: 2.776,
-    5: 2.571,
-    6: 2.447,
-    7: 2.365,
-    8: 2.306,
-    9: 2.262,
-    10: 2.228,
-    15: 2.131,
-    20: 2.086,
-    25: 2.06,
-    30: 2.042,
-    40: 2.021,
-    50: 2.009,
-    100: 1.984,
-    200: 1.972,
-    1000: 1.962,
-  };
-
-  // Encontra o valor mais próximo
-  const keys = Object.keys(tValues).map(Number).sort((a, b) => a - b);
-  for (let i = 0; i < keys.length - 1; i++) {
-    if (df >= keys[i] && df < keys[i + 1]) {
-      // Interpolação linear simples
-      const w1 = (keys[i + 1] - df) / (keys[i + 1] - keys[i]);
-      return w1 * tValues[keys[i]] + (1 - w1) * tValues[keys[i + 1]];
-    }
+    predictions.push({
+      year,
+      predicted: Math.round(predicted * 10) / 10,
+      ciLow: Math.max(0, Math.round((predicted - margin) * 10) / 10),
+      ciHigh: Math.min(200, Math.round((predicted + margin) * 10) / 10),
+    });
   }
 
-  // Se df > 1000, retorna o valor para df grande
-  return tValues[1000] || 1.96;
+  return predictions;
 }
 
 /**
- * Prediz a nota para o próximo ano usando regressão linear
- * @param data Array com dados históricos (com ano e valores de nota)
- * @param phase Chave da fase ('fase_1', 'fase_2', 'fase_3')
- * @param nextYear Ano para o qual fazer a previsão (default: ano máximo + 1)
- * @returns Previsão com intervalo de confiança de 95%
- */
-export function predictNextYearPhase(
-  data: PhaseEvolutionData[],
-  phase: 'fase_1' | 'fase_2' | 'fase_3',
-  nextYear?: number
-): PredictionResult | null {
-  // Filtra dados válidos (sem null)
-  const validData = data.filter((d) => d[phase] !== null);
-
-  if (validData.length < 2) {
-    return null; // Precisa de pelo menos 2 pontos para fazer regressão
-  }
-
-  // Extrai anos e valores
-  const years = validData.map((d) => Number(d.year));
-  const values = validData.map((d) => d[phase] as number);
-
-  // Calcula regressão linear
-  const { slope, intercept, stdError } = linearRegression(years, values);
-
-  // Define ano de previsão
-  const predictionYear = nextYear || Math.max(...years) + 1;
-
-  // Calcula valor previsto
-  const predicted = slope * predictionYear + intercept;
-
-  // Calcula intervalo de confiança
-  const n = validData.length;
-  const tCritical = getTCriticalValue(n);
-  const meanX = years.reduce((a, b) => a + b) / n;
-  const sumSquaredDev = years.reduce((sum, x) => sum + (x - meanX) ** 2, 0);
-
-  // Erro padrão da previsão
-  const sePredict = stdError * Math.sqrt(1 + 1 / n + ((predictionYear - meanX) ** 2) / sumSquaredDev);
-  const margin = tCritical * sePredict;
-
-  return {
-    year: predictionYear,
-    predicted: Math.max(0, Math.round(predicted * 10) / 10), // Arredonda para 1 decimal
-    ciLow: Math.max(0, Math.round((predicted - margin) * 10) / 10),
-    ciHigh: Math.round((predicted + margin) * 10) / 10,
-  };
-}
-
-/**
- * Prediz os próximos anos para as 3 fases
+ * Prediz os próximos anos para as 3 fases usando suavização exponencial
  */
 export function predictPhaseEvolution(
   data: PhaseEvolutionData[],
@@ -402,27 +310,13 @@ export function predictPhaseEvolution(
   fase_2: PredictionResult[];
   fase_3: PredictionResult[];
 } {
-  const maxYear = Math.max(...data.map((d) => Number(d.year)));
-  const predictions = {
-    fase_1: [] as PredictionResult[],
-    fase_2: [] as PredictionResult[],
-    fase_3: [] as PredictionResult[],
+  const years = data.map((d) => Number(d.year));
+
+  return {
+    fase_1: predictPhase(data.map((d) => d.fase_1), years, yearsAhead) || [],
+    fase_2: predictPhase(data.map((d) => d.fase_2), years, yearsAhead) || [],
+    fase_3: predictPhase(data.map((d) => d.fase_3), years, yearsAhead) || [],
   };
-
-  for (let i = 1; i <= yearsAhead; i++) {
-    const year = maxYear + i;
-
-    const pred1 = predictNextYearPhase(data, 'fase_1', year);
-    if (pred1) predictions.fase_1.push(pred1);
-
-    const pred2 = predictNextYearPhase(data, 'fase_2', year);
-    if (pred2) predictions.fase_2.push(pred2);
-
-    const pred3 = predictNextYearPhase(data, 'fase_3', year);
-    if (pred3) predictions.fase_3.push(pred3);
-  }
-
-  return predictions;
 }
 
 /**

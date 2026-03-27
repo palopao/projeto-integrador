@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, Legend, BarChart, Bar
@@ -37,6 +37,13 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   const displayCourseName = displayInfo?.courseName || 'Curso'
   const displayInstitution = displayInfo?.institution || 'Universidade'
 
+  const [selectedExamSetIdx, setSelectedExamSetIdx] = useState(0)
+
+  // Resetar a seleção de exames sempre que o curso mudar
+  useEffect(() => {
+    setSelectedExamSetIdx(0)
+  }, [displayCourseName, displayInstitution])
+
   const degreeChangeInfo = useMemo(() => {
     if (!codes || codes.length < 2) return null
 
@@ -55,49 +62,21 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
     ? codes
     : [{ inst: codigoInstituicao, curso: codigoCurso }]
 
-  const code1 = effectiveCodes[0]
-  const code2 = effectiveCodes[1] // Pode ser undefined
-
   // Carregar dados para o código principal e secundário (se existir), passando o nome do curso
-  const { data: data1, predictions: pred1, loading: load1, error: err1, yearRange: range1 } = useCoursePhaseEvolution(code1?.inst, code1?.curso, displayCourseName) // displayCourseName is the 3rd arg
-  const { data: data2, predictions: pred2, loading: load2 } = useCoursePhaseEvolution(code2?.inst || '', code2?.curso || '', displayCourseName) // displayCourseName is the 3rd arg
+  const { 
+    data = [], 
+    predictions, 
+    loading, 
+    error, 
+    yearRange 
+  } = useCoursePhaseEvolution(displayCourseName, displayInstitution)
 
-  // Fundir dados dos dois códigos
-  const data = useMemo(() => {
-    const d1 = data1 || []
-    const d2 = (code2 && data2) ? data2 : []
-
-    // Combinar e remover duplicados por ano
-    const combined = [...d1, ...d2]
-    const uniqueMap = new Map()
-    // Usar String(year) como chave para garantir que 2020 (number) e "2020" (string) sejam o mesmo ano
-    combined.forEach(item => uniqueMap.set(String(item.year), item))
-
-    return Array.from(uniqueMap.values()).sort((a, b) => a.year - b.year)
-  }, [data1, data2, code2])
-
-  // Usar previsões do código que tem dados mais recentes
-  const predictions = useMemo(() => {
-    if (!pred1 && !pred2) return null
-    if (!pred2) return pred1
-    if (!pred1) return pred2
-
-    const maxYear1 = data1 && data1.length ? Math.max(...data1.map(d => Number(d.year))) : 0
-    const maxYear2 = data2 && data2.length ? Math.max(...data2.map(d => Number(d.year))) : 0
-    return maxYear2 > maxYear1 ? pred2 : pred1
-  }, [pred1, pred2, data1, data2])
-
-  const loading = load1 || (code2 && load2)
-  const error = err1 // Ignorar erro do segundo código se não existir
-
-  // Recalcular range de anos
-  const yearRange = useMemo(() => {
-    if (!data.length) return { min: null, max: null }
-    const years = data.map(d => Number(d.year))
-    return { min: Math.min(...years), max: Math.max(...years) }
-  }, [data])
-
-  const { course, loading: courseLoading, error: courseError } = useCourseDetailsById(codigoInstituicao, codigoCurso)
+  const { 
+    course, 
+    loading: courseLoading, 
+    error: courseError 
+  } = useCourseDetailsById(displayCourseName, displayInstitution)
+  
   const { data: examData, loading: examLoading, error: examError } = useExamEvolution(EVOLUTION_EXAMS)
 
   // Correção da lógica do banner: predictions é um objeto, não um array.
@@ -183,9 +162,10 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
                 <h3 className={styles.cardTitle}>Provas de Ingresso</h3>
               </div>
               <AdmissionCalculator
-                course={course}
-                isLoading={courseLoading}
-                error={courseError}
+                courseName={displayCourseName}
+                institutionName={displayInstitution}
+                selectedIdx={selectedExamSetIdx}
+                onSelect={setSelectedExamSetIdx}
               />
 
               {/* Application Simulator */}
@@ -199,6 +179,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
                   predictions={predictions}
                   courseName={displayCourseName}
                   course={course}
+                  selectedExamSetIdx={selectedExamSetIdx}
                 />
               </div>
             </div>

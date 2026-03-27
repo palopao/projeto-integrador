@@ -13,78 +13,6 @@ import {
 } from 'recharts'
 import styles from './CoursePhaseEvolutionChart.module.css'
 
-function predictPhase(values, years, steps = 3) {
-  const clean = values
-    .map((v, i) => (v != null ? { x: years[i], y: v } : null))
-    .filter(Boolean)
-
-  if (clean.length < 2) return null
-
-  const ys = clean.map(p => p.y)
-
-  // -------------------------
-  // Média global
-  // -------------------------
-  const mean =
-    ys.reduce((a, b) => a + b, 0) / ys.length
-
-  // -------------------------
-  // Exponential smoothing
-  // -------------------------
-  const alpha = 0.5
-  let smoothed = ys[0]
-
-  for (let i = 1; i < ys.length; i++) {
-    smoothed = alpha * ys[i] + (1 - alpha) * smoothed
-  }
-
-  // -------------------------
-  // Erro dos resíduos (melhor para IC)
-  // -------------------------
-  let residualSum = 0
-
-  for (let i = 1; i < ys.length; i++) {
-    const prev = ys[i - 1]
-    const predicted = alpha * ys[i] + (1 - alpha) * prev
-    residualSum += Math.pow(ys[i] - predicted, 2)
-  }
-
-  const residualVariance = residualSum / (ys.length - 1)
-  const std = Math.sqrt(residualVariance)
-
-  // -------------------------
-  // Previsões (mean reversion)
-  // -------------------------
-  const predictions = []
-  const lastYear = clean[clean.length - 1].x
-
-  for (let i = 1; i <= steps; i++) {
-    const year = lastYear + i
-
-    // regressão à média progressiva
-    const weightToMean = Math.min(0.15 * i, 0.6)
-
-    const predictedRaw =
-      (1 - weightToMean) * smoothed +
-      weightToMean * mean
-
-    const predicted = Math.max(0, Math.min(200, predictedRaw))
-
-    // crescimento suave da incerteza
-    const growthFactor = 1 + i * 0.15
-
-    // IC mais controlado
-    const margin = 1.28 * std * growthFactor
-
-    const ciLow = Math.max(0, predicted - margin)
-    const ciHigh = Math.min(200, predicted + margin)
-
-    predictions.push({ year, predicted, ciLow, ciHigh })
-  }
-
-  return predictions
-}
-
 /**
  * CustomTooltip para o gráfico de evolução de fases
  * Mostra os valores com 1 decimal, exibe "—" para valores nulos
@@ -150,6 +78,7 @@ function PredictionCard({ phase, prediction, phaseLabel, color }) {
  */
 export default function CoursePhaseEvolutionChart({
   data = [],
+  predictions = null,
   courseName = 'Curso',
   minYear = null,
   maxYear = null,
@@ -169,18 +98,6 @@ export default function CoursePhaseEvolutionChart({
       avgFase1: avg('fase_1'),
       avgFase2: avg('fase_2'),
       avgFase3: avg('fase_3'),
-    }
-  }, [data])
-
-  const predictions = useMemo(() => {
-    if (!data || data.length < 2) return null
-
-    const years = data.map(d => Number(d.year))
-
-    return {
-      fase_1: predictPhase(data.map(d => d.fase_1), years),
-      fase_2: predictPhase(data.map(d => d.fase_2), years),
-      fase_3: predictPhase(data.map(d => d.fase_3), years),
     }
   }, [data])
 

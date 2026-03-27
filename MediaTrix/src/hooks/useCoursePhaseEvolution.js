@@ -7,9 +7,8 @@ const DEFAULT_YEARS = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
  * Hook para carregar e agregar dados de evolução de fases de um curso
  */
 export function useCoursePhaseEvolution(
-  codigoInstituicao,
-  codigoCurso,
   courseName,
+  institutionName,
   years = DEFAULT_YEARS,
   dataPath = '/data'
 ) {
@@ -23,7 +22,7 @@ export function useCoursePhaseEvolution(
   const dataByYearRef = useRef(null)
 
   useEffect(() => {
-    if (!codigoInstituicao || !codigoCurso || !courseName) {
+    if (!courseName || !institutionName) {
       setLoading(false)
       return
     }
@@ -42,10 +41,9 @@ export function useCoursePhaseEvolution(
         }
 
         const newEvolutionData = aggregateCoursePhaseEvolution(
-          codigoInstituicao,
-          codigoCurso,
+          courseName,
+          institutionName,
           dataByYearRef.current,
-          courseName // Pass the displayCourseName as the fourth argument
         );
 
         // Only update state if the data has actually changed (deep comparison)
@@ -89,16 +87,15 @@ export function useCoursePhaseEvolution(
     return () => {
       mounted = false
     }
-  }, [codigoInstituicao, codigoCurso, courseName, years, dataPath])
+  }, [courseName, institutionName, years, dataPath])
 
   const refetch = () => {
-    if (codigoInstituicao && codigoCurso && courseName && dataByYearRef.current) {
+    if (courseName && institutionName && dataByYearRef.current) {
       try {
         const evolutionData = aggregateCoursePhaseEvolution(
-          codigoInstituicao,
-          codigoCurso,
+          courseName,
+          institutionName,
           dataByYearRef.current,
-          courseName
         );
         if (JSON.stringify(evolutionData) !== JSON.stringify(data)) {
             setData(evolutionData);

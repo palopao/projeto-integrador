@@ -1,17 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useCourseDetailsById } from '../../hooks/useCourseDetailsById'
 import styles from './AdmissionCalculator.module.css'
 
-export default function AdmissionCalculator({ course, isLoading, error }) {
-  const [selectedIdx, setSelectedIdx] = useState(0)
+export default function AdmissionCalculator({ courseName, institutionName, selectedIdx, onSelect }) {
+  const { course, loading: isLoading, error } = useCourseDetailsById(courseName, institutionName)
 
-  // Reseta a seleção se mudarmos de curso
-  useEffect(() => {
-    setSelectedIdx(0)
-  }, [course])
-
-  if (isLoading && !course) return <p className={styles.loading}>Carregando informações do curso...</p>
+  if (isLoading) return <p className={styles.loading}>A carregar informações do curso...</p>
   if (error) return <p className={styles.error}>Erro: {error.message}</p>
-  if (!course) return <p className={styles.noData}>Nenhum curso encontrado</p>
+  if (!course && !isLoading) return <p className={styles.noData}>Nenhum curso encontrado</p>
 
   const provasConjuntos = course.provas_ingresso || []
   const selectedConjunto = provasConjuntos[selectedIdx] || []
@@ -47,28 +42,25 @@ export default function AdmissionCalculator({ course, isLoading, error }) {
                     type="radio"
                     name="examSet"
                     checked={selectedIdx === idx}
-                    onChange={() => setSelectedIdx(idx)}
+                    onChange={() => onSelect(idx)}
                     className={styles.radioInput}
                   />
-                  {/* Nova formatação que empilha os exames na vertical */}
-                  <div className={styles.optionContent} style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '100%' }}>
+                  <div className={styles.optionContent}>
                     {conjunto.map((prova, i) => (
-                      <div key={i} style={{ display: 'flex', flexDirection: 'column', width: '100%', gap: '8px' }}>
-                        
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                      <div key={i} className={styles.examRow}>
+                        <div className={styles.examInfo}>
                           <span className={styles.examCode}>{prova.code}</span>
                           <span className={styles.examName}>{prova.name}</span>
                         </div>
 
                         {/* Desenha a etiqueta "E" centrada entre os exames */}
                         {i < conjunto.length - 1 && (
-                          <div style={{ display: 'flex', justifyContent: 'flex-start', paddingLeft: '12px' }}>
-                            <span style={{ fontSize: '11px', fontWeight: 'bold', color: '#64748b', background: '#f1f5f9', padding: '2px 8px', borderRadius: '4px' }}>
+                          <div className={styles.separatorContainer}>
+                            <span className={styles.separatorE}>
                               E
                             </span>
                           </div>
                         )}
-                        
                       </div>
                     ))}
                   </div>
