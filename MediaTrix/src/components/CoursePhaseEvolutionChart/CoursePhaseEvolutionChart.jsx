@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import {
-  LineChart,
+  ComposedChart,
   Line,
   XAxis,
   YAxis,
@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   Legend,
   ReferenceLine,
+  Area,
 } from 'recharts'
 import styles from './CoursePhaseEvolutionChart.module.css'
 
@@ -38,12 +39,18 @@ function predictPhase(values, years, steps = 3) {
   }
 
   // -------------------------
-  // Variância (para IC)
+  // Erro dos resíduos (melhor para IC)
   // -------------------------
-  const variance =
-    ys.reduce((a, y) => a + Math.pow(y - mean, 2), 0) / ys.length
+  let residualSum = 0
 
-  const std = Math.sqrt(variance)
+  for (let i = 1; i < ys.length; i++) {
+    const prev = ys[i - 1]
+    const predicted = alpha * ys[i] + (1 - alpha) * prev
+    residualSum += Math.pow(ys[i] - predicted, 2)
+  }
+
+  const residualVariance = residualSum / (ys.length - 1)
+  const std = Math.sqrt(residualVariance)
 
   // -------------------------
   // Previsões (mean reversion)
@@ -63,8 +70,14 @@ function predictPhase(values, years, steps = 3) {
 
     const predicted = Math.max(0, Math.min(200, predictedRaw))
 
-    const ciLow = Math.max(0, predicted - 1.96 * std)
-    const ciHigh = Math.min(200, predicted + 1.96 * std)
+    // crescimento suave da incerteza
+    const growthFactor = 1 + i * 0.15
+
+    // IC mais controlado
+    const margin = 1.28 * std * growthFactor
+
+    const ciLow = Math.max(0, predicted - margin)
+    const ciHigh = Math.min(200, predicted + margin)
 
     predictions.push({ year, predicted, ciLow, ciHigh })
   }
@@ -82,11 +95,26 @@ function CustomTooltip({ active, payload, label }) {
   return (
     <div className={styles.tooltip}>
       <p className={styles.tooltipLabel}>Ano: {label}</p>
-      {payload.map((entry, idx) => (
-        <p key={idx} style={{ color: entry.color }} className={styles.tooltipValue}>
-          {entry.name}: {entry.value !== null ? entry.value.toFixed(1) : '—'}
-        </p>
-      ))}
+      {payload.map((entry, idx) => {
+        let color = entry.color;
+
+        // Se for a fase_1_low, muda para azul no tooltip
+        if (entry.dataKey === 'fase_1_low') {
+          color = '#2563eb' // cor da legenda no hover
+        }
+        if (entry.dataKey === 'fase_2_low') {
+          color = '#10b981' // cor da legenda no hover
+        }
+        if (entry.dataKey === 'fase_3_low') {
+          color = '#f59e0b' // cor da legenda no hover
+        }
+
+        return (
+          <p key={idx} style={{ color }} className={styles.tooltipValue}>
+            {entry.name}: {entry.value !== null ? entry.value.toFixed(1) : '—'}
+          </p>
+        )
+      })}
     </div>
   )
 }
@@ -174,12 +202,18 @@ export default function CoursePhaseEvolutionChart({
 
       if (predictions.fase_1?.[i - 1]) {
         entry.fase_1_pred = predictions.fase_1[i - 1].predicted
+        entry.fase_1_low = predictions.fase_1[i - 1].ciLow
+        entry.fase_1_high = predictions.fase_1[i - 1].ciHigh
       }
       if (predictions.fase_2?.[i - 1]) {
         entry.fase_2_pred = predictions.fase_2[i - 1].predicted
+        entry.fase_2_low = predictions.fase_2[i - 1].ciLow
+        entry.fase_2_high = predictions.fase_2[i - 1].ciHigh
       }
       if (predictions.fase_3?.[i - 1]) {
         entry.fase_3_pred = predictions.fase_3[i - 1].predicted
+        entry.fase_3_low = predictions.fase_3[i - 1].ciLow
+        entry.fase_3_high = predictions.fase_3[i - 1].ciHigh
       }
     }
 
@@ -228,7 +262,7 @@ export default function CoursePhaseEvolutionChart({
 
       <div className={styles.chartWrapper}>
         <ResponsiveContainer width="100%" height={320}>
-          <LineChart data={combinedData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+          <ComposedChart data={combinedData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis dataKey="year" tick={{ fontSize: 13, fill: '#4b5563' }} />
             <YAxis domain={yAxisDomain()} tick={{ fontSize: 13, fill: '#4b5563' }} />
@@ -264,7 +298,7 @@ export default function CoursePhaseEvolutionChart({
               dot={{ r: 5, fill: '#2563eb' }}
               isAnimationActive={false}
               connectNulls
-              name="Fase 1 (Histórico)"
+              name="Fase 1"
             />
             <Line
               type="linear"
@@ -274,7 +308,7 @@ export default function CoursePhaseEvolutionChart({
               dot={{ r: 5, fill: '#10b981' }}
               isAnimationActive={false}
               connectNulls
-              name="Fase 2 (Histórico)"
+              name="Fase 2"
             />
             <Line
               type="linear"
@@ -284,7 +318,7 @@ export default function CoursePhaseEvolutionChart({
               dot={{ r: 5, fill: '#f59e0b' }}
               isAnimationActive={false}
               connectNulls
-              name="Fase 3 (Histórico)"
+              name="Fase 3"
             />
 
             {/* Linhas de previsões (tracejadas) */}
@@ -301,6 +335,29 @@ export default function CoursePhaseEvolutionChart({
                   connectNulls
                   name="Fase 1 (Previsão)"
                   connectNullsForData={true}
+                  legendType="none"
+                />
+                <Area
+                  type="linear"
+                  dataKey="fase_1_high"
+                  stroke="none"
+                  fill="#2563eb"
+                  fillOpacity={0.1}
+                  isAnimationActive={false}
+                  connectNulls
+                  name="Fase 1 (Máximo)"
+                  legendType="none"
+                />
+                <Area
+                  type="linear"
+                  dataKey="fase_1_low"
+                  stroke="none"
+                  fill="#ffffff"
+                  fillOpacity={1}
+                  isAnimationActive={false}
+                  connectNulls
+                  name="Fase 1 (Mínimo)"
+                  legendType="none"
                 />
                 <Line
                   type="linear"
@@ -311,7 +368,27 @@ export default function CoursePhaseEvolutionChart({
                   dot={{ r: 4, fill: '#10b981' }}
                   isAnimationActive={false}
                   connectNulls
-                  name="Fase 2 (Previsão)"
+                  legendType="none"
+                />
+                <Area
+                  type="linear"
+                  dataKey="fase_2_high"
+                  stroke="none"
+                  fill="#10b981"
+                  fillOpacity={0.1}
+                  isAnimationActive={false}
+                  connectNulls
+                  legendType="none"
+                />
+                <Area
+                  type="linear"
+                  dataKey="fase_2_low"
+                  stroke="none"
+                  fill="#ffffff"
+                  fillOpacity={1}
+                  isAnimationActive={false}
+                  connectNulls
+                  legendType="none"
                 />
                 <Line
                   type="linear"
@@ -323,10 +400,31 @@ export default function CoursePhaseEvolutionChart({
                   isAnimationActive={false}
                   connectNulls
                   name="Fase 3 (Previsão)"
+                  legendType="none"
+                />
+                <Area
+                  type="linear"
+                  dataKey="fase_3_high"
+                  stroke="none"
+                  fill="#f59e0b"
+                  fillOpacity={0.1}
+                  isAnimationActive={false}
+                  connectNulls
+                  legendType="none"
+                />
+                <Area
+                  type="linear"
+                  dataKey="fase_3_low"
+                  stroke="none"
+                  fill="#ffffff"
+                  fillOpacity={1}
+                  isAnimationActive={false}
+                  connectNulls
+                  legendType="none"
                 />
               </>
             )}
-          </LineChart>
+          </ComposedChart>
         </ResponsiveContainer>
       </div>
 

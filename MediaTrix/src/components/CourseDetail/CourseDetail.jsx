@@ -51,10 +51,10 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   }, [codes])
 
   // Gerir múltiplos códigos (histórico vs atual)
-  const effectiveCodes = codes && codes.length > 0 
-    ? codes 
+  const effectiveCodes = codes && codes.length > 0
+    ? codes
     : [{ inst: codigoInstituicao, curso: codigoCurso }]
-  
+
   const code1 = effectiveCodes[0]
   const code2 = effectiveCodes[1] // Pode ser undefined
 
@@ -66,13 +66,13 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   const data = useMemo(() => {
     const d1 = data1 || []
     const d2 = (code2 && data2) ? data2 : []
-    
+
     // Combinar e remover duplicados por ano
     const combined = [...d1, ...d2]
     const uniqueMap = new Map()
     // Usar String(year) como chave para garantir que 2020 (number) e "2020" (string) sejam o mesmo ano
     combined.forEach(item => uniqueMap.set(String(item.year), item))
-    
+
     return Array.from(uniqueMap.values()).sort((a, b) => a.year - b.year)
   }, [data1, data2, code2])
 
@@ -81,7 +81,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
     if (!pred1 && !pred2) return null
     if (!pred2) return pred1
     if (!pred1) return pred2
-    
+
     const maxYear1 = data1 && data1.length ? Math.max(...data1.map(d => Number(d.year))) : 0
     const maxYear2 = data2 && data2.length ? Math.max(...data2.map(d => Number(d.year))) : 0
     return maxYear2 > maxYear1 ? pred2 : pred1
@@ -89,7 +89,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
 
   const loading = load1 || (code2 && load2)
   const error = err1 // Ignorar erro do segundo código se não existir
-  
+
   // Recalcular range de anos
   const yearRange = useMemo(() => {
     if (!data.length) return { min: null, max: null }
@@ -102,9 +102,10 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
 
   // Correção da lógica do banner: predictions é um objeto, não um array.
   // Procuramos a previsão específica para 2026 na Fase 1.
-  const pred2026 = predictions?.fase_1?.find(p => p.year === 2026);
-  const minPred = pred2026 ? pred2026.ciLow.toFixed(1) : '—';
-  const maxPred = pred2026 ? pred2026.ciHigh.toFixed(1) : '—';
+  const predmin = predictions?.fase_1[0]?.ciLow.toFixed(1);
+  const predmax = predictions?.fase_1[0]?.ciHigh.toFixed(1);
+  const minPred = predmin ? predmin: '—';
+  const maxPred = predmax ? predmax: '—';
 
   return (
     <section className={styles.section}>
@@ -181,7 +182,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
                 </div>
                 <h3 className={styles.cardTitle}>Provas de Ingresso</h3>
               </div>
-              <AdmissionCalculator 
+              <AdmissionCalculator
                 course={course}
                 isLoading={courseLoading}
                 error={courseError}
@@ -193,7 +194,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
                   <CalculatorIcon className={styles.simulatorHeaderIcon} />
                   <h3 className={styles.simulatorTitle}>Simulador de Candidatura</h3>
                 </div>
-                <ApplicationSimulator 
+                <ApplicationSimulator
                   data={data}
                   predictions={predictions}
                   courseName={displayCourseName}
