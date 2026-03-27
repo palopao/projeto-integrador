@@ -378,6 +378,7 @@ export default function CoursePhaseEvolutionChart({
                   fillOpacity={0.1}
                   isAnimationActive={false}
                   connectNulls
+                  name="Fase 2 (Máximo)"
                   legendType="none"
                 />
                 <Area
@@ -388,6 +389,7 @@ export default function CoursePhaseEvolutionChart({
                   fillOpacity={1}
                   isAnimationActive={false}
                   connectNulls
+                  name="Fase 2 (Mínimo)"
                   legendType="none"
                 />
                 <Line
@@ -410,6 +412,7 @@ export default function CoursePhaseEvolutionChart({
                   fillOpacity={0.1}
                   isAnimationActive={false}
                   connectNulls
+                  name="Fase 3 (Máximo)"
                   legendType="none"
                 />
                 <Area
@@ -420,6 +423,7 @@ export default function CoursePhaseEvolutionChart({
                   fillOpacity={1}
                   isAnimationActive={false}
                   connectNulls
+                  name="Fase 3 (Mínimo)"
                   legendType="none"
                 />
               </>
