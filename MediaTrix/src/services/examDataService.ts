@@ -95,6 +95,38 @@ export async function loadCourseDetails(
 }
 
 /**
+ * Calcula a nota final de candidatura (0-200) com base na fórmula e pesos dos exames.
+ * Suporta tanto pesos globais quanto pesos individuais por prova de ingresso.
+ */
+export function calculateEntranceScore(
+  secondaryAvg: number,
+  selectedExams: { score: number; weight?: number }[],
+  formulaText: string
+): number {
+  if (!formulaText || selectedExams.length === 0) return 0;
+
+  // Extrai pesos da fórmula (ex: "Média do secundário: 45% | Provas de ingresso: 55%")
+  const secondaryWeightMatch = formulaText.match(/secundário:\s*(\d+)%/i);
+  const secondaryWeight = secondaryWeightMatch ? parseInt(secondaryWeightMatch[1], 10) : 50;
+  
+  const examsTotalWeightMatch = formulaText.match(/ingresso:\s*(\d+)%/i);
+  const examsTotalWeight = examsTotalWeightMatch ? parseInt(examsTotalWeightMatch[1], 10) : (100 - secondaryWeight);
+
+  // Verifica se as provas selecionadas têm pesos específicos definidos no JSON
+  const hasIndividualWeights = selectedExams.some(e => e.weight !== undefined);
+
+  if (hasIndividualWeights) {
+    // Soma ponderada usando os pesos individuais (ex: nota * 0.15 + nota * 0.25...)
+    const examsWeightedSum = selectedExams.reduce((acc, e) => acc + (e.score * ((e.weight || 0) / 100)), 0);
+    return (secondaryAvg * (secondaryWeight / 100)) + examsWeightedSum;
+  } else {
+    // Média aritmética simples das provas selecionadas multiplicada pelo peso total dos exames
+    const examsAvg = selectedExams.reduce((acc, e) => acc + e.score, 0) / selectedExams.length;
+    return (secondaryAvg * (secondaryWeight / 100)) + (examsAvg * (examsTotalWeight / 100));
+  }
+}
+
+/**
  * Carrega os dados de candidatura de um ano específico
  */
 export async function loadCourseYearData(

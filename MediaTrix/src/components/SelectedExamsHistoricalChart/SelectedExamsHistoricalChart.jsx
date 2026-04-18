@@ -5,17 +5,30 @@ import {
 } from 'recharts'
 import styles from './SelectedExamsHistoricalChart.module.css'
 
-// Função para remover acentos e normalizar strings
-const normalizeString = (str) => {
-  return str
-    .toLowerCase()
-    .trim()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-    .replace(/\s+e\s+/g, '_') // Substitui " e " por underscore (ex: "Biologia e Geologia" -> "biologia_geologia")
-    .replace(/\s+/g, '_') // Substitui outros espaços por underscores
-    .replace(/[&,]/g, '') // Remove & e virgulas
-}
+// Mapeamento fixo entre cursos_detalhes e medias_historicas_exames
+const EXAM_CODE_MAPPING = {
+  '01': 'Alemao',
+  '02': 'Biologia_Geologia',
+  '03': 'Desenho_A',
+  '04': 'Economia_A',
+  '05': 'Espanhol_Continuacao',
+  '06': 'Filosofia',
+  '07': 'Fisica_Quimica_A',
+  '08': 'Frances',
+  '09': 'Geografia_A',
+  '10': 'Geometria_Descritiva_A',
+  '11': 'Historia_A',
+  '12': 'HCA',
+  '13': 'Ingles',
+  '14': 'Latim_A',
+  '15': 'Literatura_Portuguesa',
+  '16': 'Matematica_B',
+  '17': 'MACS',
+  '18': 'Portugues',
+  '19': 'Matematica_A',
+  '20': 'Mandarim_Iniciacao',
+  '21': 'Italiano_Iniciacao'
+};
 
 function CustomTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null
@@ -38,60 +51,13 @@ export default function SelectedExamsHistoricalChart({ selectedExams, historical
       return []
     }
 
-    const availableExams = [...new Set(historicalData.map(e => e.Exame_Unificado))]
-    
-    console.log('Selected Exams:', selectedExams)
-    console.log('Available Exams:', availableExams)
-
-    // Função para fazer matching entre nomes com normalização de acentos
-    const findMatchingExamName = (selectedName) => {
-      const normalized = normalizeString(selectedName)
-      
-      // Debug
-      console.log(`  Matching "${selectedName}" → normalized: "${normalized}"`)
-      
-      // Procura match exacto primeiro (com normalização)
-      let match = availableExams.find(exam => {
-        const normalizedExam = normalizeString(exam)
-        console.log(`    vs "${exam}" → "${normalizedExam}" | match: ${normalizedExam === normalized}`)
-        return normalizedExam === normalized
-      })
-      if (match) {
-        console.log(`  ✓ Found exact match: "${match}"`)
-        return match
-      }
-      
-      // Se não encontrou, procura parcial removendo sufixos
-      const baseNormalized = normalized.replace(/_[abc12]$/, '')
-      
-      match = availableExams.find(exam => {
-        const normalizedExam = normalizeString(exam)
-        const baseExam = normalizedExam.replace(/_[abc12]$/, '')
-        
-        return (
-          baseExam === baseNormalized ||
-          normalizedExam.includes(normalized) ||
-          normalized.includes(normalizedExam) ||
-          baseExam.includes(baseNormalized) ||
-          baseNormalized.includes(baseExam)
-        )
-      })
-      
-      if (match) {
-        console.log(`  ✓ Found partial match: "${match}"`)
-        return match
-      }
-      
-      console.log(`  ✗ No match found`)
-      return null
-    }
-
     // Cria um mapa de exames selecionados para seus correspondentes no histórico
     const examMapping = {}
     selectedExams.forEach(exam => {
-      const matchedName = findMatchingExamName(exam.name)
-      if (matchedName) {
-        examMapping[matchedName] = exam.name
+      // Procura o identificador unificado usando o código do exame (ex: '02' -> 'Biologia_Geologia')
+      const matchedUnifiedName = EXAM_CODE_MAPPING[exam.code]
+      if (matchedUnifiedName) {
+        examMapping[matchedUnifiedName] = exam.name
       }
     })
 

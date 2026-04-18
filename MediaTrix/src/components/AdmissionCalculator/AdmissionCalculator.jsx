@@ -62,13 +62,13 @@ export default function AdmissionCalculator({ courseName, institutionName, selec
                         </div>
 
                         {/* Desenha a etiqueta "E" centrada entre os exames */}
-                        {i < conjunto.length - 1 && (
+                        {/*i < conjunto.length - 1 && (
                           <div className={styles.separatorContainer}>
                             <span className={styles.separatorE}>
                               E
                             </span>
                           </div>
-                        )}
+                        )*/}
                       </div>
                     ))}
                   </div>
