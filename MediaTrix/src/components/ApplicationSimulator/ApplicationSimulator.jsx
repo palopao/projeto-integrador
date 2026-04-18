@@ -70,14 +70,27 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
   // O nosso novo cálculo matemático dinâmico!
   const calcular = () => {
     const ni = parseFloat(notaInterna) || 0
-    
-    // Calcula a média das notas individuais das provas de ingresso
     const piValues = notasExames.map(v => parseFloat(v) || 0)
-    const piMedia = piValues.length > 0 ? piValues.reduce((a, b) => a + b, 0) / piValues.length : 0
     
-    // Calcula com base nos pesos da DGES (ex: ni * 0.50 + pi * 0.50)
-    const media = (ni * (pesos.sec / 100) + piMedia * (pesos.pi / 100)) / 10
-    setCalcResult(media.toFixed(1))
+    // Verifica se existem pesos individuais nas provas (ex: 15%, 25%)
+    const hasIndividualWeights = selectedSet.some(p => p.weight !== undefined)
+
+    if (hasIndividualWeights) {
+      // Cálculo Ponderado Individual (Soma de cada nota * seu peso específico)
+      // Nota: Nestes casos, a soma dos pesos das PIs no JSON já corresponde ao total da fórmula (ex: 15+15+25 = 55%)
+      const piWeightedSum = selectedSet.reduce((acc, prova, idx) => {
+        const weight = prova.weight || (pesos.pi / selectedSet.length)
+        return acc + (piValues[idx] * (weight / 100))
+      }, 0)
+
+      const mediaFinal = (ni * (pesos.sec / 100) + piWeightedSum) / 10
+      setCalcResult(mediaFinal.toFixed(2))
+    } else {
+      // Cálculo por Média Aritmética (Média das PIs * peso total do grupo)
+      const piMedia = piValues.length > 0 ? piValues.reduce((a, b) => a + b, 0) / piValues.length : 0
+      const mediaFinal = (ni * (pesos.sec / 100) + piMedia * (pesos.pi / 100)) / 10
+      setCalcResult(mediaFinal.toFixed(2))
+    }
   }
 
   // Determinar a probabilidade
@@ -151,8 +164,10 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
               selectedSet.map((prova, idx) => (
                 <div className={styles.inputGroup} key={`${prova.code}-${idx}`}>
                   <label className={styles.label}>
-                    <span className={styles.labelText}>{prova.name}</span>
-                    {idx === 0 && <span className={styles.weight}>({pesos.pi}% total)</span>}
+                    <span className={styles.labelText}>Prova: {prova.name}</span>
+                    <span className={styles.weight}>
+                      ({prova.weight ? `${prova.weight}%` : `${(pesos.pi / selectedSet.length).toFixed(0)}%`})
+                    </span>
                   </label>
                   <input
                     type="number"

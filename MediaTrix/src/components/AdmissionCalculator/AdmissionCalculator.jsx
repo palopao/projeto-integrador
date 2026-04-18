@@ -58,7 +58,10 @@ export default function AdmissionCalculator({ courseName, institutionName, selec
                       <div key={i} className={styles.examRow}>
                         <div className={styles.examInfo}>
                           <span className={styles.examCode}>{prova.code}</span>
-                          <span className={styles.examName}>{prova.name}</span>
+                          <span className={styles.examName}>
+                            {prova.name}
+                            {prova.weight && <span className={styles.weightTag}>({prova.weight}%)</span>}
+                          </span>
                         </div>
 
                         {/* Desenha a etiqueta "E" centrada entre os exames */}
@@ -89,7 +92,10 @@ export default function AdmissionCalculator({ courseName, institutionName, selec
             {selectedConjunto.map((prova, idx) => (
               <div key={idx} className={styles.summaryItem}>
                 <span className={styles.summaryCode}>{prova.code}</span>
-                <span className={styles.summaryName}>{prova.name}</span>
+                <span className={styles.summaryName}>
+                  {prova.name}
+                  {prova.weight && <span className={styles.weightTagSummary}> ({prova.weight}%)</span>}
+                </span>
               </div>
             ))}
           </div>

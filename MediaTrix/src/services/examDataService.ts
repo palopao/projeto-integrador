@@ -21,13 +21,28 @@ function isExamOption(str: string): boolean {
 /**
  * Converte uma string de prova em um objeto ExamOption
  * Formato esperado: "18  Português" -> { code: "18", name: "Português" }
+ * Suporta pesos: "11  História (15%)" -> { code: "11", name: "História", weight: 15 }
  */
 function parseExamOption(examStr: string): ExamOption {
-  const parts = examStr.trim().split(/\s{2,}/);
+  const trimmed = examStr.trim();
+  const parts = trimmed.split(/\s{2,}/);
+  const code = parts[0];
+  let name = parts[1] || '';
+  let weight: number | undefined;
+
+  // Tenta extrair o peso se presente no formato "(XX%)" no final do nome
+  const weightMatch = name.match(/\((\d+)%\)$/);
+  if (weightMatch) {
+    weight = parseInt(weightMatch[1], 10);
+    // Remove a percentagem do nome para uma exibição limpa na interface
+    name = name.replace(weightMatch[0], '').trim();
+  }
+
   return {
-    code: parts[0],
-    name: parts[1] || '',
-  };
+    code,
+    name,
+    weight,
+  } as any;
 }
 
 /**
@@ -116,8 +131,21 @@ export function calculateEntranceScore(
   const hasIndividualWeights = selectedExams.some(e => e.weight !== undefined);
 
   if (hasIndividualWeights) {
-    // Soma ponderada usando os pesos individuais (ex: nota * 0.15 + nota * 0.25...)
-    const examsWeightedSum = selectedExams.reduce((acc, e) => acc + (e.score * ((e.weight || 0) / 100)), 0);
+    // Soma ponderada usando os pesos individuais extraídos do JSON
+    const examsWithWeight = selectedExams.filter(e => e.weight !== undefined);
+    const examsWithoutWeight = selectedExams.filter(e => e.weight === undefined);
+    
+    let examsWeightedSum = examsWithWeight.reduce((acc, e) => acc + (e.score * ((e.weight || 0) / 100)), 0);
+    
+    // Caso existam exames sem peso definido mas outros no mesmo grupo tenham, 
+    // distribui o peso restante (total exames - pesos definidos) entre eles.
+    if (examsWithoutWeight.length > 0) {
+      const weightUsed = examsWithWeight.reduce((acc, e) => acc + (e.weight || 0), 0);
+      const remainingWeight = Math.max(0, examsTotalWeight - weightUsed);
+      const individualRemainingWeight = remainingWeight / examsWithoutWeight.length;
+      examsWeightedSum += examsWithoutWeight.reduce((acc, e) => acc + (e.score * (individualRemainingWeight / 100)), 0);
+    }
+    
     return (secondaryAvg * (secondaryWeight / 100)) + examsWeightedSum;
   } else {
     // Média aritmética simples das provas selecionadas multiplicada pelo peso total dos exames
