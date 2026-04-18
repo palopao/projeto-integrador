@@ -10,9 +10,11 @@ import CoursePhaseEvolutionChart from '../CoursePhaseEvolutionChart/CoursePhaseE
 import AdmissionCalculator from '../AdmissionCalculator/AdmissionCalculator'
 import ApplicationSimulator from '../ApplicationSimulator/ApplicationSimulator'
 import ExamEvolutionChart from '../ExamEvolutionChart/ExamEvolutionChart'
+import SelectedExamsHistoricalChart from '../SelectedExamsHistoricalChart/SelectedExamsHistoricalChart'
 import { useCoursePhaseEvolution } from '../../hooks/useCoursePhaseEvolution'
 import { useCourseDetailsById } from '../../hooks/useCourseDetailsById'
 import { useExamEvolution } from '../../hooks/useExamEvolution'
+import { useExamHistoricalData } from '../../hooks/useExamHistoricalData'
 import styles from './CourseDetail.module.css'
 
 // Função auxiliar movida para fora para evitar re-declarações e permitir uso imediato
@@ -38,10 +40,12 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   const displayInstitution = displayInfo?.institution || 'Universidade'
 
   const [selectedExamSetIdx, setSelectedExamSetIdx] = useState(0)
+  const [selectedExams, setSelectedExams] = useState([])
 
   // Resetar a seleção de exames sempre que o curso mudar
   useEffect(() => {
     setSelectedExamSetIdx(0)
+    setSelectedExams([])
   }, [displayCourseName, displayInstitution])
 
   const degreeChangeInfo = useMemo(() => {
@@ -78,9 +82,11 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   } = useCourseDetailsById(displayCourseName, displayInstitution)
   
   const { data: examData, loading: examLoading, error: examError } = useExamEvolution(EVOLUTION_EXAMS)
+  
+  const { data: historicalExamData, loading: historicalExamLoading } = useExamHistoricalData()
 
   // Correção da lógica do banner: predictions é um objeto, não um array.
-  // Procuramos a previsão específica para 2026 na Fase 1.
+  // Procuramos a previsão específica para 2025 na Fase 1.
   const predmin = predictions?.fase_1[0]?.ciLow.toFixed(1);
   const predmax = predictions?.fase_1[0]?.ciHigh.toFixed(1);
   const minPred = predmin ? predmin: '—';
@@ -108,7 +114,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
             </div>
           </div>
           <div className={styles.bannerRight}>
-            <p className={styles.avgLabel}>Média Prevista 2026</p>
+            <p className={styles.avgLabel}>Média Prevista 2025</p>
             <p className={styles.avgValue}>{minPred} - {maxPred}</p>
             <p className={styles.avgConf}>Intervalo de confiança 95%</p>
           </div>
@@ -116,73 +122,88 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
 
         {/* Main content grid */}
         <div className={styles.grid}>
-          {/* Left column */}
-          <div className={styles.leftCol}>
-            {/* Phase Evolution Chart - New */}
-            <div className={styles.card}>
-              <CoursePhaseEvolutionChart
-                data={data}
-                predictions={predictions}
-                courseName={displayCourseName}
-                minYear={yearRange.min}
-                maxYear={yearRange.max}
-                isLoading={loading}
-                error={error}
-              />
-            </div>
-
-            {/* Exam Evolution Chart */}
-            {examData && examData.length > 0 && (
-              <div className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <div className={`icon-box icon-box--primary`}>
-                    <ChartLineIcon />
-                  </div>
-                  <h3 className={styles.cardTitle}>Evolução das Notas dos Exames</h3>
-                </div>
-                <ExamEvolutionChart
-                  data={examData}
-                  isLoading={examLoading}
-                  error={examError}
-                  examNames={EVOLUTION_EXAMS}
-                />
-              </div>
-            )}
-
+          {/* Left column - Phase Evolution Chart */}
+          <div className={styles.card}>
+            <CoursePhaseEvolutionChart
+              data={data}
+              predictions={predictions}
+              courseName={displayCourseName}
+              minYear={yearRange.min}
+              maxYear={yearRange.max}
+              isLoading={loading}
+              error={error}
+            />
           </div>
 
-          {/* Right column */}
-          <div className={styles.rightCol}>
-            {/* Required Exams - Now using real data */}
+          {/* Right column - Selected Exams Historical Chart */}
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <div className={`icon-box icon-box--primary`}>
+                <ChartLineIcon />
+              </div>
+              <h3 className={styles.cardTitle}>Histórico dos Exames de Ingresso</h3>
+            </div>
+            <SelectedExamsHistoricalChart
+              selectedExams={selectedExams}
+              historicalData={historicalExamData}
+              isLoading={historicalExamLoading}
+            />
+          </div>
+        </div>
+
+        {/* Secondary content grid */}
+        <div className={styles.secondaryGrid}>
+          {/* Exam Evolution Chart - Full width */}
+          {examData && examData.length > 0 && (
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <div className={`icon-box icon-box--primary`}>
-                  <ChecklistIcon />
+                  <ChartLineIcon />
                 </div>
-                <h3 className={styles.cardTitle}>Provas de Ingresso</h3>
+                <h3 className={styles.cardTitle}>Evolução das Notas dos Exames</h3>
               </div>
-              <AdmissionCalculator
-                courseName={displayCourseName}
-                institutionName={displayInstitution}
-                selectedIdx={selectedExamSetIdx}
-                onSelect={setSelectedExamSetIdx}
+              <ExamEvolutionChart
+                data={examData}
+                isLoading={examLoading}
+                error={examError}
+                examNames={EVOLUTION_EXAMS}
               />
-
-              {/* Application Simulator */}
-              <div className={styles.simulatorSection}>
-                <div className={styles.simulatorCardHeader}>
-                  <CalculatorIcon className={styles.simulatorHeaderIcon} />
-                  <h3 className={styles.simulatorTitle}>Simulador de Candidatura</h3>
-                </div>
-                <ApplicationSimulator
-                  data={data}
-                  predictions={predictions}
-                  courseName={displayCourseName}
-                  course={course}
-                  selectedExamSetIdx={selectedExamSetIdx}
-                />
-              </div>
             </div>
+          )}
+        </div>
+
+        {/* Tertiary content grid */}
+        <div className={styles.tertiaryGrid}>
+          {/* Required Exams - Now using real data */}
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <div className={`icon-box icon-box--primary`}>
+                <ChecklistIcon />
+              </div>
+              <h3 className={styles.cardTitle}>Provas de Ingresso</h3>
+            </div>
+            <AdmissionCalculator
+              courseName={displayCourseName}
+              institutionName={displayInstitution}
+              selectedIdx={selectedExamSetIdx}
+              onSelect={setSelectedExamSetIdx}
+              onSelectedExamsChange={setSelectedExams}
+            />
+          </div>
+
+          {/* Application Simulator */}
+          <div className={styles.card}>
+            <div className={styles.simulatorCardHeader}>
+              <CalculatorIcon className={styles.simulatorHeaderIcon} />
+              <h3 className={styles.simulatorTitle}>Simulador de Candidatura</h3>
+            </div>
+            <ApplicationSimulator
+              data={data}
+              predictions={predictions}
+              courseName={displayCourseName}
+              course={course}
+              selectedExamSetIdx={selectedExamSetIdx}
+            />
           </div>
         </div>
       </div>

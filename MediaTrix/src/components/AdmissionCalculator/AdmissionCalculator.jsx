@@ -1,15 +1,23 @@
+import { useEffect } from 'react'
 import { useCourseDetailsById } from '../../hooks/useCourseDetailsById'
 import styles from './AdmissionCalculator.module.css'
 
-export default function AdmissionCalculator({ courseName, institutionName, selectedIdx, onSelect }) {
+export default function AdmissionCalculator({ courseName, institutionName, selectedIdx, onSelect, onSelectedExamsChange }) {
   const { course, loading: isLoading, error } = useCourseDetailsById(courseName, institutionName)
+
+  const provasConjuntos = course?.provas_ingresso || []
+  const selectedConjunto = provasConjuntos[selectedIdx] || []
+
+  // Notifica o componente pai sobre os exames selecionados
+  useEffect(() => {
+    if (onSelectedExamsChange && selectedConjunto.length > 0) {
+      onSelectedExamsChange(selectedConjunto)
+    }
+  }, [selectedConjunto, onSelectedExamsChange])
 
   if (isLoading) return <p className={styles.loading}>A carregar informações do curso...</p>
   if (error) return <p className={styles.error}>Erro: {error.message}</p>
   if (!course && !isLoading) return <p className={styles.noData}>Nenhum curso encontrado</p>
-
-  const provasConjuntos = course.provas_ingresso || []
-  const selectedConjunto = provasConjuntos[selectedIdx] || []
 
   return (
     <div className={styles.container}>

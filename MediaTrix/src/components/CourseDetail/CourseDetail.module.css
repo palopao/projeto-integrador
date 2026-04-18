@@ -73,7 +73,22 @@
 /* Grid */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 384px;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.secondaryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.tertiaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: start;
 }
@@ -88,6 +103,13 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+}
+
+/* Simulator Card */
+.simulatorCard {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
 }
 
 /* Cards */
@@ -488,6 +510,14 @@
     grid-template-columns: 1fr;
   }
 
+  .secondaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tertiaryGrid {
+    grid-template-columns: 1fr;
+  }
+
   .banner {
     flex-direction: column;
     align-items: flex-start;
@@ -500,6 +530,12 @@
   .avgValue {
     font-size: 36px;
     line-height: 44px;
+  }
+
+  .rightCol {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 }
 

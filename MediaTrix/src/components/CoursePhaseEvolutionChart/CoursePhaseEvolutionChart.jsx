@@ -285,6 +285,7 @@ export default function CoursePhaseEvolutionChart({
                   dot={{ r: 4, fill: '#10b981' }}
                   isAnimationActive={false}
                   connectNulls
+                  name="Fase 2 (Previsão)"
                   legendType="none"
                 />
                 <Area
