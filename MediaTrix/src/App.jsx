@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Stats from './components/Stats/Stats'
@@ -11,11 +11,27 @@ import './App.css'
 
 function App() {
   // Default: Psicologia @ Universidade dos Açores (real course from dados_dges_YYYY.json)
-  const [selectedCourse, setSelectedCourse] = useState({
+  const defaultCourse = {
     codigoInstituicao: '150',
     codigoCurso: '9219',
     nome: 'Psicologia - Universidade dos Açores - Faculdade de Ciências Sociais e Humanas'
-  })
+  }
+
+  const [selectedCourse, setSelectedCourse] = useState(defaultCourse)
+
+  // Recuperar curso selecionado do localStorage ao carregar a página
+  useEffect(() => {
+    const savedCourse = localStorage.getItem('selected_course')
+    if (savedCourse) {
+      try {
+        const parsedCourse = JSON.parse(savedCourse)
+        setSelectedCourse(parsedCourse)
+      } catch (error) {
+        console.error('Erro ao recuperar curso do localStorage:', error)
+        setSelectedCourse(defaultCourse)
+      }
+    }
+  }, [])
 
   const handleCourseSelect = (curso) => {
     setSelectedCourse({

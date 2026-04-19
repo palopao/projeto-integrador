@@ -8,6 +8,23 @@ export default function AdmissionCalculator({ courseName, institutionName, selec
   const provasConjuntos = course?.provas_ingresso || []
   const selectedConjunto = provasConjuntos[selectedIdx] || []
 
+  // Chave única para persistência da escolha do conjunto
+  const storageKey = `selected_exam_set_${courseName}_${institutionName}`
+
+  // Recuperar escolha anterior ao carregar o curso
+  useEffect(() => {
+    if (course && provasConjuntos.length > 0) {
+      const savedIdx = localStorage.getItem(storageKey)
+      if (savedIdx !== null) {
+        const idx = parseInt(savedIdx, 10)
+        // Valida se o índice ainda é válido para o curso atual
+        if (idx >= 0 && idx < provasConjuntos.length && idx !== selectedIdx) {
+          onSelect(idx)
+        }
+      }
+    }
+  }, [course, courseName, institutionName, provasConjuntos.length])
+
   // Notifica o componente pai sobre os exames selecionados
   useEffect(() => {
     if (onSelectedExamsChange && selectedConjunto.length > 0) {
@@ -50,7 +67,10 @@ export default function AdmissionCalculator({ courseName, institutionName, selec
                     type="radio"
                     name="examSet"
                     checked={selectedIdx === idx}
-                    onChange={() => onSelect(idx)}
+                    onChange={() => {
+                      localStorage.setItem(storageKey, idx)
+                      onSelect(idx)
+                    }}
                     className={styles.radioInput}
                   />
                   <div className={styles.optionContent}>

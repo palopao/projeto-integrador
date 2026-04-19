@@ -29,10 +29,33 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
     return conjuntos[selectedExamSetIdx] || []
   }, [course, selectedExamSetIdx])
 
-  // Sincronizar os inputs com o conjunto de exames selecionado
+  // Chave única para persistência no localStorage
+  const storageKey = useMemo(() => 
+    `sim_vals_${courseName}_${course?.instituicao}`, 
+    [courseName, course?.instituicao]
+  )
+
+  // Carregar dados e sincronizar inputs com o conjunto de exames
   useEffect(() => {
+    const saved = localStorage.getItem(storageKey)
+    if (saved) {
+      const { ni, exams } = JSON.parse(saved)
+      setNotaInterna(ni || '')
+      // Apenas restaura exames se a quantidade for a mesma do conjunto atual
+      if (exams && exams.length === selectedSet.length) {
+        setNotasExames(exams)
+        return
+      }
+    }
     setNotasExames(new Array(selectedSet.length).fill(''))
-  }, [selectedSet])
+  }, [selectedSet, storageKey])
+
+  // Guardar dados sempre que mudarem
+  useEffect(() => {
+    if (notaInterna || notasExames.some(v => v !== '')) {
+      localStorage.setItem(storageKey, JSON.stringify({ ni: notaInterna, exams: notasExames }))
+    }
+  }, [notaInterna, notasExames, storageKey])
 
   // Extrair os pesos reais do curso atual
   const pesos = useMemo(() => getPesos(course?.formula_nota), [course?.formula_nota])

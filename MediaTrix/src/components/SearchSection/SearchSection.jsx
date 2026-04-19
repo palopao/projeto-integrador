@@ -18,11 +18,13 @@ export default function SearchSection({ onCourseSelect, selectedCourse = null })
 
   // Atualizar barra de pesquisa com nome do curso selecionado
   React.useEffect(() => {
-    if (selectedCourse && selectedCourse.nome) {
-      setQuery(selectedCourse.nome)
+    // Tenta obter o nome por várias propriedades possíveis (nome, curso, nome_curso)
+    const courseName = selectedCourse?.nome || selectedCourse?.curso || selectedCourse?.nome_curso;
+    if (courseName) {
+      setQuery(courseName);
       setShowResults(false)
     }
-  }, [selectedCourse?.codigoCurso]) // Atualizado quando código do curso muda
+  }, [selectedCourse]) // Atualizado sempre que o objeto do curso selecionado mudar
 
   const { loading, error, filterOptions, search } = useCourseSearchWithSuggestions()
 
@@ -89,6 +91,14 @@ export default function SearchSection({ onCourseSelect, selectedCourse = null })
 
   const handleSelectCourse = (course) => {
     if (onCourseSelect) {
+      // Persiste o curso selecionado para que não se perca ao recarregar a página
+      localStorage.setItem('selected_course', JSON.stringify({
+        ...course,
+        // Garante que as propriedades existam em ambos os formatos (snake_case e camelCase)
+        codigoInstituicao: course.codigo_instituicao,
+        codigoCurso: course.codigo_curso,
+        nome: `${course.curso} - ${course.instituicao}`
+      }));
       onCourseSelect(course)
     }
     setShowResults(false)

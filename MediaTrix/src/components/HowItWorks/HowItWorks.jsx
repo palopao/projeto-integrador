@@ -12,7 +12,7 @@ const steps = [
     num: '01',
     numColor: 'var(--color-primary)',
     title: 'Recolha de Dados',
-    desc: 'Extraímos automaticamente dados oficiais da DGES e estatísticas dos exames nacionais dos últimos 5 anos.',
+    desc: 'Extraímos automaticamente dados oficiais da DGES e estatísticas dos exames nacionais dos últimos 8 anos.',
   },
   {
     icon: StatsAnalysisIcon,

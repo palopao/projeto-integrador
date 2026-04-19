@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './Stats.module.css'
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Cursos Analisados', color: 'var(--color-primary)' },
-  { value: 50, suffix: '+', label: 'Instituições', color: 'var(--color-secondary)' },
-  { value: 5, suffix: '', label: 'Anos de Dados', color: 'var(--color-amber)' },
+  { value: 1000, suffix: '+', label: 'Cursos Analisados', color: 'var(--color-primary)' },
+  { value: 150, suffix: '+', label: 'Instituições', color: 'var(--color-secondary)' },
+  { value: 8, suffix: '', label: 'Anos de Dados', color: 'var(--color-amber)' },
   { value: 95, suffix: '%', label: 'Precisão', color: 'var(--color-primary)' },
 ]
 
