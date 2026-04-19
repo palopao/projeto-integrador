@@ -53,7 +53,7 @@ export default function ExamEvolutionChart({ data, isLoading, error, examNames =
         <ResponsiveContainer width="100%" height={340}>
           <LineChart
             data={data}
-            margin={{ top: 10, right: 10, left: -10, bottom: 0 }}
+            margin={{ top: 10, right: 10, left: -10, bottom: 5 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis
@@ -67,8 +67,10 @@ export default function ExamEvolutionChart({ data, isLoading, error, examNames =
             />
             <Tooltip content={<CustomTooltip />} />
             <Legend
-              wrapperStyle={{ paddingBottom: '16px' }}
-              tooltipType="none"
+              verticalAlign="bottom"
+              align="center"
+              height={60}
+              wrapperStyle={{ paddingTop: '20px' }}
             />
 
             {/* Linhas para cada exame */}

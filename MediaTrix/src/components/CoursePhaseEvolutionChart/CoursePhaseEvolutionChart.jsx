@@ -179,7 +179,7 @@ export default function CoursePhaseEvolutionChart({
 
       <div className={styles.chartWrapper}>
         <ResponsiveContainer width="100%" height={320}>
-          <ComposedChart data={combinedData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+          <ComposedChart data={combinedData} margin={{ top: 10, right: 10, left: -10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis dataKey="year" tick={{ fontSize: 13, fill: '#4b5563' }} />
             <YAxis domain={yAxisDomain()} tick={{ fontSize: 13, fill: '#4b5563' }} />
@@ -201,7 +201,7 @@ export default function CoursePhaseEvolutionChart({
 
             <Legend
               verticalAlign="bottom"
-              height={36}
+              height={50}
               wrapperStyle={{ paddingTop: '20px' }}
               iconType="line"
             />
