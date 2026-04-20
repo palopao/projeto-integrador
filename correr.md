@@ -1,3 +1,3 @@
 ```
-cd MediaTrix && npm run dev
+npm run dev
 ```
