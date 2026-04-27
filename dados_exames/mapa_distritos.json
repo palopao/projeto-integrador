@@ -1,0 +1,646 @@
+{
+    "0140": {
+        "nome_oficial": "Universidade dos Açores - Faculdade de Ciências Agrárias e do Ambiente",
+        "distrito": "Açores"
+    },
+    "0150": {
+        "nome_oficial": "Universidade dos Açores - Faculdade de Ciências Sociais e Humanas",
+        "distrito": "Açores"
+    },
+    "0160": {
+        "nome_oficial": "Universidade dos Açores - Faculdade de Ciências e Tecnologia",
+        "distrito": "Açores"
+    },
+    "0170": {
+        "nome_oficial": "Universidade dos Açores - Faculdade de Economia e Gestão",
+        "distrito": "Açores"
+    },
+    "0200": {
+        "nome_oficial": "Universidade do Algarve",
+        "distrito": "Faro"
+    },
+    "0201": {
+        "nome_oficial": "Universidade do Algarve - Faculdade de Ciências Humanas e Sociais",
+        "distrito": "Faro"
+    },
+    "0203": {
+        "nome_oficial": "Universidade do Algarve - Faculdade de Ciências e Tecnologia",
+        "distrito": "Faro"
+    },
+    "0204": {
+        "nome_oficial": "Universidade do Algarve - Faculdade de Economia",
+        "distrito": "Faro"
+    },
+    "0300": {
+        "nome_oficial": "Universidade de Aveiro",
+        "distrito": "Braga"
+    },
+    "0400": {
+        "nome_oficial": "Universidade da Beira Interior",
+        "distrito": "Castelo Branco"
+    },
+    "0501": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Ciências e Tecnologia",
+        "distrito": "Coimbra"
+    },
+    "0502": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Direito",
+        "distrito": "Coimbra"
+    },
+    "0503": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Economia",
+        "distrito": "Coimbra"
+    },
+    "0504": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Farmácia",
+        "distrito": "Coimbra"
+    },
+    "0505": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Letras",
+        "distrito": "Coimbra"
+    },
+    "0506": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Medicina",
+        "distrito": "Coimbra"
+    },
+    "0507": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Psicologia e de Ciências da Educação",
+        "distrito": "Coimbra"
+    },
+    "0508": {
+        "nome_oficial": "Universidade de Coimbra - Faculdade de Ciências do Desporto e Educação Física",
+        "distrito": "Porto"
+    },
+    "0602": {
+        "nome_oficial": "Universidade de Évora - Escola de Ciências e Tecnologia",
+        "distrito": "Évora"
+    },
+    "0603": {
+        "nome_oficial": "Universidade de Évora - Escola de Artes",
+        "distrito": "Évora"
+    },
+    "0604": {
+        "nome_oficial": "Universidade de Évora - Escola de Ciências Sociais",
+        "distrito": "Évora"
+    },
+    "0901": {
+        "nome_oficial": "Universidade Nova de Lisboa - Faculdade de Ciências Médicas",
+        "distrito": "Lisboa"
+    },
+    "0902": {
+        "nome_oficial": "Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas",
+        "distrito": "Lisboa"
+    },
+    "0903": {
+        "nome_oficial": "Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia",
+        "distrito": "Lisboa"
+    },
+    "0904": {
+        "nome_oficial": "Universidade Nova de Lisboa - Faculdade de Economia",
+        "distrito": "Lisboa"
+    },
+    "0906": {
+        "nome_oficial": "Universidade Nova de Lisboa - Instituto Superior de Estatística e Gestão de Informação",
+        "distrito": "Lisboa"
+    },
+    "0911": {
+        "nome_oficial": "Universidade Nova de Lisboa - Faculdade de Direito",
+        "distrito": "Lisboa"
+    },
+    "1000": {
+        "nome_oficial": "Universidade do Minho",
+        "distrito": "Braga"
+    },
+    "1101": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Ciências da Nutrição e da Alimentação",
+        "distrito": "Porto"
+    },
+    "1102": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Arquitetura",
+        "distrito": "Porto"
+    },
+    "1103": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Ciências",
+        "distrito": "Porto"
+    },
+    "1104": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Economia",
+        "distrito": "Porto"
+    },
+    "1105": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Engenharia",
+        "distrito": "Porto"
+    },
+    "1106": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Farmácia",
+        "distrito": "Porto"
+    },
+    "1107": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Letras",
+        "distrito": "Porto"
+    },
+    "1108": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Medicina",
+        "distrito": "Porto"
+    },
+    "1109": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Psicologia e de Ciências da Educação",
+        "distrito": "Porto"
+    },
+    "1110": {
+        "nome_oficial": "Universidade do Porto - Instituto de Ciências Biomédicas Abel Salazar",
+        "distrito": "Porto"
+    },
+    "1111": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Desporto",
+        "distrito": "Porto"
+    },
+    "1113": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Medicina Dentária",
+        "distrito": "Porto"
+    },
+    "1114": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Direito",
+        "distrito": "Porto"
+    },
+    "1201": {
+        "nome_oficial": "Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Agrárias e Veterinárias",
+        "distrito": "Vila Real"
+    },
+    "1202": {
+        "nome_oficial": "Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais",
+        "distrito": "Vila Real"
+    },
+    "1203": {
+        "nome_oficial": "Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia",
+        "distrito": "Vila Real"
+    },
+    "1204": {
+        "nome_oficial": "Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente",
+        "distrito": "Vila Real"
+    },
+    "1300": {
+        "nome_oficial": "Universidade da Madeira",
+        "distrito": "Madeira"
+    },
+    "1320": {
+        "nome_oficial": "Universidade da Madeira - Escola Superior de Saúde",
+        "distrito": "Madeira"
+    },
+    "1500": {
+        "nome_oficial": "Universidade de Lisboa",
+        "distrito": "Lisboa"
+    },
+    "1501": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Arquitetura",
+        "distrito": "Lisboa"
+    },
+    "1502": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Belas-Artes",
+        "distrito": "Lisboa"
+    },
+    "1503": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Ciências",
+        "distrito": "Lisboa"
+    },
+    "1504": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Direito",
+        "distrito": "Lisboa"
+    },
+    "1505": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Farmácia",
+        "distrito": "Lisboa"
+    },
+    "1506": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Letras",
+        "distrito": "Lisboa"
+    },
+    "1507": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Medicina",
+        "distrito": "Lisboa"
+    },
+    "1508": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Medicina Dentária",
+        "distrito": "Lisboa"
+    },
+    "1509": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Medicina Veterinária",
+        "distrito": "Lisboa"
+    },
+    "1510": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Motricidade Humana",
+        "distrito": "Lisboa"
+    },
+    "1511": {
+        "nome_oficial": "Universidade de Lisboa - Faculdade de Psicologia",
+        "distrito": "Lisboa"
+    },
+    "1513": {
+        "nome_oficial": "Universidade de Lisboa - Instituto de Educação",
+        "distrito": "Lisboa"
+    },
+    "1514": {
+        "nome_oficial": "Universidade de Lisboa - Instituto de Geografia e Ordenamento do Território",
+        "distrito": "Lisboa"
+    },
+    "1515": {
+        "nome_oficial": "Universidade de Lisboa - Instituto Superior de Agronomia",
+        "distrito": "Lisboa"
+    },
+    "1516": {
+        "nome_oficial": "Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas",
+        "distrito": "Lisboa"
+    },
+    "1517": {
+        "nome_oficial": "Universidade de Lisboa - Instituto Superior de Economia e Gestão",
+        "distrito": "Lisboa"
+    },
+    "1518": {
+        "nome_oficial": "Universidade de Lisboa - Instituto Superior Técnico",
+        "distrito": "Lisboa"
+    },
+    "1519": {
+        "nome_oficial": "Universidade de Lisboa - Instituto Superior Técnico (Tagus Park)",
+        "distrito": "Lisboa"
+    },
+    "3011": {
+        "nome_oficial": "Universidade de Aveiro - Instituto Superior de Contabilidade e Administração de Aveiro",
+        "distrito": "Braga"
+    },
+    "3012": {
+        "nome_oficial": "Universidade de Aveiro - Escola Superior de Tecnologia e Gestão de Águeda",
+        "distrito": "Braga"
+    },
+    "3013": {
+        "nome_oficial": "Universidade de Aveiro - Escola Superior de Saúde de Aveiro",
+        "distrito": "Braga"
+    },
+    "3014": {
+        "nome_oficial": "Universidade de Aveiro - Escola Superior de Design, Gestão e Tecnologia da Produção de Aveiro-Norte",
+        "distrito": "Braga"
+    },
+    "3021": {
+        "nome_oficial": "Instituto Politécnico de Beja - Escola Superior Agrária",
+        "distrito": "Beja"
+    },
+    "3022": {
+        "nome_oficial": "Instituto Politécnico de Beja - Escola Superior de Educação",
+        "distrito": "Beja"
+    },
+    "3023": {
+        "nome_oficial": "Instituto Politécnico de Beja - Escola Superior de Tecnologia e de Gestão",
+        "distrito": "Beja"
+    },
+    "3031": {
+        "nome_oficial": "Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão",
+        "distrito": "Braga"
+    },
+    "3032": {
+        "nome_oficial": "Instituto Politécnico do Cávado e do Ave - Escola Superior de Tecnologia",
+        "distrito": "Braga"
+    },
+    "3033": {
+        "nome_oficial": "Instituto Politécnico do Cávado e do Ave - Escola Superior de Design",
+        "distrito": "Braga"
+    },
+    "3034": {
+        "nome_oficial": "Instituto Politécnico do Cávado e do Ave - Escola Superior de Hotelaria e Turismo",
+        "distrito": "Braga"
+    },
+    "3041": {
+        "nome_oficial": "Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança",
+        "distrito": "Braga"
+    },
+    "3042": {
+        "nome_oficial": "Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança",
+        "distrito": "Braga"
+    },
+    "3043": {
+        "nome_oficial": "Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança",
+        "distrito": "Braga"
+    },
+    "3045": {
+        "nome_oficial": "Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",
+        "distrito": "Braga"
+    },
+    "3051": {
+        "nome_oficial": "Instituto Politécnico de Castelo Branco - Escola Superior Agrária de Castelo Branco",
+        "distrito": "Castelo Branco"
+    },
+    "3052": {
+        "nome_oficial": "Instituto Politécnico de Castelo Branco - Escola Superior de Educação de Castelo Branco",
+        "distrito": "Castelo Branco"
+    },
+    "3053": {
+        "nome_oficial": "Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia de Castelo Branco",
+        "distrito": "Castelo Branco"
+    },
+    "3054": {
+        "nome_oficial": "Instituto Politécnico de Castelo Branco - Escola Superior de Gestão de Idanha-a-Nova",
+        "distrito": "Castelo Branco"
+    },
+    "3055": {
+        "nome_oficial": "Instituto Politécnico de Castelo Branco - Escola Superior de Artes Aplicadas",
+        "distrito": "Castelo Branco"
+    },
+    "3061": {
+        "nome_oficial": "Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra",
+        "distrito": "Coimbra"
+    },
+    "3062": {
+        "nome_oficial": "Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra",
+        "distrito": "Coimbra"
+    },
+    "3063": {
+        "nome_oficial": "Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra",
+        "distrito": "Coimbra"
+    },
+    "3064": {
+        "nome_oficial": "Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra",
+        "distrito": "Coimbra"
+    },
+    "3065": {
+        "nome_oficial": "Instituto Politécnico de Coimbra - Escola Superior de Tecnologia e Gestão de Oliveira do Hospital",
+        "distrito": "Coimbra"
+    },
+    "3081": {
+        "nome_oficial": "Universidade do Algarve - Escola Superior de Educação e Comunicação",
+        "distrito": "Faro"
+    },
+    "3082": {
+        "nome_oficial": "Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo",
+        "distrito": "Faro"
+    },
+    "3083": {
+        "nome_oficial": "Universidade do Algarve - Instituto Superior de Engenharia",
+        "distrito": "Faro"
+    },
+    "3087": {
+        "nome_oficial": "Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo (Portimão)",
+        "distrito": "Faro"
+    },
+    "3091": {
+        "nome_oficial": "Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",
+        "distrito": "Porto"
+    },
+    "3092": {
+        "nome_oficial": "Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão",
+        "distrito": "Guarda"
+    },
+    "3095": {
+        "nome_oficial": "Instituto Politécnico da Guarda - Escola Superior de Turismo e Hotelaria",
+        "distrito": "Guarda"
+    },
+    "3101": {
+        "nome_oficial": "Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais",
+        "distrito": "Leiria"
+    },
+    "3102": {
+        "nome_oficial": "Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão",
+        "distrito": "Leiria"
+    },
+    "3103": {
+        "nome_oficial": "Instituto Politécnico de Leiria - Escola Superior de Artes e Design",
+        "distrito": "Leiria"
+    },
+    "3105": {
+        "nome_oficial": "Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar",
+        "distrito": "Leiria"
+    },
+    "3112": {
+        "nome_oficial": "Instituto Politécnico de Lisboa - Escola Superior de Educação",
+        "distrito": "Lisboa"
+    },
+    "3113": {
+        "nome_oficial": "Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social",
+        "distrito": "Lisboa"
+    },
+    "3117": {
+        "nome_oficial": "Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa",
+        "distrito": "Lisboa"
+    },
+    "3118": {
+        "nome_oficial": "Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa",
+        "distrito": "Lisboa"
+    },
+    "3121": {
+        "nome_oficial": "Instituto Politécnico de Portalegre - Escola Superior de Educação e Ciências Sociais",
+        "distrito": "Portalegre"
+    },
+    "3122": {
+        "nome_oficial": "Instituto Politécnico de Portalegre - Escola Superior de Tecnologia e Gestão",
+        "distrito": "Portalegre"
+    },
+    "3123": {
+        "nome_oficial": "Instituto Politécnico de Portalegre - Escola Superior Agrária de Elvas",
+        "distrito": "Portalegre"
+    },
+    "3131": {
+        "nome_oficial": "Instituto Politécnico do Porto - Escola Superior de Educação",
+        "distrito": "Porto"
+    },
+    "3134": {
+        "nome_oficial": "Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto",
+        "distrito": "Porto"
+    },
+    "3135": {
+        "nome_oficial": "Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto",
+        "distrito": "Porto"
+    },
+    "3138": {
+        "nome_oficial": "Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão",
+        "distrito": "Porto"
+    },
+    "3139": {
+        "nome_oficial": "Instituto Politécnico do Porto - Escola Superior de Hotelaria e Turismo",
+        "distrito": "Porto"
+    },
+    "3141": {
+        "nome_oficial": "Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém",
+        "distrito": "Santarém"
+    },
+    "3142": {
+        "nome_oficial": "Instituto Politécnico de Santarém - Escola Superior de Educação de Santarém",
+        "distrito": "Santarém"
+    },
+    "3143": {
+        "nome_oficial": "Instituto Politécnico de Santarém - Escola Superior de Gestão e Tecnologia de Santarém",
+        "distrito": "Santarém"
+    },
+    "3145": {
+        "nome_oficial": "Instituto Politécnico de Santarém - Escola Superior de Desporto de Rio Maior",
+        "distrito": "Porto"
+    },
+    "3151": {
+        "nome_oficial": "Instituto Politécnico de Setúbal - Escola Superior de Educação",
+        "distrito": "Setúbal"
+    },
+    "3152": {
+        "nome_oficial": "Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal",
+        "distrito": "Setúbal"
+    },
+    "3153": {
+        "nome_oficial": "Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais",
+        "distrito": "Setúbal"
+    },
+    "3154": {
+        "nome_oficial": "Instituto Politécnico de Setúbal - Escola Superior de Tecnologia do Barreiro",
+        "distrito": "Setúbal"
+    },
+    "3155": {
+        "nome_oficial": "Instituto Politécnico de Setúbal - Escola Superior de Saúde",
+        "distrito": "Setúbal"
+    },
+    "3161": {
+        "nome_oficial": "Instituto Politécnico de Viana do Castelo - Escola Superior Agrária",
+        "distrito": "Viana do Castelo"
+    },
+    "3162": {
+        "nome_oficial": "Instituto Politécnico de Viana do Castelo - Escola Superior de Educação",
+        "distrito": "Viana do Castelo"
+    },
+    "3163": {
+        "nome_oficial": "Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão",
+        "distrito": "Viana do Castelo"
+    },
+    "3164": {
+        "nome_oficial": "Instituto Politécnico de Viana do Castelo - Escola Superior de Ciências Empresariais",
+        "distrito": "Viana do Castelo"
+    },
+    "3165": {
+        "nome_oficial": "Instituto Politécnico de Viana do Castelo - Escola Superior de Desporto e Lazer",
+        "distrito": "Porto"
+    },
+    "3181": {
+        "nome_oficial": "Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu",
+        "distrito": "Viseu"
+    },
+    "3182": {
+        "nome_oficial": "Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu",
+        "distrito": "Viseu"
+    },
+    "3185": {
+        "nome_oficial": "Instituto Politécnico de Viseu - Escola Superior Agrária de Viseu",
+        "distrito": "Viseu"
+    },
+    "3186": {
+        "nome_oficial": "Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Lamego",
+        "distrito": "Viseu"
+    },
+    "3241": {
+        "nome_oficial": "Instituto Politécnico de Tomar - Escola Superior de Gestão de Tomar",
+        "distrito": "Santarém"
+    },
+    "3242": {
+        "nome_oficial": "Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar",
+        "distrito": "Santarém"
+    },
+    "3243": {
+        "nome_oficial": "Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Abrantes",
+        "distrito": "Santarém"
+    },
+    "3331": {
+        "nome_oficial": "Instituto Politécnico do Porto - Escola Superior de Media Artes e Design",
+        "distrito": "Porto"
+    },
+    "5402": {
+        "nome_oficial": "Universidade do Porto - Faculdade de Belas-Artes",
+        "distrito": "Porto"
+    },
+    "6800": {
+        "nome_oficial": "ISCTE - Instituto Universitário de Lisboa",
+        "distrito": "Lisboa"
+    },
+    "7001": {
+        "nome_oficial": "Escola Superior de Enfermagem de Coimbra",
+        "distrito": "Coimbra"
+    },
+    "7002": {
+        "nome_oficial": "Escola Superior de Enfermagem de Lisboa",
+        "distrito": "Lisboa"
+    },
+    "7003": {
+        "nome_oficial": "Escola Superior de Enfermagem do Porto",
+        "distrito": "Porto"
+    },
+    "7005": {
+        "nome_oficial": "Instituto Politécnico de Beja - Escola Superior de Saúde",
+        "distrito": "Beja"
+    },
+    "7010": {
+        "nome_oficial": "Universidade do Minho - Escola Superior de Enfermagem",
+        "distrito": "Braga"
+    },
+    "7015": {
+        "nome_oficial": "Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança",
+        "distrito": "Braga"
+    },
+    "7020": {
+        "nome_oficial": "Instituto Politécnico de Castelo Branco - Escola Superior de Saúde Dr. Lopes Dias",
+        "distrito": "Castelo Branco"
+    },
+    "7030": {
+        "nome_oficial": "Universidade de Évora - Escola Superior de Enfermagem de São João de Deus",
+        "distrito": "Évora"
+    },
+    "7035": {
+        "nome_oficial": "Universidade do Algarve - Escola Superior de Saúde",
+        "distrito": "Faro"
+    },
+    "7040": {
+        "nome_oficial": "Instituto Politécnico da Guarda - Escola Superior de Saúde da Guarda",
+        "distrito": "Guarda"
+    },
+    "7045": {
+        "nome_oficial": "Instituto Politécnico de Leiria - Escola Superior de Saúde",
+        "distrito": "Leiria"
+    },
+    "7055": {
+        "nome_oficial": "Instituto Politécnico de Portalegre - Escola Superior de Saúde",
+        "distrito": "Portalegre"
+    },
+    "7065": {
+        "nome_oficial": "Instituto Politécnico de Santarém - Escola Superior de Saúde de Santarém",
+        "distrito": "Santarém"
+    },
+    "7075": {
+        "nome_oficial": "Instituto Politécnico de Viana do Castelo - Escola Superior de Saúde",
+        "distrito": "Viana do Castelo"
+    },
+    "7080": {
+        "nome_oficial": "Universidade de Trás-os-Montes e Alto Douro - Escola Superior de Saúde",
+        "distrito": "Vila Real"
+    },
+    "7085": {
+        "nome_oficial": "Instituto Politécnico de Viseu - Escola Superior de Saúde de Viseu",
+        "distrito": "Viseu"
+    },
+    "7092": {
+        "nome_oficial": "Universidade dos Açores - Escola Superior de Saúde - Angra do Heroísmo",
+        "distrito": "Açores"
+    },
+    "7093": {
+        "nome_oficial": "Universidade dos Açores - Escola Superior de Saúde - Ponta Delgada",
+        "distrito": "Açores"
+    },
+    "7105": {
+        "nome_oficial": "Escola Superior Náutica Infante D. Henrique",
+        "distrito": "Lisboa"
+    },
+    "7110": {
+        "nome_oficial": "Escola Superior de Hotelaria e Turismo do Estoril",
+        "distrito": "Lisboa"
+    },
+    "7210": {
+        "nome_oficial": "Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra",
+        "distrito": "Coimbra"
+    },
+    "7220": {
+        "nome_oficial": "Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa",
+        "distrito": "Lisboa"
+    },
+    "7230": {
+        "nome_oficial": "Instituto Politécnico do Porto - Escola Superior de Saúde",
+        "distrito": "Porto"
+    }
+}

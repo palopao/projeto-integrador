@@ -19,12 +19,13 @@ def gerar_populacao(ano, num_estudantes=60000):
         quantidade = registo.get("Quantidade_Alunos")
         fase = registo.get("Fase")
         
-        if str(fase) != "1": continue
+        # Correção: Apanha "1", "1.0" ou "1ª Fase" para não falhar nenhum exame
+        if "1" not in str(fase).lower(): continue
+        
         if exame not in sacos_de_notas: sacos_de_notas[exame] = []
         sacos_de_notas[exame].extend([nota] * quantidade)
         todos_os_exames_do_ano.add(exame)
         
-    # ⬇️ A CORREÇÃO MESTRA: Ordenar os sacos do pior para o melhor
     for exame in sacos_de_notas:
         sacos_de_notas[exame].sort()
         
@@ -46,8 +47,6 @@ def gerar_populacao(ano, num_estudantes=60000):
         aluno = {"Aluno_ID": f"{ano}_{i+1}"}
         aluno["Distrito"] = random.choices(distritos, weights=pesos_distritos)[0]
         
-        # ⬇️ A CRIAÇÃO DO GÊNIO: Atribuir uma "Aptidão Académica"
-        # Usamos uma distribuição Beta para criar mais alunos de elite (candidatos universitários)
         percentil_aluno = random.betavariate(2.5, 1.2)
         
         r = random.random()
@@ -71,35 +70,42 @@ def gerar_populacao(ano, num_estudantes=60000):
             if exame_extra not in exames_escolhidos and len(sacos_de_notas.get(exame_extra, [])) > 0:
                 exames_escolhidos.append(exame_extra)
         
-        notas_tiradas = []
+        notas_fase1 = []
         for exame in exames_escolhidos:
-            # ⬇️ O aluno tira uma nota de acordo com o seu Percentil (+/- um pequeno ruído)
-            p_exame = max(0.0, min(0.999, percentil_aluno + random.uniform(-0.1, 0.1)))
+            p_exame = max(0.0, min(0.999, percentil_aluno + random.uniform(-0.08, 0.08)))
             idx = int(p_exame * len(sacos_de_notas[exame]))
-            nota_sorteada = sacos_de_notas[exame][idx]
             
-            aluno[exame] = nota_sorteada
-            notas_tiradas.append(nota_sorteada)
+            n1 = min(200, sacos_de_notas[exame][idx] + random.randint(12, 18))
+            aluno[f"{exame}_F1"] = n1
+            notas_fase1.append(n1)
             
-        if notas_tiradas:
-            media_exames = sum(notas_tiradas) / len(notas_tiradas)
-            # Como a aptidão já está a criar as notas perfeitas, voltamos à curva de inflação real normal (14 pontos)
-            diferenca = random.gauss(14, 4)
+            n2 = min(200, n1 + random.randint(-5, 15))
+            aluno[f"{exame}_F2"] = n2
+            
+            n3 = min(200, max(n1, n2) + random.randint(-2, 10))
+            aluno[f"{exame}_F3"] = n3
+            
+        if notas_fase1:
+            media_exames = sum(notas_fase1) / len(notas_fase1)
+            diferenca = random.gauss(25, 3)
             nota_interna = media_exames + diferenca
         else:
-            nota_interna = random.gauss(155, 15)
+            nota_interna = random.gauss(165, 15)
             
         aluno["Nota_Interna"] = max(100, min(200, int(nota_interna)))
         alunos.append(aluno)
         
     df_populacao = pd.DataFrame(alunos)
+    
     for exame in lista_todos_exames:
-        if exame not in df_populacao.columns:
-            df_populacao[exame] = float('nan')
-            
-    caminho_saida = os.path.join(pasta_atual, f'populacao_virtual_{ano}.csv')
-    df_populacao.to_csv(caminho_saida, index=False)
+        for fase in [1, 2, 3]:
+            col_name = f"{exame}_F{fase}"
+            if col_name not in df_populacao.columns:
+                df_populacao[col_name] = float('nan')
+                
+    caminho_saida = os.path.join(pasta_atual, f'populacao_virtual_{ano}.parquet')
+    df_populacao.to_parquet(caminho_saida, index=False)
     return caminho_saida
 
 if __name__ == "__main__":
-    gerar_populacao("2023", 60000)
+    gerar_populacao("2024", 75000)
