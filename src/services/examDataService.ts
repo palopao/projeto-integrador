@@ -88,21 +88,39 @@ export function parseProvasIngresso(provas: string[]): any[] {
  * Carrega os detalhes dos cursos do ficheiro JSON
  */
 export async function loadCourseDetails(
-  path: string = '/data/cursos_detalhes.json'
+  path: string = '/data/cursos_detalhes.json',
+  mapaDistritosPath: string = '/data/mapa_distritos.json'
 ): Promise<CourseDetails[]> {
   try {
-    const response = await fetch(path);
-    if (!response.ok) {
-      throw new Error(`Erro ao carregar detalhes dos cursos: ${response.status}`);
+    // Carrega detalhes dos cursos e o mapeamento de distritos em paralelo
+    const [coursesResponse, distritosResponse] = await Promise.all([
+      fetch(path),
+      fetch(mapaDistritosPath).catch(() => null)
+    ]);
+
+    if (!coursesResponse.ok) {
+      throw new Error(`Erro ao carregar detalhes dos cursos: ${coursesResponse.status}`);
     }
-    const data = await response.json();
+
+    const data = await coursesResponse.json();
+    const mapaDistritos = distritosResponse && distritosResponse.ok 
+      ? await distritosResponse.json() 
+      : {};
 
     // Processa as provas de ingresso
-    return data.map((course: any) => ({
-      ...course,
-      curso: course.nome_curso || course.curso || '', // Normaliza o nome do curso para consistência
-      provas_ingresso: parseProvasIngresso(course.provas_ingresso || [])
-    }));
+    return data.map((course: any) => {
+      // Normalização do código da instituição para 4 dígitos para garantir compatibilidade com o mapa
+      const instCode = String(course.codigo_instituicao).padStart(4, '0');
+      const infoDistrito = mapaDistritos[instCode];
+
+      return {
+        ...course,
+        curso: course.nome_curso || course.curso || '', // Normaliza o nome do curso para consistência
+        // Atribui o distrito com base no mapa, permitindo filtros precisos na pesquisa
+        distrito: infoDistrito?.distrito || course.distrito || 'Outro',
+        provas_ingresso: parseProvasIngresso(course.provas_ingresso || [])
+      };
+    });
   } catch (error) {
     console.error('Erro ao carregar dados de cursos:', error);
     throw error;
