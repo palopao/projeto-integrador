@@ -74,11 +74,13 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
 
   // Obter a previsão para o próximo ano
   const nextYearPrediction = useMemo(() => {
-    if (!predictions || !predictions.fase_1 || predictions.fase_1.length === 0) return null
-    const nextPred = predictions.fase_1[0]
+    if (!predictions) return null
+    const year = predictions.fase_1?.[0]?.year || predictions.fase_2?.[0]?.year || predictions.fase_3?.[0]?.year
+    if (!year) return null
+
     return {
-      year: nextPred.year,
-      fase1: { predicted: nextPred.predicted, ciLow: nextPred.ciLow, ciHigh: nextPred.ciHigh },
+      year,
+      fase1: predictions.fase_1?.[0],
       fase2: predictions.fase_2?.[0],
       fase3: predictions.fase_3?.[0],
     }
@@ -116,46 +118,75 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
     }
   }
 
-  // Determinar a probabilidade
-  const getProbabilidade = () => {
-    if (!calcResult || !lastYearGrades) return null
+  // Helper para calcular probabilidade para uma nota específica
+  const evaluateProbability = (userGrade, targetGrade) => {
+    if (targetGrade === null || targetGrade === undefined) return null;
 
-    const userGrade = parseFloat(calcResult)
-    const lastFase3 = lastYearGrades.fase3 || lastYearGrades.fase2 || lastYearGrades.fase1
+    const diff = userGrade - (targetGrade / 10);
 
-    const diffLastYear = userGrade - (lastFase3 / 10)
-    
     let probability = 'Muito Baixa'
     let color = '#ef4444'
     let icon = '❌'
     let recommendation = 'Nota abaixo dos registos recentes'
 
-    if (diffLastYear >= 1.0) {
+    if (diff >= 1.0) {
       probability = 'Muito Alta'
       color = '#059669'
       icon = '✅'
       recommendation = 'Nota bastante acima dos registos, entrada muito provável'
-    } else if (diffLastYear >= 0.5) {
+    } else if (diff >= 0.5) {
       probability = 'Alta'
       color = '#10b981'
       icon = '✅'
       recommendation = 'Nota acima dos registos, boa probabilidade de entrada'
-    } else if (diffLastYear >= -0.2) {
+    } else if (diff >= -0.2) {
       probability = 'Média'
       color = '#f59e0b'
       icon = '⚠️'
       recommendation = 'Nota próxima aos registos, entrada possível'
-    } else if (diffLastYear >= -0.5) {
+    } else if (diff >= -0.5) {
       probability = 'Baixa'
       color = '#f59e0b'
       icon = '⚠️'
       recommendation = 'Nota ligeiramente abaixo dos registos'
     }
 
-    return { probability, color, icon, recommendation, diffLastYear }
+    return { probability, color, icon, recommendation, diff };
   }
 
-  const probabilidadeInfo = getProbabilidade()
+  // Determinar a probabilidade para cada fase
+  const phaseProbabilities = useMemo(() => {
+    if (!calcResult) return []
+
+    const userGrade = parseFloat(calcResult)
+
+    const targets = [
+      { 
+        id: 'f1', 
+        label: nextYearPrediction?.year ? `1ª Fase ${nextYearPrediction.year} (Previsto)` : `1ª Fase ${lastYearGrades?.year || ''}`,
+        grade: nextYearPrediction?.fase1?.predicted ?? lastYearGrades?.fase1 
+      },
+      { 
+        id: 'f2', 
+        label: nextYearPrediction?.year ? `2ª Fase ${nextYearPrediction.year} (Previsto)` : `2ª Fase ${lastYearGrades?.year || ''}`,
+        grade: nextYearPrediction?.fase2?.predicted ?? lastYearGrades?.fase2 
+      },
+      { 
+        id: 'f3', 
+        label: nextYearPrediction?.year ? `3ª Fase ${nextYearPrediction.year} (Previsto)` : `3ª Fase ${lastYearGrades?.year || ''}`,
+        grade: nextYearPrediction?.fase3?.predicted ?? lastYearGrades?.fase3 
+      },
+    ]
+
+    return targets
+      .filter(t => t.grade !== null && t.grade !== undefined)
+      .map(t => ({
+        id: t.id,
+        label: t.label,
+        info: evaluateProbability(userGrade, t.grade)
+      }))
+      .filter(p => p.info !== null)
+  }, [calcResult, lastYearGrades, nextYearPrediction])
 
   return (
     <div className={styles.simulator}>
@@ -233,26 +264,29 @@ export default function ApplicationSimulator({ data, predictions, courseName, co
               </div>
             </div>
 
-            {/* Probabilidade de Entrada */}
-            {probabilidadeInfo && (
+            {/* Probabilidades de Entrada por Fase */}
+            {phaseProbabilities.length > 0 && (
               <div className={styles.probabilitySection}>
-                <div
-                  className={styles.probabilityBox}
-                  style={{ borderLeftColor: probabilidadeInfo.color }}
-                >
-                  <div className={styles.probabilityHeader}>
-                    <span className={styles.probabilityIcon}>{probabilidadeInfo.icon}</span>
-                    <div className={styles.probabilityText}>
-                      <p className={styles.probabilityLabel}>Probabilidade de Entrada</p>
-                      <p className={styles.probabilityValue} style={{ color: probabilidadeInfo.color }}>
-                        {probabilidadeInfo.probability}
-                      </p>
+                {phaseProbabilities.map((phase) => (
+                  <div
+                    key={phase.id}
+                    className={styles.probabilityBox}
+                    style={{ borderLeftColor: phase.info.color, marginBottom: '12px' }}
+                  >
+                    <div className={styles.probabilityHeader}>
+                      <span className={styles.probabilityIcon}>{phase.info.icon}</span>
+                      <div className={styles.probabilityText}>
+                        <p className={styles.probabilityLabel}>Probabilidade ({phase.label})</p>
+                        <p className={styles.probabilityValue} style={{ color: phase.info.color }}>
+                          {phase.info.probability}
+                        </p>
+                      </div>
                     </div>
+                    <p className={styles.probabilityRecommendation}>
+                      {phase.info.recommendation}
+                    </p>
                   </div>
-                  <p className={styles.probabilityRecommendation}>
-                    {probabilidadeInfo.recommendation}
-                  </p>
-                </div>
+                ))}
               </div>
             )}
           </>
