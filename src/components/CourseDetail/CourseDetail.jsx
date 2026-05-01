@@ -9,11 +9,10 @@ import CalculatorIcon from '../../assets/icons/calculator.svg?react'
 import CoursePhaseEvolutionChart from '../CoursePhaseEvolutionChart/CoursePhaseEvolutionChart'
 import AdmissionCalculator from '../AdmissionCalculator/AdmissionCalculator'
 import ApplicationSimulator from '../ApplicationSimulator/ApplicationSimulator'
-import ExamEvolutionChart from '../ExamEvolutionChart/ExamEvolutionChart'
 import SelectedExamsHistoricalChart from '../SelectedExamsHistoricalChart/SelectedExamsHistoricalChart'
+import ExamDistributionChart from '../ExamDistributionChart/ExamDistributionChart'
 import { useCoursePhaseEvolution } from '../../hooks/useCoursePhaseEvolution'
 import { useCourseDetailsById } from '../../hooks/useCourseDetailsById'
-import { useExamEvolution } from '../../hooks/useExamEvolution'
 import { useExamHistoricalData } from '../../hooks/useExamHistoricalData'
 import styles from './CourseDetail.module.css'
 
@@ -29,9 +28,6 @@ const parseCourseInfo = (courseFullName) => {
     institution: parts.slice(1).join(' - ') || ''
   }
 }
-
-// Constantes fora do componente para manter referências estáveis e evitar loops
-const EVOLUTION_EXAMS = ['Biologia', 'Fisica'];
 
 export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = '9219', nomeDefault = 'Psicologia - Universidade dos Açores - Faculdade de Ciências Sociais e Humanas', codes }) {
   // 1. Calcular a informação do curso IMEDIATAMENTE no início para poder ser usada nos hooks abaixo
@@ -80,8 +76,6 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
     loading: courseLoading, 
     error: courseError 
   } = useCourseDetailsById(displayCourseName, displayInstitution)
-  
-  const { data: examData, loading: examLoading, error: examError } = useExamEvolution(EVOLUTION_EXAMS)
   
   const { data: historicalExamData, loading: historicalExamLoading } = useExamHistoricalData()
 
@@ -135,41 +129,31 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
             />
           </div>
 
-          {/* Right column - Selected Exams Historical Chart */}
-          <div className={styles.card}>
-            <div className={styles.cardHeader}>
-              <div className={`icon-box icon-box--primary`}>
-                <ChartLineIcon />
-              </div>
-              <h3 className={styles.cardTitle}>Histórico dos Exames de Ingresso</h3>
-            </div>
-            <SelectedExamsHistoricalChart
-              selectedExams={selectedExams}
-              historicalData={historicalExamData}
-              isLoading={historicalExamLoading}
-            />
-          </div>
-        </div>
-
-        {/* Secondary content grid */}
-        <div className={styles.secondaryGrid}>
-          {/* Exam Evolution Chart - Full width */}
-          {examData && examData.length > 0 && (
+          {/* Right column - Selected Exams and Distribution */}
+          <div className={styles.rightColumn}>
+            {/* Selected Exams Historical Chart */}
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <div className={`icon-box icon-box--primary`}>
                   <ChartLineIcon />
                 </div>
-                <h3 className={styles.cardTitle}>Evolução das Notas dos Exames</h3>
+                <h3 className={styles.cardTitle}>Histórico dos Exames de Ingresso</h3>
               </div>
-              <ExamEvolutionChart
-                data={examData}
-                isLoading={examLoading}
-                error={examError}
-                examNames={EVOLUTION_EXAMS}
+              <SelectedExamsHistoricalChart
+                selectedExams={selectedExams}
+                historicalData={historicalExamData}
+                isLoading={historicalExamLoading}
               />
             </div>
-          )}
+
+            {/* Exam Distribution Chart */}
+            <div className={styles.card}>
+              <ExamDistributionChart
+                year={2024}
+                examNames={selectedExams.map(e => e.name)}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Tertiary content grid */}

@@ -1,0 +1,31 @@
+.container {
+  animation: fadeIn 0.3s ease-in-out;
+  width: 100%;
+}
+
+.chartWrapper {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.loading, .noData, .error {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #ef4444;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .chartWrapper { height: 300px; }
+}

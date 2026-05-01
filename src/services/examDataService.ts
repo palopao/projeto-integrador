@@ -12,6 +12,40 @@ import { normalize } from '../utils/normalize';
  */
 
 /**
+ * Mapeia o nome de exibição de um exame para o seu identificador unificado usado nos dados estatísticos.
+ * Garante a sincronização entre a seleção de Provas de Ingresso e os dados de gráficos.
+ */
+export function getUnifiedExamName(examName: string): string {
+  const name = examName.toLowerCase().replace(/\s{2,}/g, ' ').trim();
+  
+  if (name.includes("biologia") && name.includes("geologia")) return "Biologia_Geologia";
+  if (name.includes("física") && name.includes("química")) return "Fisica_Quimica_A";
+  if (name.includes("economia")) return "Economia_A";
+  if (name.includes("filosofia")) return "Filosofia";
+  if (name.includes("geometria descritiva")) return "Geometria_Descritiva_A";
+  if (name.includes("matemática a")) return "Matematica_A";
+  if (name.includes("matemática")) return "Matematica_A";
+  if (name.includes("geografia")) return "Geografia_A";
+  if (name.includes("cultura e artes") || name.includes("hca")) return "HCA";
+  if (name.includes("história")) return "Historia_A";
+  if (name.includes("ciências soc") || name.includes("macs")) return "MACS";
+  if (name.includes("português")) return "Portugues";
+  if (name.includes("desenho")) return "Desenho_A";
+  if (name.includes("inglês")) return "Ingles";
+  if (name.includes("espanhol")) return "Espanhol_Continuacao";
+  if (name.includes("alemão")) return "Alemao";
+  if (name.includes("francês")) return "Frances";
+  if (name.includes("latim")) return "Latim_A";
+  
+  // Se não houver mapeamento, tenta normalizar removendo acentos e espaços
+  return examName
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, '_')
+    .replace(/[^a-zA-Z0-9_]/g, '');
+}
+
+/**
  * Verifica se uma string é uma opção de prova (formato: "XX  Nome da Prova")
  */
 function isExamOption(str: string): boolean {
@@ -41,6 +75,7 @@ function parseExamOption(examStr: string): ExamOption {
   return {
     code,
     name,
+    unifiedName: getUnifiedExamName(name),
     weight,
   } as any;
 }
@@ -410,26 +445,13 @@ export async function loadExamHistoryData(
   } = {};
 
   try {
-    // Para cada ano, carrega medias_historicas_exames.json
-    const examsByYear: {
-      Ano: number;
-      Exame_Unificado: string;
-      Fase: number;
-      Total_Alunos: number;
-      Media_0_200: number;
-      Media_0_20: number;
-    }[] = [];
-
-    for (const year of years) {
-      try {
-        const response = await fetch(`${dataPath}/medias_historicas_exames.json`);
-        const data = await response.json();
-        // Nota: este arquivo contém dados de TODOS os anos
-        examsByYear.push(...data);
-      } catch (err) {
-        console.warn(`Erro ao carregar medias_historicas_exames.json para ${year}:`, err);
-      }
+    // O ficheiro contém dados de todos os anos, carregamos apenas uma vez por eficiência
+    const response = await fetch(`${dataPath}/medias_historicas_exames.json`);
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar histórico: ${response.status}`);
     }
+    
+    const examsByYear: any[] = await response.json();
 
     // Agrupa por nome de exame e filtra pelos selecionados
     for (const examName of examNames) {
@@ -451,5 +473,55 @@ export async function loadExamHistoryData(
   } catch (error) {
     console.error('Erro ao carregar histórico de exames:', error);
     throw error;
+  }
+}
+
+/**
+ * Carrega os dados de distribuição de notas (histograma) para um ano específico.
+ * Os ficheiros seguem o padrão: dados_graficos_05_YYYY.json
+ */
+export async function loadExamDistributionData(
+  year: number | string,
+  dataPath: string = '/data'
+): Promise<Record<string, number[]> | null> {
+  try {
+    const response = await fetch(`${dataPath}/dados_graficos_05_${year}.json`);
+    if (!response.ok) {
+      // Falha silenciosa se o ficheiro não existir para o ano clicado
+      return null;
+    }
+    const rawData = await response.json();
+    
+    // Transforma o array de objetos em um objeto com exames como chaves
+    // Formato entrada: [{ Exame_Unificado: "Biologia", Nota_0_20: 5, Quantidade_Alunos: 10 }, ...]
+    // Formato saída: { Biologia: [0, 0, ..., 10, ...], ... }
+    const result: Record<string, number[]> = {};
+    
+    // Itera sobre os dados e agrupa por exame
+    for (const item of rawData) {
+      // Suporte para formatos antigos onde o campo pode ser 'Exame' em vez de 'Exame_Unificado'
+      const examName = item.Exame_Unificado || item.Exame;
+      if (!examName) continue;
+
+      // Lida com escalas 0-20 ou 0-200 (comum em dados históricos)
+      const noteRaw = item.Nota_0_20 !== undefined ? item.Nota_0_20 : ((item.Nota_0_200 || 0) / 10);
+      const note = Math.round(noteRaw);
+      const quantity = item.Quantidade_Alunos || 0;
+      
+      // Inicializa o array para este exame se não existir
+      if (!result[examName]) {
+        result[examName] = Array(21).fill(0); // 0 a 20 = 21 posições
+      }
+      
+      // Garante que a nota está dentro do intervalo [0, 20]
+      if (note >= 0 && note <= 20) {
+        result[examName][note] = (result[examName][note] || 0) + quantity;
+      }
+    }
+    
+    return Object.keys(result).length > 0 ? result : null;
+  } catch (error) {
+    console.error(`Erro ao carregar distribuição do ano ${year}:`, error);
+    return null;
   }
 }

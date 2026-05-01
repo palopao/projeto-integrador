@@ -151,56 +151,6 @@ export default function SelectedExamsHistoricalChart({ selectedExams, historical
         </ResponsiveContainer>
       </div>
 
-      {/* Stats */}
-      <div className={styles.statsGrid}>
-        {examsToShow.map((exam, index) => {
-          const validValues = chartData
-            .map(d => d[exam.name])
-            .filter(v => v !== null && v !== undefined)
-
-          if (validValues.length === 0) return null
-
-          const min = Math.min(...validValues)
-          const max = Math.max(...validValues)
-          const avg = validValues.reduce((a, b) => a + b) / validValues.length
-          const latest = validValues[validValues.length - 1]
-          const trend = 
-            validValues.length >= 2 
-              ? validValues[validValues.length - 1] - validValues[validValues.length - 2]
-              : 0
-
-          return (
-            <div key={exam.name} className={styles.statCard}>
-              <div className={styles.statColorBox} style={{ borderLeftColor: colors[index] }} />
-              <div className={styles.statContent}>
-                <p className={styles.statTitle}>{exam.name}</p>
-                <p className={styles.statValue}>{latest.toFixed(2)}</p>
-                <div className={styles.statMeta}>
-                  <span>Mín: {min.toFixed(2)}</span>
-                  <span>Máx: {max.toFixed(2)}</span>
-                  <span>Méd: {avg.toFixed(2)}</span>
-                </div>
-                {trend !== 0 && (
-                  <p className={styles.statTrend} style={{
-                    color: trend > 0 ? '#10b981' : '#ef4444'
-                  }}>
-                    {trend > 0 ? '↑' : '↓'} {Math.abs(trend).toFixed(2)} últimos 2 anos
-                  </p>
-                )}
-              </div>
-            </div>
-          )
-        })}
-      </div>
-
-      {/* Info box */}
-      <div className={styles.infoBox}>
-        <p className={styles.infoTitle}>📊 Sobre Este Gráfico</p>
-        <p className={styles.infoText}>
-          Mostra o histórico de notas médias (escala 0-20) dos exames de ingresso selecionados.
-          Útil para comparar o desempenho ao longo dos anos.
-        </p>
-      </div>
     </div>
   )
 }

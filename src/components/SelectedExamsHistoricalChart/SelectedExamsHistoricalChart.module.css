@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.chartWrap {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .loading,

@@ -79,6 +79,26 @@
   margin-bottom: 32px;
 }
 
+.grid > * {
+  min-width: 0; /* Crucial para permitir que o grid force os gráficos a respeitarem os 2/3 e 1/3 */
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+/* Reduz drasticamente o espaço entre os dois cartões de exames */
+.rightColumn > .card:first-child {
+  padding-bottom: 4px;
+}
+
+.rightColumn > .card:last-child {
+  padding-top: 12px;
+}
+
 .secondaryGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -117,6 +137,9 @@
   background: var(--color-bg-light);
   border-radius: var(--radius-lg);
   padding: 32px;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .cardHeader {
@@ -510,6 +533,10 @@
     grid-template-columns: 1fr;
   }
 
+  .rightColumn {
+    grid-column: 1;
+  }
+
   .secondaryGrid {
     grid-template-columns: 1fr;
   }
@@ -532,7 +559,7 @@
     line-height: 44px;
   }
 
-  .rightCol {
+  .rightColumn {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -540,6 +567,14 @@
 }
 
 @media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rightColumn {
+    grid-column: 1;
+  }
+
   .banner {
     padding: 24px;
   }
