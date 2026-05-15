@@ -1,0 +1,883 @@
+Curso,Codigo,Nota_Real,Nota_Simulada,Erro
+Ciências Farmacêuticas (Preparatórios),0140-8031,109.0,108.5,-0.5
+Medicina Veterinária (Preparatórios),0140-8086,152.0,158.5,6.5
+Ciências Agrárias,0140-9022,,126.0,
+História,0150-9181,117.2,118.0,0.8
+Psicologia,0150-9219,126.5,128.0,1.5
+Serviço Social,0150-9238,108.7,104.0,-4.7
+Sociologia,0150-9240,114.6,114.5,-0.1
+Educação Básica,0150-9853,112.4,110.0,-2.4
+Estudos Portugueses e Ingleses,0150-L041,118.2,119.0,0.8
+Ciclo Básico de Medicina,0160-8083,173.8,198.5,24.7
+Proteção Civil e Gestão de Riscos,0160-8524,102.8,97.0,-5.8
+Biologia,0160-9011,114.6,111.5,-3.1
+Economia,0170-9081,,107.5,
+Gestão,0170-9147,110.3,107.0,-3.3
+Turismo,0170-9254,114.5,114.5,0.0
+Património Cultural e Arqueologia,0201-8509,101.5,102.0,0.5
+"Línguas, Literaturas e Culturas",0201-9204,103.2,104.0,0.8
+Psicologia,0201-9219,137.9,140.0,2.1
+Artes Visuais,0201-9817,121.0,123.0,2.0
+Ciências da Educação e da Formação,0201-9821,110.3,107.0,-3.3
+Arquitetura Paisagista,0203-8258,116.6,118.5,1.9
+Agronomia,0203-9003,119.5,121.5,2.0
+Biologia,0203-9011,100.2,99.0,-1.2
+Biologia Marinha,0203-9013,104.8,98.5,-6.3
+Bioquímica,0203-9015,110.8,111.0,0.2
+Biotecnologia,0203-9016,110.3,111.0,0.7
+Engenharia Informática,0203-9119,109.5,100.0,-9.5
+Matemática Aplicada à Economia e à Gestão,0203-9210,120.4,120.2,-0.2
+Ciências Farmacêuticas,0203-9494,123.4,124.5,1.1
+Gestão Marinha e Costeira,0203-L123,127.0,129.5,2.5
+Economia,0204-9081,112.3,109.8,-2.5
+Gestão de Empresas,0204-9152,126.8,125.8,-1.0
+Sociologia,0204-9240,107.8,107.5,-0.3
+Administração Pública,0300-9002,136.0,137.5,1.5
+Biologia,0300-9011,136.8,137.0,0.2
+Biologia e Geologia,0300-9012,111.2,109.5,-1.7
+Bioquímica,0300-9015,151.0,151.5,0.5
+Biotecnologia,0300-9016,154.0,155.5,1.5
+Ciências do Mar,0300-9041,119.5,117.0,-2.5
+Design,0300-9069,160.0,160.0,0.0
+Economia,0300-9081,156.0,158.2,2.2
+Engenharia Informática,0300-9119,158.0,160.5,2.5
+Física,0300-9141,127.5,128.5,1.0
+Geologia,0300-9146,108.0,106.5,-1.5
+Gestão,0300-9147,159.2,162.0,2.8
+Línguas e Estudos Editoriais,0300-9194,143.2,146.5,3.3
+Línguas e Relações Empresariais,0300-9196,145.0,147.0,2.0
+"Línguas, Literaturas e Culturas",0300-9204,134.6,136.5,1.9
+Matemática,0300-9209,124.2,123.5,-0.7
+Psicologia,0300-9219,137.0,137.8,0.8
+Química,0300-9223,132.0,133.5,1.5
+Tradução,0300-9252,135.8,138.0,2.2
+Ciências Biomédicas,0300-9351,159.3,161.0,1.7
+Educação Básica,0300-9853,114.0,110.0,-4.0
+Optometria e Ciências da Visão,0400-8184,115.3,115.0,-0.3
+Bioquímica,0400-9015,124.9,126.0,1.1
+Biotecnologia,0400-9016,108.7,106.0,-2.7
+Ciência Política e Relações Internacionais,0400-9020,149.5,153.8,4.3
+Ciências da Comunicação,0400-9023,136.6,137.0,0.4
+Ciências da Cultura,0400-9025,106.4,106.5,0.1
+Cinema,0400-9048,132.7,134.5,1.8
+Design de Moda,0400-9071,126.6,127.5,0.9
+Design Industrial,0400-9074,116.5,114.5,-2.0
+Design Multimédia,0400-9075,125.9,127.0,1.1
+Economia,0400-9081,126.5,123.8,-2.7
+Engenharia e Gestão Industrial,0400-9104,124.5,124.2,-0.3
+Engenharia Eletromecânica,0400-9105,108.8,105.8,-3.0
+Engenharia Eletrotécnica e de Computadores,0400-9112,111.4,108.0,-3.4
+Engenharia Informática,0400-9119,121.8,117.2,-4.6
+Gestão,0400-9147,143.9,144.0,0.1
+Marketing,0400-9205,109.0,106.5,-2.5
+Psicologia,0400-9219,142.0,144.5,2.5
+Química Industrial,0400-9225,113.7,113.5,-0.2
+Sociologia,0400-9240,113.8,112.8,-1.0
+Arquitetura,0400-9257,116.8,115.0,-1.8
+Ciências Biomédicas,0400-9351,136.2,134.5,-1.7
+Ciências Farmacêuticas,0400-9494,143.2,143.0,-0.2
+Ciências do Desporto,0400-9707,120.7,120.5,-0.2
+Medicina,0400-9813,174.3,193.5,19.2
+Estudos Portugueses e Espanhóis,0400-9918,112.9,113.5,0.6
+Química Medicinal,0501-8408,121.8,121.0,-0.8
+Biologia,0501-9011,126.5,120.5,-6.0
+Bioquímica,0501-9015,140.3,140.5,0.2
+Engenharia e Gestão Industrial,0501-9104,146.0,147.0,1.0
+Engenharia Informática,0501-9119,142.5,134.8,-7.7
+Física,0501-9141,136.5,138.0,1.5
+Geologia,0501-9146,100.5,100.0,-0.5
+Matemática,0501-9209,119.0,114.2,-4.8
+Química,0501-9223,116.0,114.5,-1.5
+Arquitetura,0501-9257,122.3,118.5,-3.8
+Antropologia,0501-9448,116.5,116.0,-0.5
+Design e Multimédia,0501-9891,153.5,155.5,2.0
+Administração Público-Privada,0502-8067,149.0,154.5,5.5
+Direito,0502-9078,156.5,163.0,6.5
+Economia,0503-9081,139.5,133.2,-6.3
+Gestão,0503-9147,154.0,154.8,0.8
+Relações Internacionais,0503-9229,162.5,191.5,29.0
+Sociologia,0503-9240,133.0,135.0,2.0
+Ciências Farmacêuticas,0504-9494,142.3,142.5,0.2
+Ciências Bioanalíticas,0504-9819,122.3,123.5,1.2
+Farmácia Biomédica,0504-9832,117.3,117.0,-0.3
+Português,0505-8393,106.0,102.5,-3.5
+Arqueologia,0505-9006,118.0,119.0,1.0
+Estudos Artísticos,0505-9132,125.5,126.5,1.0
+Estudos Clássicos,0505-9133,112.0,113.0,1.0
+Estudos Europeus,0505-9135,144.0,148.5,4.5
+Filosofia,0505-9139,118.5,119.2,0.7
+Geografia,0505-9143,118.5,118.5,0.0
+História,0505-9181,128.0,129.0,1.0
+História da Arte,0505-9182,119.0,120.0,1.0
+Ciência da Informação,0505-9694,128.8,131.0,2.2
+Jornalismo e Comunicação,0505-9773,151.0,157.0,6.0
+Línguas Modernas,0505-9779,138.5,140.0,1.5
+"Turismo, Território e Patrimónios",0505-L109,139.5,142.2,2.7
+Medicina Dentária,0506-9548,173.3,199.5,26.2
+Medicina,0506-9813,177.7,200.0,22.3
+Ciências da Educação,0507-9026,122.5,122.5,0.0
+Serviço Social,0507-9238,138.0,141.5,3.5
+Ciências do Desporto,0508-9707,129.3,130.0,0.7
+Biologia Humana,0602-8262,118.2,118.0,-0.2
+Agronomia,0602-9003,96.0,96.0,0.0
+Biologia,0602-9011,104.1,100.0,-4.1
+Bioquímica,0602-9015,110.3,104.5,-5.8
+Biotecnologia,0602-9016,111.3,111.0,-0.3
+Engenharia Informática,0602-9119,122.8,117.5,-5.3
+Geografia,0602-9143,111.1,111.0,-0.1
+Matemática Aplicada à Economia e à Gestão,0602-9210,113.0,107.5,-5.5
+Engenharia Mecatrónica,0602-9751,114.2,109.5,-4.7
+Ciência e Tecnologia Animal,0602-9818,105.0,103.0,-2.0
+Medicina Veterinária,0602-9847,154.7,161.5,6.8
+Engenharia de Energias Renováveis,0602-9910,120.5,120.0,-0.5
+Ecologia e Ambiente,0602-L090,102.0,103.0,1.0
+Design,0603-9069,132.4,128.0,-4.4
+Teatro,0603-9243,122.6,124.0,1.4
+Arquitetura,0603-9257,106.0,95.5,-10.5
+Artes Plásticas e Multimédia,0603-9347,112.1,112.0,-0.1
+História e Arqueologia,0604-8251,121.3,121.5,0.2
+Ciências da Educação,0604-9026,116.3,117.5,1.2
+Economia,0604-9081,111.5,111.0,-0.5
+Gestão,0604-9147,128.7,121.8,-6.9
+Psicologia,0604-9219,141.7,143.5,1.8
+Relações Internacionais,0604-9229,140.5,141.0,0.5
+Sociologia,0604-9240,120.4,120.5,0.1
+Turismo,0604-9254,129.4,130.5,1.1
+Património Cultural,0604-9787,108.7,108.0,-0.7
+Educação Básica,0604-9853,,111.0,
+Línguas e Literaturas,0604-L047,109.4,97.8,-11.6
+Ciências da Nutrição,0901-9554,156.5,163.0,6.5
+Medicina,0901-9813,177.2,200.0,22.8
+Sociologia (regime pós-laboral),0902-8109,122.0,125.5,3.5
+Arqueologia,0902-9006,119.0,122.0,3.0
+Ciência Política e Relações Internacionais,0902-9020,171.0,200.0,29.0
+Ciências da Comunicação,0902-9023,169.0,200.0,31.0
+Ciências da Linguagem,0902-9040,129.0,132.5,3.5
+Ciências Musicais,0902-9046,122.5,125.5,3.0
+Filosofia,0902-9139,144.5,151.0,6.5
+Geografia e Planeamento Regional,0902-9145,129.5,131.5,2.0
+História,0902-9181,153.5,173.5,20.0
+História da Arte,0902-9182,112.0,114.0,2.0
+"Línguas, Literaturas e Culturas",0902-9204,145.5,95.0,-50.5
+Sociologia,0902-9240,137.0,140.5,3.5
+Tradução,0902-9252,151.0,95.0,-56.0
+Antropologia,0902-9448,115.0,95.0,-20.0
+Estudos Portugueses,0902-9917,122.0,126.0,4.0
+Conservação - Restauro,0903-8036,137.0,142.0,5.0
+Bioquímica,0903-9015,149.8,151.0,1.2
+Engenharia Geológica,0903-9116,112.8,115.0,2.2
+Matemática,0903-9209,162.2,169.0,6.8
+Química Aplicada,0903-9224,141.4,143.5,2.1
+Biologia Celular e Molecular,0903-9348,160.4,164.5,4.1
+Matemática Aplicada à Gestão do Risco,0903-L167,153.6,158.8,5.2
+Economia,0904-9081,163.5,165.5,2.0
+Gestão,0904-9147,169.0,171.0,2.0
+Sistemas e Tecnologias de Informação,0906-8259,162.2,167.5,5.3
+Gestão de Informação,0906-9155,169.9,195.5,25.6
+Direito,0911-9078,158.0,188.8,30.8
+Geografia e Planeamento,1000-8183,122.0,123.5,1.5
+Optometria e Ciências da Visão,1000-8184,117.2,114.0,-3.2
+Direito (regime pós-laboral),1000-8358,160.8,196.0,35.2
+Educação (regime pós-laboral),1000-8427,123.0,125.5,2.5
+Design de Produto,1000-8494,139.0,130.5,-8.5
+Administração Pública,1000-9002,150.8,159.0,8.2
+Arqueologia,1000-9006,117.4,120.0,2.6
+Biologia e Geologia,1000-9012,106.0,101.0,-5.0
+Bioquímica,1000-9015,144.0,145.0,1.0
+Ciência Política,1000-9019,152.6,161.5,8.9
+Ciências da Comunicação,1000-9023,157.2,177.5,20.3
+Direito,1000-9078,166.8,199.0,32.2
+Economia,1000-9081,161.4,164.5,3.1
+Estudos Culturais,1000-9134,130.6,134.5,3.9
+Filosofia,1000-9139,111.2,112.5,1.3
+Física,1000-9141,140.4,142.5,2.1
+Geologia,1000-9146,103.0,103.0,0.0
+Gestão,1000-9147,165.4,169.5,4.1
+História,1000-9181,131.0,134.0,3.0
+Línguas Aplicadas,1000-9192,162.4,192.0,29.6
+Línguas e Literaturas Europeias,1000-9195,136.8,140.0,3.2
+Matemática,1000-9209,132.0,133.8,1.8
+Química,1000-9223,132.6,135.0,2.4
+Relações Internacionais,1000-9229,158.6,181.0,22.4
+Sociologia,1000-9240,136.4,139.2,2.8
+Teatro,1000-9243,126.0,130.0,4.0
+Arquitetura,1000-9257,153.8,157.0,3.2
+Educação,1000-9353,133.2,136.0,2.8
+Ciências do Ambiente,1000-9379,123.8,125.0,1.2
+Estatística Aplicada,1000-9381,126.2,128.8,2.6
+Ciências da Computação,1000-9397,131.8,131.8,0.0
+Design e Marketing de Moda,1000-9499,150.8,152.0,1.2
+Biologia Aplicada,1000-9688,139.8,140.5,0.7
+Medicina,1000-9813,180.5,200.0,19.5
+Artes Visuais,1000-9817,151.5,176.0,24.5
+Educação Básica,1000-9853,114.8,111.2,-3.6
+Criminologia e Justiça Criminal,1000-L078,160.0,189.0,29.0
+Proteção Civil e Gestão do Território,1000-L112,118.2,119.5,1.3
+Estudos Orientais: Estudos Chineses e Japoneses,1000-L147,143.8,147.0,3.2
+Ciências da Nutrição,1101-9554,153.5,161.0,7.5
+Arquitetura,1102-9257,175.5,200.0,24.5
+Arquitetura Paisagista,1103-8258,122.5,125.5,3.0
+Biologia,1103-9011,141.5,143.5,2.0
+Bioquímica,1103-9015,168.5,184.5,16.0
+Física,1103-9141,167.8,186.5,18.7
+Geologia,1103-9146,115.5,116.5,1.0
+Matemática,1103-9209,159.3,164.0,4.7
+Química,1103-9223,120.0,120.0,0.0
+Ciência de Computadores,1103-9696,142.5,144.0,1.5
+Ciências e Tecnologia do Ambiente,1103-9709,125.0,128.5,3.5
+Economia,1104-9081,168.3,171.0,2.7
+Gestão,1104-9147,175.0,199.5,24.5
+Ciências Farmacêuticas,1106-9494,153.3,157.5,4.2
+Arqueologia,1107-9006,124.6,122.8,-1.8
+Ciências da Linguagem,1107-9040,124.6,95.0,-29.6
+Filosofia,1107-9139,126.0,127.8,1.8
+Geografia,1107-9143,129.6,95.0,-34.6
+História,1107-9181,143.4,142.8,-0.6
+História da Arte,1107-9182,136.4,95.0,-41.4
+Línguas Aplicadas,1107-9192,174.6,95.0,-79.6
+Línguas e Relações Internacionais,1107-9197,180.0,95.0,-85.0
+"Línguas, Literaturas e Culturas",1107-9204,160.6,95.0,-65.6
+Sociologia,1107-9240,146.8,95.0,-51.8
+Ciência da Informação,1107-9694,141.2,144.0,2.8
+Medicina,1108-9813,181.0,200.0,19.0
+Ciências da Educação,1109-9026,137.5,141.0,3.5
+Ciências do Meio Aquático,1110-9708,136.5,140.5,4.0
+Medicina,1110-9813,182.2,200.0,17.8
+Medicina Veterinária,1110-9847,168.3,200.0,31.7
+Ciências do Desporto,1111-9707,136.0,132.0,-4.0
+Medicina Dentária,1113-9548,171.8,200.0,28.2
+Criminologia,1114-9066,162.2,195.5,33.3
+Direito,1114-9078,171.8,197.2,25.4
+Engenharia Agronómica,1201-9086,110.4,107.5,-2.9
+Engenharia Zootécnica,1201-9129,126.9,128.0,1.1
+Enologia,1201-9752,95.0,95.0,0.0
+Medicina Veterinária,1201-9847,162.8,189.0,26.2
+Ciências da Comunicação,1202-9023,134.8,95.0,-39.8
+Economia,1202-9081,139.9,95.0,-44.9
+Gestão,1202-9147,150.9,151.5,0.6
+Línguas e Relações Empresariais,1202-9196,140.6,95.0,-45.6
+"Línguas, Literaturas e Culturas",1202-9204,127.8,95.0,-32.8
+Psicologia,1202-9219,144.9,95.0,-49.9
+Serviço Social,1202-9238,132.2,133.5,1.3
+Turismo,1202-9254,127.1,127.5,0.4
+Teatro e Artes Performativas,1202-9803,96.3,97.0,0.7
+Educação Básica,1202-9853,119.2,114.8,-4.4
+Comunicação e Multimédia,1203-9052,129.1,130.0,0.9
+Engenharia Civil,1203-9089,136.4,138.0,1.6
+Engenharia Informática,1203-9119,121.1,118.8,-2.3
+Engenharia Mecânica,1203-9123,127.5,128.0,0.5
+Engenharia Biomédica,1203-9455,126.4,127.0,0.6
+Biologia,1204-9011,122.8,123.5,0.7
+Biologia e Geologia,1204-9012,95.0,97.0,2.0
+Bioquímica,1204-9015,125.9,126.0,0.1
+Ciências do Ambiente,1204-9379,95.0,95.5,0.5
+Bioengenharia,1204-9540,117.0,116.0,-1.0
+Ciências da Nutrição,1204-9554,124.0,124.0,0.0
+Ciências do Desporto,1204-9707,126.5,126.0,-0.5
+Genética e Biotecnologia,1204-9761,136.6,138.0,1.4
+Design,1306-9069,106.6,95.5,-11.1
+Línguas e Relações Empresariais,1306-9196,130.7,132.0,1.3
+Psicologia,1306-9219,132.1,134.5,2.4
+"Comunicação, Cultura e Organizações",1306-9720,123.0,123.5,0.5
+Artes Visuais,1306-9817,156.6,159.0,2.4
+Estudos de Cultura,1306-L150,107.0,101.5,-5.5
+Bioquímica,1307-9015,129.5,130.0,0.5
+Engenharia Informática,1307-9119,100.0,97.0,-3.0
+Ciências da Educação,1308-9026,115.9,115.5,-0.4
+Economia,1308-9081,119.8,115.0,-4.8
+Gestão,1308-9147,132.3,132.5,0.2
+Educação Física e Desporto,1308-9736,130.8,132.5,1.7
+Educação Básica,1308-9853,157.9,188.0,30.1
+Ciclo Básico de Medicina,1309-8083,174.2,200.0,25.8
+Biologia,1309-9011,116.0,116.0,0.0
+Enfermagem,1320-9500,136.0,139.0,3.0
+Direção e Gestão Hoteleira,1321-9076,131.4,133.5,2.1
+Design,1501-9069,158.5,160.0,1.5
+Design de Moda,1501-9071,154.5,154.5,0.0
+Arquitetura,1501-9257,113.8,106.5,-7.3
+Desenho,1502-8399,165.5,191.5,26.0
+Design de Comunicação,1502-9070,177.0,200.0,23.0
+Design de Equipamento,1502-9072,152.5,153.0,0.5
+Escultura,1502-9754,135.5,133.0,-2.5
+Pintura,1502-9790,159.0,160.0,1.0
+Arte Multimédia,1502-9904,163.5,187.0,23.5
+Ciências da Arte e do Património,1502-L010,146.0,146.5,0.5
+Biologia,1503-9011,147.5,147.0,-0.5
+Bioquímica,1503-9015,148.3,150.0,1.7
+Engenharia Informática,1503-9119,144.0,143.5,-0.5
+Física,1503-9141,156.0,160.5,4.5
+Geologia,1503-9146,115.5,112.0,-3.5
+Matemática,1503-9209,148.0,150.2,2.2
+"Meteorologia, Oceanografia e Geofísica",1503-9212,130.3,132.5,2.2
+Química,1503-9223,140.3,143.0,2.7
+Química Tecnológica,1503-9226,131.0,133.5,2.5
+Estatística Aplicada,1503-9381,130.0,131.8,1.8
+Matemática Aplicada,1503-9385,145.0,146.0,1.0
+Tecnologias de Informação,1503-L079,133.0,133.5,0.5
+Engenharia Geoespacial,1503-L096,115.0,116.0,1.0
+Direito (regime pós-laboral),1504-8358,140.5,142.5,2.0
+Direito,1504-9078,149.3,151.0,1.7
+Ciências Farmacêuticas,1505-9494,146.5,148.0,1.5
+"Estudos Artísticos, variante de Artes do Espetáculo",1506-8104,137.5,141.0,3.5
+Artes e Humanidades,1506-8413,129.0,131.5,2.5
+Estudos Gerais,1506-8458,140.0,143.0,3.0
+Arqueologia,1506-9006,113.5,115.5,2.0
+Ciências da Linguagem,1506-9040,121.0,123.0,2.0
+Estudos Africanos,1506-9131,114.5,117.5,3.0
+Estudos Clássicos,1506-9133,118.5,122.0,3.5
+Estudos Europeus,1506-9135,140.0,143.5,3.5
+Filosofia,1506-9139,131.0,134.2,3.2
+História,1506-9181,135.0,138.0,3.0
+História da Arte,1506-9182,109.0,109.0,0.0
+"Línguas, Literaturas e Culturas",1506-9204,141.5,143.0,1.5
+Tradução,1506-9252,133.0,135.0,2.0
+Estudos Asiáticos,1506-9914,150.0,156.5,6.5
+Estudos Portugueses,1506-9917,124.0,128.8,4.8
+Estudos Comparatistas,1506-L097,131.5,135.5,4.0
+Ciências da Nutrição,1507-9554,153.5,181.5,28.0
+Medicina,1507-9813,175.2,196.5,21.3
+Medicina Dentária,1508-9548,172.0,197.0,25.0
+Higiene Oral,1508-9556,124.0,127.0,3.0
+Prótese Dentária,1508-9791,110.5,110.5,0.0
+Medicina Veterinária,1509-9847,155.8,176.0,20.2
+Dança,1510-9068,107.0,110.0,3.0
+Gestão do Desporto,1510-9162,147.5,150.2,2.7
+Ciências do Desporto,1510-9707,120.5,114.2,-6.3
+Reabilitação Psicomotora,1510-9841,119.0,120.5,1.5
+Educação e Formação,1513-L040,103.8,104.0,0.2
+Planeamento e Gestão do Território,1514-8411,121.0,123.5,2.5
+Geografia,1514-9143,120.5,121.0,0.5
+Arquitetura Paisagista,1515-8258,112.5,113.0,0.5
+Engenharia Florestal e dos Recursos Naturais,1515-8377,110.5,111.5,1.0
+Biologia,1515-9011,136.0,138.0,2.0
+Engenharia Agronómica,1515-9086,114.0,106.0,-8.0
+Engenharia Alimentar,1515-9087,106.5,106.0,-0.5
+Engenharia do Ambiente,1515-9099,106.3,106.5,0.2
+Engenharia Zootécnica,1515-9129,110.0,110.5,0.5
+Serviço Social (regime pós-laboral),1516-8014,126.5,130.0,3.5
+Administração Pública (regime pós-laboral),1516-8102,125.5,128.0,2.5
+Sociologia (regime pós-laboral),1516-8109,118.5,120.5,2.0
+Gestão de Recursos Humanos (regime pós-laboral),1516-8111,133.0,135.5,2.5
+Administração Pública e Políticas do Território (regime pós-laboral),1516-8363,116.5,119.0,2.5
+Relações Internacionais (regime pós-laboral),1516-8364,142.0,145.5,3.5
+Administração Pública,1516-9002,137.0,140.0,3.0
+Ciência Política,1516-9019,149.5,156.0,6.5
+Ciências da Comunicação,1516-9023,156.5,177.0,20.5
+Gestão de Recursos Humanos,1516-9157,150.5,157.0,6.5
+Relações Internacionais,1516-9229,156.5,176.0,19.5
+Serviço Social,1516-9238,139.5,142.5,3.0
+Sociologia,1516-9240,130.5,133.5,3.0
+Antropologia,1516-9448,115.0,116.0,1.0
+Economia,1517-9081,149.0,149.2,0.2
+Gestão,1517-9147,154.5,154.5,0.0
+Matemática Aplicada à Economia e à Gestão,1517-9210,178.5,200.0,21.5
+Gestão (ensino em Inglês),1517-A001,159.8,164.5,4.7
+Economia (ensino em Inglês),1517-A006,153.0,157.2,4.2
+Engenharia Informática e de Computadores,1518-9121,171.5,188.0,16.5
+Arquitetura,1518-9257,146.5,143.2,-3.3
+Matemática Aplicada e Computação,1518-9345,183.5,200.0,16.5
+Engenharia Naval e Oceânica,1518-L162,160.3,165.5,5.2
+Engenharia de Telecomunicações e Informática,1519-9098,142.0,143.5,1.5
+Engenharia e Gestão Industrial,1519-9104,168.8,192.0,23.2
+Engenharia Informática e de Computadores,1519-9121,162.5,166.0,3.5
+Engenharia Eletrónica,1519-9912,149.3,152.0,2.7
+Marketing (regime pós-laboral),3011-8005,126.2,128.5,2.3
+Contabilidade,3011-9056,134.7,136.0,1.3
+Finanças,3011-9140,146.5,151.0,4.5
+Marketing,3011-9205,142.8,146.5,3.7
+Contabilidade (regime pós-laboral),3011-9869,120.8,122.0,1.2
+Finanças (regime pós-laboral),3011-9888,100.6,101.0,0.4
+Gestão da Qualidade,3012-8405,125.8,128.0,2.2
+Secretariado e Comunicação Empresarial,3012-9235,134.0,137.0,3.0
+Gestão Comercial,3012-L021,133.6,135.5,1.9
+Enfermagem,3013-9500,138.8,138.0,-0.8
+Fisioterapia,3013-9504,152.4,155.0,2.6
+Terapia da Fala,3013-9890,111.4,109.0,-2.4
+Imagem Médica e Radioterapia,3013-L066,134.0,135.0,1.0
+Design de Produto e Tecnologia,3014-L138,137.6,137.8,0.2
+Agronomia,3021-9003,128.7,129.0,0.3
+Engenharia do Ambiente,3021-9099,,98.0,
+Ciência e Tecnologia dos Alimentos,3021-9350,,104.5,
+Serviço Social,3022-9238,107.0,103.0,-4.0
+Desporto,3022-9563,95.0,95.0,0.0
+Educação Básica,3022-9853,126.9,128.2,1.3
+Engenharia Informática,3023-9119,112.9,111.0,-1.9
+Gestão de Empresas,3023-9152,95.0,95.0,0.0
+Solicitadoria,3023-9242,112.8,110.0,-2.8
+Turismo,3023-9254,98.0,97.5,-0.5
+Gestão de Empresas (regime pós-laboral),3023-9994,,95.0,
+Solicitadoria (regime pós-laboral),3031-8015,124.2,126.5,2.3
+Contabilidade,3031-9056,136.1,138.5,2.4
+Finanças,3031-9140,132.3,134.0,1.7
+Gestão de Empresas,3031-9152,149.0,152.5,3.5
+Solicitadoria,3031-9242,137.2,141.0,3.8
+Fiscalidade,3031-9759,123.1,124.5,1.4
+Contabilidade (regime pós-laboral),3031-9869,123.6,125.0,1.4
+Fiscalidade (regime pós-laboral),3031-9990,113.1,113.0,-0.1
+Gestão de Empresas (regime pós-laboral),3031-9994,136.7,139.2,2.5
+Gestão Pública,3031-L140,128.8,130.8,2.0
+Engenharia em Desenvolvimento de Jogos Digitais,3032-8311,124.1,125.5,1.4
+Engenharia de Sistemas Informáticos,3032-8409,125.6,126.2,0.6
+Engenharia de Sistemas Informáticos (regime pós-laboral),3032-8417,115.7,116.2,0.5
+Engenharia e Gestão Industrial,3032-9104,118.1,95.0,-23.1
+Engenharia Eletrotécnica e de Computadores,3032-9112,114.6,115.0,0.4
+Design Industrial,3033-9074,133.1,136.0,2.9
+Design Gráfico,3033-9470,146.4,150.0,3.6
+Design Gráfico (regime pós-laboral),3033-9873,125.3,128.0,2.7
+Gestão de Atividades Turísticas,3034-8156,134.5,137.5,3.0
+Gestão de Atividades Turísticas (regime pós-laboral),3034-8341,120.8,122.5,1.7
+Enfermagem Veterinária,3041-9085,129.6,130.5,0.9
+Engenharia Agronómica,3041-9086,,98.0,
+Engenharia Alimentar,3041-9087,,95.0,
+Engenharia do Ambiente,3041-9099,,97.0,
+Engenharia Zootécnica,3041-9129,,95.5,
+Biologia e Biotecnologia,3041-L029,110.9,108.5,-2.4
+Línguas Estrangeiras: Inglês e Espanhol,3042-8323,113.7,111.0,-2.7
+Línguas para Relações Internacionais,3042-8374,103.5,95.0,-8.5
+Educação Ambiental,3042-9082,,100.0,
+Educação Social,3042-9084,97.6,95.0,-2.6
+Desporto,3042-9563,104.1,98.5,-5.6
+Educação Básica,3042-9853,115.5,111.0,-4.5
+Arte e Design,3042-9898,110.0,97.0,-13.0
+Animação e Produção Artística,3042-9933,111.1,110.0,-1.1
+Relações Lusófonas e Língua Portuguesa,3042-L088,124.4,126.0,1.6
+Música em Contextos Comunitários,3042-L175,114.5,114.5,0.0
+Contabilidade,3043-9056,104.5,101.2,-3.3
+Engenharia Civil,3043-9089,,96.5,
+Engenharia Eletrotécnica e de Computadores,3043-9112,,96.5,
+Engenharia Informática,3043-9119,108.0,105.8,-2.2
+Engenharia Mecânica,3043-9123,132.0,131.5,-0.5
+Engenharia Química,3043-9125,112.1,110.0,-2.1
+Gestão,3043-9147,123.8,121.0,-2.8
+Informática de Gestão,3043-9186,109.3,105.5,-3.8
+Engenharia de Energias Renováveis,3043-9910,,95.0,
+"Gestão de Negócios Internacionais (Curso Europeu, ensino em Inglês)",3043-A004,95.0,95.0,0.0
+Tecnologia Biomédica,3043-L069,111.3,107.5,-3.8
+Design de Jogos Digitais,3045-8309,105.0,98.0,-7.0
+Gestão e Administração Pública,3045-9165,98.3,95.5,-2.8
+Informática e Comunicações,3045-9188,,95.8,
+Marketing,3045-9205,102.0,99.0,-3.0
+Multimédia,3045-9213,114.8,112.5,-2.3
+Solicitadoria,3045-9242,95.0,95.0,0.0
+Turismo,3045-9254,100.7,96.0,-4.7
+Engenharia de Proteção Civil,3051-8397,,123.5,
+Agronomia,3051-9003,117.8,118.0,0.2
+Enfermagem Veterinária,3051-9085,108.7,106.0,-2.7
+Biotecnologia Alimentar,3051-L093,,99.5,
+Serviço Social,3052-9238,114.8,113.5,-1.3
+Secretariado,3052-9485,104.9,104.5,-0.4
+Desporto e Atividade Física,3052-9850,95.0,95.0,0.0
+Educação Básica,3052-9853,,114.5,
+Engenharia das Energias Renováveis,3053-8463,,106.0,
+Engenharia Civil,3053-9089,,96.5,
+Engenharia Eletrotécnica e das Telecomunicações,3053-9111,118.8,116.5,-2.3
+Engenharia Informática,3053-9119,112.0,108.2,-3.8
+Gestão,3054-9147,119.7,119.5,-0.2
+Solicitadoria,3054-9242,105.2,98.5,-6.7
+Gestão Comercial,3054-L021,111.0,108.5,-2.5
+Design de Interiores e Equipamento,3055-9725,115.2,113.5,-1.7
+Design de Moda e Têxtil,3055-9726,134.1,136.5,2.4
+Design de Comunicação e Audiovisual,3055-L158,122.8,123.0,0.2
+Biotecnologia,3061-9016,118.1,115.5,-2.6
+Ciências Florestais e Recursos Naturais,3061-L009,114.7,115.5,0.8
+Tecnologia Alimentar,3061-L015,109.8,109.5,-0.3
+Tecnologia e Gestão Ambiental,3061-L024,95.0,96.0,1.0
+Turismo em Espaços Rurais e Naturais,3061-L178,104.7,105.5,0.8
+Animação Socioeducativa (regime pós-laboral),3062-8093,101.1,102.0,0.9
+Turismo (regime pós-laboral),3062-8114,127.0,130.5,3.5
+Comunicação Organizacional (regime pós-laboral),3062-8342,125.9,127.5,1.6
+Comunicação Social,3062-9054,141.4,145.0,3.6
+Turismo,3062-9254,139.8,142.5,2.7
+Gerontologia Social,3062-9668,110.8,110.5,-0.3
+Animação Socioeducativa,3062-9675,119.1,119.5,0.4
+Comunicação Organizacional,3062-9717,136.7,139.0,2.3
+Desporto e Lazer,3062-9731,121.4,123.0,1.6
+Língua Gestual Portuguesa,3062-9774,109.0,109.0,0.0
+Educação Básica,3062-9853,113.4,107.2,-6.2
+Comunicação e Design Multimédia,3062-9894,146.1,147.0,0.9
+Arte e Design,3062-9898,151.1,151.0,-0.1
+Gastronomia,3062-L095,112.1,112.5,0.4
+Secretariado de Direção e Administração,3063-8519,127.5,128.5,1.0
+Contabilidade e Auditoria,3063-9061,125.4,120.5,-4.9
+Gestão de Empresas,3063-9152,139.1,137.8,-1.3
+Informática de Gestão,3063-9186,109.7,106.8,-2.9
+Contabilidade e Gestão Pública,3063-9722,122.0,120.8,-1.2
+Solicitadoria e Administração,3063-9801,134.6,136.0,1.4
+Marketing e Negócios Internacionais,3063-L023,135.2,137.0,1.8
+Comércio e Relações Económicas Internacionais,3063-L056,126.9,128.5,1.6
+Engenharia Civil,3064-9089,,115.5,
+Engenharia e Gestão Industrial,3064-9104,131.5,132.5,1.0
+Engenharia Eletromecânica,3064-9105,111.0,109.0,-2.0
+Engenharia Informática,3064-9119,125.6,120.0,-5.6
+Engenharia Mecânica,3064-9123,108.4,104.0,-4.4
+Bioengenharia,3064-9540,116.2,113.5,-2.7
+Engenharia Informática (Curso Europeu),3064-9770,111.9,110.8,-1.1
+Engenharia Informática (regime pós-laboral),3064-9885,118.1,118.0,-0.1
+Gestão Sustentável das Cidades,3064-L155,117.5,119.0,1.5
+Contabilidade e Administração,3065-9058,101.0,99.5,-1.5
+Engenharia Informática,3065-9119,107.1,102.8,-4.3
+Gestão,3065-9147,132.0,134.5,2.5
+Imagem Animada,3081-8337,128.4,131.5,3.1
+Ciências da Comunicação,3081-9023,128.9,129.5,0.6
+Design de Comunicação,3081-9070,115.1,107.0,-8.1
+Educação Social,3081-9084,116.5,117.0,0.5
+Desporto,3081-9563,116.1,116.5,0.4
+Educação Básica,3081-9853,135.8,135.5,-0.3
+Gestão,3082-9147,116.8,112.0,-4.8
+Gestão (regime noturno),3082-9148,107.2,103.0,-4.2
+Gestão Hoteleira,3082-9173,121.5,111.8,-9.7
+Marketing,3082-9205,120.7,117.8,-2.9
+Turismo,3082-9254,125.2,125.5,0.3
+Engenharia Civil,3083-9089,,108.5,
+Engenharia Mecânica,3083-9123,121.2,122.0,0.8
+Gestão,3087-9147,104.2,99.5,-4.7
+Gestão (regime noturno),3087-9148,,98.5,
+Turismo,3087-9254,116.8,117.0,0.2
+Comunicação Multimédia,3091-8339,110.4,107.8,-2.6
+Animação Sociocultural,3091-9005,111.1,109.5,-1.6
+Desporto,3091-9563,95.0,95.0,0.0
+Comunicação e Relações Públicas,3091-9652,99.6,95.0,-4.6
+Educação Básica,3091-9853,,96.5,
+Contabilidade,3092-9056,106.1,103.0,-3.1
+Engenharia Civil,3092-9089,,123.0,
+Engenharia Informática,3092-9119,115.4,113.5,-1.9
+Engenharia Topográfica,3092-9128,,96.0,
+Gestão,3092-9147,95.0,95.0,0.0
+Gestão de Recursos Humanos,3092-9157,105.2,102.0,-3.2
+Marketing,3092-9205,104.8,104.0,-0.8
+Energia e Ambiente,3092-9855,117.5,117.5,0.0
+Gestão Hoteleira,3095-9173,107.0,101.5,-5.5
+Turismo e Lazer,3095-9255,109.7,107.0,-2.7
+Restauração e Catering,3095-9484,107.0,106.0,-1.0
+Serviço Social (regime pós-laboral),3101-8014,108.2,108.5,0.3
+Educação Social,3101-9084,115.2,115.0,-0.2
+Serviço Social,3101-9238,122.4,122.5,0.1
+Tradução e Interpretação: Português/Chinês - Chinês/Português,3101-9492,140.9,145.0,4.1
+Relações Humanas e Comunicação Organizacional,3101-9797,120.4,121.5,1.1
+Desporto e Bem-Estar,3101-9851,116.5,117.0,0.5
+Educação Básica,3101-9853,113.4,110.0,-3.4
+Comunicação e Media,3101-L099,122.8,123.0,0.2
+Solicitadoria (regime pós-laboral),3102-8015,102.4,102.5,0.1
+Administração Pública,3102-9002,120.4,121.0,0.6
+Engenharia Civil,3102-9089,,98.0,
+Engenharia e Gestão Industrial,3102-9104,114.7,114.5,-0.2
+Engenharia Eletrotécnica e de Computadores,3102-9112,163.2,169.5,6.3
+Engenharia Informática,3102-9119,120.3,115.0,-5.3
+Engenharia Mecânica,3102-9123,106.9,104.5,-2.4
+Gestão,3102-9147,128.6,126.0,-2.6
+Marketing,3102-9205,113.5,110.5,-3.0
+Solicitadoria,3102-9242,122.8,122.5,-0.3
+Contabilidade e Finanças,3102-9627,104.8,99.5,-5.3
+Engenharia da Energia e do Ambiente,3102-9648,119.2,121.5,2.3
+Biomecânica,3102-9690,111.3,111.5,0.2
+Engenharia Automóvel,3102-9741,113.2,109.5,-3.7
+Engenharia Informática (regime pós-laboral),3102-9885,105.5,102.2,-3.3
+Engenharia Mecânica (regime pós-laboral),3102-9886,,114.0,
+Gestão (regime pós-laboral),3102-9991,111.8,108.2,-3.6
+Design Gráfico e Multimédia (regime pós-laboral),3103-8126,122.3,124.0,1.7
+Design de Produto - Cerâmica e Vidro,3103-8525,118.3,119.5,1.2
+Artes Plásticas,3103-9007,130.7,132.5,1.8
+Design Industrial,3103-9074,134.5,137.0,2.5
+Teatro,3103-9243,134.5,138.2,3.7
+Som e Imagem,3103-9457,123.2,122.5,-0.7
+Design Gráfico e Multimédia,3103-9729,143.5,144.5,1.0
+Programação e Produção Cultural,3103-L127,107.1,107.5,0.4
+Gestão de Eventos,3105-8514,105.8,102.2,-3.6
+Biotecnologia,3105-9016,104.8,105.5,0.7
+Engenharia Alimentar,3105-9087,,113.0,
+Gestão Turística e Hoteleira,3105-9178,114.8,113.0,-1.8
+Marketing Turístico,3105-9207,104.0,103.5,-0.5
+Turismo,3105-9254,123.4,124.0,0.6
+Animação Turística,3105-9848,110.0,108.8,-1.2
+Gestão da Restauração e Catering,3105-L131,112.8,108.0,-4.8
+Artes Visuais e Tecnologias,3112-8307,129.0,123.5,-5.5
+Animação Sociocultural,3112-9005,112.0,114.0,2.0
+Educação Básica,3112-9853,104.3,99.0,-5.3
+Educação Básica (regime pós-laboral),3112-9876,105.0,107.0,2.0
+Mediação Artística e Cultural,3112-L134,116.0,118.0,2.0
+Relações Públicas e Comunicação Empresarial (regime pós-laboral),3113-8438,138.5,142.5,4.0
+Publicidade e Marketing (regime pós-laboral),3113-8439,143.0,147.0,4.0
+Audiovisual e Multimédia,3113-9010,144.0,147.0,3.0
+Jornalismo,3113-9191,152.5,162.0,9.5
+Publicidade e Marketing,3113-9222,152.5,158.5,6.0
+Relações Públicas e Comunicação Empresarial,3113-9231,147.5,152.0,4.5
+Solicitadoria (regime pós-laboral),3117-8015,120.0,121.5,1.5
+Contabilidade e Administração,3117-9058,139.9,142.5,2.6
+Gestão,3117-9147,152.0,153.5,1.5
+Solicitadoria,3117-9242,140.0,143.5,3.5
+Finanças Empresariais,3117-9476,145.9,147.2,1.3
+Contabilidade e Administração (regime pós-laboral),3117-9870,119.5,119.5,0.0
+Finanças Empresariais (regime pós-laboral),3117-9889,127.0,128.2,1.2
+Gestão (regime pós-laboral),3117-9991,136.9,138.0,1.1
+Comércio e Negócios Internacionais (regime pós-laboral),3117-L035,126.7,127.8,1.1
+Engenharia Civil,3118-9089,101.4,100.5,-0.9
+Engenharia Eletrónica e Telecomunicações e de Computadores,3118-9108,112.3,106.8,-5.5
+Engenharia Eletrotécnica,3118-9109,105.8,101.2,-4.6
+Engenharia Informática e de Computadores,3118-9121,126.0,121.2,-4.8
+Engenharia Mecânica,3118-9123,121.7,116.0,-5.7
+Engenharia Química e Biológica,3118-9126,119.8,119.5,-0.3
+Engenharia Biomédica,3118-9455,133.2,136.0,2.8
+Engenharia Informática e Multimédia,3118-L052,125.0,124.5,-0.5
+Tecnologias e Gestão Municipal,3118-L085,113.0,114.0,1.0
+Matemática Aplicada à Tecnologia e à Empresa,3118-L117,128.0,130.0,2.0
+"Engenharia Informática, Redes e Telecomunicações",3118-L119,128.2,130.0,1.8
+Serviço Social (regime pós-laboral),3121-8014,,120.5,
+Serviço Social,3121-9238,96.0,95.5,-0.5
+Turismo,3121-9254,110.4,109.5,-0.9
+Jornalismo e Comunicação,3121-9773,104.2,102.0,-2.2
+Educação Básica,3121-9853,,111.5,
+Línguas e Culturas Estrangeiras,3131-8002,143.9,148.5,4.6
+Artes Visuais e Tecnologias Artísticas,3131-8264,148.8,156.5,7.7
+Educação Social,3131-9084,140.8,145.0,4.2
+Tradução e Interpretação em Língua Gestual Portuguesa,3131-9807,123.9,127.5,3.6
+Educação Básica,3131-9853,131.9,134.0,2.1
+Educação Musical,3131-9878,113.0,115.5,2.5
+Educação Social (regime pós-laboral),3131-9879,120.0,122.0,2.0
+Marketing (regime pós-laboral),3134-8005,136.0,140.0,4.0
+Assessoria e Tradução,3134-9009,152.5,161.0,8.5
+Ciências e Tecnologias da Documentação e Informação,3134-9043,141.4,147.0,5.6
+Comunicação Empresarial,3134-9053,153.5,161.0,7.5
+Contabilidade e Administração,3134-9058,143.7,142.8,-0.9
+Marketing,3134-9205,150.0,155.5,5.5
+Recursos Humanos,3134-9227,146.9,152.0,5.1
+Comércio Internacional,3134-9716,156.1,164.5,8.4
+Assessoria e Tradução (regime pós-laboral),3134-9829,137.1,141.0,3.9
+Comércio Internacional (regime pós-laboral),3134-9866,128.7,129.5,0.8
+Comunicação Empresarial (regime pós-laboral),3134-9867,133.8,137.5,3.7
+Contabilidade e Administração (regime pós-laboral),3134-9870,126.7,128.0,1.3
+Criatividade e Inovação Empresarial,3134-L070,143.1,144.0,0.9
+Engenharia de Sistemas,3135-8316,143.6,146.2,2.6
+Engenharia Civil,3135-9089,125.6,126.5,0.9
+Engenharia e Gestão Industrial,3135-9104,174.1,200.0,25.9
+Engenharia Eletrotécnica - Sistemas Elétricos de Energia,3135-9110,134.5,135.8,1.3
+Engenharia Eletrotécnica e de Computadores,3135-9112,141.3,140.2,-1.1
+Engenharia Geotécnica e Geoambiente,3135-9117,114.9,115.5,0.6
+Engenharia Informática,3135-9119,152.3,152.5,0.2
+Engenharia Mecânica,3135-9123,156.5,158.5,2.0
+Engenharia Química,3135-9125,153.8,156.5,2.7
+Engenharia Biomédica,3135-9455,170.1,194.0,23.9
+Engenharia Mecânica Automóvel,3135-9936,141.4,143.0,1.6
+Biorrecursos,3135-L089,143.1,146.0,2.9
+Solicitadoria (regime pós-laboral),3138-8015,125.2,129.5,4.3
+Ciências Empresariais (regime pós-laboral),3138-8097,126.1,127.2,1.1
+Sistemas de Informação para Gestão,3138-8288,114.1,116.5,2.4
+Segurança Informática em Redes de Computadores,3138-8398,121.0,123.5,2.5
+Ciências Empresariais,3138-9045,147.3,150.2,2.9
+Engenharia Informática,3138-9119,128.9,129.5,0.6
+Solicitadoria,3138-9242,145.8,151.0,5.2
+Gestão Industrial e Logística,3138-L030,139.9,146.5,6.6
+Segurança do Trabalho e Ambiente,3138-L091,122.3,126.5,4.2
+Gestão das Atividades Turísticas (regime pós-laboral),3139-8442,127.9,131.0,3.1
+Gestão e Administração Hoteleira,3139-9164,161.5,192.5,31.0
+Gestão das Atividades Turísticas,3139-9921,147.8,153.5,5.7
+Gestão da Restauração e Catering,3139-L131,134.3,138.5,4.2
+Agronomia (regime pós-laboral),3141-8419,,99.0,
+Agronomia,3141-9003,95.0,95.0,0.0
+Educação Social,3142-9084,95.0,95.0,0.0
+Educação Básica,3142-9853,,114.2,
+Educação Ambiental e Turismo de Natureza,3142-L130,108.6,108.0,-0.6
+Produção Multimédia em Educação,3142-L179,140.6,144.5,3.9
+Gestão de Empresas,3143-9152,98.9,95.5,-3.4
+Informática,3143-9185,111.3,108.5,-2.8
+Contabilidade e Fiscalidade,3143-9498,97.0,95.5,-1.5
+Negócios Internacionais,3143-9785,104.6,101.2,-3.4
+Gestão de Empresas (regime pós-laboral),3143-9994,105.4,104.0,-1.4
+Desporto de Natureza e Turismo Ativo,3145-9730,109.2,108.2,-1.0
+Gestão das Organizações Desportivas,3145-9763,95.0,95.5,0.5
+Treino Desportivo,3145-9808,102.4,99.5,-2.9
+Atividade Física e Estilos de Vida Saudáveis,3145-L008,106.2,105.0,-1.2
+"Desporto, Condição Física e Saúde",3145-L034,111.6,110.0,-1.6
+Comunicação Social,3151-9054,132.8,95.0,-37.8
+Desporto,3151-9563,116.6,118.0,1.4
+Tradução e Interpretação de Língua Gestual Portuguesa,3151-9633,108.0,109.0,1.0
+Educação Básica,3151-9853,106.4,101.2,-5.2
+Tecnologias de Energia,3152-8515,111.5,112.5,1.0
+"Engenharia de Automação, Controlo e Instrumentação",3152-9092,142.6,144.8,2.2
+Engenharia Eletrotécnica e de Computadores,3152-9112,111.1,104.5,-6.6
+Engenharia Informática,3152-9119,124.3,124.5,0.2
+Engenharia Mecânica,3152-9123,113.4,109.0,-4.4
+Tecnologia e Gestão Industrial (regime noturno),3152-9862,106.1,99.5,-6.6
+Tecnologia Biomédica,3152-L069,104.1,103.0,-1.1
+Tecnologias do Ambiente e do Mar,3152-L124,110.0,109.0,-1.0
+Gestão de Recursos Humanos (regime pós-laboral),3153-8111,115.2,116.0,0.8
+Gestão de Recursos Humanos,3153-9157,129.3,132.0,2.7
+Marketing,3153-9205,131.4,134.0,2.6
+Contabilidade e Finanças,3153-9627,117.9,115.0,-2.9
+Contabilidade e Finanças (regime noturno),3153-9628,104.3,99.2,-5.1
+Gestão da Distribuição e da Logística,3153-9629,118.1,112.8,-5.3
+Gestão de Sistemas de Informação,3153-9630,121.0,119.2,-1.8
+Gestão da Distribuição e da Logística (regime pós-laboral),3153-9993,102.0,97.0,-5.0
+Biotecnologia,3154-9016,111.3,108.5,-2.8
+Engenharia Civil,3154-9089,,105.0,
+Engenharia Civil (regime noturno),3154-9090,,102.0,
+Bioinformática,3154-9687,110.6,111.5,0.9
+Tecnologias do Petróleo,3154-L100,121.0,123.0,2.0
+Enfermagem,3155-9500,135.6,138.5,2.9
+Fisioterapia,3155-9504,150.6,159.0,8.4
+Terapia da Fala,3155-9890,113.0,113.5,0.5
+Agronomia,3161-9003,121.5,117.0,-4.5
+Biotecnologia,3161-9016,117.8,117.5,-0.3
+Enfermagem Veterinária,3161-9085,113.7,112.5,-1.2
+Engenharia do Ambiente e Geoinformática,3161-L164,,95.0,
+Educação Social Gerontológica,3162-9473,113.6,113.5,-0.1
+Educação Básica,3162-9853,107.8,98.2,-9.6
+Artes Plásticas e Tecnologias Artísticas,3162-L122,117.1,117.0,-0.1
+Engenharia da Computação Gráfica e Multimédia,3163-8407,121.7,117.8,-3.9
+Engenharia Alimentar,3163-9087,,100.0,
+Engenharia Informática,3163-9119,108.8,107.0,-1.8
+Engenharia Mecânica,3163-9123,118.4,115.0,-3.4
+Gestão,3163-9147,139.1,139.0,-0.1
+Gestão (regime noturno),3163-9148,105.0,103.2,-1.8
+Turismo,3163-9254,132.9,134.0,1.1
+Design de Ambientes,3163-9723,138.0,135.5,-2.5
+Design do Produto,3163-9727,127.9,125.5,-2.4
+Engenharia Civil e do Ambiente,3163-9743,,110.5,
+Engenharia Mecatrónica,3163-9751,,121.0,
+Engenharia de Redes e Sistemas de Computadores,3163-L153,115.8,113.2,-2.6
+Gestão da Distribuição e Logística,3164-8464,108.7,106.5,-2.2
+Organização e Gestão Empresariais,3164-8516,124.2,125.5,1.3
+Contabilidade e Fiscalidade,3164-9498,114.6,115.5,0.9
+Marketing e Comunicação Empresarial,3164-9664,128.2,129.5,1.3
+Desporto e Lazer,3165-9731,100.9,95.0,-5.9
+Comunicação Social,3181-9054,112.4,109.0,-3.4
+Educação Social,3181-9084,101.6,96.5,-5.1
+Artes Plásticas e Multimédia,3181-9347,113.2,113.5,0.3
+Desporto e Atividade Física,3181-9850,120.5,121.0,0.5
+Educação Básica,3181-9853,134.8,131.0,-3.8
+Publicidade e Relações Públicas,3181-9930,115.2,112.0,-3.2
+Gestão Industrial,3182-8296,108.5,105.5,-3.0
+Tecnologia e Design de Mobiliário,3182-8517,126.7,126.0,-0.7
+Contabilidade,3182-9056,115.2,112.5,-2.7
+Engenharia Civil,3182-9089,130.1,129.0,-1.1
+Engenharia Eletrotécnica,3182-9109,129.5,129.5,0.0
+Engenharia Informática,3182-9119,110.1,107.5,-2.6
+Engenharia Mecânica,3182-9123,134.3,134.0,-0.3
+Gestão de Empresas,3182-9152,120.0,116.2,-3.8
+Marketing,3182-9205,119.1,119.0,-0.1
+Turismo,3182-9254,126.0,126.0,0.0
+Tecnologias e Design de Multimédia,3182-9491,106.1,100.0,-6.1
+Gestão de Empresas (regime pós-laboral),3182-9994,102.5,97.5,-5.0
+Enfermagem Veterinária,3185-9085,109.1,102.5,-6.6
+Engenharia Agronómica,3185-9086,131.0,132.0,1.0
+Engenharia Informática e Telecomunicações,3186-9122,95.0,95.0,0.0
+Gestão e Informática,3186-9168,117.6,118.5,0.9
+"Gestão Turística, Cultural e Patrimonial",3186-9179,112.4,111.0,-1.4
+Serviço Social,3186-9238,115.2,115.5,0.3
+Secretariado de Administração,3186-L116,108.7,105.0,-3.7
+Contabilidade,3241-9056,113.7,110.5,-3.2
+Gestão de Empresas,3241-9152,105.0,103.5,-1.5
+Gestão de Recursos Humanos e Comportamento Organizacional,3241-9640,100.9,99.5,-1.4
+Engenharia Eletrotécnica e de Computadores,3242-9112,,129.2,
+Engenharia Informática,3242-9119,110.6,106.0,-4.6
+Conservação e Restauro,3242-9380,110.7,106.5,-4.2
+Design e Tecnologia das Artes Gráficas,3242-9644,109.0,95.0,-14.0
+Fotografia,3242-9645,104.9,102.0,-2.9
+Tecnologia Química,3242-L142,,99.0,
+Engenharia Mecânica,3243-9123,,110.0,
+Informática e Tecnologias Multimédia,3243-L143,,121.2,
+Design,3331-9069,144.1,148.5,4.4
+Multimédia,3331-9213,172.0,200.0,28.0
+Fotografia,3331-9645,135.5,140.5,5.0
+Tecnologias e Sistemas de Informação para a Web,3331-L071,116.5,119.0,2.5
+Artes Plásticas,5402-9007,162.0,165.5,3.5
+Design de Comunicação,5402-9070,173.5,199.2,25.7
+Serviço Social (regime pós-laboral),6800-8014,131.0,134.5,3.5
+Finanças e Contabilidade,6800-8029,149.5,151.2,1.7
+Sociologia (regime pós-laboral),6800-8109,119.0,121.0,2.0
+Informática e Gestão de Empresas (regime pós-laboral),6800-8366,134.0,136.0,2.0
+Ciência Política,6800-9019,153.0,166.5,13.5
+Economia,6800-9081,157.5,160.2,2.7
+Engenharia de Telecomunicações e Informática,6800-9098,126.5,126.2,-0.3
+Engenharia Informática,6800-9119,151.0,152.8,1.8
+Gestão,6800-9147,162.0,164.0,2.0
+Gestão de Marketing,6800-9156,151.5,154.0,2.5
+Gestão de Recursos Humanos,6800-9157,162.0,195.2,33.2
+Informática e Gestão de Empresas,6800-9189,144.5,146.0,1.5
+Psicologia,6800-9219,155.0,174.5,19.5
+Sociologia,6800-9240,133.5,136.5,3.0
+Arquitetura,6800-9257,143.0,144.5,1.5
+Antropologia,6800-9448,121.5,124.5,3.0
+Engenharia Informática (regime pós-laboral),6800-9885,133.0,135.0,2.0
+História Moderna e Contemporânea,6800-9927,119.5,121.5,2.0
+Gestão Industrial e Logística,6800-L030,150.3,153.0,2.7
+Enfermagem,7001-9500,131.2,122.0,-9.2
+Enfermagem,7002-9500,135.8,135.5,-0.3
+Enfermagem,7003-9500,144.0,145.0,1.0
+Terapia Ocupacional,7005-8138,109.0,107.0,-2.0
+Enfermagem,7005-9500,124.0,125.0,1.0
+Enfermagem,7010-9500,142.0,144.5,2.5
+Dietética e Nutrição,7015-8149,108.9,105.0,-3.9
+Enfermagem,7015-9500,121.9,121.5,-0.4
+Enfermagem (entrada no 2.º semestre),7015-9501,101.4,97.0,-4.4
+Farmácia,7015-9549,110.0,104.0,-6.0
+Gerontologia,7015-9833,,99.5,
+Ciências Biomédicas Laboratoriais,7015-L068,97.0,96.5,-0.5
+Enfermagem,7020-9500,112.6,109.5,-3.1
+Fisioterapia,7020-9504,142.2,145.0,2.8
+Imagem Médica e Radioterapia,7020-L066,110.4,110.0,-0.4
+Fisiologia Clínica,7020-L067,122.7,123.5,0.8
+Ciências Biomédicas Laboratoriais,7020-L068,99.0,98.5,-0.5
+Enfermagem,7030-9500,125.2,125.0,-0.2
+Dietética e Nutrição,7035-8149,108.0,108.0,0.0
+Enfermagem,7035-9500,129.0,131.5,2.5
+Farmácia,7035-9549,109.7,109.5,-0.2
+Imagem Médica e Radioterapia,7035-L066,111.5,113.0,1.5
+Ciências Biomédicas Laboratoriais,7035-L068,111.8,112.0,0.2
+Enfermagem,7040-9500,100.0,95.0,-5.0
+Farmácia,7040-9549,117.0,116.0,-1.0
+Terapia Ocupacional,7045-8138,110.6,104.5,-6.1
+Dietética e Nutrição,7045-8149,116.0,113.0,-3.0
+Enfermagem,7045-9500,124.2,124.0,-0.2
+Fisioterapia,7045-9504,141.6,143.0,1.4
+Terapia da Fala,7045-9890,124.4,126.5,2.1
+Enfermagem,7055-9500,100.6,95.0,-5.6
+Higiene Oral,7055-9556,97.0,98.0,1.0
+Enfermagem,7065-9500,120.8,117.0,-3.8
+Enfermagem,7075-9500,129.3,130.0,0.7
+Enfermagem,7080-9500,131.8,132.0,0.2
+Enfermagem,7085-9500,127.4,127.5,0.1
+Enfermagem,7092-9500,113.0,109.5,-3.5
+Enfermagem,7093-9500,107.8,102.5,-5.3
+Engenharia de Máquinas Marítimas,7105-9745,112.1,109.5,-2.6
+Pilotagem,7105-9789,140.6,142.5,1.9
+Gestão de Transportes e Logística,7105-9924,121.3,121.5,0.2
+Gestão Portuária,7105-9926,129.8,132.5,2.7
+Engenharia Eletrotécnica Marítima,7105-L118,124.6,126.8,2.2
+Produção Alimentar em Restauração (regime pós-laboral),7110-8011,96.0,98.5,2.5
+Direção e Gestão Hoteleira,7110-9076,148.8,153.0,4.2
+Gestão do Lazer e Animação Turística,7110-9163,144.8,149.5,4.7
+Gestão Turística,7110-9177,149.2,154.5,5.3
+Informação Turística,7110-9183,123.0,125.0,2.0
+Produção Alimentar em Restauração,7110-9217,121.4,123.5,2.1
+Direção e Gestão Hoteleira (regime pós-laboral),7110-9875,133.6,137.0,3.4
+Gestão do Lazer e Animação Turística (regime pós-laboral),7110-9995,131.0,134.0,3.0
+Gestão Turística (regime pós-laboral),7110-9996,133.2,137.0,3.8
+Audiologia,7210-8141,106.6,105.5,-1.1
+Dietética e Nutrição,7210-8149,134.0,137.0,3.0
+Fisioterapia,7210-9504,155.6,177.5,21.9
+Farmácia,7210-9549,129.0,130.5,1.5
+Saúde Ambiental,7210-9861,104.5,104.5,0.0
+Imagem Médica e Radioterapia,7210-L066,132.9,135.5,2.6
+Fisiologia Clínica,7210-L067,136.4,139.5,3.1
+Ciências Biomédicas Laboratoriais,7210-L068,142.8,146.0,3.2
+Dietética e Nutrição,7220-8149,145.8,150.0,4.2
+Ortoprotesia,7220-8152,118.8,120.5,1.7
+Fisioterapia,7220-9504,155.1,180.5,25.4
+Farmácia,7220-9549,139.2,143.0,3.8
+Saúde Ambiental,7220-9861,112.7,114.5,1.8
+Imagem Médica e Radioterapia,7220-L066,130.0,132.0,2.0
+Fisiologia Clínica,7220-L067,137.7,141.5,3.8
+Ciências Biomédicas Laboratoriais,7220-L068,147.5,153.0,5.5
+Ortóptica e Ciências da Visão,7220-L161,123.2,126.5,3.3
+Terapia Ocupacional,7230-8138,125.5,126.5,1.0
+Audiologia,7230-8141,117.3,121.0,3.7
+Ortóptica,7230-8143,124.3,128.5,4.2
+Fisioterapia,7230-9504,156.5,160.5,4.0
+Farmácia,7230-9549,133.0,134.0,1.0
+Saúde Ambiental,7230-9861,117.0,118.0,1.0
+Terapia da Fala,7230-9890,116.0,117.5,1.5
+Imagem Médica e Radioterapia,7230-L066,133.0,134.0,1.0
+Fisiologia Clínica,7230-L067,136.0,137.0,1.0
+Ciências Biomédicas Laboratoriais,7230-L068,149.0,151.5,2.5
+Biotecnologia Medicinal,7230-L101,158.5,164.0,5.5
+Osteopatia,7230-L136,142.0,147.5,5.5

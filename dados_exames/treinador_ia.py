@@ -72,5 +72,5 @@ def iniciar_treino(anos_treino):
     print("\n✅ TREINO CONCLUÍDO! O ficheiro pesos_cursos.json tem agora o DNA do Ensino Superior.")
 
 if __name__ == "__main__":
-    anos = ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"] 
+    anos = ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"] 
     iniciar_treino(anos)
