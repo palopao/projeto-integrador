@@ -1,2930 +1,3098 @@
 [
   {
-    "Ano":2017,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":1034,
-    "Media_0_200":120.7,
-    "Media_0_20":12.07
-  },
-  {
-    "Ano":2018,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":1064,
-    "Media_0_200":139.2,
-    "Media_0_20":13.92
-  },
-  {
-    "Ano":2019,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":867,
-    "Media_0_200":127.4,
-    "Media_0_20":12.74
-  },
-  {
-    "Ano":2020,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":273,
-    "Media_0_200":162.0,
-    "Media_0_20":16.2
-  },
-  {
-    "Ano":2021,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":217,
-    "Media_0_200":159.5,
-    "Media_0_20":15.95
-  },
-  {
-    "Ano":2022,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":195,
-    "Media_0_200":147.4,
-    "Media_0_20":14.74
-  },
-  {
-    "Ano":2023,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":191,
-    "Media_0_200":150.5,
-    "Media_0_20":15.05
-  },
-  {
-    "Ano":2024,
-    "Exame_Unificado":"Alemao",
-    "Fase":1,
-    "Total_Alunos":312,
-    "Media_0_200":122.5,
-    "Media_0_20":12.25
-  },
-  {
-    "Ano":2017,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":137,
-    "Media_0_200":133.2,
-    "Media_0_20":13.32
-  },
-  {
-    "Ano":2018,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":51,
-    "Media_0_200":133.9,
-    "Media_0_20":13.39
-  },
-  {
-    "Ano":2019,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":71,
-    "Media_0_200":118.8,
-    "Media_0_20":11.88
-  },
-  {
-    "Ano":2020,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":15,
-    "Media_0_200":123.9,
-    "Media_0_20":12.39
-  },
-  {
-    "Ano":2021,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":12,
-    "Media_0_200":140.8,
-    "Media_0_20":14.08
+    "Ano": 2017,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 1034,
+    "Media_0_200": 120.7,
+    "Media_0_20": 12.07
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 137,
+    "Media_0_200": 133.2,
+    "Media_0_20": 13.32
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 47224,
+    "Media_0_200": 97.1,
+    "Media_0_20": 9.71
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 22821,
+    "Media_0_200": 102.6,
+    "Media_0_20": 10.26
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 5038,
+    "Media_0_200": 132.7,
+    "Media_0_20": 13.27
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 955,
+    "Media_0_200": 132.7,
+    "Media_0_20": 13.27
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 11861,
+    "Media_0_200": 109.7,
+    "Media_0_20": 10.97
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 3619,
+    "Media_0_200": 99.9,
+    "Media_0_20": 9.99
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 2889,
+    "Media_0_200": 140.2,
+    "Media_0_20": 14.02
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 297,
+    "Media_0_200": 129.4,
+    "Media_0_20": 12.94
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 14876,
+    "Media_0_200": 101.7,
+    "Media_0_20": 10.17
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 3548,
+    "Media_0_200": 86.1,
+    "Media_0_20": 8.61
+  },
+  {
+    "Ano": 2017,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 43007,
+    "Media_0_200": 92.5,
+    "Media_0_20": 9.25
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":11,
-    "Media_0_200":109.8,
-    "Media_0_20":10.98
+    "Ano": 2017,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 23368,
+    "Media_0_200": 93.7,
+    "Media_0_20": 9.37
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":11,
-    "Media_0_200":110.3,
-    "Media_0_20":11.03
+    "Ano": 2017,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 1315,
+    "Media_0_200": 114.7,
+    "Media_0_20": 11.47
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Alemao",
-    "Fase":2,
-    "Total_Alunos":43,
-    "Media_0_200":119.8,
-    "Media_0_20":11.98
+    "Ano": 2017,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 195,
+    "Media_0_200": 100.8,
+    "Media_0_20": 10.08
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":47224,
-    "Media_0_200":97.1,
-    "Media_0_20":9.71
+    "Ano": 2017,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 22867,
+    "Media_0_200": 107.3,
+    "Media_0_20": 10.73
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":44635,
-    "Media_0_200":102.8,
-    "Media_0_20":10.28
+    "Ano": 2017,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 4880,
+    "Media_0_200": 88.5,
+    "Media_0_20": 8.85
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":42847,
-    "Media_0_200":99.1,
-    "Media_0_20":9.91
+    "Ano": 2017,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 8519,
+    "Media_0_200": 103.7,
+    "Media_0_20": 10.37
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":41460,
-    "Media_0_200":140.1,
-    "Media_0_20":14.01
+    "Ano": 2017,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 2888,
+    "Media_0_200": 112.8,
+    "Media_0_20": 11.28
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":36519,
-    "Media_0_200":119.7,
-    "Media_0_20":11.97
+    "Ano": 2017,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 4920,
+    "Media_0_200": 86.5,
+    "Media_0_20": 8.65
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":39136,
-    "Media_0_200":107.8,
-    "Media_0_20":10.78
+    "Ano": 2017,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 1241,
+    "Media_0_200": 90.0,
+    "Media_0_20": 9.0
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":38597,
-    "Media_0_200":114.4,
-    "Media_0_20":11.44
+    "Ano": 2017,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 19662,
+    "Media_0_200": 98.0,
+    "Media_0_20": 9.8
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":1,
-    "Total_Alunos":37730,
-    "Media_0_200":99.5,
-    "Media_0_20":9.95
+    "Ano": 2017,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 5134,
+    "Media_0_200": 84.6,
+    "Media_0_20": 8.46
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":22821,
-    "Media_0_200":102.6,
-    "Media_0_20":10.26
+    "Ano": 2017,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 980,
+    "Media_0_200": 108.8,
+    "Media_0_20": 10.88
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":19977,
-    "Media_0_200":90.1,
-    "Media_0_20":9.01
+    "Ano": 2017,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 287,
+    "Media_0_200": 100.7,
+    "Media_0_20": 10.07
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":21035,
-    "Media_0_200":97.3,
-    "Media_0_20":9.73
+    "Ano": 2017,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 6439,
+    "Media_0_200": 122.6,
+    "Media_0_20": 12.26
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":6822,
-    "Media_0_200":112.0,
-    "Media_0_20":11.2
+    "Ano": 2017,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 1498,
+    "Media_0_200": 111.8,
+    "Media_0_20": 11.18
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":9022,
-    "Media_0_200":99.3,
-    "Media_0_20":9.93
+    "Ano": 2017,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 71,
+    "Media_0_200": 104.3,
+    "Media_0_20": 10.43
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":11015,
-    "Media_0_200":102.7,
-    "Media_0_20":10.27
+    "Ano": 2017,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 2,
+    "Total_Alunos": 13,
+    "Media_0_200": 71.5,
+    "Media_0_20": 7.15
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":12280,
-    "Media_0_200":108.6,
-    "Media_0_20":10.86
+    "Ano": 2017,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 2521,
+    "Media_0_200": 106.2,
+    "Media_0_20": 10.62
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Biologia_Geologia",
-    "Fase":2,
-    "Total_Alunos":17064,
-    "Media_0_200":101.0,
-    "Media_0_20":10.1
+    "Ano": 2017,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 441,
+    "Media_0_200": 92.9,
+    "Media_0_20": 9.29
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":5038,
-    "Media_0_200":132.7,
-    "Media_0_20":13.27
+    "Ano": 2017,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 10823,
+    "Media_0_200": 92.5,
+    "Media_0_20": 9.25
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":4870,
-    "Media_0_200":131.4,
-    "Media_0_20":13.14
+    "Ano": 2017,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 3410,
+    "Media_0_200": 86.0,
+    "Media_0_20": 8.6
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":4614,
-    "Media_0_200":135.6,
-    "Media_0_20":13.56
+    "Ano": 2017,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 49298,
+    "Media_0_200": 100.8,
+    "Media_0_20": 10.08
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":3671,
-    "Media_0_200":147.3,
-    "Media_0_20":14.73
+    "Ano": 2017,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 23609,
+    "Media_0_200": 90.5,
+    "Media_0_20": 9.05
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":3673,
-    "Media_0_200":138.1,
-    "Media_0_20":13.81
+    "Ano": 2017,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 2310,
+    "Media_0_200": 96.3,
+    "Media_0_20": 9.63
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":3633,
-    "Media_0_200":141.1,
-    "Media_0_20":14.11
+    "Ano": 2017,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 625,
+    "Media_0_200": 104.4,
+    "Media_0_20": 10.44
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":3867,
-    "Media_0_200":137.2,
-    "Media_0_20":13.72
+    "Ano": 2017,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 76719,
+    "Media_0_200": 103.6,
+    "Media_0_20": 10.36
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":1,
-    "Total_Alunos":4784,
-    "Media_0_200":144.7,
-    "Media_0_20":14.47
+    "Ano": 2017,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 22084,
+    "Media_0_200": 95.5,
+    "Media_0_20": 9.55
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":955,
-    "Media_0_200":132.7,
-    "Media_0_20":13.27
+    "Ano": 2017,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 109,
+    "Media_0_200": 129.7,
+    "Media_0_20": 12.97
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":1012,
-    "Media_0_200":136.9,
-    "Media_0_20":13.69
+    "Ano": 2017,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 2,
+    "Total_Alunos": 6,
+    "Media_0_200": 125.3,
+    "Media_0_20": 12.53
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":793,
-    "Media_0_200":139.0,
-    "Media_0_20":13.9
+    "Ano": 2018,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 1064,
+    "Media_0_200": 139.2,
+    "Media_0_20": 13.92
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":458,
-    "Media_0_200":139.4,
-    "Media_0_20":13.94
+    "Ano": 2018,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 51,
+    "Media_0_200": 133.9,
+    "Media_0_20": 13.39
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":625,
-    "Media_0_200":126.4,
-    "Media_0_20":12.64
+    "Ano": 2018,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 44635,
+    "Media_0_200": 102.8,
+    "Media_0_20": 10.28
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":967,
-    "Media_0_200":138.2,
-    "Media_0_20":13.82
+    "Ano": 2018,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 19977,
+    "Media_0_200": 90.1,
+    "Media_0_20": 9.01
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":1133,
-    "Media_0_200":139.2,
-    "Media_0_20":13.92
+    "Ano": 2018,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 4870,
+    "Media_0_200": 131.4,
+    "Media_0_20": 13.14
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Desenho_A",
-    "Fase":2,
-    "Total_Alunos":1235,
-    "Media_0_200":145.4,
-    "Media_0_20":14.54
+    "Ano": 2018,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 1012,
+    "Media_0_200": 136.9,
+    "Media_0_20": 13.69
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":11861,
-    "Media_0_200":109.7,
-    "Media_0_20":10.97
+    "Ano": 2018,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 11688,
+    "Media_0_200": 100.7,
+    "Media_0_20": 10.07
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":11688,
-    "Media_0_200":100.7,
-    "Media_0_20":10.07
+    "Ano": 2018,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 4241,
+    "Media_0_200": 96.6,
+    "Media_0_20": 9.66
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":12144,
-    "Media_0_200":110.1,
-    "Media_0_20":11.01
+    "Ano": 2018,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 2991,
+    "Media_0_200": 129.2,
+    "Media_0_20": 12.92
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":12199,
-    "Media_0_200":126.3,
-    "Media_0_20":12.63
+    "Ano": 2018,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 325,
+    "Media_0_200": 119.1,
+    "Media_0_20": 11.91
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":11524,
-    "Media_0_200":122.2,
-    "Media_0_20":12.22
+    "Ano": 2018,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 15344,
+    "Media_0_200": 106.2,
+    "Media_0_20": 10.62
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":11348,
-    "Media_0_200":118.0,
-    "Media_0_20":11.8
+    "Ano": 2018,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 3024,
+    "Media_0_200": 101.8,
+    "Media_0_20": 10.18
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":11215,
-    "Media_0_200":120.5,
-    "Media_0_20":12.05
+    "Ano": 2018,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 43827,
+    "Media_0_200": 101.9,
+    "Media_0_20": 10.19
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Economia_A",
-    "Fase":1,
-    "Total_Alunos":12584,
-    "Media_0_200":127.3,
-    "Media_0_20":12.73
+    "Ano": 2018,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 20981,
+    "Media_0_200": 107.0,
+    "Media_0_20": 10.7
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":3619,
-    "Media_0_200":99.9,
-    "Media_0_20":9.99
+    "Ano": 2018,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 1246,
+    "Media_0_200": 117.8,
+    "Media_0_20": 11.78
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":4241,
-    "Media_0_200":96.6,
-    "Media_0_20":9.66
+    "Ano": 2018,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 124,
+    "Media_0_200": 92.5,
+    "Media_0_20": 9.25
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":4149,
-    "Media_0_200":111.6,
-    "Media_0_20":11.16
+    "Ano": 2018,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 23468,
+    "Media_0_200": 112.7,
+    "Media_0_20": 11.27
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":2863,
-    "Media_0_200":129.5,
-    "Media_0_20":12.95
+    "Ano": 2018,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 4290,
+    "Media_0_200": 100.6,
+    "Media_0_20": 10.06
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":2458,
-    "Media_0_200":116.5,
-    "Media_0_20":11.65
+    "Ano": 2018,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 8436,
+    "Media_0_200": 98.3,
+    "Media_0_20": 9.83
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":2496,
-    "Media_0_200":119.6,
-    "Media_0_20":11.96
+    "Ano": 2018,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 3209,
+    "Media_0_200": 115.2,
+    "Media_0_20": 11.52
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":2800,
-    "Media_0_200":124.5,
-    "Media_0_20":12.45
+    "Ano": 2018,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 4891,
+    "Media_0_200": 90.4,
+    "Media_0_20": 9.04
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Economia_A",
-    "Fase":2,
-    "Total_Alunos":3196,
-    "Media_0_200":116.9,
-    "Media_0_20":11.69
+    "Ano": 2018,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 1278,
+    "Media_0_200": 105.3,
+    "Media_0_20": 10.53
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":1,
-    "Total_Alunos":393,
-    "Media_0_200":146.6,
-    "Media_0_20":14.66
+    "Ano": 2018,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 19286,
+    "Media_0_200": 91.5,
+    "Media_0_20": 9.15
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":1,
-    "Total_Alunos":221,
-    "Media_0_200":135.3,
-    "Media_0_20":13.53
+    "Ano": 2018,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 5505,
+    "Media_0_200": 81.1,
+    "Media_0_20": 8.11
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":1,
-    "Total_Alunos":260,
-    "Media_0_200":129.2,
-    "Media_0_20":12.92
+    "Ano": 2018,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 914,
+    "Media_0_200": 115.7,
+    "Media_0_20": 11.57
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":1,
-    "Total_Alunos":254,
-    "Media_0_200":112.3,
-    "Media_0_20":11.23
+    "Ano": 2018,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 229,
+    "Media_0_200": 106.2,
+    "Media_0_20": 10.62
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":1,
-    "Total_Alunos":498,
-    "Media_0_200":130.1,
-    "Media_0_20":13.01
+    "Ano": 2018,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 5980,
+    "Media_0_200": 118.2,
+    "Media_0_20": 11.82
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":2,
-    "Total_Alunos":24,
-    "Media_0_200":128.8,
-    "Media_0_20":12.88
+    "Ano": 2018,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 1284,
+    "Media_0_200": 124.9,
+    "Media_0_20": 12.49
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":2,
-    "Total_Alunos":23,
-    "Media_0_200":128.3,
-    "Media_0_20":12.83
+    "Ano": 2018,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 65,
+    "Media_0_200": 118.5,
+    "Media_0_20": 11.85
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":2,
-    "Total_Alunos":36,
-    "Media_0_200":118.2,
-    "Media_0_20":11.82
+    "Ano": 2018,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 2,
+    "Total_Alunos": 9,
+    "Media_0_200": 99.2,
+    "Media_0_20": 9.92
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":2,
-    "Total_Alunos":62,
-    "Media_0_200":117.0,
-    "Media_0_20":11.7
+    "Ano": 2018,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 2152,
+    "Media_0_200": 99.6,
+    "Media_0_20": 9.96
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Espanhol_Continuacao",
-    "Fase":2,
-    "Total_Alunos":52,
-    "Media_0_200":107.9,
-    "Media_0_20":10.79
+    "Ano": 2018,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 462,
+    "Media_0_200": 86.8,
+    "Media_0_20": 8.68
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":2889,
-    "Media_0_200":140.2,
-    "Media_0_20":14.02
+    "Ano": 2018,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 11406,
+    "Media_0_200": 92.8,
+    "Media_0_20": 9.28
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":2991,
-    "Media_0_200":129.2,
-    "Media_0_20":12.92
+    "Ano": 2018,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 3325,
+    "Media_0_200": 88.2,
+    "Media_0_20": 8.82
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":3035,
-    "Media_0_200":130.7,
-    "Media_0_20":13.07
+    "Ano": 2018,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 45436,
+    "Media_0_200": 95.5,
+    "Media_0_20": 9.55
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":1246,
-    "Media_0_200":160.7,
-    "Media_0_20":16.07
+    "Ano": 2018,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 23293,
+    "Media_0_200": 92.7,
+    "Media_0_20": 9.27
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":927,
-    "Media_0_200":140.2,
-    "Media_0_20":14.02
+    "Ano": 2018,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 2269,
+    "Media_0_200": 84.6,
+    "Media_0_20": 8.46
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":826,
-    "Media_0_200":160.4,
-    "Media_0_20":16.04
+    "Ano": 2018,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 900,
+    "Media_0_200": 90.1,
+    "Media_0_20": 9.01
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":976,
-    "Media_0_200":135.3,
-    "Media_0_20":13.53
+    "Ano": 2018,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 74386,
+    "Media_0_200": 102.3,
+    "Media_0_20": 10.23
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":2225,
-    "Media_0_200":143.8,
-    "Media_0_20":14.38
+    "Ano": 2018,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 21656,
+    "Media_0_200": 93.9,
+    "Media_0_20": 9.39
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":297,
-    "Media_0_200":129.4,
-    "Media_0_20":12.94
+    "Ano": 2018,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 1,
+    "Total_Alunos": 45,
+    "Media_0_200": 105.7,
+    "Media_0_20": 10.57
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":325,
-    "Media_0_200":119.1,
-    "Media_0_20":11.91
+    "Ano": 2018,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 2,
+    "Total_Alunos": 9,
+    "Media_0_200": 83.9,
+    "Media_0_20": 8.39
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":253,
-    "Media_0_200":124.6,
-    "Media_0_20":12.46
+    "Ano": 2018,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 135,
+    "Media_0_200": 139.8,
+    "Media_0_20": 13.98
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":48,
-    "Media_0_200":127.8,
-    "Media_0_20":12.78
+    "Ano": 2018,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 2,
+    "Total_Alunos": 7,
+    "Media_0_200": 108.6,
+    "Media_0_20": 10.86
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":93,
-    "Media_0_200":149.8,
-    "Media_0_20":14.98
+    "Ano": 2019,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 867,
+    "Media_0_200": 127.4,
+    "Media_0_20": 12.74
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":36,
-    "Media_0_200":141.2,
-    "Media_0_20":14.12
+    "Ano": 2019,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 71,
+    "Media_0_200": 118.8,
+    "Media_0_20": 11.88
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":135,
-    "Media_0_200":124.8,
-    "Media_0_20":12.48
+    "Ano": 2019,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 42847,
+    "Media_0_200": 99.1,
+    "Media_0_20": 9.91
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Espanhol_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":139,
-    "Media_0_200":120.5,
-    "Media_0_20":12.05
+    "Ano": 2019,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 21035,
+    "Media_0_200": 97.3,
+    "Media_0_20": 9.73
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":14876,
-    "Media_0_200":101.7,
-    "Media_0_20":10.17
+    "Ano": 2019,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 4614,
+    "Media_0_200": 135.6,
+    "Media_0_20": 13.56
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":15344,
-    "Media_0_200":106.2,
-    "Media_0_20":10.62
+    "Ano": 2019,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 793,
+    "Media_0_200": 139.0,
+    "Media_0_20": 13.9
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":16097,
-    "Media_0_200":94.3,
-    "Media_0_20":9.43
+    "Ano": 2019,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 12144,
+    "Media_0_200": 110.1,
+    "Media_0_20": 11.01
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":7595,
-    "Media_0_200":130.4,
-    "Media_0_20":13.04
+    "Ano": 2019,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 4149,
+    "Media_0_200": 111.6,
+    "Media_0_20": 11.16
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":7206,
-    "Media_0_200":121.8,
-    "Media_0_20":12.18
+    "Ano": 2019,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 3035,
+    "Media_0_200": 130.7,
+    "Media_0_20": 13.07
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":6984,
-    "Media_0_200":111.1,
-    "Media_0_20":11.11
+    "Ano": 2019,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 253,
+    "Media_0_200": 124.6,
+    "Media_0_20": 12.46
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":7552,
-    "Media_0_200":111.6,
-    "Media_0_20":11.16
+    "Ano": 2019,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 16097,
+    "Media_0_200": 94.3,
+    "Media_0_20": 9.43
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Filosofia",
-    "Fase":1,
-    "Total_Alunos":14366,
-    "Media_0_200":105.5,
-    "Media_0_20":10.55
+    "Ano": 2019,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 4758,
+    "Media_0_200": 99.7,
+    "Media_0_20": 9.97
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":3548,
-    "Media_0_200":86.1,
-    "Media_0_20":8.61
+    "Ano": 2019,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 41383,
+    "Media_0_200": 94.8,
+    "Media_0_20": 9.48
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":3024,
-    "Media_0_200":101.8,
-    "Media_0_20":10.18
+    "Ano": 2019,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 21273,
+    "Media_0_200": 91.3,
+    "Media_0_20": 9.13
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":4758,
-    "Media_0_200":99.7,
-    "Media_0_20":9.97
+    "Ano": 2019,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 1099,
+    "Media_0_200": 112.4,
+    "Media_0_20": 11.24
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":1048,
-    "Media_0_200":113.8,
-    "Media_0_20":11.38
+    "Ano": 2019,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 140,
+    "Media_0_200": 111.8,
+    "Media_0_20": 11.18
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":1185,
-    "Media_0_200":103.4,
-    "Media_0_20":10.34
+    "Ano": 2019,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 23747,
+    "Media_0_200": 100.1,
+    "Media_0_20": 10.01
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":1420,
-    "Media_0_200":104.2,
-    "Media_0_20":10.42
+    "Ano": 2019,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 6352,
+    "Media_0_200": 108.2,
+    "Media_0_20": 10.82
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":1471,
-    "Media_0_200":101.0,
-    "Media_0_20":10.1
+    "Ano": 2019,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 9004,
+    "Media_0_200": 120.1,
+    "Media_0_20": 12.01
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Filosofia",
-    "Fase":2,
-    "Total_Alunos":3441,
-    "Media_0_200":98.5,
-    "Media_0_20":9.85
+    "Ano": 2019,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 2485,
+    "Media_0_200": 100.8,
+    "Media_0_20": 10.08
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":43007,
-    "Media_0_200":92.5,
-    "Media_0_20":9.25
+    "Ano": 2019,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 4692,
+    "Media_0_200": 110.8,
+    "Media_0_20": 11.08
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":43827,
-    "Media_0_200":101.9,
-    "Media_0_20":10.19
+    "Ano": 2019,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 786,
+    "Media_0_200": 114.1,
+    "Media_0_20": 11.41
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":41383,
-    "Media_0_200":94.8,
-    "Media_0_20":9.48
+    "Ano": 2019,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 19969,
+    "Media_0_200": 99.6,
+    "Media_0_20": 9.96
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":39443,
-    "Media_0_200":132.5,
-    "Media_0_20":13.25
+    "Ano": 2019,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 4737,
+    "Media_0_200": 89.2,
+    "Media_0_20": 8.92
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":32811,
-    "Media_0_200":97.8,
-    "Media_0_20":9.78
+    "Ano": 2019,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 876,
+    "Media_0_200": 118.7,
+    "Media_0_20": 11.87
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":32851,
-    "Media_0_200":117.0,
-    "Media_0_20":11.7
+    "Ano": 2019,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 264,
+    "Media_0_200": 109.8,
+    "Media_0_20": 10.98
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":31392,
-    "Media_0_200":112.6,
-    "Media_0_20":11.26
+    "Ano": 2019,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 5005,
+    "Media_0_200": 136.4,
+    "Media_0_20": 13.64
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":1,
-    "Total_Alunos":33568,
-    "Media_0_200":116.2,
-    "Media_0_20":11.62
+    "Ano": 2019,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 821,
+    "Media_0_200": 134.2,
+    "Media_0_20": 13.42
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":23368,
-    "Media_0_200":93.7,
-    "Media_0_20":9.37
+    "Ano": 2019,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 65,
+    "Media_0_200": 103.6,
+    "Media_0_20": 10.36
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":20981,
-    "Media_0_200":107.0,
-    "Media_0_20":10.7
+    "Ano": 2019,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 2,
+    "Total_Alunos": 7,
+    "Media_0_200": 75.7,
+    "Media_0_20": 7.57
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":21273,
-    "Media_0_200":91.3,
-    "Media_0_20":9.13
+    "Ano": 2019,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 1933,
+    "Media_0_200": 103.3,
+    "Media_0_20": 10.33
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":6859,
-    "Media_0_200":97.8,
-    "Media_0_20":9.78
+    "Ano": 2019,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 364,
+    "Media_0_200": 76.6,
+    "Media_0_20": 7.66
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":8954,
-    "Media_0_200":88.0,
-    "Media_0_20":8.8
+    "Ano": 2019,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 11228,
+    "Media_0_200": 101.8,
+    "Media_0_20": 10.18
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":7414,
-    "Media_0_200":104.2,
-    "Media_0_20":10.42
+    "Ano": 2019,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 3012,
+    "Media_0_200": 88.7,
+    "Media_0_20": 8.87
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":9102,
-    "Media_0_200":116.6,
-    "Media_0_20":11.66
+    "Ano": 2019,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 45650,
+    "Media_0_200": 101.9,
+    "Media_0_20": 10.19
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Fisica_Quimica_A",
-    "Fase":2,
-    "Total_Alunos":12043,
-    "Media_0_200":106.6,
-    "Media_0_20":10.66
+    "Ano": 2019,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 19453,
+    "Media_0_200": 98.8,
+    "Media_0_20": 9.88
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":1315,
-    "Media_0_200":114.7,
-    "Media_0_20":11.47
+    "Ano": 2019,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 2480,
+    "Media_0_200": 108.9,
+    "Media_0_20": 10.89
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":1246,
-    "Media_0_200":117.8,
-    "Media_0_20":11.78
+    "Ano": 2019,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 602,
+    "Media_0_200": 79.3,
+    "Media_0_20": 7.93
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":1099,
-    "Media_0_200":112.4,
-    "Media_0_20":11.24
+    "Ano": 2019,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 74258,
+    "Media_0_200": 110.4,
+    "Media_0_20": 11.04
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":455,
-    "Media_0_200":152.5,
-    "Media_0_20":15.25
+    "Ano": 2019,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 16443,
+    "Media_0_200": 95.2,
+    "Media_0_20": 9.52
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":313,
-    "Media_0_200":149.3,
-    "Media_0_20":14.93
+    "Ano": 2019,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 1,
+    "Total_Alunos": 38,
+    "Media_0_200": 108.0,
+    "Media_0_20": 10.8
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":281,
-    "Media_0_200":149.6,
-    "Media_0_20":14.96
+    "Ano": 2019,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 2,
+    "Total_Alunos": 8,
+    "Media_0_200": 89.8,
+    "Media_0_20": 8.98
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":313,
-    "Media_0_200":146.3,
-    "Media_0_20":14.63
+    "Ano": 2019,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 165,
+    "Media_0_200": 149.8,
+    "Media_0_20": 14.98
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Frances",
-    "Fase":1,
-    "Total_Alunos":569,
-    "Media_0_200":139.6,
-    "Media_0_20":13.96
+    "Ano": 2019,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 2,
+    "Total_Alunos": 7,
+    "Media_0_200": 121.4,
+    "Media_0_20": 12.14
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":195,
-    "Media_0_200":100.8,
-    "Media_0_20":10.08
+    "Ano": 2020,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 273,
+    "Media_0_200": 162.0,
+    "Media_0_20": 16.2
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":124,
-    "Media_0_200":92.5,
-    "Media_0_20":9.25
+    "Ano": 2020,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 15,
+    "Media_0_200": 123.9,
+    "Media_0_20": 12.39
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":140,
-    "Media_0_200":111.8,
-    "Media_0_20":11.18
+    "Ano": 2020,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 41460,
+    "Media_0_200": 140.1,
+    "Media_0_20": 14.01
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":28,
-    "Media_0_200":117.0,
-    "Media_0_20":11.7
+    "Ano": 2020,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 6822,
+    "Media_0_200": 112.0,
+    "Media_0_20": 11.2
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":20,
-    "Media_0_200":91.5,
-    "Media_0_20":9.15
+    "Ano": 2020,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 3671,
+    "Media_0_200": 147.3,
+    "Media_0_20": 14.73
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":27,
-    "Media_0_200":134.1,
-    "Media_0_20":13.41
+    "Ano": 2020,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 458,
+    "Media_0_200": 139.4,
+    "Media_0_20": 13.94
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":30,
-    "Media_0_200":115.6,
-    "Media_0_20":11.56
+    "Ano": 2020,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 12199,
+    "Media_0_200": 126.3,
+    "Media_0_20": 12.63
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Frances",
-    "Fase":2,
-    "Total_Alunos":45,
-    "Media_0_200":114.2,
-    "Media_0_20":11.42
+    "Ano": 2020,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 2863,
+    "Media_0_200": 129.5,
+    "Media_0_20": 12.95
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":22867,
-    "Media_0_200":107.3,
-    "Media_0_20":10.73
+    "Ano": 2020,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 1,
+    "Total_Alunos": 393,
+    "Media_0_200": 146.6,
+    "Media_0_20": 14.66
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":23468,
-    "Media_0_200":112.7,
-    "Media_0_20":11.27
+    "Ano": 2020,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 2,
+    "Total_Alunos": 24,
+    "Media_0_200": 128.8,
+    "Media_0_20": 12.88
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":23747,
-    "Media_0_200":100.1,
-    "Media_0_20":10.01
+    "Ano": 2020,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 1246,
+    "Media_0_200": 160.7,
+    "Media_0_20": 16.07
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":13730,
-    "Media_0_200":135.7,
-    "Media_0_20":13.57
+    "Ano": 2020,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 48,
+    "Media_0_200": 127.8,
+    "Media_0_20": 12.78
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":9816,
-    "Media_0_200":107.3,
-    "Media_0_20":10.73
+    "Ano": 2020,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 7595,
+    "Media_0_200": 130.4,
+    "Media_0_20": 13.04
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":8687,
-    "Media_0_200":116.1,
-    "Media_0_20":11.61
+    "Ano": 2020,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 1048,
+    "Media_0_200": 113.8,
+    "Media_0_20": 11.38
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":8732,
-    "Media_0_200":108.8,
-    "Media_0_20":10.88
+    "Ano": 2020,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 39443,
+    "Media_0_200": 132.5,
+    "Media_0_20": 13.25
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":1,
-    "Total_Alunos":15453,
-    "Media_0_200":102.6,
-    "Media_0_20":10.26
+    "Ano": 2020,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 6859,
+    "Media_0_200": 97.8,
+    "Media_0_20": 9.78
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":4880,
-    "Media_0_200":88.5,
-    "Media_0_20":8.85
+    "Ano": 2020,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 455,
+    "Media_0_200": 152.5,
+    "Media_0_20": 15.25
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":4290,
-    "Media_0_200":100.6,
-    "Media_0_20":10.06
+    "Ano": 2020,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 28,
+    "Media_0_200": 117.0,
+    "Media_0_20": 11.7
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":6352,
-    "Media_0_200":108.2,
-    "Media_0_20":10.82
+    "Ano": 2020,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 13730,
+    "Media_0_200": 135.7,
+    "Media_0_20": 13.57
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":1148,
-    "Media_0_200":126.1,
-    "Media_0_20":12.61
+    "Ano": 2020,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 1148,
+    "Media_0_200": 126.1,
+    "Media_0_20": 12.61
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":1561,
-    "Media_0_200":102.5,
-    "Media_0_20":10.25
+    "Ano": 2020,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 6338,
+    "Media_0_200": 112.5,
+    "Media_0_20": 11.25
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":1233,
-    "Media_0_200":111.6,
-    "Media_0_20":11.16
+    "Ano": 2020,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 1475,
+    "Media_0_200": 98.8,
+    "Media_0_20": 9.88
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":1430,
-    "Media_0_200":103.2,
-    "Media_0_20":10.32
+    "Ano": 2020,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 3572,
+    "Media_0_200": 139.4,
+    "Media_0_20": 13.94
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Geografia_A",
-    "Fase":2,
-    "Total_Alunos":3530,
-    "Media_0_200":101.0,
-    "Media_0_20":10.1
+    "Ano": 2020,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 310,
+    "Media_0_200": 115.3,
+    "Media_0_20": 11.53
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":8519,
-    "Media_0_200":103.7,
-    "Media_0_20":10.37
+    "Ano": 2020,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 8241,
+    "Media_0_200": 134.3,
+    "Media_0_20": 13.43
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":8436,
-    "Media_0_200":98.3,
-    "Media_0_20":9.83
+    "Ano": 2020,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 1210,
+    "Media_0_200": 119.6,
+    "Media_0_20": 11.96
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":9004,
-    "Media_0_200":120.1,
-    "Media_0_20":12.01
+    "Ano": 2020,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 448,
+    "Media_0_200": 145.1,
+    "Media_0_20": 14.51
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":6338,
-    "Media_0_200":112.5,
-    "Media_0_20":11.25
+    "Ano": 2020,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 49,
+    "Media_0_200": 112.3,
+    "Media_0_20": 11.23
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":5465,
-    "Media_0_200":123.7,
-    "Media_0_20":12.37
+    "Ano": 2020,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 5622,
+    "Media_0_200": 151.0,
+    "Media_0_20": 15.1
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":5394,
-    "Media_0_200":104.5,
-    "Media_0_20":10.45
+    "Ano": 2020,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 638,
+    "Media_0_200": 129.5,
+    "Media_0_20": 12.95
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":6357,
-    "Media_0_200":97.3,
-    "Media_0_20":9.73
+    "Ano": 2020,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 10,
+    "Media_0_200": 117.8,
+    "Media_0_20": 11.78
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":1,
-    "Total_Alunos":8010,
-    "Media_0_200":107.9,
-    "Media_0_20":10.79
+    "Ano": 2020,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 2,
+    "Total_Alunos": 2,
+    "Media_0_200": 50.5,
+    "Media_0_20": 5.05
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":2888,
-    "Media_0_200":112.8,
-    "Media_0_20":11.28
+    "Ano": 2020,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 605,
+    "Media_0_200": 111.8,
+    "Media_0_20": 11.18
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":3209,
-    "Media_0_200":115.2,
-    "Media_0_20":11.52
+    "Ano": 2020,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 103,
+    "Media_0_200": 95.3,
+    "Media_0_20": 9.53
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":2485,
-    "Media_0_200":100.8,
-    "Media_0_20":10.08
+    "Ano": 2020,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 7542,
+    "Media_0_200": 94.7,
+    "Media_0_20": 9.47
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":1475,
-    "Media_0_200":98.8,
-    "Media_0_20":9.88
+    "Ano": 2020,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 1822,
+    "Media_0_200": 90.4,
+    "Media_0_20": 9.04
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":1143,
-    "Media_0_200":109.4,
-    "Media_0_20":10.94
+    "Ano": 2020,
+    "Exame_Unificado": "Mandarim_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 6,
+    "Media_0_200": 168.7,
+    "Media_0_20": 16.87
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":1731,
-    "Media_0_200":116.2,
-    "Media_0_20":11.62
+    "Ano": 2020,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 35723,
+    "Media_0_200": 132.8,
+    "Media_0_20": 13.28
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":2168,
-    "Media_0_200":113.0,
-    "Media_0_20":11.3
+    "Ano": 2020,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 8735,
+    "Media_0_200": 119.9,
+    "Media_0_20": 11.99
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Geometria_Descritiva_A",
-    "Fase":2,
-    "Total_Alunos":2892,
-    "Media_0_200":103.7,
-    "Media_0_20":10.37
+    "Ano": 2020,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 2305,
+    "Media_0_200": 120.1,
+    "Media_0_20": 12.01
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":4920,
-    "Media_0_200":86.5,
-    "Media_0_20":8.65
+    "Ano": 2020,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 487,
+    "Media_0_200": 86.9,
+    "Media_0_20": 8.69
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":4891,
-    "Media_0_200":90.4,
-    "Media_0_20":9.04
+    "Ano": 2020,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 36620,
+    "Media_0_200": 119.9,
+    "Media_0_20": 11.99
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":4692,
-    "Media_0_200":110.8,
-    "Media_0_20":11.08
+    "Ano": 2020,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 7515,
+    "Media_0_200": 106.4,
+    "Media_0_20": 10.64
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":3572,
-    "Media_0_200":139.4,
-    "Media_0_20":13.94
+    "Ano": 2020,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 1,
+    "Total_Alunos": 25,
+    "Media_0_200": 123.3,
+    "Media_0_20": 12.33
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":3189,
-    "Media_0_200":125.7,
-    "Media_0_20":12.57
+    "Ano": 2020,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 2,
+    "Total_Alunos": 1,
+    "Media_0_200": 87.0,
+    "Media_0_20": 8.7
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":3248,
-    "Media_0_200":122.9,
-    "Media_0_20":12.29
+    "Ano": 2020,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 8,
+    "Media_0_200": 156.4,
+    "Media_0_20": 15.64
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":4065,
-    "Media_0_200":103.0,
-    "Media_0_20":10.3
+    "Ano": 2020,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 2,
+    "Total_Alunos": 1,
+    "Media_0_200": 133.0,
+    "Media_0_20": 13.3
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"HCA",
-    "Fase":1,
-    "Total_Alunos":6002,
-    "Media_0_200":119.3,
-    "Media_0_20":11.93
+    "Ano": 2021,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 217,
+    "Media_0_200": 159.5,
+    "Media_0_20": 15.95
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":1241,
-    "Media_0_200":90.0,
-    "Media_0_20":9.0
+    "Ano": 2021,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 12,
+    "Media_0_200": 140.8,
+    "Media_0_20": 14.08
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":1278,
-    "Media_0_200":105.3,
-    "Media_0_20":10.53
+    "Ano": 2021,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 36519,
+    "Media_0_200": 119.7,
+    "Media_0_20": 11.97
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":786,
-    "Media_0_200":114.1,
-    "Media_0_20":11.41
+    "Ano": 2021,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 9022,
+    "Media_0_200": 99.3,
+    "Media_0_20": 9.93
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":310,
-    "Media_0_200":115.3,
-    "Media_0_20":11.53
+    "Ano": 2021,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 3673,
+    "Media_0_200": 138.1,
+    "Media_0_20": 13.81
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":462,
-    "Media_0_200":125.6,
-    "Media_0_20":12.56
+    "Ano": 2021,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 625,
+    "Media_0_200": 126.4,
+    "Media_0_20": 12.64
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":557,
-    "Media_0_200":118.3,
-    "Media_0_20":11.83
+    "Ano": 2021,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 11524,
+    "Media_0_200": 122.2,
+    "Media_0_20": 12.22
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":832,
-    "Media_0_200":117.7,
-    "Media_0_20":11.77
+    "Ano": 2021,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 2458,
+    "Media_0_200": 116.5,
+    "Media_0_20": 11.65
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"HCA",
-    "Fase":2,
-    "Total_Alunos":1067,
-    "Media_0_200":110.4,
-    "Media_0_20":11.04
+    "Ano": 2021,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 1,
+    "Total_Alunos": 221,
+    "Media_0_200": 135.3,
+    "Media_0_20": 13.53
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":19662,
-    "Media_0_200":98.0,
-    "Media_0_20":9.8
+    "Ano": 2021,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 2,
+    "Total_Alunos": 23,
+    "Media_0_200": 128.3,
+    "Media_0_20": 12.83
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":19286,
-    "Media_0_200":91.5,
-    "Media_0_20":9.15
+    "Ano": 2021,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 927,
+    "Media_0_200": 140.2,
+    "Media_0_20": 14.02
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":19969,
-    "Media_0_200":99.6,
-    "Media_0_20":9.96
+    "Ano": 2021,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 93,
+    "Media_0_200": 149.8,
+    "Media_0_20": 14.98
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":8241,
-    "Media_0_200":134.3,
-    "Media_0_20":13.43
+    "Ano": 2021,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 7206,
+    "Media_0_200": 121.8,
+    "Media_0_20": 12.18
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":6871,
-    "Media_0_200":129.0,
-    "Media_0_20":12.9
+    "Ano": 2021,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 1185,
+    "Media_0_200": 103.4,
+    "Media_0_20": 10.34
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":6452,
-    "Media_0_200":123.5,
-    "Media_0_20":12.35
+    "Ano": 2021,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 32811,
+    "Media_0_200": 97.8,
+    "Media_0_20": 9.78
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":6261,
-    "Media_0_200":114.9,
-    "Media_0_20":11.49
+    "Ano": 2021,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 8954,
+    "Media_0_200": 88.0,
+    "Media_0_20": 8.8
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Historia_A",
-    "Fase":1,
-    "Total_Alunos":6317,
-    "Media_0_200":124.6,
-    "Media_0_20":12.46
+    "Ano": 2021,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 313,
+    "Media_0_200": 149.3,
+    "Media_0_20": 14.93
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":5134,
-    "Media_0_200":84.6,
-    "Media_0_20":8.46
+    "Ano": 2021,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 20,
+    "Media_0_200": 91.5,
+    "Media_0_20": 9.15
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":5505,
-    "Media_0_200":81.1,
-    "Media_0_20":8.11
+    "Ano": 2021,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 9816,
+    "Media_0_200": 107.3,
+    "Media_0_20": 10.73
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":4737,
-    "Media_0_200":89.2,
-    "Media_0_20":8.92
+    "Ano": 2021,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 1561,
+    "Media_0_200": 102.5,
+    "Media_0_20": 10.25
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":1210,
-    "Media_0_200":119.6,
-    "Media_0_20":11.96
+    "Ano": 2021,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 5465,
+    "Media_0_200": 123.7,
+    "Media_0_20": 12.37
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":1106,
-    "Media_0_200":115.5,
-    "Media_0_20":11.55
+    "Ano": 2021,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 1143,
+    "Media_0_200": 109.4,
+    "Media_0_20": 10.94
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":1606,
-    "Media_0_200":106.8,
-    "Media_0_20":10.68
+    "Ano": 2021,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 3189,
+    "Media_0_200": 125.7,
+    "Media_0_20": 12.57
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":1679,
-    "Media_0_200":108.1,
-    "Media_0_20":10.81
+    "Ano": 2021,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 462,
+    "Media_0_200": 125.6,
+    "Media_0_20": 12.56
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Historia_A",
-    "Fase":2,
-    "Total_Alunos":1868,
-    "Media_0_200":113.9,
-    "Media_0_20":11.39
+    "Ano": 2021,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 6871,
+    "Media_0_200": 129.0,
+    "Media_0_20": 12.9
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":980,
-    "Media_0_200":108.8,
-    "Media_0_20":10.88
+    "Ano": 2021,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 1106,
+    "Media_0_200": 115.5,
+    "Media_0_20": 11.55
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":914,
-    "Media_0_200":115.7,
-    "Media_0_20":11.57
+    "Ano": 2021,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 314,
+    "Media_0_200": 116.2,
+    "Media_0_20": 11.62
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":876,
-    "Media_0_200":118.7,
-    "Media_0_20":11.87
+    "Ano": 2021,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 75,
+    "Media_0_200": 110.0,
+    "Media_0_20": 11.0
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":448,
-    "Media_0_200":145.1,
-    "Media_0_20":14.51
+    "Ano": 2021,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 6926,
+    "Media_0_200": 150.2,
+    "Media_0_20": 15.02
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":314,
-    "Media_0_200":116.2,
-    "Media_0_20":11.62
+    "Ano": 2021,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 936,
+    "Media_0_200": 145.0,
+    "Media_0_20": 14.5
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":319,
-    "Media_0_200":128.2,
-    "Media_0_20":12.82
+    "Ano": 2021,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 10,
+    "Media_0_200": 136.0,
+    "Media_0_20": 13.6
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":342,
-    "Media_0_200":115.1,
-    "Media_0_20":11.51
+    "Ano": 2021,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 2,
+    "Total_Alunos": 1,
+    "Media_0_200": 61.0,
+    "Media_0_20": 6.1
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Historia_B",
-    "Fase":1,
-    "Total_Alunos":603,
-    "Media_0_200":122.4,
-    "Media_0_20":12.24
+    "Ano": 2021,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 404,
+    "Media_0_200": 105.5,
+    "Media_0_20": 10.55
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":287,
-    "Media_0_200":100.7,
-    "Media_0_20":10.07
+    "Ano": 2021,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 65,
+    "Media_0_200": 108.0,
+    "Media_0_20": 10.8
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":229,
-    "Media_0_200":106.2,
-    "Media_0_20":10.62
+    "Ano": 2021,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 6528,
+    "Media_0_200": 107.1,
+    "Media_0_20": 10.71
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":264,
-    "Media_0_200":109.8,
-    "Media_0_20":10.98
+    "Ano": 2021,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 1259,
+    "Media_0_200": 88.7,
+    "Media_0_20": 8.87
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":49,
-    "Media_0_200":112.3,
-    "Media_0_20":11.23
+    "Ano": 2021,
+    "Exame_Unificado": "Mandarim_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 7,
+    "Media_0_200": 166.6,
+    "Media_0_20": 16.66
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":75,
-    "Media_0_200":110.0,
-    "Media_0_20":11.0
+    "Ano": 2021,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 34128,
+    "Media_0_200": 106.4,
+    "Media_0_20": 10.64
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":70,
-    "Media_0_200":125.0,
-    "Media_0_20":12.5
+    "Ano": 2021,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 11456,
+    "Media_0_200": 91.8,
+    "Media_0_20": 9.18
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":94,
-    "Media_0_200":118.6,
-    "Media_0_20":11.86
+    "Ano": 2021,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 2500,
+    "Media_0_200": 101.4,
+    "Media_0_20": 10.14
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Historia_B",
-    "Fase":2,
-    "Total_Alunos":107,
-    "Media_0_200":101.3,
-    "Media_0_20":10.13
+    "Ano": 2021,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 619,
+    "Media_0_200": 78.7,
+    "Media_0_20": 7.87
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":6439,
-    "Media_0_200":122.6,
-    "Media_0_20":12.26
+    "Ano": 2021,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 34319,
+    "Media_0_200": 120.5,
+    "Media_0_20": 12.05
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":5980,
-    "Media_0_200":118.2,
-    "Media_0_20":11.82
+    "Ano": 2021,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 6818,
+    "Media_0_200": 112.5,
+    "Media_0_20": 11.25
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":5005,
-    "Media_0_200":136.4,
-    "Media_0_20":13.64
+    "Ano": 2021,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 1,
+    "Total_Alunos": 27,
+    "Media_0_200": 119.4,
+    "Media_0_20": 11.94
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":5622,
-    "Media_0_200":151.0,
-    "Media_0_20":15.1
+    "Ano": 2021,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 2,
+    "Total_Alunos": 5,
+    "Media_0_200": 90.8,
+    "Media_0_20": 9.08
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":6926,
-    "Media_0_200":150.2,
-    "Media_0_20":15.02
+    "Ano": 2021,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 9,
+    "Media_0_200": 156.6,
+    "Media_0_20": 15.66
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":7161,
-    "Media_0_200":149.0,
-    "Media_0_20":14.9
+    "Ano": 2022,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 195,
+    "Media_0_200": 147.4,
+    "Media_0_20": 14.74
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":8737,
-    "Media_0_200":149.4,
-    "Media_0_20":14.94
+    "Ano": 2022,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 11,
+    "Media_0_200": 109.8,
+    "Media_0_20": 10.98
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Ingles",
-    "Fase":1,
-    "Total_Alunos":8760,
-    "Media_0_200":143.3,
-    "Media_0_20":14.33
+    "Ano": 2022,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 39136,
+    "Media_0_200": 107.8,
+    "Media_0_20": 10.78
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":1498,
-    "Media_0_200":111.8,
-    "Media_0_20":11.18
+    "Ano": 2022,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 11015,
+    "Media_0_200": 102.7,
+    "Media_0_20": 10.27
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":1284,
-    "Media_0_200":124.9,
-    "Media_0_20":12.49
+    "Ano": 2022,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 3633,
+    "Media_0_200": 141.1,
+    "Media_0_20": 14.11
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":821,
-    "Media_0_200":134.2,
-    "Media_0_20":13.42
+    "Ano": 2022,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 967,
+    "Media_0_200": 138.2,
+    "Media_0_20": 13.82
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":638,
-    "Media_0_200":129.5,
-    "Media_0_20":12.95
+    "Ano": 2022,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 11348,
+    "Media_0_200": 118.0,
+    "Media_0_20": 11.8
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":936,
-    "Media_0_200":145.0,
-    "Media_0_20":14.5
+    "Ano": 2022,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 2496,
+    "Media_0_200": 119.6,
+    "Media_0_20": 11.96
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":973,
-    "Media_0_200":151.8,
-    "Media_0_20":15.18
+    "Ano": 2022,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 1,
+    "Total_Alunos": 260,
+    "Media_0_200": 129.2,
+    "Media_0_20": 12.92
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":1189,
-    "Media_0_200":143.3,
-    "Media_0_20":14.33
+    "Ano": 2022,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 2,
+    "Total_Alunos": 36,
+    "Media_0_200": 118.2,
+    "Media_0_20": 11.82
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Ingles",
-    "Fase":2,
-    "Total_Alunos":1490,
-    "Media_0_200":153.1,
-    "Media_0_20":15.31
+    "Ano": 2022,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 826,
+    "Media_0_200": 160.4,
+    "Media_0_20": 16.04
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Italiano_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":2,
-    "Media_0_200":133.0,
-    "Media_0_20":13.3
+    "Ano": 2022,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 36,
+    "Media_0_200": 141.2,
+    "Media_0_20": 14.12
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Italiano_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":22,
-    "Media_0_200":137.0,
-    "Media_0_20":13.7
+    "Ano": 2022,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 6984,
+    "Media_0_200": 111.1,
+    "Media_0_20": 11.11
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Italiano_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":1,
-    "Media_0_200":187.0,
-    "Media_0_20":18.7
+    "Ano": 2022,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 1420,
+    "Media_0_200": 104.2,
+    "Media_0_20": 10.42
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":71,
-    "Media_0_200":104.3,
-    "Media_0_20":10.43
+    "Ano": 2022,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 32851,
+    "Media_0_200": 117.0,
+    "Media_0_20": 11.7
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":65,
-    "Media_0_200":118.5,
-    "Media_0_20":11.85
+    "Ano": 2022,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 7414,
+    "Media_0_200": 104.2,
+    "Media_0_20": 10.42
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":65,
-    "Media_0_200":103.6,
-    "Media_0_20":10.36
+    "Ano": 2022,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 281,
+    "Media_0_200": 149.6,
+    "Media_0_20": 14.96
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":10,
-    "Media_0_200":117.8,
-    "Media_0_20":11.78
+    "Ano": 2022,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 27,
+    "Media_0_200": 134.1,
+    "Media_0_20": 13.41
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":10,
-    "Media_0_200":136.0,
-    "Media_0_20":13.6
+    "Ano": 2022,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 8687,
+    "Media_0_200": 116.1,
+    "Media_0_20": 11.61
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":8,
-    "Media_0_200":126.2,
-    "Media_0_20":12.62
+    "Ano": 2022,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 1233,
+    "Media_0_200": 111.6,
+    "Media_0_20": 11.16
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":6,
-    "Media_0_200":146.5,
-    "Media_0_20":14.65
+    "Ano": 2022,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 5394,
+    "Media_0_200": 104.5,
+    "Media_0_20": 10.45
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Latim_A",
-    "Fase":1,
-    "Total_Alunos":13,
-    "Media_0_200":102.5,
-    "Media_0_20":10.25
+    "Ano": 2022,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 1731,
+    "Media_0_200": 116.2,
+    "Media_0_20": 11.62
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Latim_A",
-    "Fase":2,
-    "Total_Alunos":13,
-    "Media_0_200":71.5,
-    "Media_0_20":7.15
+    "Ano": 2022,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 3248,
+    "Media_0_200": 122.9,
+    "Media_0_20": 12.29
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Latim_A",
-    "Fase":2,
-    "Total_Alunos":9,
-    "Media_0_200":99.2,
-    "Media_0_20":9.92
+    "Ano": 2022,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 557,
+    "Media_0_200": 118.3,
+    "Media_0_20": 11.83
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Latim_A",
-    "Fase":2,
-    "Total_Alunos":7,
-    "Media_0_200":75.7,
-    "Media_0_20":7.57
+    "Ano": 2022,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 6452,
+    "Media_0_200": 123.5,
+    "Media_0_20": 12.35
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Latim_A",
-    "Fase":2,
-    "Total_Alunos":2,
-    "Media_0_200":50.5,
-    "Media_0_20":5.05
+    "Ano": 2022,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 1606,
+    "Media_0_200": 106.8,
+    "Media_0_20": 10.68
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Latim_A",
-    "Fase":2,
-    "Total_Alunos":1,
-    "Media_0_200":61.0,
-    "Media_0_20":6.1
+    "Ano": 2022,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 319,
+    "Media_0_200": 128.2,
+    "Media_0_20": 12.82
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Latim_A",
-    "Fase":2,
-    "Total_Alunos":4,
-    "Media_0_200":115.2,
-    "Media_0_20":11.52
+    "Ano": 2022,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 70,
+    "Media_0_200": 125.0,
+    "Media_0_20": 12.5
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Latim_A",
-    "Fase":2,
-    "Total_Alunos":1,
-    "Media_0_200":139.0,
-    "Media_0_20":13.9
+    "Ano": 2022,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 7161,
+    "Media_0_200": 149.0,
+    "Media_0_20": 14.9
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":2521,
-    "Media_0_200":106.2,
-    "Media_0_20":10.62
+    "Ano": 2022,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 973,
+    "Media_0_200": 151.8,
+    "Media_0_20": 15.18
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":2152,
-    "Media_0_200":99.6,
-    "Media_0_20":9.96
+    "Ano": 2022,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 8,
+    "Media_0_200": 126.2,
+    "Media_0_20": 12.62
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":1933,
-    "Media_0_200":103.3,
-    "Media_0_20":10.33
+    "Ano": 2022,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 2,
+    "Total_Alunos": 4,
+    "Media_0_200": 115.2,
+    "Media_0_20": 11.52
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":605,
-    "Media_0_200":111.8,
-    "Media_0_20":11.18
+    "Ano": 2022,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 339,
+    "Media_0_200": 120.0,
+    "Media_0_20": 12.0
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":404,
-    "Media_0_200":105.5,
-    "Media_0_20":10.55
+    "Ano": 2022,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 39,
+    "Media_0_200": 100.8,
+    "Media_0_20": 10.08
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":339,
-    "Media_0_200":120.0,
-    "Media_0_20":12.0
+    "Ano": 2022,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 6730,
+    "Media_0_200": 104.8,
+    "Media_0_20": 10.48
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":365,
-    "Media_0_200":115.7,
-    "Media_0_20":11.57
+    "Ano": 2022,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 1619,
+    "Media_0_200": 93.7,
+    "Media_0_20": 9.37
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":1,
-    "Total_Alunos":970,
-    "Media_0_200":114.6,
-    "Media_0_20":11.46
+    "Ano": 2022,
+    "Exame_Unificado": "Mandarim_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 14,
+    "Media_0_200": 146.0,
+    "Media_0_20": 14.6
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":441,
-    "Media_0_200":92.9,
-    "Media_0_20":9.29
+    "Ano": 2022,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 34363,
+    "Media_0_200": 119.5,
+    "Media_0_20": 11.95
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":462,
-    "Media_0_200":86.8,
-    "Media_0_20":8.68
+    "Ano": 2022,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 11707,
+    "Media_0_200": 97.9,
+    "Media_0_20": 9.79
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":364,
-    "Media_0_200":76.6,
-    "Media_0_20":7.66
+    "Ano": 2022,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 3084,
+    "Media_0_200": 89.4,
+    "Media_0_20": 8.94
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":103,
-    "Media_0_200":95.3,
-    "Media_0_20":9.53
+    "Ano": 2022,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 1130,
+    "Media_0_200": 103.8,
+    "Media_0_20": 10.38
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":65,
-    "Media_0_200":108.0,
-    "Media_0_20":10.8
+    "Ano": 2022,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 35158,
+    "Media_0_200": 109.1,
+    "Media_0_20": 10.91
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":39,
-    "Media_0_200":100.8,
-    "Media_0_20":10.08
+    "Ano": 2022,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 11012,
+    "Media_0_200": 121.7,
+    "Media_0_20": 12.17
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":61,
-    "Media_0_200":90.5,
-    "Media_0_20":9.05
+    "Ano": 2022,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 1,
+    "Total_Alunos": 22,
+    "Media_0_200": 114.5,
+    "Media_0_20": 11.45
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Literatura_Portuguesa",
-    "Fase":2,
-    "Total_Alunos":118,
-    "Media_0_200":83.0,
-    "Media_0_20":8.3
+    "Ano": 2022,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 2,
+    "Total_Alunos": 1,
+    "Media_0_200": 110.0,
+    "Media_0_20": 11.0
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":10823,
-    "Media_0_200":92.5,
-    "Media_0_20":9.25
+    "Ano": 2022,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 9,
+    "Media_0_200": 115.1,
+    "Media_0_20": 11.51
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":11406,
-    "Media_0_200":92.8,
-    "Media_0_20":9.28
+    "Ano": 2022,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 2,
+    "Total_Alunos": 1,
+    "Media_0_200": 98.0,
+    "Media_0_20": 9.8
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":11228,
-    "Media_0_200":101.8,
-    "Media_0_20":10.18
+    "Ano": 2023,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 191,
+    "Media_0_200": 150.5,
+    "Media_0_20": 15.05
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":7542,
-    "Media_0_200":94.7,
-    "Media_0_20":9.47
+    "Ano": 2023,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 11,
+    "Media_0_200": 110.3,
+    "Media_0_20": 11.03
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":6528,
-    "Media_0_200":107.1,
-    "Media_0_20":10.71
+    "Ano": 2023,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 38597,
+    "Media_0_200": 114.4,
+    "Media_0_20": 11.44
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":6730,
-    "Media_0_200":104.8,
-    "Media_0_20":10.48
+    "Ano": 2023,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 12280,
+    "Media_0_200": 108.6,
+    "Media_0_20": 10.86
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":7326,
-    "Media_0_200":121.2,
-    "Media_0_20":12.12
+    "Ano": 2023,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 3867,
+    "Media_0_200": 137.2,
+    "Media_0_20": 13.72
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"MACS",
-    "Fase":1,
-    "Total_Alunos":10662,
-    "Media_0_200":117.5,
-    "Media_0_20":11.75
+    "Ano": 2023,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 1133,
+    "Media_0_200": 139.2,
+    "Media_0_20": 13.92
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":3410,
-    "Media_0_200":86.0,
-    "Media_0_20":8.6
+    "Ano": 2023,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 11215,
+    "Media_0_200": 120.5,
+    "Media_0_20": 12.05
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":3325,
-    "Media_0_200":88.2,
-    "Media_0_20":8.82
+    "Ano": 2023,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 2800,
+    "Media_0_200": 124.5,
+    "Media_0_20": 12.45
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":3012,
-    "Media_0_200":88.7,
-    "Media_0_20":8.87
+    "Ano": 2023,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 1,
+    "Total_Alunos": 254,
+    "Media_0_200": 112.3,
+    "Media_0_20": 11.23
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":1822,
-    "Media_0_200":90.4,
-    "Media_0_20":9.04
+    "Ano": 2023,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 2,
+    "Total_Alunos": 62,
+    "Media_0_200": 117.0,
+    "Media_0_20": 11.7
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":1259,
-    "Media_0_200":88.7,
-    "Media_0_20":8.87
+    "Ano": 2023,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 976,
+    "Media_0_200": 135.3,
+    "Media_0_20": 13.53
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":1619,
-    "Media_0_200":93.7,
-    "Media_0_20":9.37
+    "Ano": 2023,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 135,
+    "Media_0_200": 124.8,
+    "Media_0_20": 12.48
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":1413,
-    "Media_0_200":97.9,
-    "Media_0_20":9.79
+    "Ano": 2023,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 7552,
+    "Media_0_200": 111.6,
+    "Media_0_20": 11.16
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"MACS",
-    "Fase":2,
-    "Total_Alunos":2601,
-    "Media_0_200":103.8,
-    "Media_0_20":10.38
+    "Ano": 2023,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 1471,
+    "Media_0_200": 101.0,
+    "Media_0_20": 10.1
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Mandarim_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":6,
-    "Media_0_200":168.7,
-    "Media_0_20":16.87
+    "Ano": 2023,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 31392,
+    "Media_0_200": 112.6,
+    "Media_0_20": 11.26
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Mandarim_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":7,
-    "Media_0_200":166.6,
-    "Media_0_20":16.66
+    "Ano": 2023,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 9102,
+    "Media_0_200": 116.6,
+    "Media_0_20": 11.66
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Mandarim_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":14,
-    "Media_0_200":146.0,
-    "Media_0_20":14.6
+    "Ano": 2023,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 313,
+    "Media_0_200": 146.3,
+    "Media_0_20": 14.63
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Mandarim_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":20,
-    "Media_0_200":177.6,
-    "Media_0_20":17.76
+    "Ano": 2023,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 30,
+    "Media_0_200": 115.6,
+    "Media_0_20": 11.56
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Mandarim_Iniciacao",
-    "Fase":1,
-    "Total_Alunos":23,
-    "Media_0_200":170.6,
-    "Media_0_20":17.06
+    "Ano": 2023,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 8732,
+    "Media_0_200": 108.8,
+    "Media_0_20": 10.88
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Mandarim_Iniciacao",
-    "Fase":2,
-    "Total_Alunos":2,
-    "Media_0_200":169.0,
-    "Media_0_20":16.9
+    "Ano": 2023,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 1430,
+    "Media_0_200": 103.2,
+    "Media_0_20": 10.32
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":49298,
-    "Media_0_200":100.8,
-    "Media_0_20":10.08
+    "Ano": 2023,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 6357,
+    "Media_0_200": 97.3,
+    "Media_0_20": 9.73
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":45436,
-    "Media_0_200":95.5,
-    "Media_0_20":9.55
+    "Ano": 2023,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 2168,
+    "Media_0_200": 113.0,
+    "Media_0_20": 11.3
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":45650,
-    "Media_0_200":101.9,
-    "Media_0_20":10.19
+    "Ano": 2023,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 4065,
+    "Media_0_200": 103.0,
+    "Media_0_20": 10.3
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":35723,
-    "Media_0_200":132.8,
-    "Media_0_20":13.28
+    "Ano": 2023,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 832,
+    "Media_0_200": 117.7,
+    "Media_0_20": 11.77
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":34128,
-    "Media_0_200":106.4,
-    "Media_0_20":10.64
+    "Ano": 2023,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 6261,
+    "Media_0_200": 114.9,
+    "Media_0_20": 11.49
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":34363,
-    "Media_0_200":119.5,
-    "Media_0_20":11.95
+    "Ano": 2023,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 1679,
+    "Media_0_200": 108.1,
+    "Media_0_20": 10.81
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":33751,
-    "Media_0_200":110.6,
-    "Media_0_20":11.06
+    "Ano": 2023,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 342,
+    "Media_0_200": 115.1,
+    "Media_0_20": 11.51
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":1,
-    "Total_Alunos":32103,
-    "Media_0_200":121.6,
-    "Media_0_20":12.16
+    "Ano": 2023,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 94,
+    "Media_0_200": 118.6,
+    "Media_0_20": 11.86
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":23609,
-    "Media_0_200":90.5,
-    "Media_0_20":9.05
+    "Ano": 2023,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 8737,
+    "Media_0_200": 149.4,
+    "Media_0_20": 14.94
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":23293,
-    "Media_0_200":92.7,
-    "Media_0_20":9.27
+    "Ano": 2023,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 1189,
+    "Media_0_200": 143.3,
+    "Media_0_20": 14.33
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":19453,
-    "Media_0_200":98.8,
-    "Media_0_20":9.88
+    "Ano": 2023,
+    "Exame_Unificado": "Italiano_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 2,
+    "Media_0_200": 133.0,
+    "Media_0_20": 13.3
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":8735,
-    "Media_0_200":119.9,
-    "Media_0_20":11.99
+    "Ano": 2023,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 6,
+    "Media_0_200": 146.5,
+    "Media_0_20": 14.65
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":11456,
-    "Media_0_200":91.8,
-    "Media_0_20":9.18
+    "Ano": 2023,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 365,
+    "Media_0_200": 115.7,
+    "Media_0_20": 11.57
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":11707,
-    "Media_0_200":97.9,
-    "Media_0_20":9.79
+    "Ano": 2023,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 61,
+    "Media_0_200": 90.5,
+    "Media_0_20": 9.05
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":14404,
-    "Media_0_200":95.0,
-    "Media_0_20":9.5
+    "Ano": 2023,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 7326,
+    "Media_0_200": 121.2,
+    "Media_0_20": 12.12
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Matematica_A",
-    "Fase":2,
-    "Total_Alunos":11734,
-    "Media_0_200":95.8,
-    "Media_0_20":9.58
+    "Ano": 2023,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 1413,
+    "Media_0_200": 97.9,
+    "Media_0_20": 9.79
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":2310,
-    "Media_0_200":96.3,
-    "Media_0_20":9.63
+    "Ano": 2023,
+    "Exame_Unificado": "Mandarim_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 20,
+    "Media_0_200": 177.6,
+    "Media_0_20": 17.76
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":2269,
-    "Media_0_200":84.6,
-    "Media_0_20":8.46
+    "Ano": 2023,
+    "Exame_Unificado": "Mandarim_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 2,
+    "Media_0_200": 169.0,
+    "Media_0_20": 16.9
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":2480,
-    "Media_0_200":108.9,
-    "Media_0_20":10.89
+    "Ano": 2023,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 33751,
+    "Media_0_200": 110.6,
+    "Media_0_20": 11.06
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":2305,
-    "Media_0_200":120.1,
-    "Media_0_20":12.01
+    "Ano": 2023,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 14404,
+    "Media_0_200": 95.0,
+    "Media_0_20": 9.5
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":2500,
-    "Media_0_200":101.4,
-    "Media_0_20":10.14
+    "Ano": 2023,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 3315,
+    "Media_0_200": 112.6,
+    "Media_0_20": 11.26
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":3084,
-    "Media_0_200":89.4,
-    "Media_0_20":8.94
+    "Ano": 2023,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 959,
+    "Media_0_200": 104.7,
+    "Media_0_20": 10.47
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":3315,
-    "Media_0_200":112.6,
-    "Media_0_20":11.26
+    "Ano": 2023,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 34066,
+    "Media_0_200": 125.6,
+    "Media_0_20": 12.56
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":1,
-    "Total_Alunos":4545,
-    "Media_0_200":115.4,
-    "Media_0_20":11.54
+    "Ano": 2023,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 8648,
+    "Media_0_200": 104.3,
+    "Media_0_20": 10.43
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":625,
-    "Media_0_200":104.4,
-    "Media_0_20":10.44
+    "Ano": 2023,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 1,
+    "Total_Alunos": 19,
+    "Media_0_200": 119.2,
+    "Media_0_20": 11.92
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":900,
-    "Media_0_200":90.1,
-    "Media_0_20":9.01
+    "Ano": 2023,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 2,
+    "Total_Alunos": 5,
+    "Media_0_200": 110.8,
+    "Media_0_20": 11.08
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":602,
-    "Media_0_200":79.3,
-    "Media_0_20":7.93
+    "Ano": 2023,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 6,
+    "Media_0_200": 155.3,
+    "Media_0_20": 15.53
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":487,
-    "Media_0_200":86.9,
-    "Media_0_20":8.69
+    "Ano": 2024,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 312,
+    "Media_0_200": 122.5,
+    "Media_0_20": 12.25
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":619,
-    "Media_0_200":78.7,
-    "Media_0_20":7.87
+    "Ano": 2024,
+    "Exame_Unificado": "Alemao",
+    "Fase": 2,
+    "Total_Alunos": 43,
+    "Media_0_200": 119.8,
+    "Media_0_20": 11.98
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":1130,
-    "Media_0_200":103.8,
-    "Media_0_20":10.38
+    "Ano": 2024,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 37730,
+    "Media_0_200": 99.5,
+    "Media_0_20": 9.95
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":959,
-    "Media_0_200":104.7,
-    "Media_0_20":10.47
+    "Ano": 2024,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 2,
+    "Total_Alunos": 17064,
+    "Media_0_200": 101.0,
+    "Media_0_20": 10.1
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Matematica_B",
-    "Fase":2,
-    "Total_Alunos":1452,
-    "Media_0_200":106.7,
-    "Media_0_20":10.67
+    "Ano": 2024,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 4784,
+    "Media_0_200": 144.7,
+    "Media_0_20": 14.47
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":76719,
-    "Media_0_200":103.6,
-    "Media_0_20":10.36
+    "Ano": 2024,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 2,
+    "Total_Alunos": 1235,
+    "Media_0_200": 145.4,
+    "Media_0_20": 14.54
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":74386,
-    "Media_0_200":102.3,
-    "Media_0_20":10.23
+    "Ano": 2024,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 12584,
+    "Media_0_200": 127.3,
+    "Media_0_20": 12.73
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":74258,
-    "Media_0_200":110.4,
-    "Media_0_20":11.04
+    "Ano": 2024,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 2,
+    "Total_Alunos": 3196,
+    "Media_0_200": 116.9,
+    "Media_0_20": 11.69
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":36620,
-    "Media_0_200":119.9,
-    "Media_0_20":11.99
+    "Ano": 2024,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 1,
+    "Total_Alunos": 498,
+    "Media_0_200": 130.1,
+    "Media_0_20": 13.01
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":34319,
-    "Media_0_200":120.5,
-    "Media_0_20":12.05
+    "Ano": 2024,
+    "Exame_Unificado": "Espanhol_Continuacao",
+    "Fase": 2,
+    "Total_Alunos": 52,
+    "Media_0_200": 107.9,
+    "Media_0_20": 10.79
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":35158,
-    "Media_0_200":109.1,
-    "Media_0_20":10.91
+    "Ano": 2024,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 2225,
+    "Media_0_200": 143.8,
+    "Media_0_20": 14.38
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":34066,
-    "Media_0_200":125.6,
-    "Media_0_20":12.56
+    "Ano": 2024,
+    "Exame_Unificado": "Espanhol_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 139,
+    "Media_0_200": 120.5,
+    "Media_0_20": 12.05
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Portugues",
-    "Fase":1,
-    "Total_Alunos":34933,
-    "Media_0_200":110.8,
-    "Media_0_20":11.08
+    "Ano": 2024,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 14366,
+    "Media_0_200": 105.5,
+    "Media_0_20": 10.55
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":22084,
-    "Media_0_200":95.5,
-    "Media_0_20":9.55
+    "Ano": 2024,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 2,
+    "Total_Alunos": 3441,
+    "Media_0_200": 98.5,
+    "Media_0_20": 9.85
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":21656,
-    "Media_0_200":93.9,
-    "Media_0_20":9.39
+    "Ano": 2024,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 33568,
+    "Media_0_200": 116.2,
+    "Media_0_20": 11.62
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":16443,
-    "Media_0_200":95.2,
-    "Media_0_20":9.52
+    "Ano": 2024,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 2,
+    "Total_Alunos": 12043,
+    "Media_0_200": 106.6,
+    "Media_0_20": 10.66
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":7515,
-    "Media_0_200":106.4,
-    "Media_0_20":10.64
+    "Ano": 2024,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 569,
+    "Media_0_200": 139.6,
+    "Media_0_20": 13.96
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":6818,
-    "Media_0_200":112.5,
-    "Media_0_20":11.25
+    "Ano": 2024,
+    "Exame_Unificado": "Frances",
+    "Fase": 2,
+    "Total_Alunos": 45,
+    "Media_0_200": 114.2,
+    "Media_0_20": 11.42
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":11012,
-    "Media_0_200":121.7,
-    "Media_0_20":12.17
+    "Ano": 2024,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 15453,
+    "Media_0_200": 102.6,
+    "Media_0_20": 10.26
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":8648,
-    "Media_0_200":104.3,
-    "Media_0_20":10.43
+    "Ano": 2024,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 2,
+    "Total_Alunos": 3530,
+    "Media_0_200": 101.0,
+    "Media_0_20": 10.1
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Portugues",
-    "Fase":2,
-    "Total_Alunos":12699,
-    "Media_0_200":113.1,
-    "Media_0_20":11.31
+    "Ano": 2024,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 8010,
+    "Media_0_200": 107.9,
+    "Media_0_20": 10.79
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":1,
-    "Total_Alunos":45,
-    "Media_0_200":105.7,
-    "Media_0_20":10.57
+    "Ano": 2024,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 2,
+    "Total_Alunos": 2892,
+    "Media_0_200": 103.7,
+    "Media_0_20": 10.37
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":1,
-    "Total_Alunos":38,
-    "Media_0_200":108.0,
-    "Media_0_20":10.8
+    "Ano": 2024,
+    "Exame_Unificado": "HCA",
+    "Fase": 1,
+    "Total_Alunos": 6002,
+    "Media_0_200": 119.3,
+    "Media_0_20": 11.93
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":1,
-    "Total_Alunos":25,
-    "Media_0_200":123.3,
-    "Media_0_20":12.33
+    "Ano": 2024,
+    "Exame_Unificado": "HCA",
+    "Fase": 2,
+    "Total_Alunos": 1067,
+    "Media_0_200": 110.4,
+    "Media_0_20": 11.04
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":1,
-    "Total_Alunos":27,
-    "Media_0_200":119.4,
-    "Media_0_20":11.94
+    "Ano": 2024,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 6317,
+    "Media_0_200": 124.6,
+    "Media_0_20": 12.46
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":1,
-    "Total_Alunos":22,
-    "Media_0_200":114.5,
-    "Media_0_20":11.45
+    "Ano": 2024,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 2,
+    "Total_Alunos": 1868,
+    "Media_0_200": 113.9,
+    "Media_0_20": 11.39
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":1,
-    "Total_Alunos":19,
-    "Media_0_200":119.2,
-    "Media_0_20":11.92
+    "Ano": 2024,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 603,
+    "Media_0_200": 122.4,
+    "Media_0_20": 12.24
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":1,
-    "Total_Alunos":25,
-    "Media_0_200":129.4,
-    "Media_0_20":12.94
+    "Ano": 2024,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 2,
+    "Total_Alunos": 107,
+    "Media_0_200": 101.3,
+    "Media_0_20": 10.13
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":2,
-    "Total_Alunos":9,
-    "Media_0_200":83.9,
-    "Media_0_20":8.39
+    "Ano": 2024,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 8760,
+    "Media_0_200": 143.3,
+    "Media_0_20": 14.33
   },
   {
-    "Ano":2019,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":2,
-    "Total_Alunos":8,
-    "Media_0_200":89.8,
-    "Media_0_20":8.98
+    "Ano": 2024,
+    "Exame_Unificado": "Ingles",
+    "Fase": 2,
+    "Total_Alunos": 1490,
+    "Media_0_200": 153.1,
+    "Media_0_20": 15.31
   },
   {
-    "Ano":2020,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":2,
-    "Total_Alunos":1,
-    "Media_0_200":87.0,
-    "Media_0_20":8.7
+    "Ano": 2024,
+    "Exame_Unificado": "Italiano_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 22,
+    "Media_0_200": 137.0,
+    "Media_0_20": 13.7
   },
   {
-    "Ano":2021,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":2,
-    "Total_Alunos":5,
-    "Media_0_200":90.8,
-    "Media_0_20":9.08
+    "Ano": 2024,
+    "Exame_Unificado": "Italiano_Iniciacao",
+    "Fase": 2,
+    "Total_Alunos": 1,
+    "Media_0_200": 187.0,
+    "Media_0_20": 18.7
   },
   {
-    "Ano":2022,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":2,
-    "Total_Alunos":1,
-    "Media_0_200":110.0,
-    "Media_0_20":11.0
+    "Ano": 2024,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 1,
+    "Total_Alunos": 13,
+    "Media_0_200": 102.5,
+    "Media_0_20": 10.25
   },
   {
-    "Ano":2023,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":2,
-    "Total_Alunos":5,
-    "Media_0_200":110.8,
-    "Media_0_20":11.08
+    "Ano": 2024,
+    "Exame_Unificado": "Latim_A",
+    "Fase": 2,
+    "Total_Alunos": 1,
+    "Media_0_200": 139.0,
+    "Media_0_20": 13.9
   },
   {
-    "Ano":2024,
-    "Exame_Unificado":"Portugues_L2",
-    "Fase":2,
-    "Total_Alunos":2,
-    "Media_0_200":152.5,
-    "Media_0_20":15.25
+    "Ano": 2024,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 970,
+    "Media_0_200": 114.6,
+    "Media_0_20": 11.46
   },
   {
-    "Ano":2017,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":109,
-    "Media_0_200":129.7,
-    "Media_0_20":12.97
+    "Ano": 2024,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 2,
+    "Total_Alunos": 118,
+    "Media_0_200": 83.0,
+    "Media_0_20": 8.3
   },
   {
-    "Ano":2018,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":135,
-    "Media_0_200":139.8,
-    "Media_0_20":13.98
-  },
-  {
-    "Ano":2019,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":165,
-    "Media_0_200":149.8,
-    "Media_0_20":14.98
-  },
-  {
-    "Ano":2020,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":8,
-    "Media_0_200":156.4,
-    "Media_0_20":15.64
-  },
-  {
-    "Ano":2021,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":9,
-    "Media_0_200":156.6,
-    "Media_0_20":15.66
-  },
-  {
-    "Ano":2022,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":9,
-    "Media_0_200":115.1,
-    "Media_0_20":11.51
-  },
-  {
-    "Ano":2023,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":6,
-    "Media_0_200":155.3,
-    "Media_0_20":15.53
-  },
-  {
-    "Ano":2024,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":1,
-    "Total_Alunos":10,
-    "Media_0_200":134.6,
-    "Media_0_20":13.46
-  },
-  {
-    "Ano":2017,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":2,
-    "Total_Alunos":6,
-    "Media_0_200":125.3,
-    "Media_0_20":12.53
-  },
-  {
-    "Ano":2018,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":2,
-    "Total_Alunos":7,
-    "Media_0_200":108.6,
-    "Media_0_20":10.86
-  },
-  {
-    "Ano":2019,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":2,
-    "Total_Alunos":7,
-    "Media_0_200":121.4,
-    "Media_0_20":12.14
-  },
-  {
-    "Ano":2020,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":2,
-    "Total_Alunos":1,
-    "Media_0_200":133.0,
-    "Media_0_20":13.3
-  },
-  {
-    "Ano":2022,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":2,
-    "Total_Alunos":1,
-    "Media_0_200":98.0,
-    "Media_0_20":9.8
-  },
-  {
-    "Ano":2024,
-    "Exame_Unificado":"Portugues_LNM",
-    "Fase":2,
-    "Total_Alunos":2,
-    "Media_0_200":114.0,
-    "Media_0_20":11.4
+    "Ano": 2024,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 10662,
+    "Media_0_200": 117.5,
+    "Media_0_20": 11.75
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "MACS",
+    "Fase": 2,
+    "Total_Alunos": 2601,
+    "Media_0_200": 103.8,
+    "Media_0_20": 10.38
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Mandarim_Iniciacao",
+    "Fase": 1,
+    "Total_Alunos": 23,
+    "Media_0_200": 170.6,
+    "Media_0_20": 17.06
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 32103,
+    "Media_0_200": 121.6,
+    "Media_0_20": 12.16
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 2,
+    "Total_Alunos": 11734,
+    "Media_0_200": 95.8,
+    "Media_0_20": 9.58
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 4545,
+    "Media_0_200": 115.4,
+    "Media_0_20": 11.54
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 2,
+    "Total_Alunos": 1452,
+    "Media_0_200": 106.7,
+    "Media_0_20": 10.67
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 34933,
+    "Media_0_200": 110.8,
+    "Media_0_20": 11.08
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Portugues",
+    "Fase": 2,
+    "Total_Alunos": 12699,
+    "Media_0_200": 113.1,
+    "Media_0_20": 11.31
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 1,
+    "Total_Alunos": 25,
+    "Media_0_200": 129.4,
+    "Media_0_20": 12.94
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Portugues_L2",
+    "Fase": 2,
+    "Total_Alunos": 2,
+    "Media_0_200": 152.5,
+    "Media_0_20": 15.25
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 10,
+    "Media_0_200": 134.6,
+    "Media_0_20": 13.46
+  },
+  {
+    "Ano": 2024,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 2,
+    "Total_Alunos": 2,
+    "Media_0_200": 114.0,
+    "Media_0_20": 11.4
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Alemao",
+    "Fase": 1,
+    "Total_Alunos": 330,
+    "Media_0_200": 96.0,
+    "Media_0_20": 9.6
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Biologia_Geologia",
+    "Fase": 1,
+    "Total_Alunos": 37703,
+    "Media_0_200": 121.3,
+    "Media_0_20": 12.13
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Desenho_A",
+    "Fase": 1,
+    "Total_Alunos": 6527,
+    "Media_0_200": 132.5,
+    "Media_0_20": 13.25
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Economia_A",
+    "Fase": 1,
+    "Total_Alunos": 14010,
+    "Media_0_200": 112.6,
+    "Media_0_20": 11.26
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Espanhol_Cont",
+    "Fase": 1,
+    "Total_Alunos": 629,
+    "Media_0_200": 97.0,
+    "Media_0_20": 9.7
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Espanhol_Inic",
+    "Fase": 1,
+    "Total_Alunos": 2591,
+    "Media_0_200": 101.0,
+    "Media_0_20": 10.1
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Filosofia",
+    "Fase": 1,
+    "Total_Alunos": 20335,
+    "Media_0_200": 103.7,
+    "Media_0_20": 10.37
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Fisica_Quimica_A",
+    "Fase": 1,
+    "Total_Alunos": 34589,
+    "Media_0_200": 108.0,
+    "Media_0_20": 10.8
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Frances",
+    "Fase": 1,
+    "Total_Alunos": 532,
+    "Media_0_200": 101.0,
+    "Media_0_20": 10.1
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Geografia_A",
+    "Fase": 1,
+    "Total_Alunos": 17560,
+    "Media_0_200": 101.0,
+    "Media_0_20": 10.1
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Geometria_Descritiva_A",
+    "Fase": 1,
+    "Total_Alunos": 8128,
+    "Media_0_200": 92.6,
+    "Media_0_20": 9.26
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Historia_A",
+    "Fase": 1,
+    "Total_Alunos": 12060,
+    "Media_0_200": 108.4,
+    "Media_0_20": 10.84
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Historia_B",
+    "Fase": 1,
+    "Total_Alunos": 729,
+    "Media_0_200": 108.6,
+    "Media_0_20": 10.86
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Historia_Cultura_Artes",
+    "Fase": 1,
+    "Total_Alunos": 6408,
+    "Media_0_200": 124.6,
+    "Media_0_20": 12.46
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Ingles",
+    "Fase": 1,
+    "Total_Alunos": 12745,
+    "Media_0_200": 106.9,
+    "Media_0_20": 10.69
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Literatura_Portuguesa",
+    "Fase": 1,
+    "Total_Alunos": 1029,
+    "Media_0_200": 106.0,
+    "Media_0_20": 10.6
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "MACS",
+    "Fase": 1,
+    "Total_Alunos": 13249,
+    "Media_0_200": 93.6,
+    "Media_0_20": 9.36
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Matematica_A",
+    "Fase": 1,
+    "Total_Alunos": 35651,
+    "Media_0_200": 103.9,
+    "Media_0_20": 10.39
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Matematica_B",
+    "Fase": 1,
+    "Total_Alunos": 4942,
+    "Media_0_200": 112.7,
+    "Media_0_20": 11.27
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Portugues",
+    "Fase": 1,
+    "Total_Alunos": 76939,
+    "Media_0_200": 124.3,
+    "Media_0_20": 12.43
+  },
+  {
+    "Ano": 2025,
+    "Exame_Unificado": "Portugues_LNM",
+    "Fase": 1,
+    "Total_Alunos": 509,
+    "Media_0_200": 109.0,
+    "Media_0_20": 10.9
   }
 ]

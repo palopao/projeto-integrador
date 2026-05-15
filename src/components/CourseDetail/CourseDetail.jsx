@@ -79,12 +79,15 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   
   const { data: historicalExamData, loading: historicalExamLoading } = useExamHistoricalData()
 
-  // Correção da lógica do banner: predictions é um objeto, não um array.
-  // Procuramos a previsão específica para 2025 na Fase 1.
-  const predmin = predictions?.fase_1[0]?.ciLow.toFixed(1);
-  const predmax = predictions?.fase_1[0]?.ciHigh.toFixed(1);
-  const minPred = predmin ? predmin: '—';
-  const maxPred = predmax ? predmax: '—';
+  // Lógica dinâmica para extrair a previsão e o ano correspondente
+  const nextPrediction = predictions?.fase_1?.[0];
+  const predmin = nextPrediction?.ciLow?.toFixed(1);
+  const predmax = nextPrediction?.ciHigh?.toFixed(1);
+  const minPred = predmin || '—';
+  const maxPred = predmax || '—';
+
+  // Determina o ano da previsão (ou o ano seguinte ao range atual ou fallback para 2025)
+  const predictedYear = nextPrediction?.year || (yearRange.max ? yearRange.max + 1 : 2025);
 
   return (
     <section className={styles.section}>
@@ -108,7 +111,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
             </div>
           </div>
           <div className={styles.bannerRight}>
-            <p className={styles.avgLabel}>Média Prevista 2025</p>
+            <p className={styles.avgLabel}>Média Prevista {predictedYear}</p>
             <p className={styles.avgValue}>{minPred} - {maxPred}</p>
             <p className={styles.avgConf}>Intervalo de confiança 95%</p>
           </div>
@@ -149,7 +152,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
             {/* Exam Distribution Chart */}
             <div className={styles.card}>
               <ExamDistributionChart
-                year={2024}
+                year={yearRange.max}
                 examNames={selectedExams.map(e => e.name)}
               />
             </div>

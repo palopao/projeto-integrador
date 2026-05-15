@@ -7,6 +7,7 @@ import { useState, useEffect, useMemo } from 'react'
  */
 export function useCourseSearchWithSuggestions(dataPath = '/data') {
   const [allCourses, setAllCourses] = useState([])
+  const [yearCount, setYearCount] = useState(0)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
@@ -18,11 +19,17 @@ export function useCourseSearchWithSuggestions(dataPath = '/data') {
         const courses = []
         const seenKeys = new Set()
 
-        // Carregar dados de 2017 a 2024
-        for (let year = 2017; year <= 2024; year++) {
+        // Carregar dados de 2017 em diante até não encontrar mais ficheiros
+        let year = 2017
+        let hasMoreData = true
+
+        while (hasMoreData) {
           try {
             const response = await fetch(`${dataPath}/dados_dges_${year}.json`)
-            if (!response.ok) continue
+            if (!response.ok) {
+              hasMoreData = false
+              continue
+            }
 
             const yearData = await response.json()
             if (Array.isArray(yearData)) {
@@ -35,11 +42,14 @@ export function useCourseSearchWithSuggestions(dataPath = '/data') {
                 }
               }
             }
+            year++
           } catch (err) {
-            console.warn(`Erro ao carregar dados de ${year}:`, err)
+            // Interrompe a procura se houver erro de rede ou ficheiro inexistente
+            hasMoreData = false
           }
         }
 
+        setYearCount(year - 2017)
         setAllCourses(courses)
         setError(null)
       } catch (err) {
@@ -293,6 +303,7 @@ export function useCourseSearchWithSuggestions(dataPath = '/data') {
 
   return {
     allCourses,
+    yearCount,
     loading,
     error,
     filterOptions,

@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
-import { loadMultipleYearsData, aggregateCoursePhaseEvolution, predictPhaseEvolution } from '../services/examDataService'
-
-const DEFAULT_YEARS = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+import { loadMultipleYearsData, aggregateCoursePhaseEvolution, predictPhaseEvolution, loadCourseYearData } from '../services/examDataService'
 
 /**
  * Hook para carregar e agregar dados de evolução de fases de um curso
@@ -9,7 +7,6 @@ const DEFAULT_YEARS = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
 export function useCoursePhaseEvolution(
   courseName,
   institutionName,
-  years = DEFAULT_YEARS,
   dataPath = '/data'
 ) {
   const [data, setData] = useState(null)
@@ -35,8 +32,27 @@ export function useCoursePhaseEvolution(
       try {
         // Carrega os dados apenas uma vez
         if (!dataByYearRef.current) {
-          const validYears = years.filter(y => y >= 2017 && y <= 2024)
-          const loadedData = await loadMultipleYearsData(validYears, dataPath)
+          const discoveredYears = [];
+          let currentYear = 2017;
+          let hasMoreData = true;
+
+          while (hasMoreData) {
+            try {
+              // Tenta carregar os dados para o ano atual.
+              // loadCourseYearData lançará um erro se o ficheiro não existir (response.ok for false).
+              await loadCourseYearData(currentYear, dataPath);
+              discoveredYears.push(currentYear);
+              currentYear++;
+            } catch (err) {
+              // Se loadCourseYearData lançar um erro, significa que o ficheiro para este ano não existe
+              // ou houve um erro de rede. Assumimos que não há mais ficheiros de dados para anos subsequentes.
+              hasMoreData = false;
+            }
+          }
+          if (discoveredYears.length === 0) {
+            throw new Error('Nenhum dado de ano encontrado a partir de 2017.');
+          }
+          const loadedData = await loadMultipleYearsData(discoveredYears, dataPath)
           dataByYearRef.current = loadedData
         }
 
@@ -87,7 +103,7 @@ export function useCoursePhaseEvolution(
     return () => {
       mounted = false
     }
-  }, [courseName, institutionName, years, dataPath])
+  }, [courseName, institutionName, dataPath])
 
   const refetch = () => {
     if (courseName && institutionName && dataByYearRef.current) {
