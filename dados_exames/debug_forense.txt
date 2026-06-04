@@ -1,83 +1,83 @@
 INÍCIO FORENSE - ANO 2025
 
 ==================== FASE 1 ====================
--> [A HORA DA VERDADE] O Curso 7110-9875 entrou na Ficha Limitada a 6 de quantas pessoas?: 684
--> [A HORA DA VERDADE] O Curso 7220-9504 entrou na Ficha Limitada a 6 de quantas pessoas?: 227
--> [A HORA DA VERDADE] O Curso 0300-9002 entrou na Ficha Limitada a 6 de quantas pessoas?: 171
+-> [A HORA DA VERDADE] O Curso 7110-9875 entrou na Ficha Limitada a 6 de quantas pessoas?: 606
+-> [A HORA DA VERDADE] O Curso 7220-9504 entrou na Ficha Limitada a 6 de quantas pessoas?: 397
+-> [A HORA DA VERDADE] O Curso 0300-9002 entrou na Ficha Limitada a 6 de quantas pessoas?: 190
 
 [CURSO: 0300-9002]
 Vagas disponíveis antes de G-S: 53
 Limite Vagas Usado no G-S: 53
 Total de alunos alocados: 53
-Notas Base: [159.0, 158.0, 158.0, 158.0, 157.0, 157.0, 157.0, 156.5, 156.5, 156.5, 156.5, 155.5, 155.0, 155.0, 155.0, 155.0, 155.0, 154.5, 154.5, 154.5, 154.5, 154.5, 154.5, 154.5, 154.0, 154.0, 154.0, 154.0, 153.5, 153.5, 153.5, 153.5, 153.5, 153.5, 153.5, 153.5, 153.5, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0, 153.0]
-Nota de Corte Calculada: 153.0
+Notas Base: [175.5, 159.5, 159.5, 158.5, 158.5, 158.0, 158.0, 157.5, 157.5, 157.5, 157.0, 156.5, 156.5, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 155.5, 155.5, 155.5, 155.5, 155.5, 155.5, 155.5, 155.5, 155.0, 155.0, 155.0, 155.0, 155.0, 155.0, 155.0, 155.0, 155.0, 155.0, 155.0, 155.0, 154.5, 154.5, 154.5, 154.5, 154.5, 154.5, 154.5, 154.5, 154.0, 154.0, 154.0, 154.0, 154.0]
+Nota de Corte Calculada: 154.0
 Vagas transferidas: 3
 
 [CURSO: 7110-9875]
 Vagas disponíveis antes de G-S: 56
 Limite Vagas Usado no G-S: 56
 Total de alunos alocados: 56
-Notas Base: [144.0, 140.0, 139.5, 139.0, 138.5, 138.5, 138.5, 138.5, 137.5, 137.5, 137.5, 137.0, 137.0, 137.0, 137.0, 137.0, 136.5, 136.5, 136.5, 136.5, 136.0, 136.0, 136.0, 136.0, 136.0, 136.0, 135.5, 135.5, 135.5, 135.5, 135.5, 135.5, 135.5, 135.5, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 134.5, 134.5, 134.5, 134.5, 134.5, 134.5, 134.5, 134.5]
-Nota de Corte Calculada: 134.5
+Notas Base: [138.0, 138.0, 138.0, 137.5, 137.5, 137.5, 137.0, 137.0, 137.0, 136.5, 136.5, 136.5, 136.0, 136.0, 136.0, 136.0, 136.0, 136.0, 136.0, 135.5, 135.5, 135.5, 135.5, 135.5, 135.5, 135.5, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 135.0, 134.5, 134.5, 134.5, 134.5, 134.5, 134.5, 134.5, 134.5, 134.0, 134.0, 134.0, 134.0, 134.0, 134.0, 134.0, 134.0, 134.0, 134.0]
+Nota de Corte Calculada: 134.0
 Vagas transferidas: 3
 
 [CURSO: 7220-9504]
 Vagas disponíveis antes de G-S: 48
 Limite Vagas Usado no G-S: 48
 Total de alunos alocados: 48
-Notas Base: [165.0, 164.0, 161.5, 161.5, 161.5, 161.0, 160.5, 159.5, 159.0, 158.5, 158.5, 158.0, 158.0, 158.0, 157.5, 157.5, 157.5, 157.5, 157.0, 157.0, 157.0, 157.0, 157.0, 156.5, 156.5, 156.5, 156.5, 156.5, 156.5, 156.5, 156.5, 156.5, 156.5, 156.5, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 156.0, 155.5, 155.5]
-Nota de Corte Calculada: 155.5
+Notas Base: [189.0, 185.5, 183.5, 180.0, 180.0, 178.0, 177.0, 173.5, 171.5, 170.0, 168.5, 168.0, 167.5, 167.0, 166.0, 165.0, 164.5, 164.5, 164.0, 163.5, 163.0, 163.0, 163.0, 161.5, 161.5, 161.5, 161.5, 161.5, 161.5, 161.0, 161.0, 161.0, 161.0, 160.5, 160.5, 160.5, 160.0, 160.0, 160.0, 159.5, 159.5, 159.5, 159.5, 159.0, 159.0, 159.0, 159.0, 159.0]
+Nota de Corte Calculada: 159.0
 Vagas transferidas: 3
 
 ==================== FASE 2 ====================
--> [A HORA DA VERDADE] O Curso 7110-9875 entrou na Ficha Limitada a 6 de quantas pessoas?: 482
--> [A HORA DA VERDADE] O Curso 7220-9504 entrou na Ficha Limitada a 6 de quantas pessoas?: 89
--> [A HORA DA VERDADE] O Curso 0300-9002 entrou na Ficha Limitada a 6 de quantas pessoas?: 31
+-> [A HORA DA VERDADE] O Curso 7110-9875 entrou na Ficha Limitada a 6 de quantas pessoas?: 425
+-> [A HORA DA VERDADE] O Curso 7220-9504 entrou na Ficha Limitada a 6 de quantas pessoas?: 158
+-> [A HORA DA VERDADE] O Curso 0300-9002 entrou na Ficha Limitada a 6 de quantas pessoas?: 49
 
 [CURSO: 0300-9002]
 Vagas disponíveis antes de G-S: 3
 Limite Vagas Usado no G-S: 3
 Total de alunos alocados: 3
-Notas Base: [160.0, 155.5, 154.5]
-Nota de Corte Calculada: 154.5
+Notas Base: [171.0, 169.0, 164.5]
+Nota de Corte Calculada: 164.5
 Vagas transferidas: 1
 
 [CURSO: 7110-9875]
-Vagas disponíveis antes de G-S: 4
-Limite Vagas Usado no G-S: 4
+Vagas disponíveis antes de G-S: 3
+Limite Vagas Usado no G-S: 3
 Total de alunos alocados: 3
-Notas Base: [139.5, 138.5, 138.5]
-Nota de Corte Calculada: 138.5
-Vagas transferidas: 2
+Notas Base: [138.0, 137.5, 137.0]
+Nota de Corte Calculada: 137.0
+Vagas transferidas: 1
 
 [CURSO: 7220-9504]
 Vagas disponíveis antes de G-S: 3
 Limite Vagas Usado no G-S: 3
 Total de alunos alocados: 3
-Notas Base: [165.5, 163.0, 162.5]
-Nota de Corte Calculada: 162.5
+Notas Base: [177.5, 174.0, 172.5]
+Nota de Corte Calculada: 172.5
 Vagas transferidas: 1
 
 ==================== FASE 3 ====================
--> [A HORA DA VERDADE] O Curso 7110-9875 entrou na Ficha Limitada a 6 de quantas pessoas?: 498
--> [A HORA DA VERDADE] O Curso 7220-9504 entrou na Ficha Limitada a 6 de quantas pessoas?: 75
--> [A HORA DA VERDADE] O Curso 0300-9002 entrou na Ficha Limitada a 6 de quantas pessoas?: 27
+-> [A HORA DA VERDADE] O Curso 7110-9875 entrou na Ficha Limitada a 6 de quantas pessoas?: 456
+-> [A HORA DA VERDADE] O Curso 7220-9504 entrou na Ficha Limitada a 6 de quantas pessoas?: 109
+-> [A HORA DA VERDADE] O Curso 0300-9002 entrou na Ficha Limitada a 6 de quantas pessoas?: 28
 
 [CURSO: 0300-9002]
 Vagas disponíveis antes de G-S: 1
 Limite Vagas Usado no G-S: 1
 Total de alunos alocados: 1
-Notas Base: [161.0]
-Nota de Corte Calculada: 161.0
+Notas Base: [166.5]
+Nota de Corte Calculada: 166.5
 Vagas transferidas: 1
 
 [CURSO: 7110-9875]
 Vagas disponíveis antes de G-S: 2
 Limite Vagas Usado no G-S: 2
-Total de alunos alocados: 2
-Notas Base: [139.5, 138.5]
-Nota de Corte Calculada: 138.5
-Vagas transferidas: 1
+Total de alunos alocados: 1
+Notas Base: [140.5]
+Nota de Corte Calculada: 140.5
+Vagas transferidas: 2
 
 [CURSO: 7220-9504]
 Vagas disponíveis antes de G-S: 1
