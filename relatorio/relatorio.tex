@@ -252,7 +252,7 @@ Para simular o processo de candidatura, é necessário modelar uma população d
 
 \paragraph{Motor de Simulação e \textit{Matching} (\texttt{simulador\_dges.py})}
 
-Este módulo replica computacionalmente o processo de colocação da DGES, que segue uma variante do algoritmo Gale-Shapley~\cite{gale1962college}:
+Este módulo replica computacionalmente o processo de colocação da DGES, que segue uma variante do algoritmo Gale-Shapley:
 
 \begin{itemize}
   \item \textbf{Estrutura de fases}: simula as 3 fases reais de acesso. Na Fase~1, 96\% dos candidatos entram no mercado. As Fases~2 e~3 absorvem as vagas sobrantes e são disputadas por candidatos não colocados e por candidatos \textit{inconformados} --- alunos colocados que tentam mudar de curso apenas quando a sua nota é manifestamente superior ao mínimo do curso onde foram colocados.
@@ -285,7 +285,7 @@ A plataforma foi desenvolvida com \textbf{React~19} e \textbf{TypeScript}, usand
   \item \textbf{Componentes React}: cada secção da interface é um componente independente; os principais são \texttt{Hero}, \texttt{Stats}, \texttt{SearchSection}, \texttt{CourseDetail}, \texttt{AdmissionCalculator}, \texttt{ApplicationSimulator}, \texttt{HowItWorks} e \texttt{Limitations}.
   \item \textbf{Hooks personalizados}: a lógica de negócio está encapsulada em \textit{custom hooks} que separam a lógica de apresentação dos dados (\texttt{useCoursePhaseEvolution}, \texttt{useCourseDetailsById}, entre outros).
   \item \textbf{Serviço de dados} (\texttt{examDataService.ts}): centraliza todas as operações de carregamento, \textit{parsing} e processamento dos ficheiros JSON, bem como o algoritmo de previsão.
-  \item \textbf{Gráficos}: visualizações implementadas com \textbf{Recharts}~\cite{recharts}, uma biblioteca baseada em SVG para React.
+  \item \textbf{Gráficos}: visualizações implementadas com \textbf{Recharts}, uma biblioteca baseada em SVG para React.
   \item \textbf{Estilos}: CSS Modules para estilos com âmbito local, evitando conflitos entre componentes.
 \end{itemize}
 
@@ -469,7 +469,7 @@ O trabalho futuro inclui:
 \begin{enumerate}[noitemsep]
   \item Automatização da recolha de dados DGES através de \textit{web scraping}.
   \item Integração de dados de exames nacionais em tempo real para refinar as previsões à medida que os resultados são publicados.
-  \item Exploração de modelos de séries temporais mais sofisticados (ARIMA, Prophet~\cite{taylor2018forecasting}) para comparação com a abordagem atual.
+  \item Exploração de modelos de séries temporais mais sofisticados (ARIMA, Prophet) para comparação com a abordagem atual.
   \item Adição de funcionalidades de alerta (por correio eletrónico) quando as previsões de um curso atingem um determinado limiar.
   \item Publicação da plataforma em produção (\textit{deploy} em Vercel ou Netlify).
 \end{enumerate}
@@ -481,6 +481,7 @@ O MediaTrix contribui para o \textbf{ODS~4 --- Educação de Qualidade}~\cite{sd
 % ============================================================
 % REFERÊNCIAS
 % ============================================================
+\nocite{dges,kedgey}
 \bibliographystyle{plain}
 \bibliography{references}
 
