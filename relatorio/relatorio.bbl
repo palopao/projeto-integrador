@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{dgeec}
+{Direção-Geral de Estatísticas da Educação e Ciência (DGEEC)}.
+\newblock Perfis de acesso ao ensino superior por área científica.
+\newblock \url{https://www.dgeec.mec.pt}.
+\newblock Acedido em junho de 2026.
+
+\bibitem{gale1962college}
+David Gale and Lloyd~S. Shapley.
+\newblock College admissions and the stability of marriage.
+\newblock {\em The American Mathematical Monthly}, 69(1):9--15, 1962.
+
+\bibitem{recharts}
+{Recharts Team}.
+\newblock {Recharts} --- {Redefined} chart library built with {React} and {D3}.
+\newblock \url{https://recharts.org}, 2024.
+\newblock Acedido em junho de 2026.
+
+\bibitem{taylor2018forecasting}
+Sean~J. Taylor and Benjamin Letham.
+\newblock Forecasting at scale.
+\newblock {\em The American Statistician}, 72(1):37--45, 2018.
+
+\bibitem{sdgs}
+{United Nations}.
+\newblock Transforming our world: the 2030 agenda for sustainable development.
+\newblock \url{https://sdgs.un.org/goals}, 2015.
+
+\end{thebibliography}
