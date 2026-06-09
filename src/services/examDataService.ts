@@ -133,7 +133,8 @@ export async function loadCourseDetails(
       fetch(mapaDistritosPath).catch(() => null)
     ]);
 
-    if (!coursesResponse.ok) {
+    const contentType = coursesResponse.headers.get('content-type');
+    if (!coursesResponse.ok || !contentType?.includes('application/json')) {
       throw new Error(`Erro ao carregar detalhes dos cursos: ${coursesResponse.status}`);
     }
 
@@ -218,15 +219,14 @@ export async function loadCourseYearData(
     const filename = `dados_dges_${year}.json`;
     const response = await fetch(`${path}/${filename}`);
 
-    if (!response.ok) {
-      throw new Error(
-        `Erro ao carregar dados de ${year}: ${response.status}`
-      );
+    const contentType = response.headers.get('content-type');
+    if (!response.ok || !contentType?.includes('application/json')) {
+      throw new Error(`Dados de ${year} não disponíveis.`);
     }
 
     return await response.json();
   } catch (error) {
-    console.error(`Erro ao carregar dados do ano ${year}:`, error);
+    // Silenciamos o log pois este método é usado para descobrir anos disponíveis (probing)
     throw error;
   }
 }
@@ -485,8 +485,9 @@ export async function loadExamDistributionData(
 ): Promise<Record<string, number[]> | null> {
   try {
     const response = await fetch(`${dataPath}/dados_graficos_05_${year}.json`);
-    if (!response.ok) {
-      // Falha silenciosa se o ficheiro não existir para o ano clicado
+    
+    const contentType = response.headers.get('content-type');
+    if (!response.ok || !contentType?.includes('application/json')) {
       return null;
     }
     const rawData = await response.json();
@@ -521,6 +522,40 @@ export async function loadExamDistributionData(
     return Object.keys(result).length > 0 ? result : null;
   } catch (error) {
     console.error(`Erro ao carregar distribuição do ano ${year}:`, error);
+    return null;
+  }
+}
+
+/**
+ * Carrega as previsões geradas pelo sistema de simulação (Python) para um ano específico.
+ * Estas previsões são baseadas em modelos de população e costumam ser mais precisas
+ * do que a suavização exponencial pura por considerarem o comportamento de escolha dos alunos.
+ */
+export async function loadSimulatedPredictions(
+  year: number,
+  institutionCode: string,
+  courseCode: string,
+  dataPath: string = '/data'
+): Promise<number | null> {
+  try {
+    const response = await fetch(`${dataPath}/resultados_simulacao_completo_${year}.json`);
+    
+    const contentType = response.headers.get('content-type');
+    if (!response.ok || !contentType?.includes('application/json')) return null;
+
+    const results: any[] = await response.json();
+    // O código no simulador segue o padrão "INST-CURSO" com padding de 4 dígitos (ex: "0150-9219")
+    const targetId = `${String(institutionCode).padStart(4, '0')}-${String(courseCode).padStart(4, '0')}`;
+
+    // Filtramos apenas os resultados da Fase 1 para este curso
+    const match = results.find(
+      (r) => r.Codigo === targetId && Number(r.Fase) === 1
+    );
+
+    // Retorna a nota simulada se encontrada, caso contrário null
+    return match ? match.Nota_Simulada : null;
+  } catch (error) {
+    // Falha silenciosa: volta para a previsão estatística sem poluir a consola
     return null;
   }
 }

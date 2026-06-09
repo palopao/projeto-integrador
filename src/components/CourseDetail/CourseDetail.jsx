@@ -14,6 +14,7 @@ import ExamDistributionChart from '../ExamDistributionChart/ExamDistributionChar
 import { useCoursePhaseEvolution } from '../../hooks/useCoursePhaseEvolution'
 import { useCourseDetailsById } from '../../hooks/useCourseDetailsById'
 import { useExamHistoricalData } from '../../hooks/useExamHistoricalData'
+import { loadSimulatedPredictions } from '../../services/examDataService'
 import styles from './CourseDetail.module.css'
 
 // Função auxiliar movida para fora para evitar re-declarações e permitir uso imediato
@@ -37,6 +38,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
 
   const [selectedExamSetIdx, setSelectedExamSetIdx] = useState(0)
   const [selectedExams, setSelectedExams] = useState([])
+  const [simulatedFase1, setSimulatedFase1] = useState(null)
 
   // Resetar a seleção de exames sempre que o curso mudar
   useEffect(() => {
@@ -79,15 +81,52 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
   
   const { data: historicalExamData, loading: historicalExamLoading } = useExamHistoricalData()
 
+  // Determina o ano alvo para a previsão
+  const predictedYear = useMemo(() => {
+    return predictions?.fase_1?.[0]?.year || (yearRange.max ? yearRange.max + 1 : 2025);
+  }, [predictions, yearRange.max]);
+
+  // Carregar dados do simulador (dados_exames) se existirem para este curso/ano
+  useEffect(() => {
+    // Evita pedidos desnecessários:
+    // 1. Não tentamos "adivinhar" o ano enquanto os dados históricos ainda estão a carregar.
+    // 2. Se o ano que o algoritmo quer prever já existe no histórico real (ex: notas de 2025 já saíram),
+    //    ignoramos a simulação para esse ano e usamos os dados reais.
+    if (loading || !predictedYear || (yearRange.max && predictedYear <= yearRange.max)) {
+      if (!loading) setSimulatedFase1(null);
+      return;
+    }
+
+    let isMounted = true;
+    const fetchSim = async () => {
+      setSimulatedFase1(null); // Limpa o estado anterior enquanto carrega o novo
+      const val = await loadSimulatedPredictions(predictedYear, codigoInstituicao, codigoCurso);
+      if (isMounted) setSimulatedFase1(val);
+    };
+
+    fetchSim();
+    return () => { isMounted = false; };
+  }, [predictedYear, codigoInstituicao, codigoCurso, loading, yearRange.max]);
+
+  // Priorizar a previsão do simulador sobre a estatística na Fase 1
+  const mergedPredictions = useMemo(() => {
+    if (!predictions) return null;
+    if (simulatedFase1 === null) return predictions;
+
+    return {
+      ...predictions,
+      fase_1: predictions.fase_1.map((p, idx) => 
+        idx === 0 ? { ...p, predicted: simulatedFase1 } : p
+      )
+    };
+  }, [predictions, simulatedFase1]);
+
   // Lógica dinâmica para extrair a previsão e o ano correspondente
-  const nextPrediction = predictions?.fase_1?.[0];
+  const nextPrediction = mergedPredictions?.fase_1?.[0];
   const predmin = nextPrediction?.ciLow?.toFixed(1);
   const predmax = nextPrediction?.ciHigh?.toFixed(1);
   const minPred = predmin || '—';
   const maxPred = predmax || '—';
-
-  // Determina o ano da previsão (ou o ano seguinte ao range atual ou fallback para 2025)
-  const predictedYear = nextPrediction?.year || (yearRange.max ? yearRange.max + 1 : 2025);
 
   return (
     <section className={styles.section}>
@@ -123,7 +162,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
           <div className={styles.card}>
             <CoursePhaseEvolutionChart
               data={data}
-              predictions={predictions}
+              predictions={mergedPredictions}
               courseName={displayCourseName}
               minYear={yearRange.min}
               maxYear={yearRange.max}
@@ -153,6 +192,8 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
             <div className={styles.card}>
               <ExamDistributionChart
                 year={yearRange.max}
+                minYear={yearRange.min}
+                maxYear={yearRange.max}
                 examNames={selectedExams.map(e => e.name)}
               />
             </div>
@@ -186,7 +227,7 @@ export default function CourseDetail({ codigoInstituicao = '150', codigoCurso = 
             </div>
             <ApplicationSimulator
               data={data}
-              predictions={predictions}
+              predictions={mergedPredictions}
               courseName={displayCourseName}
               course={course}
               selectedExamSetIdx={selectedExamSetIdx}

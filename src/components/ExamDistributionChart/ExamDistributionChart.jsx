@@ -24,7 +24,7 @@ ChartJS.register(
 /**
  * Componente que exibe a distribuição de notas (histograma) para exames num ano específico.
  */
-export default function ExamDistributionChart({ year, examNames }) {
+export default function ExamDistributionChart({ year, examNames, minYear, maxYear }) {
   const [selectedYear, setSelectedYear] = useState(year || new Date().getFullYear());
   const [distributionData, setDistributionData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -168,7 +168,12 @@ export default function ExamDistributionChart({ year, examNames }) {
             onChange={(e) => setSelectedYear(Number(e.target.value))}
             className={styles.select}
           >
-            {Array.from({ length: (new Date().getFullYear()) - 2017 + 1 }, (_, i) => 2017 + i)
+            {Array.from(
+              { 
+                length: (maxYear || new Date().getFullYear()) - (minYear || 2017) + 1 
+              }, 
+              (_, i) => (minYear || 2017) + i
+            )
               .sort((a, b) => b - a)
               .map(y => (
                 <option key={y} value={y}>{y}</option>
