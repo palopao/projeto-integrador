@@ -97,9 +97,9 @@ def carregar_dados(data_dir):
 # ═════════════════════════════════════════════════════════════════════════════
 #  BACKTESTING — SUAVIZAÇÃO EXPONENCIAL
 # ═════════════════════════════════════════════════════════════════════════════
-def backtest_exp_smoothing(all_data, years):
+def backtest_exp_smoothing(all_data, years, fase_key='f1'):
     """
-    Devolve {ano: [desvios_absolutos]} para fase 1 de cada curso.
+    Devolve {ano: [desvios_absolutos]} para a fase especificada de cada curso.
     Desvio absoluto = |previsto - real|  (sempre >= 0)
     O sinal (previsto - real) é guardado separadamente para análise de viés.
     """
@@ -115,11 +115,11 @@ def backtest_exp_smoothing(all_data, years):
             if len(prev) < 2 or target_year not in history:
                 continue
 
-            actual = history[target_year]['f1']
+            actual = history[target_year][fase_key]
             if actual is None:
                 continue
 
-            hist_vals = [history[y]['f1'] for y in prev]
+            hist_vals = [history[y][fase_key] for y in prev]
             preds     = predict_phase(hist_vals, prev, steps=1)
             if preds:
                 desvio = preds[0]['predicted'] - actual  
@@ -171,11 +171,11 @@ def encontrar_csvs(years):
     return encontrados
 
 
-def ler_csv_resultados(csv_path):
-    """Lê um CSV de resultados, filtra Fase 1 e garante coluna Desvio."""
+def ler_csv_resultados(csv_path, fase_num=1):
+    """Lê um CSV de resultados, filtra pela fase especificada e garante coluna Desvio."""
     df = pd.read_csv(csv_path)
     if 'Fase' in df.columns:
-        df = df[df['Fase'] == 1].copy()
+        df = df[df['Fase'] == fase_num].copy()
     if 'Nota_Real' in df.columns and 'Nota_Simulada' in df.columns:
         df['Desvio'] = df['Nota_Simulada'] - df['Nota_Real']
     return df
@@ -226,7 +226,7 @@ def ajustar_pesos_com_csvs(anos_treino, csvs_existentes, pesos_path):
             json.dump(pesos, f)
 
 
-def backtest_simulador(all_data, years, num_estudantes=30000):
+def backtest_simulador(all_data, years, num_estudantes=30000, fase_num=1):
     """
     Backtesting limpo do sistema de simulação.
 
@@ -235,7 +235,7 @@ def backtest_simulador(all_data, years, num_estudantes=30000):
       2. Ajusta pesos com CSVs já existentes de anos < T
          (mesma lógica do treinador_ia, sem gerar nem simular)
       3. Lê CSV do ano-alvo já existente
-      4. Calcula desvios absolutos |Nota_Simulada - Nota_Real|
+      4. Calcula desvios absolutos |Nota_Simulada - Nota_Real| para a fase alvo
 
     Nunca gera nova população nem nova simulação — usa sempre os
     ficheiros resultados_simulacao_completo_YYYY.csv em disco.
@@ -280,16 +280,16 @@ def backtest_simulador(all_data, years, num_estudantes=30000):
         # ── 3. Lê CSV do ano-alvo ─────────────────────────────────────────
         tqdm.write(f"  → A usar CSV existente para {target_year}…")
         try:
-            df_sim = ler_csv_resultados(csvs_existentes[target_year])
+            df_sim = ler_csv_resultados(csvs_existentes[target_year], fase_num=fase_num)
         except Exception as e:
             tqdm.write(f" Erro ao ler CSV de {target_year}: {e}")
             continue
 
-        # ── 4. Calcula desvios absolutos para fase 1 ─────────────────────
-        df_f1 = df_sim.dropna(subset=['Nota_Real', 'Nota_Simulada'])
-        df_f1 = df_f1.copy()
-        df_f1['Desvio'] = df_f1['Nota_Simulada'] - df_f1['Nota_Real']
-        erros = df_f1['Desvio'].abs().tolist()
+        # ── 4. Calcula desvios absolutos para a fase especificada ────────
+        df_eval = df_sim.dropna(subset=['Nota_Real', 'Nota_Simulada'])
+        df_eval = df_eval.copy()
+        df_eval['Desvio'] = df_eval['Nota_Simulada'] - df_eval['Nota_Real']
+        erros = df_eval['Desvio'].abs().tolist()
 
         if erros:
             errors_by_year[target_year] = erros
@@ -325,7 +325,7 @@ def summarise(errors_by_year):
 # ═════════════════════════════════════════════════════════════════════════════
 #  GRÁFICO COMPARATIVO — estilo validate_predictions.py
 # ═════════════════════════════════════════════════════════════════════════════
-def plot_comparison(errors_exp, errors_sim):
+def plot_comparison(errors_exp, errors_sim, fase_label="Fase 1"):
     C_EXP    = '#2563eb'   # azul  — Suavização Exponencial
     C_SIM    = '#e11d48'   # rosa  — Simulador
     C_MED_E  = '#10b981'   # verde — mediana Exp.
@@ -367,7 +367,7 @@ def plot_comparison(errors_exp, errors_sim):
             linestyle='--', label='Desvio Mediano')
 
     ax.set_ylim(0, y_max)
-    ax.set_title('Suavização Exponencial\nDistribuição do Desvio Absoluto (Backtesting)',
+    ax.set_title(f'Suavização Exponencial ({fase_label})\nDistribuição do Desvio Absoluto (Backtesting)',
                  fontsize=13, pad=12)
     ax.set_xlabel('Ano Validado', fontsize=12)
     ax.set_ylabel('Desvio Absoluto (Pontos na escala 0–200)', fontsize=12)
@@ -398,7 +398,7 @@ def plot_comparison(errors_exp, errors_sim):
                  linestyle='--', label='Desvio Mediano')
 
         ax2.set_ylim(0, y_max)
-        ax2.set_title('Sistema de Simulação\nDistribuição do Desvio Absoluto (Backtesting)',
+        ax2.set_title(f'Sistema de Simulação ({fase_label})\nDistribuição do Desvio Absoluto (Backtesting)',
                       fontsize=13, pad=12)
         ax2.set_xlabel('Ano Validado', fontsize=12)
         ax2.grid(True, linestyle='--', alpha=0.6)
@@ -414,15 +414,15 @@ def plot_comparison(errors_exp, errors_sim):
     if has_sim:
         mda_s   = np.mean([e for v in errors_sim.values() for e in v])
         winner  = "Suavização Exponencial" if mda_e <= mda_s else "Sistema de Simulação"
-        suptitle = (f"MDA global: Suavização Exponencial = {mda_e:.2f} pts  |  "
+        suptitle = (f"[{fase_label}] MDA global: Suavização Exponencial = {mda_e:.2f} pts  |  "
                     f"Simulador = {mda_s:.2f} pts  →  Vencedor: {winner}")
     else:
-        suptitle = f"MDA global (Suavização Exponencial): {mda_e:.2f} pts  |  Simulador: não disponível"
+        suptitle = f"[{fase_label}] MDA global (Suavização Exponencial): {mda_e:.2f} pts  |  Simulador: não disponível"
 
     fig.suptitle(suptitle, fontsize=12, y=1.01)
     plt.tight_layout()
 
-    out = os.path.join(SCRIPT_DIR, 'comparacao_simulador_vs_exp.png')
+    out = os.path.join(SCRIPT_DIR, f'comparacao_simulador_vs_exp_{fase_label.lower().replace(" ", "_")}.png')
     plt.savefig(out, dpi=150, bbox_inches='tight')
     print(f"\nGráfico guardado em: {out}")
     return out
@@ -452,46 +452,53 @@ def main():
     all_data, years = carregar_dados(data_dir)
     print(f"Anos disponíveis: {years}")
 
-    # ── Backtesting Suavização Exponencial ───────────────────────────────
-    print("\nA correr backtesting — Suavização Exponencial…")
-    errors_exp, bias_exp = backtest_exp_smoothing(all_data, years)
+    for f_num in [1, 2, 3]:
+        f_key = f'f{f_num}'
+        f_label = f"Fase {f_num}"
+        
+        print(f"\n{'='*60}")
+        print(f" 🔍 ANALISANDO {f_label.upper()}")
+        print(f"{'='*60}")
 
-    # Imprime tabela
-    print(f"\n{'─'*58}")
-    print(f"{'Ano':<8} {'MDA Exp.':>10} {'Mediana':>10} {'Viés Médio':>12} {'N':>6}")
-    print('─' * 58)
-    for y in sorted(errors_exp.keys()):
-        e   = errors_exp[y]
-        b   = bias_exp[y]
-        mda = np.mean(e)
-        med = np.median(e)
-        vies = np.mean(b)
-        print(f"{y:<8} {mda:>10.2f} {med:>10.2f} {vies:>+12.2f} {len(e):>6}")
-    print(f"{'GLOBAL':<8} {np.mean([e for v in errors_exp.values() for e in v]):>10.2f}")
+        # ── Backtesting Suavização Exponencial ───────────────────────────────
+        print(f"\nA correr backtesting ({f_label}) — Suavização Exponencial…")
+        errors_exp, bias_exp = backtest_exp_smoothing(all_data, years, fase_key=f_key)
 
-    # ── Backtesting Simulador ────────────────────────────────────────────
-    print("\nA correr backtesting — Sistema de Simulação…")
-    print("   (usa CSVs pré-calculados se disponíveis; caso contrário simula)")
-    errors_sim = backtest_simulador(all_data, years, num_estudantes=30000)
+        # Imprime tabela
+        print(f"\n{'─'*58}")
+        print(f"{'Ano':<8} {'MDA Exp.':>10} {'Mediana':>10} {'Viés Médio':>12} {'N':>6}")
+        print('─' * 58)
+        for y in sorted(errors_exp.keys()):
+            e   = errors_exp[y]
+            b   = bias_exp[y]
+            mda = np.mean(e)
+            med = np.median(e)
+            vies = np.mean(b)
+            print(f"{y:<8} {mda:>10.2f} {med:>10.2f} {vies:>+12.2f} {len(e):>6}")
+        print(f"{'GLOBAL':<8} {np.mean([e for v in errors_exp.values() for e in v]):>10.2f}")
 
-    if errors_sim:
-        print(f"\n{'─'*62}")
-        print(f"{'Ano':<8} {'MDA Exp.':>10} {'MDA Sim.':>10} {'N':>8}  Vencedor")
-        print('─' * 62)
-        for y in sorted(set(errors_exp) & set(errors_sim)):
-            me = np.mean(errors_exp[y])
-            ms = np.mean(errors_sim[y])
-            win = 'Exp.' if me <= ms else 'Sim.'
-            print(f"{y:<8} {me:>10.2f} {ms:>10.2f} {len(errors_sim[y]):>8}  {win}")
+        # ── Backtesting Simulador ────────────────────────────────────────────
+        print(f"\nA correr backtesting ({f_label}) — Sistema de Simulação…")
+        errors_sim = backtest_simulador(all_data, years, num_estudantes=30000, fase_num=f_num)
 
-        mda_e = np.mean([e for v in errors_exp.values() for e in v])
-        mda_s = np.mean([e for v in errors_sim.values() for e in v])
-        print('─' * 62)
-        print(f"{'GLOBAL':<8} {mda_e:>10.2f} {mda_s:>10.2f}")
-        print(f"\n{'Simulador vence' if mda_s < mda_e else 'Suavização Exponencial vence'}")
+        if errors_sim:
+            print(f"\n{'─'*62}")
+            print(f"{'Ano':<8} {'MDA Exp.':>10} {'MDA Sim.':>10} {'N':>8}  Vencedor")
+            print('─' * 62)
+            for y in sorted(set(errors_exp) & set(errors_sim)):
+                me = np.mean(errors_exp[y])
+                ms = np.mean(errors_sim[y])
+                win = 'Exp.' if me <= ms else 'Sim.'
+                print(f"{y:<8} {me:>10.2f} {ms:>10.2f} {len(errors_sim[y]):>8}  {win}")
 
-    # ── Gráfico ───────────────────────────────────────────────────────────
-    plot_comparison(errors_exp, errors_sim)
+            mda_e = np.mean([e for v in errors_exp.values() for e in v])
+            mda_s = np.mean([e for v in errors_sim.values() for e in v])
+            print('─' * 62)
+            print(f"{'GLOBAL':<8} {mda_e:>10.2f} {mda_s:>10.2f}")
+            print(f"\n{'Simulador vence' if mda_s < mda_e else 'Suavização Exponencial vence'}")
+
+        # ── Gráfico ───────────────────────────────────────────────────────────
+        plot_comparison(errors_exp, errors_sim, fase_label=f_label)
 
 
 
