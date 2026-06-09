@@ -76,7 +76,7 @@ export function useCoursePhaseEvolution(
           })
 
           try {
-            const newPredictionData = predictPhaseEvolution(newEvolutionData, 3);
+            const newPredictionData = predictPhaseEvolution(newEvolutionData, 1);
             // Only update state if the predictions have actually changed (deep comparison)
             if (JSON.stringify(newPredictionData) !== JSON.stringify(predictions)) {
                 setPredictions(newPredictionData);
@@ -124,7 +124,7 @@ export function useCoursePhaseEvolution(
         })
 
         try {
-          const predictionData = predictPhaseEvolution(evolutionData, 3)
+          const predictionData = predictPhaseEvolution(evolutionData, 1)
           if (JSON.stringify(predictionData) !== JSON.stringify(predictions)) {
             setPredictions(predictionData);
           }

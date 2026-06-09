@@ -26,15 +26,13 @@ function CustomTooltip({ active, payload, label }) {
       {payload.map((entry, idx) => {
         let color = entry.color;
 
-        // Se for a fase_1_low, muda para azul no tooltip
-        if (entry.dataKey === 'fase_1_low') {
-          color = '#2563eb' // cor da legenda no hover
-        }
-        if (entry.dataKey === 'fase_2_low') {
-          color = '#10b981' // cor da legenda no hover
-        }
-        if (entry.dataKey === 'fase_3_low') {
-          color = '#f59e0b' // cor da legenda no hover
+        // Garante que a cor no tooltip corresponde à fase, corrigindo as previsões que usam stroke="none"
+        if (entry.dataKey?.startsWith('fase_1')) {
+          color = '#2563eb'
+        } else if (entry.dataKey?.startsWith('fase_2')) {
+          color = '#10b981'
+        } else if (entry.dataKey?.startsWith('fase_3')) {
+          color = '#f59e0b'
         }
 
         return (
@@ -105,10 +103,31 @@ export default function CoursePhaseEvolutionChart({
   const combinedData = useMemo(() => {
     if (!predictions) return data
 
-    const combined = [...data]
+    const combined = data.map(d => ({ ...d }))
     const maxYear = Math.max(...data.map(d => Number(d.year)))
 
-    for (let i = 1; i <= 3; i++) {
+    // Ponto de ligação: define o valor inicial da previsão como o último valor histórico
+    // para permitir que o connectNulls desenhe a linha a tracejado desde o último ponto real.
+    const lastHistorical = combined.find(d => Number(d.year) === maxYear)
+    if (lastHistorical) {
+      if (predictions.fase_1?.length > 0) {
+        lastHistorical.fase_1_pred = lastHistorical.fase_1
+        lastHistorical.fase_1_low = lastHistorical.fase_1
+        lastHistorical.fase_1_high = lastHistorical.fase_1
+      }
+      if (predictions.fase_2?.length > 0) {
+        lastHistorical.fase_2_pred = lastHistorical.fase_2
+        lastHistorical.fase_2_low = lastHistorical.fase_2
+        lastHistorical.fase_2_high = lastHistorical.fase_2
+      }
+      if (predictions.fase_3?.length > 0) {
+        lastHistorical.fase_3_pred = lastHistorical.fase_3
+        lastHistorical.fase_3_low = lastHistorical.fase_3
+        lastHistorical.fase_3_high = lastHistorical.fase_3
+      }
+    }
+
+    for (let i = 1; i <= 1; i++) {
       const year = maxYear + i
       let entry = combined.find(d => Number(d.year) === year)
 
@@ -247,32 +266,39 @@ export default function CoursePhaseEvolutionChart({
                   stroke="#2563eb"
                   strokeWidth={2}
                   strokeDasharray="6 4"
-                  dot={{ r: 4, fill: '#2563eb' }}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={4} fill="#2563eb" />
+                  }}
                   isAnimationActive={false}
                   connectNulls
                   name="Fase 1 (Previsão)"
-                  connectNullsForData={true}
                   legendType="none"
                 />
-                <Area
+                <Line
                   type="linear"
                   dataKey="fase_1_high"
                   stroke="none"
-                  fill="#2563eb"
-                  fillOpacity={0.1}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={3} fill="#2563eb" fillOpacity={0.5} />
+                  }}
                   isAnimationActive={false}
-                  connectNulls
                   name="Fase 1 (Máximo)"
                   legendType="none"
                 />
-                <Area
+                <Line
                   type="linear"
                   dataKey="fase_1_low"
                   stroke="none"
-                  fill="#ffffff"
-                  fillOpacity={1}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={3} fill="#2563eb" fillOpacity={0.5} />
+                  }}
                   isAnimationActive={false}
-                  connectNulls
                   name="Fase 1 (Mínimo)"
                   legendType="none"
                 />
@@ -282,31 +308,39 @@ export default function CoursePhaseEvolutionChart({
                   stroke="#10b981"
                   strokeWidth={2}
                   strokeDasharray="6 4"
-                  dot={{ r: 4, fill: '#10b981' }}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={4} fill="#10b981" />
+                  }}
                   isAnimationActive={false}
                   connectNulls
                   name="Fase 2 (Previsão)"
                   legendType="none"
                 />
-                <Area
+                <Line
                   type="linear"
                   dataKey="fase_2_high"
                   stroke="none"
-                  fill="#10b981"
-                  fillOpacity={0.1}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={3} fill="#10b981" fillOpacity={0.5} />
+                  }}
                   isAnimationActive={false}
-                  connectNulls
                   name="Fase 2 (Máximo)"
                   legendType="none"
                 />
-                <Area
+                <Line
                   type="linear"
                   dataKey="fase_2_low"
                   stroke="none"
-                  fill="#ffffff"
-                  fillOpacity={1}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={3} fill="#10b981" fillOpacity={0.5} />
+                  }}
                   isAnimationActive={false}
-                  connectNulls
                   name="Fase 2 (Mínimo)"
                   legendType="none"
                 />
@@ -316,31 +350,39 @@ export default function CoursePhaseEvolutionChart({
                   stroke="#f59e0b"
                   strokeWidth={2}
                   strokeDasharray="6 4"
-                  dot={{ r: 4, fill: '#f59e0b' }}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={4} fill="#f59e0b" />
+                  }}
                   isAnimationActive={false}
                   connectNulls
                   name="Fase 3 (Previsão)"
                   legendType="none"
                 />
-                <Area
+                <Line
                   type="linear"
                   dataKey="fase_3_high"
                   stroke="none"
-                  fill="#f59e0b"
-                  fillOpacity={0.1}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={3} fill="#f59e0b" fillOpacity={0.5} />
+                  }}
                   isAnimationActive={false}
-                  connectNulls
                   name="Fase 3 (Máximo)"
                   legendType="none"
                 />
-                <Area
+                <Line
                   type="linear"
                   dataKey="fase_3_low"
                   stroke="none"
-                  fill="#ffffff"
-                  fillOpacity={1}
+                  dot={(props) => {
+                    const { cx, cy, payload, value } = props
+                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
+                    return <circle cx={cx} cy={cy} r={3} fill="#f59e0b" fillOpacity={0.5} />
+                  }}
                   isAnimationActive={false}
-                  connectNulls
                   name="Fase 3 (Mínimo)"
                   legendType="none"
                 />

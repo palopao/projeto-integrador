@@ -168,7 +168,7 @@ export default function ExamDistributionChart({ year, examNames }) {
             onChange={(e) => setSelectedYear(Number(e.target.value))}
             className={styles.select}
           >
-            {Array.from({ length: (new Date().getFullYear()) - 2017  }, (_, i) => 2017 + i)
+            {Array.from({ length: (new Date().getFullYear()) - 2017 + 1 }, (_, i) => 2017 + i)
               .sort((a, b) => b - a)
               .map(y => (
                 <option key={y} value={y}>{y}</option>

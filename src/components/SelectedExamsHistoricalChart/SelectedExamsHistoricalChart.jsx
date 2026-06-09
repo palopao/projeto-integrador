@@ -119,6 +119,7 @@ export default function SelectedExamsHistoricalChart({ selectedExams, historical
             <XAxis
               dataKey="year"
               tick={{ fontSize: 13, fill: '#4b5563' }}
+              interval={0}
             />
             <YAxis
               domain={[0, 20]}
