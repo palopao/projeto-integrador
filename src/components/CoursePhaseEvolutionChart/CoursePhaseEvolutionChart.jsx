@@ -278,29 +278,19 @@ export default function CoursePhaseEvolutionChart({
                 />
                 <Line
                   type="linear"
-                  dataKey="fase_1_high"
-                  stroke="none"
-                  dot={(props) => {
-                    const { cx, cy, payload, value } = props
-                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
-                    return <circle cx={cx} cy={cy} r={3} fill="#2563eb" fillOpacity={0.5} />
-                  }}
-                  isAnimationActive={false}
+                  dataKey="fase_1_high" // Mantém a linha para a legenda
                   name="Fase 1 (Máximo)"
-                  legendType="none"
+                  stroke="#2563eb"
+                  strokeWidth={0}
+                  dot={false} // Remove os pontos da linha
                 />
                 <Line
                   type="linear"
-                  dataKey="fase_1_low"
-                  stroke="none"
-                  dot={(props) => {
-                    const { cx, cy, payload, value } = props
-                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
-                    return <circle cx={cx} cy={cy} r={3} fill="#2563eb" fillOpacity={0.5} />
-                  }}
-                  isAnimationActive={false}
+                  dataKey="fase_1_low" // Mantém a linha para a legenda
                   name="Fase 1 (Mínimo)"
-                  legendType="none"
+                  stroke="#2563eb"
+                  strokeWidth={0}
+                  dot={false} // Remove os pontos da linha
                 />
                 <Line
                   type="linear"
@@ -319,30 +309,20 @@ export default function CoursePhaseEvolutionChart({
                   legendType="none"
                 />
                 <Line
-                  type="linear"
-                  dataKey="fase_2_high"
-                  stroke="none"
-                  dot={(props) => {
-                    const { cx, cy, payload, value } = props
-                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
-                    return <circle cx={cx} cy={cy} r={3} fill="#10b981" fillOpacity={0.5} />
-                  }}
-                  isAnimationActive={false}
+                  type="linear" // Mantém a linha para a legenda
+                  dataKey="fase_2_high" // Mantém a linha para a legenda
                   name="Fase 2 (Máximo)"
-                  legendType="none"
+                  stroke="#10b981"
+                  strokeWidth={0}
+                  dot={false} // Remove os pontos da linha
                 />
                 <Line
-                  type="linear"
-                  dataKey="fase_2_low"
-                  stroke="none"
-                  dot={(props) => {
-                    const { cx, cy, payload, value } = props
-                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
-                    return <circle cx={cx} cy={cy} r={3} fill="#10b981" fillOpacity={0.5} />
-                  }}
-                  isAnimationActive={false}
+                  type="linear" // Mantém a linha para a legenda
+                  dataKey="fase_2_low" // Mantém a linha para a legenda
                   name="Fase 2 (Mínimo)"
-                  legendType="none"
+                  stroke="#10b981"
+                  strokeWidth={0}
+                  dot={false} // Remove os pontos da linha
                 />
                 <Line
                   type="linear"
@@ -361,30 +341,20 @@ export default function CoursePhaseEvolutionChart({
                   legendType="none"
                 />
                 <Line
-                  type="linear"
-                  dataKey="fase_3_high"
-                  stroke="none"
-                  dot={(props) => {
-                    const { cx, cy, payload, value } = props
-                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
-                    return <circle cx={cx} cy={cy} r={3} fill="#f59e0b" fillOpacity={0.5} />
-                  }}
-                  isAnimationActive={false}
+                  type="linear" // Mantém a linha para a legenda
+                  dataKey="fase_3_high" // Mantém a linha para a legenda
                   name="Fase 3 (Máximo)"
-                  legendType="none"
+                  stroke="#f59e0b"
+                  strokeWidth={0}
+                  dot={false} // Remove os pontos da linha
                 />
                 <Line
-                  type="linear"
-                  dataKey="fase_3_low"
-                  stroke="none"
-                  dot={(props) => {
-                    const { cx, cy, payload, value } = props
-                    if (payload.year <= maxHistoricalYear || value === null || value === undefined) return null
-                    return <circle cx={cx} cy={cy} r={3} fill="#f59e0b" fillOpacity={0.5} />
-                  }}
-                  isAnimationActive={false}
+                  type="linear" // Mantém a linha para a legenda
+                  dataKey="fase_3_low" // Mantém a linha para a legenda
                   name="Fase 3 (Mínimo)"
-                  legendType="none"
+                  stroke="#f59e0b"
+                  strokeWidth={0}
+                  dot={false} // Remove os pontos da linha
                 />
               </>
             )}
