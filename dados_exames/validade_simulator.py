@@ -433,7 +433,7 @@ def plot_comparison(errors_exp, errors_sim):
 # ═════════════════════════════════════════════════════════════════════════════
 def main():
     # ── Encontrar pasta de dados ──────────────────────────────────────────
-    candidates = ['public/data', 'src/public/data', 'data']
+    candidates = ['']
     data_dir   = next(
         (os.path.join(SCRIPT_DIR, p) for p in candidates
          if os.path.exists(os.path.join(SCRIPT_DIR, p))),
