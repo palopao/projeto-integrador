@@ -278,19 +278,21 @@ export default function CoursePhaseEvolutionChart({
                 />
                 <Line
                   type="linear"
-                  dataKey="fase_1_high" // Mantém a linha para a legenda
+                  dataKey="fase_1_high"
                   name="Fase 1 (Máximo)"
                   stroke="#2563eb"
                   strokeWidth={0}
                   dot={false} // Remove os pontos da linha
+                  legendType="none"
                 />
                 <Line
                   type="linear"
-                  dataKey="fase_1_low" // Mantém a linha para a legenda
+                  dataKey="fase_1_low"
                   name="Fase 1 (Mínimo)"
                   stroke="#2563eb"
                   strokeWidth={0}
                   dot={false} // Remove os pontos da linha
+                  legendType="none"
                 />
                 <Line
                   type="linear"
@@ -309,20 +311,22 @@ export default function CoursePhaseEvolutionChart({
                   legendType="none"
                 />
                 <Line
-                  type="linear" // Mantém a linha para a legenda
-                  dataKey="fase_2_high" // Mantém a linha para a legenda
+                  type="linear"
+                  dataKey="fase_2_high"
                   name="Fase 2 (Máximo)"
                   stroke="#10b981"
                   strokeWidth={0}
                   dot={false} // Remove os pontos da linha
+                  legendType="none"
                 />
                 <Line
-                  type="linear" // Mantém a linha para a legenda
-                  dataKey="fase_2_low" // Mantém a linha para a legenda
+                  type="linear"
+                  dataKey="fase_2_low"
                   name="Fase 2 (Mínimo)"
                   stroke="#10b981"
                   strokeWidth={0}
                   dot={false} // Remove os pontos da linha
+                  legendType="none"
                 />
                 <Line
                   type="linear"
@@ -341,20 +345,22 @@ export default function CoursePhaseEvolutionChart({
                   legendType="none"
                 />
                 <Line
-                  type="linear" // Mantém a linha para a legenda
-                  dataKey="fase_3_high" // Mantém a linha para a legenda
+                  type="linear"
+                  dataKey="fase_3_high"
                   name="Fase 3 (Máximo)"
                   stroke="#f59e0b"
                   strokeWidth={0}
                   dot={false} // Remove os pontos da linha
+                  legendType="none"
                 />
                 <Line
-                  type="linear" // Mantém a linha para a legenda
-                  dataKey="fase_3_low" // Mantém a linha para a legenda
+                  type="linear"
+                  dataKey="fase_3_low"
                   name="Fase 3 (Mínimo)"
                   stroke="#f59e0b"
                   strokeWidth={0}
                   dot={false} // Remove os pontos da linha
+                  legendType="none"
                 />
               </>
             )}
