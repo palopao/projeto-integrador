@@ -29,11 +29,25 @@ export default function ExamDistributionChart({ year, examNames, minYear, maxYea
   const [distributionData, setDistributionData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Sincroniza o ano selecionado se o prop 'year' mudar externamente
   useEffect(() => {
     if (year) setSelectedYear(year);
   }, [year]);
+
+  // Deteta se o ecrã é pequeno o suficiente para precisar de expansão
+  useEffect(() => {
+    const checkSize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+
+  const showExpandButton = isMobile || isExpanded;
 
   useEffect(() => {
     if (!selectedYear) return;
@@ -101,10 +115,12 @@ export default function ExamDistributionChart({ year, examNames, minYear, maxYea
     maintainAspectRatio: false,
     plugins: {
       legend: { 
-        position: 'bottom',
+        position: 'top',
         labels: {
           usePointStyle: true,
           pointStyle: 'circle',
+          boxWidth: 5,
+          boxHeight: 6,
           padding: 20,
           font: { family: "'Inter', sans-serif", size: 12 }
         }
@@ -132,26 +148,26 @@ export default function ExamDistributionChart({ year, examNames, minYear, maxYea
         },
         ticks: {
           color: '#6b7280',
-          font: { size: 11 }
+          font: { size: 10 }
         },
         title: { 
           display: true, 
           text: 'Nº de Alunos',
           color: '#4b5563',
-          font: { size: 12, weight: '600' }
+          font: { size: 11, weight: '600' }
         } 
       },
       x: { 
         grid: { display: false },
         ticks: {
           color: '#6b7280',
-          font: { size: 11 }
+          font: { size: 10 }
         },
         title: { 
           display: true, 
           text: 'Valores das Notas (0-20)',
           color: '#4b5563',
-          font: { size: 12, weight: '600' }
+          font: { size: 11, weight: '600' }
         } 
       }
     }
@@ -159,6 +175,28 @@ export default function ExamDistributionChart({ year, examNames, minYear, maxYea
 
   return (
     <div className={styles.container}>
+
+      {showExpandButton && (
+        <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '12px' }}>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            style={{
+              padding: '4px 12px',
+              fontSize: '11px',
+              backgroundColor: isExpanded ? '#2563eb' : '#f3f4f6',
+              color: isExpanded ? 'white' : '#4b5563',
+              border: '1px solid #d1d5db',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontWeight: '500',
+              transition: 'all 0.2s'
+            }}
+          >
+            {isExpanded ? '✕ Reduzir' : '↔️ Expandir'}
+          </button>
+        </div>
+      )}
+
       <div className={styles.header}>
         <div className={styles.yearSelector}>
           <label htmlFor="year-select">Ano dos dados:</label>
@@ -185,8 +223,16 @@ export default function ExamDistributionChart({ year, examNames, minYear, maxYea
       {loading && <div className={styles.loading}>A carregar histograma de {selectedYear}...</div>}
       {error && <div className={styles.error}>{error}</div>}
       {!loading && !error && chartData && (
-        <div className={styles.chartWrapper}>
-          <Bar data={chartData} options={options} />
+        <div 
+          className={styles.chartWrapper}
+          style={{ 
+            overflowX: isExpanded ? 'auto' : 'hidden', 
+            WebkitOverflowScrolling: 'touch' 
+          }}
+        >
+          <div style={{ minWidth: isExpanded ? '470px' : '100%', height: '100%' }}>
+            <Bar data={chartData} options={options} />
+          </div>
         </div>
       )}
       {!loading && !error && !chartData && (

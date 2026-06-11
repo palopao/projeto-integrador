@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, Legend
@@ -45,6 +45,20 @@ function CustomTooltip({ active, payload, label }) {
 }
 
 export default function SelectedExamsHistoricalChart({ selectedExams, historicalData, isLoading }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Deteta se o ecrã é pequeno o suficiente para precisar de expansão
+  useEffect(() => {
+    const checkSize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+  const showExpandButton = isMobile || isExpanded;
+
   // Processas dados históricos para o gráfico
   const chartData = useMemo(() => {
     if (!historicalData || !selectedExams || selectedExams.length === 0) {
@@ -109,29 +123,58 @@ export default function SelectedExamsHistoricalChart({ selectedExams, historical
 
   return (
     <div className={styles.container}>
-      <div className={styles.chartWrap}>
-        <ResponsiveContainer width="100%" height={340}>
+      {showExpandButton && (
+        <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '8px' }}>
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            style={{
+              padding: '4px 12px',
+              fontSize: '11px',
+              backgroundColor: isExpanded ? '#2563eb' : '#f3f4f6',
+              color: isExpanded ? 'white' : '#4b5563',
+              border: '1px solid #d1d5db',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontWeight: '500',
+              transition: 'all 0.2s'
+            }}
+          >
+            {isExpanded ? '✕ Reduzir' : '↔️ Expandir'}
+          </button>
+        </div>
+      )}
+
+      <div className={styles.chartWrap} style={{ 
+        overflowX: isExpanded ? 'auto' : 'hidden', 
+        WebkitOverflowScrolling: 'touch' 
+      }}>
+        <ResponsiveContainer width="100%" height={340} minWidth={isExpanded ? 470 : undefined}>
           <LineChart
             data={chartData}
-            margin={{ top: 10, right: 10, left: -10, bottom: 5 }}
+            margin={{ top: 10, right: 10, left: -10, bottom: 0 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis
               dataKey="year"
-              tick={{ fontSize: 13, fill: '#4b5563' }}
-              interval={0}
+              tick={{ fontSize: 10, fill: '#4b5563' }}
+              interval="preserveStartEnd"
             />
             <YAxis
               domain={[0, 20]}
-              tick={{ fontSize: 13, fill: '#4b5563' }}
+              tick={{ fontSize: 10, fill: '#4b5563' }}
               allowDataOverflow={false}
             />
             <Tooltip content={<CustomTooltip />} />
             <Legend
               verticalAlign="bottom"
               align="center"
-              height={60}
-              wrapperStyle={{ paddingTop: '20px' }}
+              iconType="circle"
+              iconSize={10}
+              formatter={(value) => <span style={{ fontSize: '12px', color: '#4b5563' }}>{value}</span>}
+              wrapperStyle={{ 
+                paddingTop: '20px',
+                position: 'relative'
+              }}
             />
 
             {/* Linhas para cada exame selecionado */}

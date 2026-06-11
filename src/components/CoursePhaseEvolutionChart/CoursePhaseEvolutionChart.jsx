@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import {
   ComposedChart,
   Line,
@@ -17,13 +17,25 @@ import styles from './CoursePhaseEvolutionChart.module.css'
  * CustomTooltip para o gráfico de evolução de fases
  * Mostra os valores com 1 decimal, exibe "—" para valores nulos
  */
-function CustomTooltip({ active, payload, label }) {
+function CustomTooltip({ active, payload, label, maxHistoricalYear }) {
   if (!active || !payload?.length) return null
+
+  const year = Number(label);
+  
+  // Filtra o payload para evitar duplicados no ano de transição e esconder linhas técnicas
+  const filteredPayload = payload.filter(entry => {
+    const isPrediction = entry.dataKey.includes('_pred') || entry.dataKey.includes('_high') || entry.dataKey.includes('_low');
+    
+    if (year <= maxHistoricalYear) {
+      return !isPrediction; // No histórico, mostramos apenas os dados reais
+    }
+    return isPrediction; // Na previsão, mostramos o valor previsto e os intervalos (high/low)
+  });
 
   return (
     <div className={styles.tooltip}>
       <p className={styles.tooltipLabel}>Ano: {label}</p>
-      {payload.map((entry, idx) => {
+      {filteredPayload.map((entry, idx) => {
         let color = entry.color;
 
         // Garante que a cor no tooltip corresponde à fase, corrigindo as previsões que usam stroke="none"
@@ -83,6 +95,20 @@ export default function CoursePhaseEvolutionChart({
   isLoading = false,
   error = null,
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Deteta se o ecrã é pequeno o suficiente para precisar de expansão
+  useEffect(() => {
+    const checkSize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+  const showExpandButton = isMobile || isExpanded;
+
   // Calcula estatísticas dos dados históricos
   const stats = useMemo(() => {
     if (!data || data.length === 0) return null
@@ -187,22 +213,47 @@ export default function CoursePhaseEvolutionChart({
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h3 className={styles.title}>Evolução das Notas por Fase</h3>
-        {minYear && maxYear && (
-          <p className={styles.subtitle}>
-            Dados históricos de {minYear} a {maxYear}
-            {predictions && ' + Previsões'}
-          </p>
-        )}
+        <div style={{ flex: 1 }}>
+          <h3 className={styles.title}>Evolução das Notas por Fase</h3>
+          {minYear && maxYear && (
+            <p className={styles.subtitle}>
+              Dados históricos de {minYear} a {maxYear}
+              {predictions && ' + Previsões'}
+            </p>
+          )}
+        </div>
       </div>
 
-      <div className={styles.chartWrapper}>
-        <ResponsiveContainer width="100%" height={320}>
+      {showExpandButton && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          style={{
+            padding: '4px 12px',
+            fontSize: '11px',
+            backgroundColor: isExpanded ? '#2563eb' : '#f3f4f6',
+            color: isExpanded ? 'white' : '#4b5563',
+            border: '1px solid #d1d5db',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            fontWeight: '500',
+            height: 'fit-content',
+            marginRight: '12px'
+          }}
+        >
+          {isExpanded ? '✕ Reduzir' : '↔️ Expandir'}
+        </button>
+      )}
+
+      <div className={styles.chartWrapper} style={{ 
+        overflowX: isExpanded ? 'auto' : 'hidden', 
+        WebkitOverflowScrolling: 'touch' 
+      }}>
+        <ResponsiveContainer width="100%" height={320} minWidth={isExpanded ? 470 : undefined}>
           <ComposedChart data={combinedData} margin={{ top: 10, right: 10, left: -10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-            <XAxis dataKey="year" tick={{ fontSize: 13, fill: '#4b5563' }} />
-            <YAxis domain={yAxisDomain()} tick={{ fontSize: 13, fill: '#4b5563' }} />
-            <Tooltip content={<CustomTooltip />} />
+            <XAxis dataKey="year" tick={{ fontSize: 10, fill: '#4b5563' }} />
+            <YAxis domain={yAxisDomain()} tick={{ fontSize: 10, fill: '#4b5563' }} />
+            <Tooltip content={<CustomTooltip maxHistoricalYear={maxHistoricalYear} />} />
 
             {predictions && (
               <ReferenceLine
@@ -213,16 +264,21 @@ export default function CoursePhaseEvolutionChart({
                   value: 'Histórico / Previsão',
                   position: 'top',
                   fill: '#6b7280',
-                  fontSize: 12,
+                  fontSize: 10,
                 }}
               />
             )}
 
             <Legend
               verticalAlign="bottom"
-              height={50}
-              wrapperStyle={{ paddingTop: '20px' }}
-              iconType="line"
+              align="center"
+              iconType="circle"
+              iconSize={10}
+              formatter={(value) => <span style={{ fontSize: '12px', color: '#4b5563' }}>{value}</span>}
+              wrapperStyle={{ 
+                paddingTop: '20px',
+                position: 'relative'
+              }}
             />
 
             {/* Linhas de dados históricos */}
