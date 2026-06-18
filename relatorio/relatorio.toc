@@ -23,15 +23,15 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Justificação das Tecnologias}{8}{subsubsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.3}Solução Desenvolvida}{8}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Secção Inicial e Estatísticas}{8}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Pesquisa de Cursos}{8}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Painel de Detalhe do Curso}{8}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.2}Pesquisa de Cursos}{9}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Painel de Detalhe do Curso}{9}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}Secções de Transparência}{9}{subsubsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.4}Validação}{9}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Validação do Motor de Simulação}{9}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Validação do Algoritmo de Previsão}{11}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4}Validação}{10}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Validação do Motor de Simulação}{10}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Validação do Algoritmo de Previsão --- 1.ª Fase}{11}{subsubsection.3.4.2}%
 \contentsline {section}{\numberline {4}Conclusões}{12}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Resultados Alcançados}{12}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Contribuições Individuais}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Contribuições Individuais}{13}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Lições Aprendidas}{13}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Limitações e Trabalho Futuro}{13}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Contribuição para os Objetivos de Desenvolvimento Sustentável}{14}{subsection.4.5}%

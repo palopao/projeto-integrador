@@ -1,20 +1,19 @@
 # Fdb version 4
-["bibtex relatorio"] 1781002022.04949 "relatorio.aux" "relatorio.bbl" "relatorio" 1781002023.37699 0
+["bibtex relatorio"] 1781210805.33948 "relatorio.aux" "relatorio.bbl" "relatorio" 1781210806.95168 0
   "./references.bib" 1781002005.6514 781 27992a13f7225befee75eb9c193a96df ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "relatorio.aux" 1781002023.18315 8655 054264f012d33ddec74373e33b1ffb06 "pdflatex"
+  "relatorio.aux" 1781210806.74284 8361 a393ffcbbc103ae8cc0931443d2da150 "pdflatex"
   (generated)
   "relatorio.bbl"
   "relatorio.blg"
   (rewritten before read)
-["pdflatex"] 1781002022.13084 "/home/josebreis05/repos/projeto-integrador/relatorio/relatorio.tex" "relatorio.pdf" "relatorio" 1781002023.37714 0
-  "../dados_exames/comparacao_simulador_vs_exp.png" 1778491499.81262 559405 adceec3ef910581943d1a14f4c4d344a ""
-  "../hist_erros.png" 1780676798.49328 82812 502d96b8f540e792238f47842ea61d90 ""
-  "../mae_por_ano.png" 1780676798.49418 94970 a65d771813fe71eb9c5f9aec4cb3f135 ""
-  "../scatter_real_vs_simulado.png" 1780676798.4989 563676 931258a651fe105de5314e16558b2798 ""
-  "../validade_predictions/desvio_previsoes_por_ano.png" 1777316810.28775 238128 914d987daf616343c9d53ae313e6d04d ""
+["pdflatex"] 1781210805.43161 "/home/josebreis05/repos/projeto-integrador/relatorio/relatorio.tex" "relatorio.pdf" "relatorio" 1781210806.95183 0
+  "../dados_exames/comparacao_simulador_vs_exp_fase_1.png" 1781017206.05358 628953 49fd153c26727bcef0e8c8afdf8e7a75 ""
+  "../hist_erros.png" 1781210117.24048 131450 bed6098d5250fb09ca13bceba1d0550a ""
+  "../mae_por_ano.png" 1781210117.55048 143351 01ffd7341d6cd6d6685fd6a8a45f8805 ""
+  "../scatter_real_vs_simulado.png" 1781210117.98748 899222 a3b42640c84434174ae26a15b65a3421 ""
   "/etc/texmf/web2c/texmf.cnf" 1772541115.94366 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/josebreis05/repos/projeto-integrador/relatorio/relatorio.tex" 1781001999.39386 33951 7a5cfb5ffd75d815bf1e8ad2c7c0e0e7 ""
+  "/home/josebreis05/repos/projeto-integrador/relatorio/relatorio.tex" 1781210783.25086 35176 84bba5b7b43c087d5bd972fbc16ed47c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm" 1136768653 3072 ccae1a240ab272417e4399fe942df546 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -30,6 +29,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm2074.tfm" 1136768653 3584 8e2870ec7aa9776f59654942b0923f51 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm" 1136768653 3072 8b5a64dc91775463bc95e2d818524028 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm" 1136768653 1536 487c9b46984a816c7ed238d0674595c7 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcbx1200.tfm" 1136768653 1536 c09172c8f235393e6235bb4758357c41 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -141,11 +141,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772541167.68406 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772541259 8214117 baa4af61bcffd69aab75a497114c73ba ""
   "feup_logo.png" 1781001082.90728 11173 8d43293722b40faebe0c0ca5660cd2d0 ""
-  "relatorio.aux" 1781002023.18315 8655 054264f012d33ddec74373e33b1ffb06 "pdflatex"
-  "relatorio.bbl" 1781002022.12763 678 72d2607af82717e371d150f0b06e68ed "bibtex relatorio"
-  "relatorio.out" 1781002023.18315 6544 71dbff8cf66143165fa72476be6144ad "pdflatex"
-  "relatorio.tex" 1781001999.39386 33951 7a5cfb5ffd75d815bf1e8ad2c7c0e0e7 ""
-  "relatorio.toc" 1781002023.18466 3523 4f5ee4dc21cac7130c02dc2868349ed7 "pdflatex"
+  "relatorio.aux" 1781210806.74284 8361 a393ffcbbc103ae8cc0931443d2da150 "pdflatex"
+  "relatorio.bbl" 1781210805.42584 678 72d2607af82717e371d150f0b06e68ed "bibtex relatorio"
+  "relatorio.out" 1781210806.74384 6614 dfc1d1c1efb5cbeb0fb066d0b58b8cd0 "pdflatex"
+  "relatorio.tex" 1781210783.25086 35176 84bba5b7b43c087d5bd972fbc16ed47c ""
+  "relatorio.toc" 1781210806.74493 3539 ade30c82ba016e4b4aebcc6dad6d8453 "pdflatex"
   (generated)
   "relatorio.aux"
   "relatorio.log"

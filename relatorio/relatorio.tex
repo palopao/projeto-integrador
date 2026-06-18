@@ -289,18 +289,25 @@ A plataforma foi desenvolvida com \textbf{React~19} e \textbf{TypeScript}, usand
   \item \textbf{Estilos}: CSS Modules para estilos com âmbito local, evitando conflitos entre componentes.
 \end{itemize}
 
-O algoritmo de previsão do \textit{frontend} usa \textbf{suavização exponencial} com $\alpha = 0.5$ e reversão progressiva à média histórica:
+O algoritmo de previsão adota uma abordagem diferenciada por fase, motivada pelos resultados de validação:
+
+\begin{itemize}[noitemsep]
+  \item \textbf{1.ª Fase}: a previsão principal é fornecida diretamente pelo motor de simulação Gale-Shapley (nota simulada), que, como demonstrado na Secção~\ref{sec:validacao}, atinge MAE = 5.2 pontos nesta fase e supera a suavização exponencial isolada. Os intervalos de confiança de 95\% são calculados pela suavização exponencial, garantindo uma margem estatisticamente fundamentada em torno do valor simulado.
+  \item \textbf{2.ª e 3.ª Fases}: dado que o simulador apresenta erro significativamente maior nestas fases (MAE = 15.4 pontos na 2.ª Fase), a previsão é obtida exclusivamente por \textbf{suavização exponencial} com $\alpha = 0.5$ e reversão progressiva à média histórica, método mais robusto para as fases com menor volume de candidatos e maior volatilidade.
+\end{itemize}
+
+O algoritmo de suavização exponencial, utilizado diretamente nas Fases~2 e~3 e para os intervalos de confiança da Fase~1, segue:
 
 \begin{equation}
 S_t = \alpha \cdot y_t + (1 - \alpha) \cdot S_{t-1}
 \label{eq:smoothing}
 \end{equation}
 \begin{equation}
-\hat{y}_{t+i} = (1 - w_i) \cdot S_T + w_i \cdot \bar{y}, \quad w_i = \min(0.15i,\ 0.6)
+\hat{y}_{t+1} = (1 - w_1) \cdot S_T + w_1 \cdot \bar{y}, \quad w_1 = 0.15
 \label{eq:prediction}
 \end{equation}
 
-onde $S_T$ é o valor suavizado no último ano observado e $\bar{y}$ é a média histórica. A margem do intervalo de confiança cresce com o horizonte de previsão: $\text{margem}_i = 1.28 \cdot \hat{\sigma} \cdot (1 + 0.15i)$, onde $\hat{\sigma}$ é o desvio-padrão residual. Este modelo foi escolhido por ser interpretável, eficiente em tempo de execução e por produzir previsões estáveis face à variabilidade anual dos dados.
+onde $S_T$ é o valor suavizado no último ano observado e $\bar{y}$ é a média histórica. A margem do intervalo de confiança é $\text{margem} = 1.28 \cdot \hat{\sigma} \cdot 1.15$, onde $\hat{\sigma}$ é o desvio-padrão residual. A plataforma apresenta a previsão para o \textbf{ano imediatamente seguinte}, utilizando um horizonte único para maximizar a fiabilidade da estimativa.
 
 \subsubsection{Justificação das Tecnologias}
 
@@ -323,7 +330,7 @@ A secção de pesquisa permite filtrar cursos por nome, instituição e/ou distr
 Após selecionar um curso, o utilizador acede ao painel de detalhe, que integra as seguintes funcionalidades:
 
 \begin{itemize}
-  \item \textbf{Gráfico de evolução por fase}: representação temporal das notas de acesso observadas (2017--2025) e das previsões para os 3 anos seguintes (2026--2028), com bandas de confiança a 95\%. O cabeçalho do painel destaca de imediato o intervalo previsto para 2026 na 1.ª Fase.
+  \item \textbf{Gráfico de evolução por fase}: representação temporal das notas de acesso observadas (2017--2025) e da previsão para o ano seguinte (2026), com banda de confiança a 95\%. O cabeçalho do painel destaca de imediato o intervalo previsto para 2026 na 1.ª Fase. A previsão da 1.ª Fase usa diretamente o resultado do simulador; as Fases~2 e~3 usam suavização exponencial.
 
   \item \textbf{Histórico dos exames de ingresso}: gráfico de linha com a evolução da média histórica dos exames nacionais relevantes para o curso selecionado.
 
@@ -376,27 +383,20 @@ A Figura~\ref{fig:scatter} ilustra a correlação entre notas reais e simuladas 
   \label{fig:scatter}
 \end{figure}
 
-\subsubsection{Validação do Algoritmo de Previsão}
+\subsubsection{Validação do Algoritmo de Previsão --- 1.ª Fase}
 
-O algoritmo de previsão foi validado por \textit{backtesting}: para cada ano de 2019 a 2024, o algoritmo foi alimentado com dados até ao ano anterior e a previsão foi comparada com os valores reais. A Figura~\ref{fig:previsao} mostra a distribuição do erro absoluto de previsão por ano.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.7\textwidth]{desvio_previsoes_por_ano.png}
-  \caption{Distribuição do erro de previsão por curso em \textit{backtesting} (2019--2024).}
-  \label{fig:previsao}
-\end{figure}
-
-O MAE médio de previsão estabiliza em torno de \textbf{5--8 pontos} a partir de 2022. O pico de erro em 2020--2021 deve-se às anomalias introduzidas pela pandemia de COVID-19 nos resultados dos exames nacionais, que produziram uma inflação atípica das notas de acesso não prevista pelos dados históricos anteriores.
-
-A Figura~\ref{fig:comparacao} apresenta a comparação entre o método de suavização exponencial simples e o sistema de simulação completo para previsão de notas (MAE global: 7.41~pts vs.\ 5.19~pts), evidenciando a vantagem do sistema de simulação baseado em IA para previsão.
+A estratégia de previsão diferenciada descrita na Secção~\ref{sec:solucao} foi validada por \textit{backtesting} na 1.ª Fase: para cada ano de 2019 a 2025, o modelo foi alimentado com dados até ao ano anterior e a previsão comparada com os valores reais. A Figura~\ref{fig:comparacao} compara diretamente a suavização exponencial isolada com o sistema de simulação completo.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{comparacao_simulador_vs_exp.png}
-  \caption{Comparação entre suavização exponencial e o sistema de simulação em \textit{backtesting} (2019--2024).}
+  \includegraphics[width=\textwidth]{comparacao_simulador_vs_exp_fase_1.png}
+  \caption{Comparação entre suavização exponencial e o sistema de simulação em \textit{backtesting} para a 1.ª Fase (2019--2025).}
   \label{fig:comparacao}
 \end{figure}
+
+O sistema de simulação obteve MDA global de \textbf{5.16~pts} face a 7.88~pts da suavização exponencial isolada, confirmando a vantagem da abordagem baseada em IA para a 1.ª Fase. O pico de erro em 2020--2021 deve-se às anomalias introduzidas pela pandemia de COVID-19, que produziram uma inflação atípica das notas de acesso não prevista pelos dados históricos anteriores.
+
+Para as \textbf{2.ª e 3.ª Fases}, onde o simulador apresenta maior erro (MAE = 15.4 e 21.5 pontos, respetivamente), é usada exclusivamente a suavização exponencial como método de previsão, constituindo uma solução mais estável face à maior volatilidade e ao menor volume de candidatos nestas fases.
 
 % ============================================================
 % 4. CONCLUSÕES
@@ -412,7 +412,7 @@ O projeto MediaTrix cumpriu todos os objetivos definidos. Foram desenvolvidos e 
   \item Uma base de dados estruturada com informação de \textbf{1\,105 cursos} de \textbf{mais de 150 instituições} do ensino superior português, cobrindo \textbf{9 anos de dados} (2017--2025).
   \item Um motor de simulação do processo de candidatura com MAE de 5.2 pontos na Fase~1 (escala 0--200), utilizando geração de populações sintéticas e o algoritmo Gale-Shapley adaptado.
   \item Um modelo de IA treinado por \textit{online learning} com \textit{backpropagation} e \textit{momentum} ao longo de 9 anos, capaz de calibrar dinamicamente o comportamento de preferência dos candidatos.
-  \item Um algoritmo de previsão com MAE de \textit{backtesting} de 5.19 pontos e intervalos de confiança de 95\%.
+  \item Uma estratégia de previsão diferenciada por fase: simulador Gale-Shapley para a 1.ª Fase (MDA de \textit{backtesting} = 5.16 pontos) e suavização exponencial para as 2.ª e 3.ª Fases, com intervalos de confiança de 95\%.
   \item Uma plataforma web completa e responsiva, integrando pesquisa de cursos, visualização histórica, previsões e simulador de candidatura.
 \end{itemize}
 
@@ -447,7 +447,7 @@ O projeto proporcionou aprendizagens significativas em diversas dimensões dos o
 
   \item \textbf{Modelação de sistemas sociais complexos (A)}: simular o comportamento de 75\,000 candidatos num mercado dinâmico exige decisões de modelação cuidadas. O choque pandémico de 2020 revelou os limites de modelos estocásticos face a perturbações sistémicas não observadas no histórico de treino.
 
-  \item \textbf{Equilíbrio entre complexidade e precisão (A)}: a comparação entre o método de suavização exponencial e o simulador completo mostrou que a escolha do método deve ser guiada por validação empírica e não por intuição sobre a complexidade do modelo.
+  \item \textbf{Equilíbrio entre complexidade e precisão (A)}: a validação mostrou que o simulador vence na 1.ª Fase (MDA = 5.16 pts vs.\ 7.88 pts da suavização exponencial), mas perde nas Fases~2 e~3 (MAE = 15.4 e 21.5 pts). Esta assimetria levou à adoção de uma estratégia híbrida: o melhor método é selecionado por fase com base em resultados empíricos, não em intuição sobre a complexidade do modelo.
 
   \item \textbf{Comunicação de incerteza (D)}: a apresentação de intervalos de confiança em vez de valores pontuais requer cuidados na interface. A inclusão de uma secção de ``Limitações'' foi essencial para que os utilizadores interpretem as previsões de forma correta e responsável.
 
